@@ -1,0 +1,22 @@
+# For deploy/Dockerfile, whose build context is the repo root. Docker only reads .dockerignore from the root of the
+# context, so this file can't live in deploy/. It's an allowlist, so a new file stays out of images (and a .env can't
+# get in) unless it's listed here.
+*
+!agent/
+!demo/
+!evals/
+!jurisdictions/
+!mcp/
+!realdata/
+!runs/
+!runs-real/
+!scripts/
+!deploy/drop-root.sh
+!package.json
+!package-lock.json
+!tsconfig.json
+
+# Rebuilt inside the image, so a stale local copy can't slip in.
+jurisdictions/*/comments.jsonl
+**/.env
+**/.env.*

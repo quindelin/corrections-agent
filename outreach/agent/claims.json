@@ -1,0 +1,45 @@
+{
+  "_note": "Human-owned. The only factual claims outreach copy may make. The drafter inserts them as {{claim:id}} and code expands the exact wording, so it cannot paraphrase them. Set verified_by_human to true after opening the source yourself; approval is blocked until then. The learning step cannot edit this file.",
+  "claims": [
+    {
+      "id": "redline_what",
+      "wording": "Redline is an AI agent I am building that reads a Chicago correction letter and drafts a response package for the architect to review: each comment sorted, cited to a code section, routed to whoever has to act, and drafted.",
+      "source_url": "https://github.com/quindelin/corrections-agent/blob/main/README.md",
+      "evidence_grade": "own project README",
+      "required": true,
+      "verified_by_human": false
+    },
+    {
+      "id": "redline_limits",
+      "wording": "For Chicago, it has only been tested on correction letters we wrote ourselves. No architect has checked its answers and no city has reviewed its output, so I cannot tell you it would hold up with a real plan examiner.",
+      "source_url": "https://github.com/quindelin/corrections-agent/blob/main/README.md",
+      "evidence_grade": "own project README",
+      "required": true,
+      "verified_by_human": false
+    },
+    {
+      "id": "redline_signoff",
+      "wording": "Anything that needs a licensed professional's judgment is held for their sign-off.",
+      "source_url": "https://github.com/quindelin/corrections-agent/blob/main/README.md",
+      "evidence_grade": "own project README",
+      "required": false,
+      "verified_by_human": false
+    },
+    {
+      "id": "chicago_time_share_2024",
+      "wording": "In November 2024 the Chicago Department of Buildings told the City Council that plan-based permits averaged 71 days that October, 50 of them with the applicant or design professional.",
+      "source_url": "https://www.chicago.gov/content/dam/city/depts/obm/supp_info/2025Budget/2025BudgetOpeningStatements/Department%20Hearing%20Opening%20Statement%20DOB%20-%20FINAL.pdf",
+      "evidence_grade": "primary, but seen only through a search excerpt because the site returned 403 to fetchers. Open the PDF and confirm before using.",
+      "required": false,
+      "verified_by_human": false
+    },
+    {
+      "id": "chicago_time_share_2026",
+      "wording": "Chicago City Wire reported that the Department of Buildings told the City Council in October 2026 that standard plan review permits average 88 days this year, roughly two-thirds of it attributed to the design professional.",
+      "source_url": "https://chicagocitywire.com/chicago-buildings-department-reports-88-day-average-permit-time-down-slightly-in-volume",
+      "evidence_grade": "secondary reporting; the primary statement was not found",
+      "required": false,
+      "verified_by_human": false
+    }
+  ]
+}

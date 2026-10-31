@@ -1,0 +1,1800 @@
+{
+ "note": "Mined from citations in Seattle's public Plan Comments dataset, so it holds only sections reviewers have cited, and titles come from reviewers' subject lines rather than the code. Spans code editions. Not code text.",
+ "sections": [
+  {
+   "id": "SBC 101",
+   "title": "A8.00",
+   "scope": "Seattle Building Code. Cited 5 time(s) in Seattle correction letters, on subjects: 01 Administration; Scope."
+  },
+  {
+   "id": "SBC 102",
+   "title": "Landfill ECA mitigation note",
+   "scope": "Seattle Building Code. Cited 3 time(s) in Seattle correction letters, on subjects: Landfill ECA mitigation note."
+  },
+  {
+   "id": "SBC 104",
+   "title": "00 General",
+   "scope": "Seattle Building Code. Cited 5 time(s) in Seattle correction letters, on subjects: 00 General; 16 Lateral Design; 01 Administration."
+  },
+  {
+   "id": "SBC 106",
+   "title": "01 Administration",
+   "scope": "Seattle Building Code. Cited 67 time(s) in Seattle correction letters, on subjects: 01 Administration; SBC Ch01; 00 General; Shoring."
+  },
+  {
+   "id": "SBC 108",
+   "title": "01 Administration",
+   "scope": "Seattle Building Code. Cited 1 time(s) in Seattle correction letters, on subjects: 01 Administration."
+  },
+  {
+   "id": "SBC 202",
+   "title": "05 Height and Area Limitation",
+   "scope": "Seattle Building Code. Cited 3 time(s) in Seattle correction letters, on subjects: 05 Height and Area Limitation; SBC Ch02."
+  },
+  {
+   "id": "SBC 302",
+   "title": "03 Use and Occupancy",
+   "scope": "Seattle Building Code. Cited 3 time(s) in Seattle correction letters, on subjects: 03 Use and Occupancy; SBC Ch12."
+  },
+  {
+   "id": "SBC 303",
+   "title": "SBC Ch03",
+   "scope": "Seattle Building Code. Cited 2 time(s) in Seattle correction letters, on subjects: SBC Ch03; 10 Means of Egress."
+  },
+  {
+   "id": "SBC 310",
+   "title": "03 Use and Occupancy",
+   "scope": "Seattle Building Code. Cited 4 time(s) in Seattle correction letters, on subjects: 03 Use and Occupancy."
+  },
+  {
+   "id": "SBC 311",
+   "title": "G1.11",
+   "scope": "Seattle Building Code. Cited 7 time(s) in Seattle correction letters, on subjects: 03 Use and Occupancy; SBC Ch03; 04 Special Use and Occupancy."
+  },
+  {
+   "id": "SBC 312",
+   "title": "03 Use and Occupancy",
+   "scope": "Seattle Building Code. Cited 2 time(s) in Seattle correction letters, on subjects: 03 Use and Occupancy."
+  },
+  {
+   "id": "SBC 406",
+   "title": "04 Special Use and Occupancy",
+   "scope": "Seattle Building Code. Cited 16 time(s) in Seattle correction letters, on subjects: 04 Special Use and Occupancy; General; 03 Use and Occupancy; 11 Accessibility."
+  },
+  {
+   "id": "SBC 419",
+   "title": "04 Special Use and Occupancy",
+   "scope": "Seattle Building Code. Cited 3 time(s) in Seattle correction letters, on subjects: 04 Special Use and Occupancy; General."
+  },
+  {
+   "id": "SBC 420",
+   "title": "04 Special Use and Occupancy",
+   "scope": "Seattle Building Code. Cited 31 time(s) in Seattle correction letters, on subjects: 04 Special Use and Occupancy; 07 Fire Resistive Assemblies; 09 Fire Protective Assemblies; 00 General."
+  },
+  {
+   "id": "SBC 428",
+   "title": "04 Special Use and Occupancy",
+   "scope": "Seattle Building Code. Cited 5 time(s) in Seattle correction letters, on subjects: 04 Special Use and Occupancy; Concrete."
+  },
+  {
+   "id": "SBC 430",
+   "title": "04 Special Use and Occupancy",
+   "scope": "Seattle Building Code. Cited 14 time(s) in Seattle correction letters, on subjects: 04 Special Use and Occupancy; SBC Ch04; General."
+  },
+  {
+   "id": "SBC 503",
+   "title": "SBC Ch05",
+   "scope": "Seattle Building Code. Cited 2 time(s) in Seattle correction letters, on subjects: SBC Ch05."
+  },
+  {
+   "id": "SBC 504",
+   "title": "05 Height and Area Limitation",
+   "scope": "Seattle Building Code. Cited 13 time(s) in Seattle correction letters, on subjects: 05 Height and Area Limitation; Scope; 00 General; General."
+  },
+  {
+   "id": "SBC 508",
+   "title": "05 Height and Area Limitation",
+   "scope": "Seattle Building Code. Cited 13 time(s) in Seattle correction letters, on subjects: 05 Height and Area Limitation; SBC Ch05; 00 General; General."
+  },
+  {
+   "id": "SBC 509",
+   "title": "05 Height and Area Limitation",
+   "scope": "Seattle Building Code. Cited 1 time(s) in Seattle correction letters, on subjects: 05 Height and Area Limitation."
+  },
+  {
+   "id": "SBC 510",
+   "title": "05 Height and Area Limitation",
+   "scope": "Seattle Building Code. Cited 20 time(s) in Seattle correction letters, on subjects: 05 Height and Area Limitation; SBC Ch05; Concrete; 00 General."
+  },
+  {
+   "id": "SBC 601",
+   "title": "A5.01",
+   "scope": "Seattle Building Code. Cited 21 time(s) in Seattle correction letters, on subjects: 06 Type of Construction; 07 Fire Resistive Assemblies; 00 General."
+  },
+  {
+   "id": "SBC 602",
+   "title": "06 Type of Construction",
+   "scope": "Seattle Building Code. Cited 17 time(s) in Seattle correction letters, on subjects: 06 Type of Construction; 00 General; 07 Fire Resistive Assemblies; SBC Ch06."
+  },
+  {
+   "id": "SBC 703",
+   "title": "A5.01",
+   "scope": "Seattle Building Code. Cited 20 time(s) in Seattle correction letters, on subjects: 07 Fire Resistive Assemblies; 04 Special Use and Occupancy; SBC Ch07; 302 Fire Separation."
+  },
+  {
+   "id": "SBC 704",
+   "title": "A1.01-A1.04",
+   "scope": "Seattle Building Code. Cited 15 time(s) in Seattle correction letters, on subjects: 07 Fire Resistive Assemblies; 00 General; 302 Fire Separation; 05 Height and Area Limitation."
+  },
+  {
+   "id": "SBC 705",
+   "title": "A2.01",
+   "scope": "Seattle Building Code. Cited 75 time(s) in Seattle correction letters, on subjects: 07 Fire Resistive Assemblies; SBC Ch07; 00 General; SBC Ch."
+  },
+  {
+   "id": "SBC 706",
+   "title": "A2.05",
+   "scope": "Seattle Building Code. Cited 67 time(s) in Seattle correction letters, on subjects: 07 Fire Resistive Assemblies; 05 Height and Area Limitation; 01 Administration; General."
+  },
+  {
+   "id": "SBC 707",
+   "title": "07 Fire Resistive Assemblies",
+   "scope": "Seattle Building Code. Cited 2 time(s) in Seattle correction letters, on subjects: 07 Fire Resistive Assemblies; 05 Height and Area Limitation."
+  },
+  {
+   "id": "SBC 708",
+   "title": "07 Fire Resistive Assemblies",
+   "scope": "Seattle Building Code. Cited 5 time(s) in Seattle correction letters, on subjects: 07 Fire Resistive Assemblies; Scope; 10 Means of Egress."
+  },
+  {
+   "id": "SBC 711",
+   "title": "07 Fire Resistive Assemblies",
+   "scope": "Seattle Building Code. Cited 1 time(s) in Seattle correction letters, on subjects: 07 Fire Resistive Assemblies."
+  },
+  {
+   "id": "SBC 712",
+   "title": "10 Means of Egress",
+   "scope": "Seattle Building Code. Cited 1 time(s) in Seattle correction letters, on subjects: 10 Means of Egress."
+  },
+  {
+   "id": "SBC 713",
+   "title": "07 Fire Resistive Assemblies",
+   "scope": "Seattle Building Code. Cited 18 time(s) in Seattle correction letters, on subjects: 07 Fire Resistive Assemblies; SBC Ch07; 00 General; General."
+  },
+  {
+   "id": "SBC 714",
+   "title": "07 Fire Resistive Assemblies",
+   "scope": "Seattle Building Code. Cited 1 time(s) in Seattle correction letters, on subjects: 07 Fire Resistive Assemblies."
+  },
+  {
+   "id": "SBC 716",
+   "title": "A6.1",
+   "scope": "Seattle Building Code. Cited 12 time(s) in Seattle correction letters, on subjects: 07 Fire Resistive Assemblies; SBC Ch07; 10 Means of Egress."
+  },
+  {
+   "id": "SBC 717",
+   "title": "07 Fire Resistive Assemblies",
+   "scope": "Seattle Building Code. Cited 6 time(s) in Seattle correction letters, on subjects: 07 Fire Resistive Assemblies; General."
+  },
+  {
+   "id": "SBC 718",
+   "title": "07 Fire Resistive Assemblies",
+   "scope": "Seattle Building Code. Cited 2 time(s) in Seattle correction letters, on subjects: 07 Fire Resistive Assemblies; 10 Means of Egress."
+  },
+  {
+   "id": "SBC 721",
+   "title": "302 Fire Separation",
+   "scope": "Seattle Building Code. Cited 7 time(s) in Seattle correction letters, on subjects: 302 Fire Separation; Concrete; 16 Gravity Design."
+  },
+  {
+   "id": "SBC 722",
+   "title": "07 Fire Resistive Assemblies",
+   "scope": "Seattle Building Code. Cited 7 time(s) in Seattle correction letters, on subjects: 07 Fire Resistive Assemblies; 302 Fire Separation."
+  },
+  {
+   "id": "SBC 903",
+   "title": "Scope",
+   "scope": "Seattle Building Code. Cited 9 time(s) in Seattle correction letters, on subjects: Scope; 00 General; 05 Height and Area Limitation; 09 Fire Protective Assemblies."
+  },
+  {
+   "id": "SBC 907",
+   "title": "09 Fire Protective Assemblies",
+   "scope": "Seattle Building Code. Cited 1 time(s) in Seattle correction letters, on subjects: 09 Fire Protective Assemblies."
+  },
+  {
+   "id": "SBC 909",
+   "title": "General",
+   "scope": "Seattle Building Code. Cited 8 time(s) in Seattle correction letters, on subjects: General; 05 Height and Area Limitation; 00 General; 09 Fire Protective Assemblies."
+  },
+  {
+   "id": "SBC 913",
+   "title": "09 Fire Protective Assemblies",
+   "scope": "Seattle Building Code. Cited 1 time(s) in Seattle correction letters, on subjects: 09 Fire Protective Assemblies."
+  },
+  {
+   "id": "SBC 915",
+   "title": "09 Fire Protective Assemblies",
+   "scope": "Seattle Building Code. Cited 1 time(s) in Seattle correction letters, on subjects: 09 Fire Protective Assemblies."
+  },
+  {
+   "id": "SBC 1003",
+   "title": "10 Means of Egress",
+   "scope": "Seattle Building Code. Cited 1 time(s) in Seattle correction letters, on subjects: 10 Means of Egress."
+  },
+  {
+   "id": "SBC 1004",
+   "title": "10 Means of Egress",
+   "scope": "Seattle Building Code. Cited 6 time(s) in Seattle correction letters, on subjects: 10 Means of Egress; SBC Ch10."
+  },
+  {
+   "id": "SBC 1005",
+   "title": "A1.01",
+   "scope": "Seattle Building Code. Cited 2 time(s) in Seattle correction letters, on subjects: 10 Means of Egress."
+  },
+  {
+   "id": "SBC 1006",
+   "title": "10 Means of Egress",
+   "scope": "Seattle Building Code. Cited 19 time(s) in Seattle correction letters, on subjects: 10 Means of Egress; SBC Ch10; 00 General."
+  },
+  {
+   "id": "SBC 1007",
+   "title": "10 Means of Egress",
+   "scope": "Seattle Building Code. Cited 2 time(s) in Seattle correction letters, on subjects: 10 Means of Egress."
+  },
+  {
+   "id": "SBC 1008",
+   "title": "10 Means of Egress",
+   "scope": "Seattle Building Code. Cited 1 time(s) in Seattle correction letters, on subjects: 10 Means of Egress."
+  },
+  {
+   "id": "SBC 1009",
+   "title": "10 Means of Egress",
+   "scope": "Seattle Building Code. Cited 3 time(s) in Seattle correction letters, on subjects: 10 Means of Egress."
+  },
+  {
+   "id": "SBC 1010",
+   "title": "10 Means of Egress",
+   "scope": "Seattle Building Code. Cited 21 time(s) in Seattle correction letters, on subjects: 10 Means of Egress; SBC Ch10; 05 Height and Area Limitation; 00 General."
+  },
+  {
+   "id": "SBC 1011",
+   "title": "A1.05",
+   "scope": "Seattle Building Code. Cited 20 time(s) in Seattle correction letters, on subjects: 10 Means of Egress; General; SBC Ch10; Scope."
+  },
+  {
+   "id": "SBC 1012",
+   "title": "A1.01",
+   "scope": "Seattle Building Code. Cited 3 time(s) in Seattle correction letters, on subjects: 10 Means of Egress; 09 Fire Protective Assemblies."
+  },
+  {
+   "id": "SBC 1014",
+   "title": "Substantial Alterations",
+   "scope": "Seattle Building Code. Cited 6 time(s) in Seattle correction letters, on subjects: Substantial Alterations; 10 Means of Egress."
+  },
+  {
+   "id": "SBC 1015",
+   "title": "A6.1 & A SHEETS",
+   "scope": "Seattle Building Code. Cited 24 time(s) in Seattle correction letters, on subjects: 10 Means of Egress; SBC Ch10; SBC Ch01."
+  },
+  {
+   "id": "SBC 1019",
+   "title": "10 Means of Egress",
+   "scope": "Seattle Building Code. Cited 4 time(s) in Seattle correction letters, on subjects: 10 Means of Egress; Code Modification Request."
+  },
+  {
+   "id": "SBC 1020",
+   "title": "10 Means of Egress",
+   "scope": "Seattle Building Code. Cited 9 time(s) in Seattle correction letters, on subjects: 10 Means of Egress; 11 Accessibility; SBC Ch10; Additions or Alterations."
+  },
+  {
+   "id": "SBC 1022",
+   "title": "10 Means of Egress",
+   "scope": "Seattle Building Code. Cited 1 time(s) in Seattle correction letters, on subjects: 10 Means of Egress."
+  },
+  {
+   "id": "SBC 1023",
+   "title": "10 Means of Egress",
+   "scope": "Seattle Building Code. Cited 11 time(s) in Seattle correction letters, on subjects: 10 Means of Egress; SBC Ch10; 00 General; Code Modification Request."
+  },
+  {
+   "id": "SBC 1024",
+   "title": "10 Means of Egress",
+   "scope": "Seattle Building Code. Cited 5 time(s) in Seattle correction letters, on subjects: 10 Means of Egress."
+  },
+  {
+   "id": "SBC 1027",
+   "title": "10 Means of Egress",
+   "scope": "Seattle Building Code. Cited 4 time(s) in Seattle correction letters, on subjects: 10 Means of Egress."
+  },
+  {
+   "id": "SBC 1028",
+   "title": "10 Means of Egress",
+   "scope": "Seattle Building Code. Cited 16 time(s) in Seattle correction letters, on subjects: 10 Means of Egress; SBC Ch10; 07 Fire Resistive Assemblies."
+  },
+  {
+   "id": "SBC 1030",
+   "title": "10 Means of Egress",
+   "scope": "Seattle Building Code. Cited 12 time(s) in Seattle correction letters, on subjects: 10 Means of Egress; Scope; 09 Fire Protective Assemblies."
+  },
+  {
+   "id": "SBC 1031",
+   "title": "10 Means of Egress",
+   "scope": "Seattle Building Code. Cited 2 time(s) in Seattle correction letters, on subjects: 10 Means of Egress; 00 General."
+  },
+  {
+   "id": "SBC 1101",
+   "title": "11 Accessibility",
+   "scope": "Seattle Building Code. Cited 2 time(s) in Seattle correction letters, on subjects: 11 Accessibility."
+  },
+  {
+   "id": "SBC 1102",
+   "title": "A1.01",
+   "scope": "Seattle Building Code. Cited 2 time(s) in Seattle correction letters, on subjects: 10 Means of Egress."
+  },
+  {
+   "id": "SBC 1104",
+   "title": "11 Accessibility",
+   "scope": "Seattle Building Code. Cited 11 time(s) in Seattle correction letters, on subjects: 11 Accessibility; SBC Ch11."
+  },
+  {
+   "id": "SBC 1106",
+   "title": "11 Accessibility",
+   "scope": "Seattle Building Code. Cited 7 time(s) in Seattle correction letters, on subjects: 11 Accessibility; 03 Use and Occupancy."
+  },
+  {
+   "id": "SBC 1107",
+   "title": "A1.01",
+   "scope": "Seattle Building Code. Cited 24 time(s) in Seattle correction letters, on subjects: 11 Accessibility; SBC Ch11; 10 Means of Egress."
+  },
+  {
+   "id": "SBC 1108",
+   "title": "11 Accessibility",
+   "scope": "Seattle Building Code. Cited 2 time(s) in Seattle correction letters, on subjects: 11 Accessibility."
+  },
+  {
+   "id": "SBC 1109",
+   "title": "11 Accessibility",
+   "scope": "Seattle Building Code. Cited 8 time(s) in Seattle correction letters, on subjects: 11 Accessibility; 29 Plumbing Systems; SBC Ch11; 10 Means of Egress."
+  },
+  {
+   "id": "SBC 1202",
+   "title": "A8.00",
+   "scope": "Seattle Building Code. Cited 8 time(s) in Seattle correction letters, on subjects: 12 Interior Environment."
+  },
+  {
+   "id": "SBC 1206",
+   "title": "A5.01",
+   "scope": "Seattle Building Code. Cited 20 time(s) in Seattle correction letters, on subjects: 12 Interior Environment; 04 Special Use and Occupancy."
+  },
+  {
+   "id": "SBC 1207",
+   "title": "12 Interior Environment",
+   "scope": "Seattle Building Code. Cited 21 time(s) in Seattle correction letters, on subjects: 12 Interior Environment; Change of Occupancy; Additions or Alterations; Scope."
+  },
+  {
+   "id": "SBC 1209",
+   "title": "SBC Ch12",
+   "scope": "Seattle Building Code. Cited 1 time(s) in Seattle correction letters, on subjects: SBC Ch12."
+  },
+  {
+   "id": "SBC 1510",
+   "title": "15 Roof Assemblies and Rooftop Structures",
+   "scope": "Seattle Building Code. Cited 1 time(s) in Seattle correction letters, on subjects: 15 Roof Assemblies and Rooftop Structures."
+  },
+  {
+   "id": "SBC 1603",
+   "title": "Engineered Lateral",
+   "scope": "Seattle Building Code. Cited 29 time(s) in Seattle correction letters, on subjects: Engineered Lateral; Structural Design Criteria; 16 Lateral Design; 18 Foundations & Retaining Walls."
+  },
+  {
+   "id": "SBC 1604",
+   "title": "16 Lateral Design",
+   "scope": "Seattle Building Code. Cited 2 time(s) in Seattle correction letters, on subjects: 16 Lateral Design; 16 Gravity Design."
+  },
+  {
+   "id": "SBC 1605",
+   "title": "18 Foundations & Retaining Walls",
+   "scope": "Seattle Building Code. Cited 2 time(s) in Seattle correction letters, on subjects: 18 Foundations & Retaining Walls."
+  },
+  {
+   "id": "SBC 1606",
+   "title": "Gravity Design",
+   "scope": "Seattle Building Code. Cited 3 time(s) in Seattle correction letters, on subjects: Gravity Design; 16 Gravity Design."
+  },
+  {
+   "id": "SBC 1607",
+   "title": "00 General",
+   "scope": "Seattle Building Code. Cited 6 time(s) in Seattle correction letters, on subjects: 00 General; General; 16 Gravity Design."
+  },
+  {
+   "id": "SBC 1609",
+   "title": "Structural Design Criteria",
+   "scope": "Seattle Building Code. Cited 12 time(s) in Seattle correction letters, on subjects: Structural Design Criteria; Engineered Lateral; 301 Design Criteria; 00 General."
+  },
+  {
+   "id": "SBC 1610",
+   "title": "Lateral Design",
+   "scope": "Seattle Building Code. Cited 1 time(s) in Seattle correction letters, on subjects: Lateral Design."
+  },
+  {
+   "id": "SBC 1612",
+   "title": "Floodplain",
+   "scope": "Seattle Building Code. Cited 1 time(s) in Seattle correction letters, on subjects: Floodplain."
+  },
+  {
+   "id": "SBC 1613",
+   "title": "Seismic Site Class F",
+   "scope": "Seattle Building Code. Cited 14 time(s) in Seattle correction letters, on subjects: Seismic Site Class F; Engineered Lateral."
+  },
+  {
+   "id": "SBC 1704",
+   "title": "17 Special Inspections",
+   "scope": "Seattle Building Code. Cited 73 time(s) in Seattle correction letters, on subjects: 17 Special Inspections; 17 Structural Observation; Special Inspections; 16 Lateral Design."
+  },
+  {
+   "id": "SBC 1705",
+   "title": "Foundations",
+   "scope": "Seattle Building Code. Cited 4 time(s) in Seattle correction letters, on subjects: Foundations; Structural; Earth pressure diagram."
+  },
+  {
+   "id": "SBC 1803",
+   "title": "Upload geotechnical report separately",
+   "scope": "Seattle Building Code. Cited 4 time(s) in Seattle correction letters, on subjects: Upload geotechnical report separately; Duplicate plan sheet numbers."
+  },
+  {
+   "id": "SBC 1804",
+   "title": "18 Shoring & Excavation",
+   "scope": "Seattle Building Code. Cited 1 time(s) in Seattle correction letters, on subjects: 18 Shoring & Excavation."
+  },
+  {
+   "id": "SBC 1806",
+   "title": "18 Foundations & Retaining Walls",
+   "scope": "Seattle Building Code. Cited 1 time(s) in Seattle correction letters, on subjects: 18 Foundations & Retaining Walls."
+  },
+  {
+   "id": "SBC 1807",
+   "title": "Foundations",
+   "scope": "Seattle Building Code. Cited 10 time(s) in Seattle correction letters, on subjects: Foundations; Shoring; 404 Retaining Walls; 18 Foundations & Retaining Walls."
+  },
+  {
+   "id": "SBC 1809",
+   "title": "301 Design Criteria",
+   "scope": "Seattle Building Code. Cited 1 time(s) in Seattle correction letters, on subjects: 301 Design Criteria."
+  },
+  {
+   "id": "SBC 1810",
+   "title": "18 Foundations & Retaining Walls",
+   "scope": "Seattle Building Code. Cited 12 time(s) in Seattle correction letters, on subjects: 18 Foundations & Retaining Walls; Structural; Shoring."
+  },
+  {
+   "id": "SBC 1811",
+   "title": "Landfill ECA mitigation plan",
+   "scope": "Seattle Building Code. Cited 3 time(s) in Seattle correction letters, on subjects: Landfill ECA mitigation plan."
+  },
+  {
+   "id": "SBC 1908",
+   "title": "Shoring",
+   "scope": "Seattle Building Code. Cited 1 time(s) in Seattle correction letters, on subjects: Shoring."
+  },
+  {
+   "id": "SBC 2012",
+   "title": "09 Fire Protective Assemblies",
+   "scope": "Seattle Building Code. Cited 1 time(s) in Seattle correction letters, on subjects: 09 Fire Protective Assemblies."
+  },
+  {
+   "id": "SBC 2018",
+   "title": "16 Lateral Design",
+   "scope": "Seattle Building Code. Cited 9 time(s) in Seattle correction letters, on subjects: 16 Lateral Design; extended Machine/control room; 19 Concrete; 16 Gravity Design."
+  },
+  {
+   "id": "SBC 2021",
+   "title": "Structural Design Criteria",
+   "scope": "Seattle Building Code. Cited 1 time(s) in Seattle correction letters, on subjects: Structural Design Criteria."
+  },
+  {
+   "id": "SBC 2304",
+   "title": "23 Wood",
+   "scope": "Seattle Building Code. Cited 2 time(s) in Seattle correction letters, on subjects: 23 Wood."
+  },
+  {
+   "id": "SBC 2308",
+   "title": "23 Wood",
+   "scope": "Seattle Building Code. Cited 1 time(s) in Seattle correction letters, on subjects: 23 Wood."
+  },
+  {
+   "id": "SBC 2406",
+   "title": "A2.03",
+   "scope": "Seattle Building Code. Cited 12 time(s) in Seattle correction letters, on subjects: 24 Glass and Glazing; 10 Means of Egress."
+  },
+  {
+   "id": "SBC 2407",
+   "title": "312 Guards and Window Fall Protection",
+   "scope": "Seattle Building Code. Cited 55 time(s) in Seattle correction letters, on subjects: 312 Guards and Window Fall Protection; 308 Safety Glazing; 311 Means of Egress; 312 Guards."
+  },
+  {
+   "id": "SBC 2902",
+   "title": "29 Plumbing Systems",
+   "scope": "Seattle Building Code. Cited 14 time(s) in Seattle correction letters, on subjects: 29 Plumbing Systems; SBC Ch29; SBC Ch."
+  },
+  {
+   "id": "SBC 3006",
+   "title": "10 Means of Egress",
+   "scope": "Seattle Building Code. Cited 2 time(s) in Seattle correction letters, on subjects: 10 Means of Egress."
+  },
+  {
+   "id": "SBC 3016",
+   "title": "30 Elevators",
+   "scope": "Seattle Building Code. Cited 1 time(s) in Seattle correction letters, on subjects: 30 Elevators."
+  },
+  {
+   "id": "SBC 3201",
+   "title": "32 Public Right-of-Way",
+   "scope": "Seattle Building Code. Cited 7 time(s) in Seattle correction letters, on subjects: 32 Public Right-of-Way; 301 Design Criteria; 01 Administration; 02 Permits."
+  },
+  {
+   "id": "SBC T504",
+   "title": "General",
+   "scope": "Seattle Building Code. Cited 1 time(s) in Seattle correction letters, on subjects: General."
+  },
+  {
+   "id": "SEC 402",
+   "title": "Conflicting compliance approaches cited",
+   "scope": "Seattle Energy Code. Cited 2 time(s) in Seattle correction letters, on subjects: Conflicting compliance approaches cited; Roof insulation."
+  },
+  {
+   "id": "SEC 403",
+   "title": "Missing equipment sizing form or calculation",
+   "scope": "Seattle Energy Code. Cited 67 time(s) in Seattle correction letters, on subjects: Missing equipment sizing form or calculation; General."
+  },
+  {
+   "id": "SEC 405",
+   "title": "A1.01",
+   "scope": "Seattle Energy Code. Cited 1 time(s) in Seattle correction letters, on subjects: 11 Accessibility."
+  },
+  {
+   "id": "SEC 406",
+   "title": "General",
+   "scope": "Seattle Energy Code. Cited 3 time(s) in Seattle correction letters, on subjects: General."
+  },
+  {
+   "id": "SEC 460",
+   "title": "General",
+   "scope": "Seattle Energy Code. Cited 2 time(s) in Seattle correction letters, on subjects: General."
+  },
+  {
+   "id": "SEC 608",
+   "title": "11 Accessibility",
+   "scope": "Seattle Energy Code. Cited 2 time(s) in Seattle correction letters, on subjects: 11 Accessibility."
+  },
+  {
+   "id": "SEC 1003",
+   "title": "11 Accessibility",
+   "scope": "Seattle Energy Code. Cited 2 time(s) in Seattle correction letters, on subjects: 11 Accessibility."
+  },
+  {
+   "id": "SEC 2018",
+   "title": "General",
+   "scope": "Seattle Energy Code. Cited 3 time(s) in Seattle correction letters, on subjects: General."
+  },
+  {
+   "id": "SEC 2021",
+   "title": "General",
+   "scope": "Seattle Energy Code. Cited 1 time(s) in Seattle correction letters, on subjects: General."
+  },
+  {
+   "id": "SEC A101",
+   "title": "General",
+   "scope": "Seattle Energy Code. Cited 1 time(s) in Seattle correction letters, on subjects: General."
+  },
+  {
+   "id": "SEC A102",
+   "title": "General",
+   "scope": "Seattle Energy Code. Cited 2 time(s) in Seattle correction letters, on subjects: General."
+  },
+  {
+   "id": "SEC A103",
+   "title": "General",
+   "scope": "Seattle Energy Code. Cited 4 time(s) in Seattle correction letters, on subjects: General."
+  },
+  {
+   "id": "SEC A104",
+   "title": "General",
+   "scope": "Seattle Energy Code. Cited 2 time(s) in Seattle correction letters, on subjects: General."
+  },
+  {
+   "id": "SEC C202",
+   "title": "General",
+   "scope": "Seattle Energy Code. Cited 1 time(s) in Seattle correction letters, on subjects: General."
+  },
+  {
+   "id": "SEC C303",
+   "title": "General",
+   "scope": "Seattle Energy Code. Cited 2 time(s) in Seattle correction letters, on subjects: General."
+  },
+  {
+   "id": "SEC C402",
+   "title": "General",
+   "scope": "Seattle Energy Code. Cited 6 time(s) in Seattle correction letters, on subjects: General."
+  },
+  {
+   "id": "SEC C403",
+   "title": "General",
+   "scope": "Seattle Energy Code. Cited 35 time(s) in Seattle correction letters, on subjects: General."
+  },
+  {
+   "id": "SEC C404",
+   "title": "General",
+   "scope": "Seattle Energy Code. Cited 1 time(s) in Seattle correction letters, on subjects: General."
+  },
+  {
+   "id": "SEC C405",
+   "title": "General",
+   "scope": "Seattle Energy Code. Cited 2 time(s) in Seattle correction letters, on subjects: General."
+  },
+  {
+   "id": "SEC C406",
+   "title": "General",
+   "scope": "Seattle Energy Code. Cited 4 time(s) in Seattle correction letters, on subjects: General."
+  },
+  {
+   "id": "SEC C407",
+   "title": "General",
+   "scope": "Seattle Energy Code. Cited 5 time(s) in Seattle correction letters, on subjects: General."
+  },
+  {
+   "id": "SEC C411",
+   "title": "General",
+   "scope": "Seattle Energy Code. Cited 5 time(s) in Seattle correction letters, on subjects: General."
+  },
+  {
+   "id": "SEC C412",
+   "title": "General",
+   "scope": "Seattle Energy Code. Cited 8 time(s) in Seattle correction letters, on subjects: General."
+  },
+  {
+   "id": "SEC M1505",
+   "title": "General",
+   "scope": "Seattle Energy Code. Cited 2 time(s) in Seattle correction letters, on subjects: General."
+  },
+  {
+   "id": "SEC R103",
+   "title": "General",
+   "scope": "Seattle Energy Code. Cited 2 time(s) in Seattle correction letters, on subjects: General."
+  },
+  {
+   "id": "SEC R303",
+   "title": "General",
+   "scope": "Seattle Energy Code. Cited 52 time(s) in Seattle correction letters, on subjects: General; Missing U-value schedule on drawing; Missing NFRC label for projects other than; Window: Small Business Qualification not provided."
+  },
+  {
+   "id": "SEC R401",
+   "title": "General",
+   "scope": "Seattle Energy Code. Cited 93 time(s) in Seattle correction letters, on subjects: General; Missing Certificate, insulation (Mandatory); Missing Report, envelope air leakage."
+  },
+  {
+   "id": "SEC R402",
+   "title": "R-20 foam?  rigid?",
+   "scope": "Seattle Energy Code. Cited 470 time(s) in Seattle correction letters, on subjects: General; Missing Report, envelope air leakage; Missing insulation installation details on drawing; Missing Window and door headers insulation."
+  },
+  {
+   "id": "SEC R403",
+   "title": "General",
+   "scope": "Seattle Energy Code. Cited 98 time(s) in Seattle correction letters, on subjects: General; URM Chimney; Missing heat type/documents if electrical resistance; Missing equipment sizing form or calculation."
+  },
+  {
+   "id": "SEC R404",
+   "title": "General",
+   "scope": "Seattle Energy Code. Cited 182 time(s) in Seattle correction letters, on subjects: General; Missing Lighting, high efficacy lamps; Lighting, high efficacy lamps."
+  },
+  {
+   "id": "SEC R405",
+   "title": "General",
+   "scope": "Seattle Energy Code. Cited 23 time(s) in Seattle correction letters, on subjects: General; No citation of approach."
+  },
+  {
+   "id": "SEC R406",
+   "title": "General",
+   "scope": "Seattle Energy Code. Cited 240 time(s) in Seattle correction letters, on subjects: General; Missing additional energy credit(s) option number; Missing Heat Recovery Ventilator details on drawing; Missing U-value schedule on drawing."
+  },
+  {
+   "id": "SEC R407",
+   "title": "General",
+   "scope": "Seattle Energy Code. Cited 22 time(s) in Seattle correction letters, on subjects: General; No citation of approach."
+  },
+  {
+   "id": "SEC R501",
+   "title": "Programmable Thermostat",
+   "scope": "Seattle Energy Code. Cited 41 time(s) in Seattle correction letters, on subjects: General; Not code compliant Additions."
+  },
+  {
+   "id": "SEC R502",
+   "title": "General",
+   "scope": "Seattle Energy Code. Cited 1 time(s) in Seattle correction letters, on subjects: General."
+  },
+  {
+   "id": "SEC R503",
+   "title": "General",
+   "scope": "Seattle Energy Code. Cited 16 time(s) in Seattle correction letters, on subjects: General; Not code compliant Alterations/exceptions not; Missing Lighting, high efficacy lamps; Missing U-value schedule on drawing."
+  },
+  {
+   "id": "SEC R505",
+   "title": "General",
+   "scope": "Seattle Energy Code. Cited 2 time(s) in Seattle correction letters, on subjects: General."
+  },
+  {
+   "id": "SEC R4026",
+   "title": "General",
+   "scope": "Seattle Energy Code. Cited 1 time(s) in Seattle correction letters, on subjects: General."
+  },
+  {
+   "id": "SFC 105",
+   "title": "General",
+   "scope": "Seattle Fire Code. Cited 2 time(s) in Seattle correction letters, on subjects: General."
+  },
+  {
+   "id": "SFC 405",
+   "title": "General",
+   "scope": "Seattle Fire Code. Cited 1 time(s) in Seattle correction letters, on subjects: General."
+  },
+  {
+   "id": "SFC 503",
+   "title": "General",
+   "scope": "Seattle Fire Code. Cited 6 time(s) in Seattle correction letters, on subjects: General."
+  },
+  {
+   "id": "SFC 504",
+   "title": "General",
+   "scope": "Seattle Fire Code. Cited 1 time(s) in Seattle correction letters, on subjects: General."
+  },
+  {
+   "id": "SFC 505",
+   "title": "General",
+   "scope": "Seattle Fire Code. Cited 17 time(s) in Seattle correction letters, on subjects: General."
+  },
+  {
+   "id": "SFC 507",
+   "title": "General",
+   "scope": "Seattle Fire Code. Cited 13 time(s) in Seattle correction letters, on subjects: General; AS Permit Required."
+  },
+  {
+   "id": "SFC 510",
+   "title": "General",
+   "scope": "Seattle Fire Code. Cited 3 time(s) in Seattle correction letters, on subjects: General."
+  },
+  {
+   "id": "SFC 901",
+   "title": "AS Permit Required",
+   "scope": "Seattle Fire Code. Cited 29 time(s) in Seattle correction letters, on subjects: AS Permit Required; Deferred Subs List; General."
+  },
+  {
+   "id": "SFC 903",
+   "title": "NFPA 13D",
+   "scope": "Seattle Fire Code. Cited 33 time(s) in Seattle correction letters, on subjects: General."
+  },
+  {
+   "id": "SFC 907",
+   "title": "General",
+   "scope": "Seattle Fire Code. Cited 13 time(s) in Seattle correction letters, on subjects: General."
+  },
+  {
+   "id": "SFC 912",
+   "title": "General",
+   "scope": "Seattle Fire Code. Cited 2 time(s) in Seattle correction letters, on subjects: General; FDC Location."
+  },
+  {
+   "id": "SFC 1009",
+   "title": "General",
+   "scope": "Seattle Fire Code. Cited 1 time(s) in Seattle correction letters, on subjects: General."
+  },
+  {
+   "id": "SFC 1011",
+   "title": "General",
+   "scope": "Seattle Fire Code. Cited 1 time(s) in Seattle correction letters, on subjects: General."
+  },
+  {
+   "id": "SFC 1103",
+   "title": "General",
+   "scope": "Seattle Fire Code. Cited 6 time(s) in Seattle correction letters, on subjects: General."
+  },
+  {
+   "id": "SFC 1204",
+   "title": "General",
+   "scope": "Seattle Fire Code. Cited 3 time(s) in Seattle correction letters, on subjects: General."
+  },
+  {
+   "id": "SFC B105",
+   "title": "General",
+   "scope": "Seattle Fire Code. Cited 3 time(s) in Seattle correction letters, on subjects: General."
+  },
+  {
+   "id": "SMC 2.34",
+   "title": "AADU gross floor area",
+   "scope": "Seattle Municipal Code. Cited 1 time(s) in Seattle correction letters, on subjects: AADU gross floor area."
+  },
+  {
+   "id": "SMC 3.58",
+   "title": "400 sq ft net unit area - MHA",
+   "scope": "Seattle Municipal Code. Cited 1 time(s) in Seattle correction letters, on subjects: 400 sq ft net unit area - MHA."
+  },
+  {
+   "id": "SMC 15.04.010",
+   "title": "Scope",
+   "scope": "Seattle Municipal Code. Cited 3 time(s) in Seattle correction letters, on subjects: Scope; 02 Permits."
+  },
+  {
+   "id": "SMC 15.44.030",
+   "title": "Legal docs G",
+   "scope": "Seattle Municipal Code. Cited 1 time(s) in Seattle correction letters, on subjects: Legal docs G."
+  },
+  {
+   "id": "SMC 15.44.170",
+   "title": "Top 4 Ft Removal",
+   "scope": "Seattle Municipal Code. Cited 1 time(s) in Seattle correction letters, on subjects: Top 4 Ft Removal."
+  },
+  {
+   "id": "SMC 21.16.220",
+   "title": "Route drainage to approved point of discharge",
+   "scope": "Seattle Municipal Code. Cited 7 time(s) in Seattle correction letters, on subjects: Route drainage to approved point of discharge."
+  },
+  {
+   "id": "SMC 21.16.240",
+   "title": "Adding Units to Existing Shared Side Sewer (Mailing Notifiication and Attestation/Certification)",
+   "scope": "Seattle Municipal Code. Cited 15 time(s) in Seattle correction letters, on subjects: Adding Units to Existing Shared Side Sewer (Mailing Notifiication and Attestation/Certification); General; Adding Units to Existing Shared Side Sewer (Mailing; Side Sewers."
+  },
+  {
+   "id": "SMC 21.16.250",
+   "title": "Submit SS JUMA",
+   "scope": "Seattle Municipal Code. Cited 89 time(s) in Seattle correction letters, on subjects: Submit SS JUMA; Submit SS Easement; General; Submit SD Easement."
+  },
+  {
+   "id": "SMC 22.17",
+   "title": "A1.0",
+   "scope": "Seattle Municipal Code. Cited 1272 time(s) in Seattle correction letters, on subjects: Plan review and minimal risk; Special Inspector nomination; Potential landslide area covenant; Temporary Shoring and Excavation plan."
+  },
+  {
+   "id": "SMC 22.80",
+   "title": "General",
+   "scope": "Seattle Municipal Code. Cited 232 time(s) in Seattle correction letters, on subjects: General; Submit MDC; OSM Calculator Required - SFR; CSC/Soil Plan."
+  },
+  {
+   "id": "SMC 23.11.050",
+   "title": "ECA Revegetation",
+   "scope": "Seattle Municipal Code. Cited 1 time(s) in Seattle correction letters, on subjects: ECA Revegetation."
+  },
+  {
+   "id": "SMC 23.24",
+   "title": "Zoning - SMC 23.24 - Short Plats",
+   "scope": "Seattle Municipal Code. Cited 2 time(s) in Seattle correction letters, on subjects: Zoning - SMC 23.24 - Short Plats."
+  },
+  {
+   "id": "SMC 23.24.045",
+   "title": "[delete and add subject for zoning]",
+   "scope": "Seattle Municipal Code. Cited 1 time(s) in Seattle correction letters, on subjects: [delete and add subject for zoning]."
+  },
+  {
+   "id": "SMC 23.40.030",
+   "title": "Zoning - SMC 23.44 - Neighborhood Residential",
+   "scope": "Seattle Municipal Code. Cited 1 time(s) in Seattle correction letters, on subjects: Zoning - SMC 23.44 - Neighborhood Residential."
+  },
+  {
+   "id": "SMC 23.40.035",
+   "title": "Zoning - SMC 23.44 - Neighborhood Residential",
+   "scope": "Seattle Municipal Code. Cited 4 time(s) in Seattle correction letters, on subjects: Zoning - SMC 23.44 - Neighborhood Residential; Zoning – SMC 23.44 – Single-Family Residential; Zoning."
+  },
+  {
+   "id": "SMC 23.41",
+   "title": "Construction Wait for MUP",
+   "scope": "Seattle Municipal Code. Cited 1 time(s) in Seattle correction letters, on subjects: Construction Wait for MUP."
+  },
+  {
+   "id": "SMC 23.41.004",
+   "title": "Construction Wait for MUP",
+   "scope": "Seattle Municipal Code. Cited 2 time(s) in Seattle correction letters, on subjects: Construction Wait for MUP; Zoning - General and Special Corrections."
+  },
+  {
+   "id": "SMC 23.41.018",
+   "title": "General Land Use Review Comment",
+   "scope": "Seattle Municipal Code. Cited 1 time(s) in Seattle correction letters, on subjects: General Land Use Review Comment."
+  },
+  {
+   "id": "SMC 23.42.022",
+   "title": "Primary residence floor plans",
+   "scope": "Seattle Municipal Code. Cited 13 time(s) in Seattle correction letters, on subjects: Primary residence floor plans; Zoning - General and Special Corrections; Allotted DADU height; DADU allotted height."
+  },
+  {
+   "id": "SMC 23.42.048",
+   "title": "Zoning - SMC 23.44 - Neighborhood Residential",
+   "scope": "Seattle Municipal Code. Cited 19 time(s) in Seattle correction letters, on subjects: Zoning - SMC 23.44 - Neighborhood Residential; Zoning – SMC 23.44 – Single-Family Residential; Zoning - General and Special Corrections; Zoning - SMC 23.45 - Multifamily."
+  },
+  {
+   "id": "SMC 23.42.057",
+   "title": "Zoning - General and Special Corrections",
+   "scope": "Seattle Municipal Code. Cited 1 time(s) in Seattle correction letters, on subjects: Zoning - General and Special Corrections."
+  },
+  {
+   "id": "SMC 23.42.112",
+   "title": "Zoning – SMC 23.44 – Single-Family Residential",
+   "scope": "Seattle Municipal Code. Cited 16 time(s) in Seattle correction letters, on subjects: Zoning – SMC 23.44 – Single-Family Residential; Zoning - SMC 23.44 - Neighborhood Residential; Zoning - General and Special Corrections; Zoning – SMC 23.45 – Multifamily."
+  },
+  {
+   "id": "SMC 23.43.112",
+   "title": "DADU allotted height",
+   "scope": "Seattle Municipal Code. Cited 1 time(s) in Seattle correction letters, on subjects: DADU allotted height."
+  },
+  {
+   "id": "SMC 23.44",
+   "title": "Tree Requirements",
+   "scope": "Seattle Municipal Code. Cited 310 time(s) in Seattle correction letters, on subjects: Zoning - SMC 23.44 - Neighborhood Residential; Zoning – SMC 23.44 – Single-Family Residential; Zoning - General and Special Corrections; Lot Coverage."
+  },
+  {
+   "id": "SMC 23.44.007",
+   "title": "Mandatory Housing Affordability (MHA",
+   "scope": "Seattle Municipal Code. Cited 12 time(s) in Seattle correction letters, on subjects: MHA - SMC 23.58B and 23.58C - Mandatory; MHA - SMC 23.58B and 23.58C - Mandatory Housing Affordability; Zoning – SMC 23.58B and 23.58C – Mandatory; Zoning - SMC 23.44 - Neighborhood Residential."
+  },
+  {
+   "id": "SMC 23.44.008",
+   "title": "Lighting",
+   "scope": "Seattle Municipal Code. Cited 52 time(s) in Seattle correction letters, on subjects: Zoning - SMC 23.44 - Neighborhood Residential; Zoning - General and Special Corrections; Zoning – SMC 23.44 – Single-Family Residential; Zoning – SMC 23.44 – Neighborhood Residential."
+  },
+  {
+   "id": "SMC 23.44.009",
+   "title": "RSL Design Standards",
+   "scope": "Seattle Municipal Code. Cited 11 time(s) in Seattle correction letters, on subjects: Zoning - SMC 23.44 - Neighborhood Residential; [delete and add subject for zoning]."
+  },
+  {
+   "id": "SMC 23.44.010",
+   "title": "Lot Coverage",
+   "scope": "Seattle Municipal Code. Cited 425 time(s) in Seattle correction letters, on subjects: Zoning - SMC 23.44 - Neighborhood Residential; Zoning – SMC 23.44 – Single-Family Residential; Lot Coverage; Allotted lot coverage."
+  },
+  {
+   "id": "SMC 23.44.011",
+   "title": "Floor Area Ratio",
+   "scope": "Seattle Municipal Code. Cited 309 time(s) in Seattle correction letters, on subjects: Zoning - SMC 23.44 - Neighborhood Residential; Zoning – SMC 23.44 – Single-Family Residential; FAR; Zoning - General and Special Corrections."
+  },
+  {
+   "id": "SMC 23.44.012",
+   "title": "Height Limits",
+   "scope": "Seattle Municipal Code. Cited 306 time(s) in Seattle correction letters, on subjects: Zoning - SMC 23.44 - Neighborhood Residential; Zoning – SMC 23.44 – Single-Family Residential; Height (SMC 23.44.012); Pitched roof (SMC 23.44.012)."
+  },
+  {
+   "id": "SMC 23.44.014",
+   "title": "Yards",
+   "scope": "Seattle Municipal Code. Cited 555 time(s) in Seattle correction letters, on subjects: Zoning - SMC 23.44 - Neighborhood Residential; Zoning – SMC 23.44 – Single-Family Residential; Rear yard; Required yards."
+  },
+  {
+   "id": "SMC 23.44.016",
+   "title": "Parking and Garages",
+   "scope": "Seattle Municipal Code. Cited 112 time(s) in Seattle correction letters, on subjects: Zoning - SMC 23.44 - Neighborhood Residential; Zoning – SMC 23.44 – Single-Family Residential; Parking; Cloud+."
+  },
+  {
+   "id": "SMC 23.44.017",
+   "title": "Density Limits",
+   "scope": "Seattle Municipal Code. Cited 8 time(s) in Seattle correction letters, on subjects: Zoning - SMC 23.44 - Neighborhood Residential; Zoning – SMC 23.58B and 23.58C – Mandatory Housing Affordability."
+  },
+  {
+   "id": "SMC 23.44.018",
+   "title": "RSL Dwelling Unit Size",
+   "scope": "Seattle Municipal Code. Cited 13 time(s) in Seattle correction letters, on subjects: Zoning - SMC 23.44 - Neighborhood Residential; Zoning – SMC 23.44 – Single-Family Residential."
+  },
+  {
+   "id": "SMC 23.44.019",
+   "title": "Lot Coverage",
+   "scope": "Seattle Municipal Code. Cited 1 time(s) in Seattle correction letters, on subjects: Lot Coverage."
+  },
+  {
+   "id": "SMC 23.44.020",
+   "title": "Tree Requirements",
+   "scope": "Seattle Municipal Code. Cited 595 time(s) in Seattle correction letters, on subjects: Zoning - SMC 23.44 - Neighborhood Residential; Zoning – SMC 23.44 – Single-Family Residential; Tree Caliper; Street trees (SMC 23.44.020)."
+  },
+  {
+   "id": "SMC 23.44.041",
+   "title": "Accessory Dwelling Units",
+   "scope": "Seattle Municipal Code. Cited 826 time(s) in Seattle correction letters, on subjects: Zoning - SMC 23.44 - Neighborhood Residential; Zoning – SMC 23.44 – Single-Family Residential; DADU gross floor area; Primary residence floor plans."
+  },
+  {
+   "id": "SMC 23.44.044",
+   "title": "Zoning – SMC 23.44 – Single-Family Residential",
+   "scope": "Seattle Municipal Code. Cited 2 time(s) in Seattle correction letters, on subjects: Zoning – SMC 23.44 – Single-Family Residential."
+  },
+  {
+   "id": "SMC 23.44.046",
+   "title": "Zoning - SMC 23.44 - Neighborhood Residential",
+   "scope": "Seattle Municipal Code. Cited 2 time(s) in Seattle correction letters, on subjects: Zoning - SMC 23.44 - Neighborhood Residential."
+  },
+  {
+   "id": "SMC 23.44.104",
+   "title": "Zoning – SMC 23.44 – Single-Family Residential",
+   "scope": "Seattle Municipal Code. Cited 1 time(s) in Seattle correction letters, on subjects: Zoning – SMC 23.44 – Single-Family Residential."
+  },
+  {
+   "id": "SMC 23.44.401",
+   "title": "Zoning – SMC 23.44 – Single-Family Residential",
+   "scope": "Seattle Municipal Code. Cited 3 time(s) in Seattle correction letters, on subjects: Zoning – SMC 23.44 – Single-Family Residential; DADU entry location."
+  },
+  {
+   "id": "SMC 23.44.518",
+   "title": "Zoning - SMC 23.45 - Multifamily",
+   "scope": "Seattle Municipal Code. Cited 1 time(s) in Seattle correction letters, on subjects: Zoning - SMC 23.45 - Multifamily."
+  },
+  {
+   "id": "SMC 23.44.527",
+   "title": "Zoning - SMC 23.45 - Multifamily",
+   "scope": "Seattle Municipal Code. Cited 2 time(s) in Seattle correction letters, on subjects: Zoning - SMC 23.45 - Multifamily."
+  },
+  {
+   "id": "SMC 23.45",
+   "title": "Landscaping",
+   "scope": "Seattle Municipal Code. Cited 51 time(s) in Seattle correction letters, on subjects: Zoning - SMC 23.45 - Multifamily; Zoning – SMC 23.45 – Multifamily; Zoning – SMC 23.58B and 23.58C – Mandatory Housing Affordability; Zoning - SMC 23.44 - Neighborhood Residential."
+  },
+  {
+   "id": "SMC 23.45.015",
+   "title": "Zoning – SMC 23.54 – Parking, Access, and Solid",
+   "scope": "Seattle Municipal Code. Cited 1 time(s) in Seattle correction letters, on subjects: Zoning – SMC 23.54 – Parking, Access, and Solid."
+  },
+  {
+   "id": "SMC 23.45.017",
+   "title": "MHA - SMC 23.58B and 23.58C - Mandatory Housing Affordability",
+   "scope": "Seattle Municipal Code. Cited 2 time(s) in Seattle correction letters, on subjects: MHA - SMC 23.58B and 23.58C - Mandatory Housing Affordability."
+  },
+  {
+   "id": "SMC 23.45.018",
+   "title": "Zoning - SMC 23.45 - Multifamily",
+   "scope": "Seattle Municipal Code. Cited 2 time(s) in Seattle correction letters, on subjects: Zoning - SMC 23.45 - Multifamily."
+  },
+  {
+   "id": "SMC 23.45.020",
+   "title": "Zoning – SMC 23.54 – Parking, Access, and Solid",
+   "scope": "Seattle Municipal Code. Cited 1 time(s) in Seattle correction letters, on subjects: Zoning – SMC 23.54 – Parking, Access, and Solid."
+  },
+  {
+   "id": "SMC 23.45.510",
+   "title": "Floor Area Ratio (FAR",
+   "scope": "Seattle Municipal Code. Cited 33 time(s) in Seattle correction letters, on subjects: Zoning - SMC 23.45 - Multifamily; Zoning – SMC 23.45 – Multifamily; MHA - SMC 23.58B and 23.58C - Mandatory Housing Affordability."
+  },
+  {
+   "id": "SMC 23.45.512",
+   "title": "Zoning – SMC 23.45 – Multifamily",
+   "scope": "Seattle Municipal Code. Cited 3 time(s) in Seattle correction letters, on subjects: Zoning – SMC 23.45 – Multifamily."
+  },
+  {
+   "id": "SMC 23.45.514",
+   "title": "Structure Height",
+   "scope": "Seattle Municipal Code. Cited 39 time(s) in Seattle correction letters, on subjects: Zoning - SMC 23.45 - Multifamily; Zoning – SMC 23.45 – Multifamily."
+  },
+  {
+   "id": "SMC 23.45.517",
+   "title": "Mandatory housing affordability (MHA",
+   "scope": "Seattle Municipal Code. Cited 6 time(s) in Seattle correction letters, on subjects: MHA - SMC 23.58B and 23.58C - Mandatory Housing Affordability; MHA - SMC 23.58B and 23.58C - Mandatory; Zoning – SMC 23.58B and 23.58C – Mandatory; Zoning – SMC 23.58B and 23.58C – Mandatory Housing Affordability."
+  },
+  {
+   "id": "SMC 23.45.518",
+   "title": "Setbacks and Separations",
+   "scope": "Seattle Municipal Code. Cited 64 time(s) in Seattle correction letters, on subjects: Zoning - SMC 23.45 - Multifamily; Zoning – SMC 23.45 – Multifamily; Zoning - General and Special Corrections."
+  },
+  {
+   "id": "SMC 23.45.522",
+   "title": "Amenity Area",
+   "scope": "Seattle Municipal Code. Cited 46 time(s) in Seattle correction letters, on subjects: Zoning - SMC 23.45 - Multifamily; Zoning – SMC 23.45 – Multifamily."
+  },
+  {
+   "id": "SMC 23.45.524",
+   "title": "Landscaping",
+   "scope": "Seattle Municipal Code. Cited 101 time(s) in Seattle correction letters, on subjects: Zoning - SMC 23.45 - Multifamily; Zoning – SMC 23.45 – Multifamily."
+  },
+  {
+   "id": "SMC 23.45.527",
+   "title": "Structure Width and Facade Lengths In LR Zones",
+   "scope": "Seattle Municipal Code. Cited 23 time(s) in Seattle correction letters, on subjects: Zoning - SMC 23.45 - Multifamily; Zoning – SMC 23.45 – Multifamily."
+  },
+  {
+   "id": "SMC 23.45.529",
+   "title": "Design Standards",
+   "scope": "Seattle Municipal Code. Cited 65 time(s) in Seattle correction letters, on subjects: Zoning - SMC 23.45 - Multifamily; Zoning – SMC 23.45 – Multifamily; Design Standards; Zoning - General and Special Corrections."
+  },
+  {
+   "id": "SMC 23.45.530",
+   "title": "Green Building",
+   "scope": "Seattle Municipal Code. Cited 15 time(s) in Seattle correction letters, on subjects: Zoning - SMC 23.45 - Multifamily."
+  },
+  {
+   "id": "SMC 23.45.534",
+   "title": "Light and Glare",
+   "scope": "Seattle Municipal Code. Cited 33 time(s) in Seattle correction letters, on subjects: Zoning - SMC 23.45 - Multifamily; Zoning – SMC 23.45 – Multifamily."
+  },
+  {
+   "id": "SMC 23.45.536",
+   "title": "Parking Location, Access, and Screening",
+   "scope": "Seattle Municipal Code. Cited 7 time(s) in Seattle correction letters, on subjects: Zoning - SMC 23.45 - Multifamily; Zoning – SMC 23.45 – Multifamily; Parking location (SMC 23.45.536); Parking."
+  },
+  {
+   "id": "SMC 23.45.545",
+   "title": "Standards for Certain Accessory Uses",
+   "scope": "Seattle Municipal Code. Cited 12 time(s) in Seattle correction letters, on subjects: Zoning - SMC 23.45 - Multifamily; Zoning – SMC 23.45 – Multifamily; MHA - SMC 23.58B and 23.58C - Mandatory; General and Special Corrections."
+  },
+  {
+   "id": "SMC 23.47",
+   "title": "Landscaping and Screening Standards",
+   "scope": "Seattle Municipal Code. Cited 27 time(s) in Seattle correction letters, on subjects: Zoning - SMC 23.47A - Commercial; Zoning - SMC 23.47A.008 - Commercial; Zoning - SMC 23.47A.012 - Commercial; Zoning - SMC 23.47A.013 - Commercial."
+  },
+  {
+   "id": "SMC 23.53",
+   "title": "Access easement standards",
+   "scope": "Seattle Municipal Code. Cited 96 time(s) in Seattle correction letters, on subjects: Zoning - SMC 23.53 - Streets, Alleys, and Easements."
+  },
+  {
+   "id": "SMC 23.53.005",
+   "title": "Access to Lots",
+   "scope": "Seattle Municipal Code. Cited 4 time(s) in Seattle correction letters, on subjects: Zoning - SMC 23.53 - Streets, Alleys, and Easements."
+  },
+  {
+   "id": "SMC 23.53.006",
+   "title": "Pedestrian Access and Circulation",
+   "scope": "Seattle Municipal Code. Cited 44 time(s) in Seattle correction letters, on subjects: Zoning - SMC 23.53 - Streets, Alleys, and Easements; Zoning – SMC 23.53 – Streets, Alleys, and; Zoning - General and Special Corrections; No protest agreement."
+  },
+  {
+   "id": "SMC 23.53.015",
+   "title": "Zoning - SMC 23.53 - Streets, Alleys, and Easements",
+   "scope": "Seattle Municipal Code. Cited 103 time(s) in Seattle correction letters, on subjects: Zoning - SMC 23.53 - Streets, Alleys, and Easements; Zoning – SMC 23.53 – Streets, Alleys, and; Zoning - SMC 23.54 - Parking, Access, and Solid; Minimum right of way width (SMC 23.53.015)."
+  },
+  {
+   "id": "SMC 23.53.025",
+   "title": "Access easement standards",
+   "scope": "Seattle Municipal Code. Cited 23 time(s) in Seattle correction letters, on subjects: Zoning - SMC 23.53 - Streets, Alleys, and Easements."
+  },
+  {
+   "id": "SMC 23.53.030",
+   "title": "Alley improvements in all zones",
+   "scope": "Seattle Municipal Code. Cited 19 time(s) in Seattle correction letters, on subjects: Zoning - SMC 23.53 - Streets, Alleys, and Easements; Zoning – SMC 23.53 – Streets, Alleys, and; ROW Dedication; Zoning – SMC 23.54 – Parking, Access, and Solid."
+  },
+  {
+   "id": "SMC 23.54",
+   "title": "Parking and Access",
+   "scope": "Seattle Municipal Code. Cited 171 time(s) in Seattle correction letters, on subjects: Zoning - SMC 23.54 - Parking, Access, and Solid; Zoning - SMC 23.54 - Parking, Access, and Solid Waste; Zoning – SMC 23.54 – Parking, Access, and Solid Waste; Zoning – SMC 23.54 – Parking, Access, and Solid."
+  },
+  {
+   "id": "SMC 23.54.006",
+   "title": "Zoning - SMC 23.53 - Streets, Alleys, and Easements",
+   "scope": "Seattle Municipal Code. Cited 4 time(s) in Seattle correction letters, on subjects: Zoning - SMC 23.53 - Streets, Alleys, and Easements."
+  },
+  {
+   "id": "SMC 23.54.015",
+   "title": "Required Parking",
+   "scope": "Seattle Municipal Code. Cited 100 time(s) in Seattle correction letters, on subjects: Zoning - SMC 23.54 - Parking, Access, and Solid Waste; Zoning - SMC 23.54 - Parking, Access, and Solid; Zoning – SMC 23.54 – Parking, Access, and Solid; Zoning – SMC 23.54 – Parking, Access, and Solid Waste."
+  },
+  {
+   "id": "SMC 23.54.020",
+   "title": "Parking quantity exceptions",
+   "scope": "Seattle Municipal Code. Cited 4 time(s) in Seattle correction letters, on subjects: Zoning - SMC 23.54 - Parking, Access, and Solid; Zoning - SMC 23.54 - Parking, Access, and Solid Waste; Parking."
+  },
+  {
+   "id": "SMC 23.54.025",
+   "title": "Off-site required parking",
+   "scope": "Seattle Municipal Code. Cited 2 time(s) in Seattle correction letters, on subjects: Zoning - SMC 23.54 - Parking, Access, and Solid Waste."
+  },
+  {
+   "id": "SMC 23.54.030",
+   "title": "Parking and Access",
+   "scope": "Seattle Municipal Code. Cited 533 time(s) in Seattle correction letters, on subjects: Zoning - SMC 23.54 - Parking, Access, and Solid; Zoning - SMC 23.54 - Parking, Access, and Solid Waste; Zoning – SMC 23.54 – Parking, Access, and Solid; Zoning – SMC 23.44 – Single-Family Residential."
+  },
+  {
+   "id": "SMC 23.54.040",
+   "title": "Waste and Recycling",
+   "scope": "Seattle Municipal Code. Cited 70 time(s) in Seattle correction letters, on subjects: Zoning - SMC 23.54 - Parking, Access, and Solid; Zoning - SMC 23.54 - Parking, Access, and Solid Waste; Zoning – SMC 23.54 – Parking, Access, and Solid; Zoning – SMC 23.54 – Parking, Access, and Solid Waste."
+  },
+  {
+   "id": "SMC 23.58",
+   "title": "Mandatory Housing Affordability",
+   "scope": "Seattle Municipal Code. Cited 284 time(s) in Seattle correction letters, on subjects: MHA - SMC 23.58B and 23.58C - Mandatory; Zoning - SMC 23.58D - Green Building - CN/PH; MHA - SMC 23.58B and 23.58C - Mandatory Housing Affordability; Zoning – SMC 23.58B and 23.58C – Mandatory."
+  },
+  {
+   "id": "SMC 23.76.026",
+   "title": "MHA - SMC 23.58B and 23.58C - Mandatory Housing Affordability",
+   "scope": "Seattle Municipal Code. Cited 6 time(s) in Seattle correction letters, on subjects: MHA - SMC 23.58B and 23.58C - Mandatory Housing Affordability; Zoning – SMC 23.58B and 23.58C – Mandatory; MHA - SMC 23.58B and 23.58C - Mandatory."
+  },
+  {
+   "id": "SMC 23.84",
+   "title": "Zoning - SMC 23.44 - Neighborhood Residential",
+   "scope": "Seattle Municipal Code. Cited 46 time(s) in Seattle correction letters, on subjects: Zoning - SMC 23.44 - Neighborhood Residential; Zoning - SMC 23.45 - Multifamily; Zoning – SMC 23.44 – Single-Family Residential; Zoning – SMC 23.45 – Multifamily."
+  },
+  {
+   "id": "SMC 23.84.014",
+   "title": "DADU gross floor area",
+   "scope": "Seattle Municipal Code. Cited 1 time(s) in Seattle correction letters, on subjects: DADU gross floor area."
+  },
+  {
+   "id": "SMC 23.86.002",
+   "title": "Zoning – SMC 23.44 – Single-Family Residential",
+   "scope": "Seattle Municipal Code. Cited 16 time(s) in Seattle correction letters, on subjects: Zoning – SMC 23.44 – Single-Family Residential; Rounding (SMC 23.86.002); Zoning -; Zoning."
+  },
+  {
+   "id": "SMC 23.86.006",
+   "title": "Zoning - SMC 23.44 - Neighborhood Residential",
+   "scope": "Seattle Municipal Code. Cited 26 time(s) in Seattle correction letters, on subjects: Zoning - SMC 23.44 - Neighborhood Residential; Zoning – SMC 23.44 – Single-Family Residential."
+  },
+  {
+   "id": "SMC 23.86.007",
+   "title": "Zoning – SMC 23.44 – Single-Family Residential",
+   "scope": "Seattle Municipal Code. Cited 42 time(s) in Seattle correction letters, on subjects: Zoning – SMC 23.44 – Single-Family Residential; Zoning - SMC 23.44 - Neighborhood Residential; MHA - SMC 23.58B and 23.58C - Mandatory Housing Affordability; Zoning - SMC 23.45 - Multifamily."
+  },
+  {
+   "id": "SMC 23.86.008",
+   "title": "Zoning - SMC 23.44 - Neighborhood Residential",
+   "scope": "Seattle Municipal Code. Cited 3 time(s) in Seattle correction letters, on subjects: Zoning - SMC 23.44 - Neighborhood Residential; Zoning – SMC 23.44 – Neighborhood Residential."
+  },
+  {
+   "id": "SMC 23.86.010",
+   "title": "Zoning – SMC 23.44 – Single-Family Residential",
+   "scope": "Seattle Municipal Code. Cited 29 time(s) in Seattle correction letters, on subjects: Zoning – SMC 23.44 – Single-Family Residential; Zoning - SMC 23.44 - Neighborhood Residential; Rear yard; Lot depth."
+  },
+  {
+   "id": "SMC 23.86.012",
+   "title": "Zoning - SMC 23.45 - Multifamily",
+   "scope": "Seattle Municipal Code. Cited 2 time(s) in Seattle correction letters, on subjects: Zoning - SMC 23.45 - Multifamily."
+  },
+  {
+   "id": "SMC 23.86.015",
+   "title": "Zoning - SMC 23.45 - Multifamily",
+   "scope": "Seattle Municipal Code. Cited 8 time(s) in Seattle correction letters, on subjects: Zoning - SMC 23.45 - Multifamily; Zoning - General and Special Corrections."
+  },
+  {
+   "id": "SMC 23.86.016",
+   "title": "Zoning - SMC 23.45 - Multifamily",
+   "scope": "Seattle Municipal Code. Cited 1 time(s) in Seattle correction letters, on subjects: Zoning - SMC 23.45 - Multifamily."
+  },
+  {
+   "id": "SMC 23.86.019",
+   "title": "Zoning - SMC 23.45 - Multifamily",
+   "scope": "Seattle Municipal Code. Cited 1 time(s) in Seattle correction letters, on subjects: Zoning - SMC 23.45 - Multifamily."
+  },
+  {
+   "id": "SMC 23.86.028",
+   "title": "Zoning - SMC 23.47A - Commercial",
+   "scope": "Seattle Municipal Code. Cited 1 time(s) in Seattle correction letters, on subjects: Zoning - SMC 23.47A - Commercial."
+  },
+  {
+   "id": "SMC 24.44.041",
+   "title": "AADU gross floor area",
+   "scope": "Seattle Municipal Code. Cited 1 time(s) in Seattle correction letters, on subjects: AADU gross floor area."
+  },
+  {
+   "id": "SMC 25.06.030",
+   "title": "Floodplain",
+   "scope": "Seattle Municipal Code. Cited 1 time(s) in Seattle correction letters, on subjects: Floodplain."
+  },
+  {
+   "id": "SMC 25.06.050",
+   "title": "Floodplain",
+   "scope": "Seattle Municipal Code. Cited 2 time(s) in Seattle correction letters, on subjects: Floodplain."
+  },
+  {
+   "id": "SMC 25.06.070",
+   "title": "Floodplain",
+   "scope": "Seattle Municipal Code. Cited 1 time(s) in Seattle correction letters, on subjects: Floodplain."
+  },
+  {
+   "id": "SMC 25.06.090",
+   "title": "Floodplain",
+   "scope": "Seattle Municipal Code. Cited 1 time(s) in Seattle correction letters, on subjects: Floodplain."
+  },
+  {
+   "id": "SMC 25.06.100",
+   "title": "Floodplain",
+   "scope": "Seattle Municipal Code. Cited 1 time(s) in Seattle correction letters, on subjects: Floodplain."
+  },
+  {
+   "id": "SMC 25.06.110",
+   "title": "Floodplain",
+   "scope": "Seattle Municipal Code. Cited 1 time(s) in Seattle correction letters, on subjects: Floodplain."
+  },
+  {
+   "id": "SMC 25.06.120",
+   "title": "Floodplain",
+   "scope": "Seattle Municipal Code. Cited 1 time(s) in Seattle correction letters, on subjects: Floodplain."
+  },
+  {
+   "id": "SMC 25.09",
+   "title": "ECA Revegetation",
+   "scope": "Seattle Municipal Code. Cited 6 time(s) in Seattle correction letters, on subjects: ECA Revegetation; ECA Steep Slope and Buffer Delineation; Land Use Code Title 23 Tree Identification; Temporary Shoring and Excavation plan."
+  },
+  {
+   "id": "SMC 25.09.012",
+   "title": "Steep slope ECA delineation",
+   "scope": "Seattle Municipal Code. Cited 5 time(s) in Seattle correction letters, on subjects: Steep slope ECA delineation; Floodplain."
+  },
+  {
+   "id": "SMC 25.09.020",
+   "title": "General",
+   "scope": "Seattle Municipal Code. Cited 6 time(s) in Seattle correction letters, on subjects: General; Steep slope ECA delineation."
+  },
+  {
+   "id": "SMC 25.09.060",
+   "title": "Grading season restriction",
+   "scope": "Seattle Municipal Code. Cited 61 time(s) in Seattle correction letters, on subjects: Grading season restriction; Stormwater control and discharge; Footing Drains; Construction fence."
+  },
+  {
+   "id": "SMC 25.09.065",
+   "title": "ECA Revegetation",
+   "scope": "Seattle Municipal Code. Cited 57 time(s) in Seattle correction letters, on subjects: ECA Revegetation."
+  },
+  {
+   "id": "SMC 25.09.070",
+   "title": "ECA Revegetation",
+   "scope": "Seattle Municipal Code. Cited 86 time(s) in Seattle correction letters, on subjects: ECA Revegetation; Land Use Code Title 23 Tree Identification; ECA Riparian."
+  },
+  {
+   "id": "SMC 25.09.080",
+   "title": "Liability insurance basic",
+   "scope": "Seattle Municipal Code. Cited 203 time(s) in Seattle correction letters, on subjects: Liability insurance basic; Liability Insurance; Liability Insurance - including Products Completed Operations coverage; Landslide-prone ECA complete stabilization."
+  },
+  {
+   "id": "SMC 25.09.090",
+   "title": "Steep slope ECA delineation",
+   "scope": "Seattle Municipal Code. Cited 5 time(s) in Seattle correction letters, on subjects: Steep slope ECA delineation; Steep slope ECA variance review; Steep slope ECA variance granted; Non-disturbance areas."
+  },
+  {
+   "id": "SMC 25.09.100",
+   "title": "Liquefaction settlement evaluation",
+   "scope": "Seattle Municipal Code. Cited 27 time(s) in Seattle correction letters, on subjects: Liquefaction settlement evaluation; Liquefaction evaluation; Liquefaction mitigation."
+  },
+  {
+   "id": "SMC 25.09.110",
+   "title": "ECA Peat Settlement-Prone Area development below groundwater table",
+   "scope": "Seattle Municipal Code. Cited 7 time(s) in Seattle correction letters, on subjects: ECA Peat Settlement-Prone Area development below groundwater table; ECA Peat Settlement-Prone Area geotechnical; ECA Peat Settlement-Prone Area prohibition on groundwater collection systems; Category 1 Peat Settlement ECA – Infiltration/Dispersion Required for New Hard Surfaces."
+  },
+  {
+   "id": "SMC 25.09.180",
+   "title": "Steep slope ECA variance review",
+   "scope": "Seattle Municipal Code. Cited 4 time(s) in Seattle correction letters, on subjects: Steep slope ECA variance review."
+  },
+  {
+   "id": "SMC 25.09.200",
+   "title": "Temporary Shoring and Excavation plan",
+   "scope": "Seattle Municipal Code. Cited 2 time(s) in Seattle correction letters, on subjects: Temporary Shoring and Excavation plan; ECA Revegetation."
+  },
+  {
+   "id": "SMC 25.09.330",
+   "title": "Potential landslide ECA note",
+   "scope": "Seattle Municipal Code. Cited 86 time(s) in Seattle correction letters, on subjects: Potential landslide ECA note; Steep slope ECA note; Geotechnical report; Geotechnical Report."
+  },
+  {
+   "id": "SMC 25.09.335",
+   "title": "Permanent visible markers",
+   "scope": "Seattle Municipal Code. Cited 15 time(s) in Seattle correction letters, on subjects: Permanent visible markers; General Land Use Review Comment; ECA covenant information request; ECA covenant."
+  },
+  {
+   "id": "SMC 25.11",
+   "title": "General Tree Comment",
+   "scope": "Seattle Municipal Code. Cited 222 time(s) in Seattle correction letters, on subjects: General Tree Comment; Land Use Code Title 23 Tree Identification; Tree replacement summary; Tree Replacement Requirements -- Show."
+  },
+  {
+   "id": "SMC 25.11.050",
+   "title": "Land Use Code Title 23 Tree Identification",
+   "scope": "Seattle Municipal Code. Cited 15 time(s) in Seattle correction letters, on subjects: Land Use Code Title 23 Tree Identification; Zoning - General and Special Corrections; Tree overview-no response needed; Tree Protection Fence."
+  },
+  {
+   "id": "SMC 25.11.060",
+   "title": "Site Plan Requirements -- Trees",
+   "scope": "Seattle Municipal Code. Cited 66 time(s) in Seattle correction letters, on subjects: Site Plan Requirements -- Trees; General Tree Comment; Zoning – SMC 23.44 – Single-Family Residential; Zoning - SMC 23.44 - Neighborhood Residential."
+  },
+  {
+   "id": "SMC 25.11.070",
+   "title": "General Tree Comment",
+   "scope": "Seattle Municipal Code. Cited 30 time(s) in Seattle correction letters, on subjects: General Tree Comment; Zoning - SMC 23.44 - Neighborhood Residential; Tree removal requirements (SMC 25.11.070); Tree Analysis Diagram (SMC 25.11.070.A)."
+  },
+  {
+   "id": "SMC 25.11.090",
+   "title": "General Tree Comment",
+   "scope": "Seattle Municipal Code. Cited 109 time(s) in Seattle correction letters, on subjects: General Tree Comment; Tree Replacement Requirements (SMC 25.11.090); Tree Replacement Requirements -- General; Tree Replacement Requirements (SMC."
+  },
+  {
+   "id": "SMC 25.33",
+   "title": "ECA Covenant",
+   "scope": "Seattle Municipal Code. Cited 8 time(s) in Seattle correction letters, on subjects: ECA Covenant; ECA covenant e-recording instructions."
+  },
+  {
+   "id": "SMC 32.44.041",
+   "title": "Proposed two dwelling units",
+   "scope": "Seattle Municipal Code. Cited 2 time(s) in Seattle correction letters, on subjects: Proposed two dwelling units."
+  },
+  {
+   "id": "SMC 44.01",
+   "title": "ZONING",
+   "scope": "Seattle Municipal Code. Cited 1 time(s) in Seattle correction letters, on subjects: ZONING."
+  },
+  {
+   "id": "SRC 101",
+   "title": "00 Code Edition",
+   "scope": "Seattle Residential Code. Cited 3 time(s) in Seattle correction letters, on subjects: 00 Code Edition; 101.2 Scope."
+  },
+  {
+   "id": "SRC 107",
+   "title": "01 Substantial Alteration",
+   "scope": "Seattle Residential Code. Cited 1 time(s) in Seattle correction letters, on subjects: 01 Substantial Alteration."
+  },
+  {
+   "id": "SRC 202",
+   "title": "Scope",
+   "scope": "Seattle Residential Code. Cited 3 time(s) in Seattle correction letters, on subjects: Scope; 302 Fire Separation; Unlabeled local exhaust fan used as whole house ventilation."
+  },
+  {
+   "id": "SRC 301",
+   "title": "301 Design Criteria",
+   "scope": "Seattle Residential Code. Cited 3 time(s) in Seattle correction letters, on subjects: 301 Design Criteria; 16 Gravity Design."
+  },
+  {
+   "id": "SRC 302",
+   "title": "302 Fire Separation",
+   "scope": "Seattle Residential Code. Cited 26 time(s) in Seattle correction letters, on subjects: 302 Fire Separation; 311 Means of Egress; 07 Fire Resistive Assemblies."
+  },
+  {
+   "id": "SRC 308",
+   "title": "308 Safety Glazing",
+   "scope": "Seattle Residential Code. Cited 4 time(s) in Seattle correction letters, on subjects: 308 Safety Glazing."
+  },
+  {
+   "id": "SRC 310",
+   "title": "310 Emergency Escape",
+   "scope": "Seattle Residential Code. Cited 6 time(s) in Seattle correction letters, on subjects: 310 Emergency Escape."
+  },
+  {
+   "id": "SRC 311",
+   "title": "A1.0",
+   "scope": "Seattle Residential Code. Cited 5 time(s) in Seattle correction letters, on subjects: 311 Means of Egress; 301 Design Criteria."
+  },
+  {
+   "id": "SRC 314",
+   "title": "314 Smoke Alarms",
+   "scope": "Seattle Residential Code. Cited 1 time(s) in Seattle correction letters, on subjects: 314 Smoke Alarms."
+  },
+  {
+   "id": "SRC 315",
+   "title": "315 Carbon Monoxide Alarms",
+   "scope": "Seattle Residential Code. Cited 1 time(s) in Seattle correction letters, on subjects: 315 Carbon Monoxide Alarms."
+  },
+  {
+   "id": "SRC 324",
+   "title": "00 General",
+   "scope": "Seattle Residential Code. Cited 1 time(s) in Seattle correction letters, on subjects: 00 General."
+  },
+  {
+   "id": "SRC 333",
+   "title": "R325.3",
+   "scope": "Seattle Residential Code. Cited 3 time(s) in Seattle correction letters, on subjects: 333 Loft."
+  },
+  {
+   "id": "SRC 335",
+   "title": "335 Security",
+   "scope": "Seattle Residential Code. Cited 1 time(s) in Seattle correction letters, on subjects: 335 Security."
+  },
+  {
+   "id": "SRC 401",
+   "title": "401.5 Protection of Adjoining Propery",
+   "scope": "Seattle Residential Code. Cited 1 time(s) in Seattle correction letters, on subjects: 401.5 Protection of Adjoining Propery."
+  },
+  {
+   "id": "SRC 408",
+   "title": "408 Underfloor Space",
+   "scope": "Seattle Residential Code. Cited 3 time(s) in Seattle correction letters, on subjects: 408 Underfloor Space; Scope."
+  },
+  {
+   "id": "SRC 504",
+   "title": "General",
+   "scope": "Seattle Residential Code. Cited 1 time(s) in Seattle correction letters, on subjects: General."
+  },
+  {
+   "id": "SRC 602",
+   "title": "Prescriptive Lateral",
+   "scope": "Seattle Residential Code. Cited 2 time(s) in Seattle correction letters, on subjects: Prescriptive Lateral; Missing whole house ventilation method."
+  },
+  {
+   "id": "SRC 806",
+   "title": "806 Roof Ventilation",
+   "scope": "Seattle Residential Code. Cited 1 time(s) in Seattle correction letters, on subjects: 806 Roof Ventilation."
+  },
+  {
+   "id": "SRC 1004",
+   "title": "General",
+   "scope": "Seattle Residential Code. Cited 7 time(s) in Seattle correction letters, on subjects: General; Missing UL listing; Chimneys & Fireplaces."
+  },
+  {
+   "id": "SRC 1504",
+   "title": "General",
+   "scope": "Seattle Residential Code. Cited 1 time(s) in Seattle correction letters, on subjects: General."
+  },
+  {
+   "id": "SRC 1505",
+   "title": "General",
+   "scope": "Seattle Residential Code. Cited 2 time(s) in Seattle correction letters, on subjects: General; Unlabeled local exhaust fan used as whole house."
+  },
+  {
+   "id": "SRC 2018",
+   "title": "00 General",
+   "scope": "Seattle Residential Code. Cited 2 time(s) in Seattle correction letters, on subjects: 00 General; 302 Fire Separation."
+  },
+  {
+   "id": "SRC 2021",
+   "title": "General",
+   "scope": "Seattle Residential Code. Cited 2 time(s) in Seattle correction letters, on subjects: General; Structural Design Criteria."
+  },
+  {
+   "id": "SRC G2406",
+   "title": "Scope",
+   "scope": "Seattle Residential Code. Cited 1 time(s) in Seattle correction letters, on subjects: Scope."
+  },
+  {
+   "id": "SRC M303",
+   "title": "Missing whole house ventilation method",
+   "scope": "Seattle Residential Code. Cited 1 time(s) in Seattle correction letters, on subjects: Missing whole house ventilation method."
+  },
+  {
+   "id": "SRC M1307",
+   "title": "Mechanical",
+   "scope": "Seattle Residential Code. Cited 3 time(s) in Seattle correction letters, on subjects: Mechanical; Administration; 309 Garages."
+  },
+  {
+   "id": "SRC M1501",
+   "title": "Exhaust terminated to wrong location",
+   "scope": "Seattle Residential Code. Cited 9 time(s) in Seattle correction letters, on subjects: Exhaust terminated to wrong location; General."
+  },
+  {
+   "id": "SRC M1503",
+   "title": "General",
+   "scope": "Seattle Residential Code. Cited 32 time(s) in Seattle correction letters, on subjects: General; Missing local exhaust fan on drawing."
+  },
+  {
+   "id": "SRC M1504",
+   "title": "Building B",
+   "scope": "Seattle Residential Code. Cited 166 time(s) in Seattle correction letters, on subjects: General; Missing Exhaust termination; Exhaust terminated to wrong location."
+  },
+  {
+   "id": "SRC M1505",
+   "title": "Whole House Fan Noise",
+   "scope": "Seattle Residential Code. Cited 468 time(s) in Seattle correction letters, on subjects: General; Missing local exhaust fan on drawing; Missing whole house ventilation method; Unlabeled local exhaust fan used as whole house."
+  },
+  {
+   "id": "SRC M1506",
+   "title": "General",
+   "scope": "Seattle Residential Code. Cited 5 time(s) in Seattle correction letters, on subjects: General."
+  },
+  {
+   "id": "SRC M1507",
+   "title": "General",
+   "scope": "Seattle Residential Code. Cited 2 time(s) in Seattle correction letters, on subjects: General."
+  },
+  {
+   "id": "SRC M1540",
+   "title": "General",
+   "scope": "Seattle Residential Code. Cited 1 time(s) in Seattle correction letters, on subjects: General."
+  },
+  {
+   "id": "SRC P2904",
+   "title": "General",
+   "scope": "Seattle Residential Code. Cited 20 time(s) in Seattle correction letters, on subjects: General; 302 Fire Separation."
+  },
+  {
+   "id": "SRC R101",
+   "title": "302 Fire Separation",
+   "scope": "Seattle Residential Code. Cited 27 time(s) in Seattle correction letters, on subjects: 302 Fire Separation; Scope; Administration; 101 SRC Scope."
+  },
+  {
+   "id": "SRC R105",
+   "title": "A2.4",
+   "scope": "Seattle Residential Code. Cited 132 time(s) in Seattle correction letters, on subjects: Administration; 01 Administration; Wood Framing; 105 Required Plan Details."
+  },
+  {
+   "id": "SRC R106",
+   "title": "Special Inspections",
+   "scope": "Seattle Residential Code. Cited 11 time(s) in Seattle correction letters, on subjects: Special Inspections; 17 Special Inspections; Floodplain; Administration."
+  },
+  {
+   "id": "SRC R107",
+   "title": "Substantial Alteration",
+   "scope": "Seattle Residential Code. Cited 95 time(s) in Seattle correction letters, on subjects: Substantial Alteration; 01 Substantial Alteration; URM Chimney; 16 Lateral Design."
+  },
+  {
+   "id": "SRC R202",
+   "title": "333 Loft",
+   "scope": "Seattle Residential Code. Cited 6 time(s) in Seattle correction letters, on subjects: 333 Loft; 202 Fire Separation Distance Definition; General."
+  },
+  {
+   "id": "SRC R301",
+   "title": "312 Guards and Window Fall Protection",
+   "scope": "Seattle Residential Code. Cited 120 time(s) in Seattle correction letters, on subjects: 312 Guards and Window Fall Protection; Wood Framing; 301 Design Criteria; Structural Design Criteria."
+  },
+  {
+   "id": "SRC R302",
+   "title": "A4.0",
+   "scope": "Seattle Residential Code. Cited 909 time(s) in Seattle correction letters, on subjects: 302 Fire Separation; 309 Garages; 314 Smoke Alarms; 03 Use and Occupancy."
+  },
+  {
+   "id": "SRC R303",
+   "title": "Intakes",
+   "scope": "Seattle Residential Code. Cited 66 time(s) in Seattle correction letters, on subjects: General; Missing whole house ventilation outdoor air inlet; 314 Smoke Alarms."
+  },
+  {
+   "id": "SRC R304",
+   "title": "304 Minimum Room Area",
+   "scope": "Seattle Residential Code. Cited 22 time(s) in Seattle correction letters, on subjects: 304 Minimum Room Area."
+  },
+  {
+   "id": "SRC R305",
+   "title": "305 Ceiling Height",
+   "scope": "Seattle Residential Code. Cited 21 time(s) in Seattle correction letters, on subjects: 305 Ceiling Height; General Comment."
+  },
+  {
+   "id": "SRC R306",
+   "title": "306 Sanitation",
+   "scope": "Seattle Residential Code. Cited 6 time(s) in Seattle correction letters, on subjects: 306 Sanitation; 306 Kitchen."
+  },
+  {
+   "id": "SRC R307",
+   "title": "307 Toilet, Bath, and Shower Spaces",
+   "scope": "Seattle Residential Code. Cited 5 time(s) in Seattle correction letters, on subjects: 307 Toilet, Bath, and Shower Spaces; 304 Minimum Room Area."
+  },
+  {
+   "id": "SRC R308",
+   "title": "A105",
+   "scope": "Seattle Residential Code. Cited 250 time(s) in Seattle correction letters, on subjects: 308 Safety Glazing; 00 General; 03 Building Planning and Construction; 312 Guards and Window Fall Protection."
+  },
+  {
+   "id": "SRC R309",
+   "title": "309 Garages",
+   "scope": "Seattle Residential Code. Cited 26 time(s) in Seattle correction letters, on subjects: 309 Garages; 302 Fire Separation; 314 Smoke Alarms."
+  },
+  {
+   "id": "SRC R310",
+   "title": "A1.0",
+   "scope": "Seattle Residential Code. Cited 173 time(s) in Seattle correction letters, on subjects: 310 Emergency Escape; 311 Means of Egress; General Comment; 309 Garages."
+  },
+  {
+   "id": "SRC R311",
+   "title": "A201",
+   "scope": "Seattle Residential Code. Cited 179 time(s) in Seattle correction letters, on subjects: 311 Means of Egress; Substantial Alteration; Plan Clarity; 301 Design Criteria."
+  },
+  {
+   "id": "SRC R312",
+   "title": "A301",
+   "scope": "Seattle Residential Code. Cited 108 time(s) in Seattle correction letters, on subjects: 312 Guards and Window Fall Protection; 311 Means of Egress; 03 Building Planning and Construction; 312 Guards."
+  },
+  {
+   "id": "SRC R313",
+   "title": "General",
+   "scope": "Seattle Residential Code. Cited 14 time(s) in Seattle correction letters, on subjects: General; 313 Automatic Fire Sprinkler System; 302 Fire Separation; Scope."
+  },
+  {
+   "id": "SRC R314",
+   "title": "A2.1",
+   "scope": "Seattle Residential Code. Cited 202 time(s) in Seattle correction letters, on subjects: 314 Smoke Alarms; 309 Garages; 302 Fire Separation; 315 Carbon Monoxide Alarms."
+  },
+  {
+   "id": "SRC R315",
+   "title": "A101-A104",
+   "scope": "Seattle Residential Code. Cited 102 time(s) in Seattle correction letters, on subjects: 315 Carbon Monoxide Alarms; 314 Smoke Alarms; 310 Emergency Escape; General Comment."
+  },
+  {
+   "id": "SRC R317",
+   "title": "Wood Framing",
+   "scope": "Seattle Residential Code. Cited 8 time(s) in Seattle correction letters, on subjects: Wood Framing; 301 Design Criteria."
+  },
+  {
+   "id": "SRC R324",
+   "title": "Appendix T",
+   "scope": "Seattle Residential Code. Cited 4 time(s) in Seattle correction letters, on subjects: Appendix T; 326 Habitable Attics."
+  },
+  {
+   "id": "SRC R326",
+   "title": "326 Habitable Attics",
+   "scope": "Seattle Residential Code. Cited 2 time(s) in Seattle correction letters, on subjects: 326 Habitable Attics; 00 Code Edition."
+  },
+  {
+   "id": "SRC R327",
+   "title": "327 Sleeping Lofts",
+   "scope": "Seattle Residential Code. Cited 2 time(s) in Seattle correction letters, on subjects: 327 Sleeping Lofts."
+  },
+  {
+   "id": "SRC R333",
+   "title": "R325.3",
+   "scope": "Seattle Residential Code. Cited 4 time(s) in Seattle correction letters, on subjects: 333 Loft; 311 Means of Egress."
+  },
+  {
+   "id": "SRC R334",
+   "title": "302 Fire Separation",
+   "scope": "Seattle Residential Code. Cited 58 time(s) in Seattle correction letters, on subjects: 302 Fire Separation; 334 Sound Separation; 314 Smoke Alarms; General Comment."
+  },
+  {
+   "id": "SRC R336",
+   "title": "A9.1",
+   "scope": "Seattle Residential Code. Cited 42 time(s) in Seattle correction letters, on subjects: 334 Sound Separation; 336 Sound Separation."
+  },
+  {
+   "id": "SRC R401",
+   "title": "401.5 Protection of Adjoining Propery",
+   "scope": "Seattle Residential Code. Cited 22 time(s) in Seattle correction letters, on subjects: 401.5 Protection of Adjoining Propery; 401.4."
+  },
+  {
+   "id": "SRC R402",
+   "title": "Foundations",
+   "scope": "Seattle Residential Code. Cited 5 time(s) in Seattle correction letters, on subjects: Foundations."
+  },
+  {
+   "id": "SRC R403",
+   "title": "Foundations",
+   "scope": "Seattle Residential Code. Cited 8 time(s) in Seattle correction letters, on subjects: Foundations."
+  },
+  {
+   "id": "SRC R404",
+   "title": "Foundations",
+   "scope": "Seattle Residential Code. Cited 1 time(s) in Seattle correction letters, on subjects: Foundations."
+  },
+  {
+   "id": "SRC R405",
+   "title": "405 Foundation Drainage",
+   "scope": "Seattle Residential Code. Cited 12 time(s) in Seattle correction letters, on subjects: 405 Foundation Drainage; 04 Foundations; Foundations; Retaining wall."
+  },
+  {
+   "id": "SRC R408",
+   "title": "408 Underfloor Space",
+   "scope": "Seattle Residential Code. Cited 36 time(s) in Seattle correction letters, on subjects: 408 Underfloor Space; 310 Emergency Escape."
+  },
+  {
+   "id": "SRC R410",
+   "title": "401.5 Protection of Adjoining Propery",
+   "scope": "Seattle Residential Code. Cited 1 time(s) in Seattle correction letters, on subjects: 401.5 Protection of Adjoining Propery."
+  },
+  {
+   "id": "SRC R502",
+   "title": "Foundations",
+   "scope": "Seattle Residential Code. Cited 3 time(s) in Seattle correction letters, on subjects: Foundations; Wood Framing."
+  },
+  {
+   "id": "SRC R507",
+   "title": "Decks",
+   "scope": "Seattle Residential Code. Cited 11 time(s) in Seattle correction letters, on subjects: Decks; Wood Framing; 16 Lateral Design."
+  },
+  {
+   "id": "SRC R602",
+   "title": "Prescriptive Lateral",
+   "scope": "Seattle Residential Code. Cited 15 time(s) in Seattle correction letters, on subjects: Prescriptive Lateral; Structural Design Criteria; Engineered Lateral; 602 Wood Walls."
+  },
+  {
+   "id": "SRC R806",
+   "title": "R3/A4.7",
+   "scope": "Seattle Residential Code. Cited 165 time(s) in Seattle correction letters, on subjects: 806 Roof Ventilation; Ordinance; 807 Attic Access; 302 Fire Separation."
+  },
+  {
+   "id": "SRC R807",
+   "title": "807 Attic Access",
+   "scope": "Seattle Residential Code. Cited 4 time(s) in Seattle correction letters, on subjects: 807 Attic Access."
+  },
+  {
+   "id": "SRC R903",
+   "title": "903 Roof Drainage",
+   "scope": "Seattle Residential Code. Cited 17 time(s) in Seattle correction letters, on subjects: 903 Roof Drainage."
+  },
+  {
+   "id": "SRC R1004",
+   "title": "A2.1",
+   "scope": "Seattle Residential Code. Cited 27 time(s) in Seattle correction letters, on subjects: Chimneys & Fireplaces; General Comment; 303 Light, Ventilation and Heating; 1004.1."
+  },
+  {
+   "id": "SRC R3023",
+   "title": "302 Fire Separation",
+   "scope": "Seattle Residential Code. Cited 1 time(s) in Seattle correction letters, on subjects: 302 Fire Separation."
+  },
+  {
+   "id": "SRC T101",
+   "title": "Appendix T",
+   "scope": "Seattle Residential Code. Cited 32 time(s) in Seattle correction letters, on subjects: Appendix T; General; Appendix T - Solar; Administration."
+  },
+  {
+   "id": "SRC T103",
+   "title": "General",
+   "scope": "Seattle Residential Code. Cited 25 time(s) in Seattle correction letters, on subjects: General; Appendix T."
+  },
+  {
+   "id": "SDCI-RESPONSE",
+   "title": "How to respond to review comments (SDCI process)",
+   "scope": "Not a code section. Wait for all reviews to finish, reply to each comment in the plan set, cloud the changes, upload both a response set and a clean set, and cite code if you decline a change. Source: seattle.gov/construction-and-inspections/permits/how-to-respond-to-review-comments."
+  }
+ ]
+}

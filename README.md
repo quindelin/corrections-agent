@@ -44,6 +44,10 @@ The agent sorts what it learns by where it holds:
 - `agent/skills/correction-playbook/` holds rules that apply anywhere.
 - `agent/skills/local-chicago/` holds rules about one place.
 
+## Real data
+
+`npm run real:build` rebuilds real letters from Seattle's public records, and `npm run real:run` runs the agent on them, hiding reviewers' citations so they can be checked. Results are in `runs-real/`. See `docs/emris-integration.md` for how this connects to Emris.
+
 ## Built for many places
 
 Everything specific to a place lives in a jurisdiction pack. The tools, scorer and playbook are shared.
@@ -121,13 +125,28 @@ npm run run-evals
 
 Review each change with `git show`. To drop one: `git reset --hard HEAD~1`, then improve again. The rule is that **the agent writes the change**: you can keep it or drop it, but you don't edit it.
 
-**5. Open the review queue:**
+**5. Open the customer flow or the review queue.** `npm run demo` serves the drop-a-letter flow at http://localhost:8792/start and the review queue at http://localhost:8792. As a service behind Emris, set `REDLINE_API_KEY`, and `REDLINE_HOST` if it must listen beyond localhost. Stripe needs `STRIPE_PAYMENT_LINK`, `STRIPE_SECRET_KEY` and `STRIPE_WEBHOOK_SECRET`, set up by following [docs/stripe-setup.md](docs/stripe-setup.md). Without the first two, unlocking is a free design-partner offer. `npm run test:payments` checks the payment code offline on both backends; it hasn't been run against Stripe itself.
 
 ```bash
 npm run demo
 ```
 
-Then go to http://localhost:8792.
+## Where state is kept
+
+Reports, jobs, rate limits, the payment ledger and the waitlist go through one interface, `demo/store.ts`, with two backends.
+
+| | Local files (default) | Postgres (when `DATABASE_URL` is set) |
+|---|---|---|
+| **Setup** | None. Everything is under `.cache/` | `npm run store -- migrate` once, then start the service |
+| **Instances** | One process only | Several |
+
+- **Retention:** reports are deleted after 90 days, or `REDLINE_RETENTION_DAYS`. Instances purge at startup and hourly, and an expired report can't be read even before the purge. Once a permit's reports are deleted, its next round is no longer free. Jobs last an hour.
+- **Deleting one report:** `npm run store -- delete <report id>`, or `deleteReport()` in `demo/reports.ts`. There's no HTTP route for it. `npm run store -- purge` runs the retention purge now.
+- **Personal data:** rate limits keep a keyed hash of the client address, not the address. Set `REDLINE_RATE_LIMIT_SECRET` to the same value on every instance, or they fall back to `REDLINE_API_KEY`. Jobs keep a report's id, not its contents.
+- **Not covered:** `feedback/reviews.jsonl` and the review queue's in-memory letters stay local to one instance, and retention doesn't reach them or TrueForge sessions. Report text isn't encrypted by this code, so use a database with encryption at rest. Existing local reports aren't copied into Postgres.
+- **Tests:** `npm run test:demo` runs the same behavior tests on both backends. Postgres is PGlite, the real engine compiled to WebAssembly, reached through the `pg` driver. It has one backend process, so statements never run truly in parallel. These tests have not run against a real Postgres server.
+
+To package it for a container host, see [docs/deploy.md](docs/deploy.md).
 
 ## The scorer
 
@@ -171,7 +190,8 @@ demo/             the review queue
 feedback/         architect decisions from the demo (created on first use)
 scripts/          setup, run-evals, improve, export-session
 runs/             one folder per run, plus summary.csv
-docs/             locale research
+docs/             locale research, deployment
+deploy/           Dockerfiles, compose and Fly.io config
 ```
 
 ## Troubleshooting

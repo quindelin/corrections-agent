@@ -1,0 +1,19 @@
+{
+  "id": "seattle",
+  "name": "City of Seattle, Washington",
+  "authority": "Seattle Department of Construction and Inspections (SDCI)",
+  "code_basis": "Seattle codes based on the 2021 International Codes with state and local amendments. Real letters in the dataset span earlier editions too, back to 2012.",
+  "correction_process": {
+    "name": "Respond to review comments",
+    "entry_id": "SDCI-RESPONSE"
+  },
+  "process_wording": {
+    "terms": ["SDCI", "Seattle Department of Construction and Inspections"]
+  },
+  "citation_format": {
+    "find": "\\b(?:SMC|SBC|SRC|SEC|SFC)\\s+(?:(?:Section|Sec\\.?|Table|Chapter|§)\\s*)?[A-Z]?\\d[\\w.()-]*",
+    "section": "^(SMC \\d{1,2}\\.\\d{2}(?:\\.\\d{3})?|(?:SBC|SRC|SEC|SFC) [A-Z]?\\d{3,4})"
+  },
+  "data_source": "https://data.seattle.gov/Built-Environment/Plan-Comments/e285-aq8h",
+  "status": "active"
+}

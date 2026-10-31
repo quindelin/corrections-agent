@@ -1,0 +1,105 @@
+# Redline's three processes. Only the API publishes a port. TrueForge has auth disabled and the MCP server has no auth,
+# so neither may ever get a `ports:` entry.
+#
+#   cd deploy && cp .env.example .env    then fill in .env
+#   docker compose up -d --build
+#   docker compose exec api npm run check:services
+#
+# NOT YET RUN: Docker wasn't available where this was written. See docs/deploy.md for what was tested instead.
+
+name: redline
+
+services:
+  trueforge:
+    build:
+      context: .
+      dockerfile: Dockerfile.trueforge
+    restart: unless-stopped
+    init: true
+    security_opt: ["no-new-privileges:true"]
+    environment:
+      HOST: 0.0.0.0
+      PORT: "8790"
+      # TrueForge refuses private and single-label hosts unless they're listed. Exact names, no ports or wildcards.
+      OUTBOUND_URL_ALLOWED_HOSTS: '["mcp"]'
+      MODEL_PROVIDER_API_KEY: ${MODEL_PROVIDER_API_KEY:-}
+      MODEL_PROVIDER_BASE_URL: ${MODEL_PROVIDER_BASE_URL:-}
+      MODEL_PROVIDER_TYPE: ${MODEL_PROVIDER_TYPE:-custom}
+      MODEL_PROVIDER_NAME: ${MODEL_PROVIDER_NAME:-truefoundry}
+      MODEL_PROVIDER_MODELS: ${MODEL_PROVIDER_MODELS:-claude-haiku-4-5}
+    volumes:
+      - trueforge-data:/data
+    expose: ["8790"]
+    networks: [private, trueforge-egress]
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:8790/healthz').then((r) => process.exit(r.ok ? 0 : 1), () => process.exit(1))"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+
+  mcp:
+    build: &app-build
+      context: ..
+      dockerfile: deploy/Dockerfile
+      args:
+        REDLINE_GIT_SHA: ${REDLINE_GIT_SHA:-unknown}
+    command: ["node", "--import", "tsx", "mcp/server.ts"]
+    restart: unless-stopped
+    init: true
+    security_opt: ["no-new-privileges:true"]
+    environment:
+      MCP_HOST: 0.0.0.0
+      MCP_PORT: "8791"
+    expose: ["8791"]
+    # Only the private network: this service reads local files and needs no internet.
+    networks: [private]
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:8791/health').then((r) => process.exit(r.ok ? 0 : 1), () => process.exit(1))"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+
+  api:
+    build: *app-build
+    restart: unless-stopped
+    init: true
+    security_opt: ["no-new-privileges:true"]
+    depends_on:
+      trueforge: { condition: service_healthy }
+      mcp: { condition: service_healthy }
+    environment:
+      REDLINE_HOST: 0.0.0.0
+      DEMO_PORT: "8792"
+      REDLINE_API_KEY: ${REDLINE_API_KEY:?Set REDLINE_API_KEY in deploy/.env}
+      TRUEFORGE_BASE_URL: http://trueforge:8790
+      REDLINE_MCP_URL: http://mcp:8791/mcp
+      TF_MODEL: ${TF_MODEL:-}
+      STRIPE_PAYMENT_LINK: ${STRIPE_PAYMENT_LINK:-}
+      STRIPE_SECRET_KEY: ${STRIPE_SECRET_KEY:-}
+    volumes:
+      # Reports, the waitlist and sign-off notes. These can hold client letters, so treat this volume as confidential.
+      - redline-data:/data
+    ports:
+      - "${REDLINE_PUBLIC_PORT:-8792}:8792"
+    networks: [private, api-public]
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:8792/health').then((r) => process.exit(r.ok ? 0 : 1), () => process.exit(1))"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+
+networks:
+  # No route to the internet, and nothing published.
+  private:
+    internal: true
+  # TrueForge's way out to the model gateway. Nothing is published on it.
+  trueforge-egress: {}
+  # The API's published port, and its way out to Stripe.
+  api-public: {}
+
+volumes:
+  trueforge-data: {}
+  redline-data: {}

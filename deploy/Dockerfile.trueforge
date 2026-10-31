@@ -1,0 +1,28 @@
+# TrueForge, pinned to the version tested with this repo. Its auth is disabled, so never publish its port.
+# Build from this folder:  docker build -f Dockerfile.trueforge .
+# NOT YET BUILT: Docker wasn't available where this was written.
+
+FROM node:24-bookworm-slim AS deps
+WORKDIR /opt/trueforge
+# better-sqlite3 is native. Its prebuilt binary is normally used, and the compiler is the fallback.
+RUN apt-get update && apt-get install -y --no-install-recommends python3 make g++ && rm -rf /var/lib/apt/lists/*
+COPY trueforge/package.json trueforge/package-lock.json ./
+RUN npm ci --omit=dev --no-audit --no-fund \
+ && npm rebuild better-sqlite3 \
+ && node -e "new (require('better-sqlite3'))(':memory:').close()"
+
+FROM node:24-bookworm-slim AS app
+WORKDIR /opt/trueforge
+ENV NODE_ENV=production \
+    HOME=/home/node \
+    HOST=0.0.0.0 \
+    PORT=8790 \
+    XDG_DATA_HOME=/data \
+    SQLITE_PATH=/data/db/db.sqlite \
+    REDLINE_DATA_DIRS="/data/db"
+COPY --from=deps /opt/trueforge/node_modules ./node_modules
+COPY drop-root.sh trueforge-entry.mjs ./
+RUN mkdir -p /data && chown node:node /data
+EXPOSE 8790
+ENTRYPOINT ["/opt/trueforge/drop-root.sh"]
+CMD ["node", "trueforge-entry.mjs"]

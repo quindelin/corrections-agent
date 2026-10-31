@@ -1,0 +1,8 @@
+{
+  "name": "redline-trueforge",
+  "private": true,
+  "description": "Pins the TrueForge server for deploy/Dockerfile.trueforge. Same version as .claude/launch.json.",
+  "dependencies": {
+    "@truefoundry/trueforge": "0.182.0"
+  }
+}

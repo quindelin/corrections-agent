@@ -13,22 +13,187 @@
       "stormwater",
       "incomplete applications",
       "disputed comments"
-    ]
+    ],
+    "status": "unconfirmed",
+    "status_note": "Rules seen only in search excerpts of city pages and one secondary guide. See facts cpc-*. The program itself is verified in permit data (fact cpc-in-use)."
+  },
+  "process_wording": {
+    "terms": ["Certified Plan*", "Form 420", "Department of Buildings", "bubbl*"],
+    "marking_phrases": ["bubbled, dated and initialed", "bubbled, initialed and dated", "bubbled and dated", "bubbled and initialed", "bubbled"],
+    "protocol_phrases": ["Certified Plan Corrections protocol", "Certified Plan Corrections process", "Certified Plan Corrections"]
+  },
+  "citation_format": {
+    "find": "\\b(?:1[347][A-Z]?-\\d+(?:-\\d+)*(?:\\.\\d+)*|14[A-Z]\\b)",
+    "section": "^(1[347][A-Z]?(?:-\\d+){0,2}|14[A-Z])"
   },
   "data_source": "https://data.cityofchicago.org/Buildings/Building-Permits/ydr8-5enu",
   "status": "active",
   "code_editions": [
     {
-      "name": "2019 Chicago Building Code, based on the 2018 IBC",
-      "applies": "Most applications started from August 1, 2020, until the 2026 Ordinance becomes mandatory",
-      "in_code_index": true
+      "name": "2019 Chicago Building Code (Title 14B), based on the 2018 IBC",
+      "applies": "Title 14B is still this code after the 2026 Ordinance, which amends it section by section. Start date of most applications from August 1, 2020 was not rechecked.",
+      "in_code_index": true,
+      "source": "https://codelibrary.amlegal.com/codes/chicago/latest/chicago_il/0-0-0-2662065",
+      "status": "unconfirmed",
+      "last_checked": "2026-10-31",
+      "note": "See facts code-14b-base and ord-14b-amended."
     },
     {
-      "name": "2026 Ordinance, described by a trade group as aligned with the 2024 model codes",
-      "applies": "Optional from October 1, 2026; mandatory for projects starting the application process on or after December 1, 2026",
+      "name": "2026 Ordinance SO2026-0024930 (Phase 3 of code modernization)",
+      "applies": "Replaces Titles 14M, 14G and 14N, using 2024 model codes, and partly updates 14F to the 2024 IFC. It amends 14A, 14B, 14R, 14X and others without replacing them. Dates differ by article: see facts ord-effective-dates and memo-dates.",
       "in_code_index": false,
-      "source": "https://www.chicago.gov/content/dam/city/depts/bldgs/general/CodeModernization/CodeMemo2026-001.pdf",
-      "verified": "search excerpt only, 2026-10-31"
+      "index_file": "code-2026.json",
+      "source": "https://api.chicityclerkelms.chicago.gov/matter/A27ACB7B-F538-F111-88B3-001DD80B0E39",
+      "status": "verified",
+      "verified": "2026-10-31"
+    }
+  ],
+  "facts_note": "verified = read directly from a primary source on the date shown. unconfirmed = seen only in a search excerpt or a secondary source, usually because the primary page returned 403. Confirm unconfirmed facts in a browser before relying on them.",
+  "facts": [
+    {
+      "id": "ord-identity",
+      "fact": "Ordinance SO2026-0024930 (introduced as O2026-0024930) was introduced April 15, 2026 and substituted June 16, 2026. It passed June 17, 2026 with 49 yeas and no nays.",
+      "status": "verified",
+      "source_url": "https://api.chicityclerkelms.chicago.gov/matter/A27ACB7B-F538-F111-88B3-001DD80B0E39",
+      "verified": "2026-10-31"
+    },
+    {
+      "id": "ord-signature-date",
+      "fact": "The signature page of the signed ordinance carries a handwritten mayoral date that reads June 30, 2026 by eye. The Clerk's action list dates its signed entry June 17, 2026. These do not match, and the difference matters for sections effective upon passage and approval.",
+      "status": "unconfirmed",
+      "source_url": "https://occprodstoragev1.blob.core.usgovcloudapi.net/matterattachmentspublic/a47c8854-8909-416a-a00b-b8280d80053d.pdf",
+      "last_checked": "2026-10-31"
+    },
+    {
+      "id": "ord-effective-dates",
+      "fact": "Article VI: Articles III and IV (except Article IV sections 30 and 31) and Article V section 1 take effect upon passage and approval. Article I section 3 takes effect December 1, 2026. The rest takes effect October 1, 2026.",
+      "status": "verified",
+      "source_url": "https://occprodstoragev1.blob.core.usgovcloudapi.net/matterattachmentspublic/a47c8854-8909-416a-a00b-b8280d80053d.pdf",
+      "verified": "2026-10-31"
+    },
+    {
+      "id": "ord-mandatory-14m-14g-14n",
+      "fact": "Under the amended 14A-1-105.7 through 105.9, permit applications must follow the 2026 Fuel Gas, Mechanical and Energy Transformation Codes beginning December 1, 2026. Earlier applications, minor revisions and later phases may qualify to stay under prior requirements.",
+      "status": "verified",
+      "source_url": "https://occprodstoragev1.blob.core.usgovcloudapi.net/matterattachmentspublic/a47c8854-8909-416a-a00b-b8280d80053d.pdf",
+      "verified": "2026-10-31"
+    },
+    {
+      "id": "ord-replaced-titles",
+      "fact": "Titles 14M, 14G and 14N are repealed and replaced, adopting the 2024 IMC, IFGC and IECC (commercial and residential). Title 14F stays partial and interim but moves from the 2018 to the 2024 IFC. Chapters 18-28 and 18-36 are repealed effective December 1, 2026.",
+      "status": "verified",
+      "source_url": "https://occprodstoragev1.blob.core.usgovcloudapi.net/matterattachmentspublic/a47c8854-8909-416a-a00b-b8280d80053d.pdf",
+      "verified": "2026-10-31"
+    },
+    {
+      "id": "ord-14b-amended",
+      "fact": "Title 14B is amended section by section and is not repealed or replaced. No section of the ordinance amends Chapter 14B-1, where the IBC adoption sits, so calling the whole 2026 Ordinance aligned with 2024 model codes overstates it for the building code.",
+      "status": "verified",
+      "source_url": "https://occprodstoragev1.blob.core.usgovcloudapi.net/matterattachmentspublic/a47c8854-8909-416a-a00b-b8280d80053d.pdf",
+      "verified": "2026-10-31"
+    },
+    {
+      "id": "code-14b-base",
+      "fact": "Section 14B-1-001 adopts the 2018 IBC, first printing, by reference.",
+      "status": "unconfirmed",
+      "source_url": "https://codelibrary.amlegal.com/codes/chicago/latest/chicago_il/0-0-0-2662065",
+      "last_checked": "2026-10-31",
+      "note": "American Legal returned 403. Search excerpt only."
+    },
+    {
+      "id": "memo-dates",
+      "fact": "Code Memorandum 2026-001, dated October 6, 2026, says use of the 2026 Ordinance is optional as of October 1, 2026 and mandatory for projects beginning the permit application process on or after December 1, 2026.",
+      "status": "unconfirmed",
+      "source_url": "https://www.chicago.gov/content/dam/city/depts/bldgs/general/CodeModernization/CodeMemo2026-001.pdf",
+      "last_checked": "2026-10-31",
+      "note": "403. Search excerpts only. Applying it to every article does not obviously match the ordinance's own Article VI, which gives some 14B sections earlier dates. Not reconciled."
+    },
+    {
+      "id": "memo-started-meaning",
+      "fact": "The memo treats an application as started when the $600 deposit and applicable zoning fee are paid. Drawings need not be uploaded by that date.",
+      "status": "unconfirmed",
+      "source_url": "https://www.chicago.gov/content/dam/city/depts/bldgs/general/CodeModernization/CodeMemo2026-001.pdf",
+      "last_checked": "2026-10-31",
+      "note": "403. Search excerpt only."
+    },
+    {
+      "id": "cpc-in-use",
+      "fact": "Certified corrections are in current use: 575 of 3,061 Standard Plan Review permits issued in 2026 through the retrieval date have descriptions containing certified corrections wording, often with a conditional permit subject to field inspection.",
+      "status": "verified",
+      "source_url": "https://data.cityofchicago.org/Buildings/Building-Permits/ydr8-5enu",
+      "verified": "2026-10-31"
+    },
+    {
+      "id": "cpc-required",
+      "fact": "Standard Plan Review applications must use Certified Plan Corrections for most corrections issued after a full review, unless the reviewer's comments show the plans are incomplete.",
+      "status": "unconfirmed",
+      "source_url": "https://www.chicago.gov/city/en/depts/bldgs/supp_info/certified_plan_correctionsinformation.html",
+      "last_checked": "2026-10-31",
+      "note": "403. Search excerpt of the city page, and groundbook.ai/locations/chicago read directly (it says sources reviewed September 12, 2026)."
+    },
+    {
+      "id": "cpc-marks",
+      "fact": "The design professionals revise the drawings for each correction, with each change bubbled, dated and initialed by the professional of record.",
+      "status": "unconfirmed",
+      "source_url": "https://www.chicago.gov/city/en/depts/bldgs/supp_info/certified_plan_correctionsinformation.html",
+      "last_checked": "2026-10-31",
+      "note": "403. Same two sources as cpc-required. Evals depend on this. The wording seen is bubbled; clouded was not seen."
+    },
+    {
+      "id": "cpc-exclusions",
+      "fact": "The program cannot be used for zoning, geotechnical or Stormwater Management Ordinance corrections. It also cannot be used for a disputed comment, which goes to the plan examiner, project manager or a plan review supervisor.",
+      "status": "unconfirmed",
+      "source_url": "https://www.chicago.gov/city/en/depts/bldgs/supp_info/certified_plan_correctionsinformation.html",
+      "last_checked": "2026-10-31",
+      "note": "403. Same two sources as cpc-required. Older city flow charts seen in excerpts also list occupancies as ineligible, so the current page should be checked."
+    },
+    {
+      "id": "cpc-conditional-permit",
+      "fact": "The permit that results from certified corrections is conditional and subject to field inspection.",
+      "status": "unconfirmed",
+      "source_url": "https://www.chicago.gov/city/en/depts/bldgs/supp_info/certified_plan_correctionsinformation.html",
+      "last_checked": "2026-10-31",
+      "note": "403. Search excerpt. Consistent with the wording in permit data (cpc-in-use)."
+    },
+    {
+      "id": "cpc-120-days",
+      "fact": "If corrections go unanswered for 120 days, the application is treated as withdrawn and a new one is required. The code text seen also forfeits the deposit and allows a written good-cause extension of up to 90 days.",
+      "status": "unconfirmed",
+      "source_url": "https://codelibrary.amlegal.com/codes/chicago/latest/chicago_il/0-0-0-2661276",
+      "last_checked": "2026-10-31",
+      "note": "City page and American Legal (14A-4-410.4.1) returned 403. Search excerpts and groundbook.ai only. How the extension interacts with the program page was not confirmed."
+    },
+    {
+      "id": "zoning-90-days",
+      "fact": "Zoning applications have a separate 90-day period to correct deficiencies under 17-13-0104-C.",
+      "status": "unconfirmed",
+      "source_url": "https://codelibrary.amlegal.com/codes/chicago/latest/chicagozoning_il/0-0-0-51431",
+      "last_checked": "2026-10-31",
+      "note": "403. Search excerpt only."
+    },
+    {
+      "id": "form-420",
+      "fact": "Form 420 (revision dated July 6, 2020) has the professional of record certify, under signature and seal, having reviewed corrections in the Dynamic Portal and ProjectDox, not disputing them, and having personally made each noted correction in their scope. It goes on the first certified corrections sheet.",
+      "status": "unconfirmed",
+      "source_url": "https://www.chicago.gov/content/dam/city/depts/bldgs/general/forms/Form420-070620.pdf",
+      "last_checked": "2026-10-31",
+      "note": "403. Search excerpts only. Whether this is still the current revision is unknown. The upload folder name differs between sources: Certified Correction Documents (form excerpt) and Certified Plan Correction (groundbook.ai)."
+    },
+    {
+      "id": "fees-2026",
+      "fact": "A city notice dated January 2, 2026 says that from January 6, 2026 the non-refundable deposit on plan-based permits is $600. A $600 penalty applies when an application is substantially incomplete or deficient, and another when it is ineligible for its review program. The changes come from budget ordinances adopted December 20, 2025.",
+      "status": "unconfirmed",
+      "source_url": "https://www.chicago.gov/city/en/depts/bldgs/provdrs/bldg_code/alerts/2025/december/2026changes.html",
+      "last_checked": "2026-10-31",
+      "note": "403. Search excerpts only."
+    },
+    {
+      "id": "status-site",
+      "fact": "The City's Building Permit Application Status site is designed for applicants and their authorized representatives. The public gets more limited information by address. Searching by application number opens open and completed correction pages. A ProjectDox status report with reviewer comments is available only while an application is under review. It covers applications started in the last 36 months, and issued permits may not appear.",
+      "status": "verified",
+      "source_url": "https://webapps1.chicago.gov/buildingpermit/help",
+      "verified": "2026-10-31",
+      "note": "Help page only. The site itself was not used: it has an accept-terms step, so whether correction text is actually shown is unknown."
     }
   ]
 }

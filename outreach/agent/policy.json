@@ -1,0 +1,25 @@
+{
+  "_note": "Human-owned. The learning step cannot edit this file. See outreach/README.md for why each number is what it is.",
+  "contact_limits": {
+    "max_per_day": 10,
+    "max_per_week": 30,
+    "max_touches_per_domain": 1,
+    "min_days_between_touches_same_domain": 90
+  },
+  "experiment": {
+    "primary_metric": "positive",
+    "min_delivered_per_arm": 50,
+    "alpha": 0.05,
+    "maturity_days": 7
+  },
+  "guardrails": {
+    "window_sent": 20,
+    "max_bounce_rate": 0.05,
+    "max_unsubscribe_rate": 0.05,
+    "min_unsubscribes": 3
+  },
+  "budget": {
+    "max_usd_per_command": 0.5,
+    "max_usd_total": 5
+  }
+}

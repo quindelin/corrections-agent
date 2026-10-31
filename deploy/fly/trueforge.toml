@@ -1,0 +1,21 @@
+# Private: no [http_service] and no [[services]], so Fly has nothing to route publicly. Don't add either, and don't
+# allocate IPs, because TrueForge's auth is disabled.
+# Deploy from deploy/, the build context:
+#   fly deploy --config fly/trueforge.toml --dockerfile Dockerfile.trueforge --ha=false --no-public-ips
+# Keep the host below in step with the app name in mcp.toml.
+
+app = "redline-trueforge"
+primary_region = "iad"
+
+[env]
+  HOST = "::"
+  PORT = "8790"
+  OUTBOUND_URL_ALLOWED_HOSTS = '["redline-mcp.internal"]'
+
+[[mounts]]
+  source = "redline_trueforge_data"
+  destination = "/data"
+
+[[vm]]
+  size = "shared-cpu-1x"
+  memory = "512mb"
