@@ -19,6 +19,8 @@
     "real:build": "tsx realdata/build-seattle.ts",
     "real:run": "tsx realdata/run.ts",
     "real:improve": "tsx realdata/improve.ts",
+    "test:guard": "tsx --test demo/guard.test.ts",
+    "real:guard": "tsx realdata/measure-guard.ts",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {

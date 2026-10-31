@@ -12,6 +12,7 @@ import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { parseItems } from "../evals/score.ts";
 import { client, exportSession, FEEDBACK_FILE, headSha, readAgent, ROOT, runTurn, SUMMARY_CSV, syncAgent } from "../scripts/lib.ts";
+import { guardItems } from "./guard.ts";
 import { MAX_LETTER_CHARS, parseLetter, type ParsedComment } from "./parse-letter.ts";
 import { readPdfText } from "./read-pdf.ts";
 import { exportDoc, loadReport, newReportId, permitAlreadyUnlocked, publicView, saveReport, type Report } from "./reports.ts";
@@ -120,8 +121,9 @@ async function analyze(letter: Letter) {
   await tf.sessions.update(session.id, { title: `review: ${letter.project.address}` });
   const turn = await runTurn(tf, session.id, promptFor(letter), false);
   if (turn.status !== "done") throw new Error(turn.error ?? `The turn ended with status ${turn.status}`);
-  const items = parseItems(turn.text);
-  if (!items) throw new Error("The agent's reply had no valid JSON block.");
+  const parsed = parseItems(turn.text);
+  if (!parsed) throw new Error("The agent's reply had no valid JSON block.");
+  const items = guardItems(parsed, letter, packs);
   analyzed.set(session.id, letter);
   const exp = await exportSession(tf, session.id);
   // The audit trail: every tool call the agent made in this session, as TrueForge recorded it.
