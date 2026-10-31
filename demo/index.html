@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Redline Review Queue</title>
+<style>
+  :root {
+    color-scheme: light;
+    --surface: #f6f5f1; --panel: #fcfcfb; --line: #dcdad2;
+    --ink: #1b1a18; --ink-2: #52514e; --ink-3: #75736c;
+    --accent: #b3261e; --accent-ink: #ffffff; --series: #2a78d6; --grid: #e6e4dd;
+    --good: #0b6e3b; --warn: #8a5a00; --bad: #a3231b;
+    --chip: #ece9e0;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:where(:not([data-theme="light"])) {
+      color-scheme: dark;
+      --surface: #141413; --panel: #1a1a19; --line: #33322e;
+      --ink: #f0efec; --ink-2: #c3c2b7; --ink-3: #9a988e;
+      --accent: #e66767; --accent-ink: #1a1a19; --series: #3987e5; --grid: #2c2b28;
+      --good: #6cc99a; --warn: #e0b45a; --bad: #ef8d86;
+      --chip: #2a2926;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--surface); color: var(--ink); font: 15px/1.5 ui-sans-serif, -apple-system, "Segoe UI", sans-serif; }
+  header { padding: 20px 24px 16px; border-bottom: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center; justify-content: space-between; }
+  h1 { margin: 0; font-size: 20px; letter-spacing: -0.01em; }
+  h1 span { color: var(--accent); }
+  .sub { color: var(--ink-2); font-size: 14px; }
+  main { display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 24px; padding: 24px; max-width: 1280px; margin: 0 auto; align-items: start; }
+  @media (max-width: 900px) { main { grid-template-columns: minmax(0, 1fr); padding: 16px; } header { padding: 16px; } }
+  h2 { font-size: 13px; font-weight: 600; margin: 0 0 8px; color: var(--ink-2); }
+  section + section { margin-top: 24px; }
+  .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 16px; }
+  button { font: inherit; font-size: 14px; border-radius: 6px; border: 1px solid var(--line); background: var(--panel); color: var(--ink); padding: 6px 12px; cursor: pointer; }
+  button:hover:not(:disabled) { border-color: var(--ink-3); }
+  button:disabled { opacity: .55; cursor: default; }
+  button.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); font-weight: 600; padding: 8px 16px; }
+  :focus-visible { outline: 2px solid var(--series); outline-offset: 2px; }
+  .letter li { margin-bottom: 6px; }
+  .letter ol { margin: 0; padding-left: 0; list-style: none; }
+  .tag { display: inline-block; font-size: 12px; background: var(--chip); color: var(--ink-2); border-radius: 4px; padding: 0 6px; margin-right: 4px; white-space: nowrap; }
+  .group { margin-bottom: 20px; }
+  .group h3 { font-size: 14px; margin: 0 0 8px; display: flex; gap: 8px; align-items: baseline; }
+  .group h3 small { font-weight: 400; color: var(--ink-3); }
+  .card { background: var(--panel); border: 1px solid var(--line); border-left: 3px solid var(--line); border-radius: 6px; padding: 12px 14px; margin-bottom: 8px; }
+  .card.licensed { border-left-color: var(--accent); }
+  .card.approved { border-left-color: var(--good); }
+  .card.rejected { border-left-color: var(--bad); opacity: .8; }
+  .quote { color: var(--ink-2); font-size: 14px; margin: 4px 0 8px; }
+  textarea { width: 100%; font: inherit; font-size: 14px; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 8px; resize: vertical; min-height: 64px; }
+  .actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 8px; }
+  .state { font-size: 13px; font-weight: 600; }
+  .state.ok { color: var(--good); } .state.no { color: var(--bad); }
+  .cite { font-size: 13px; color: var(--ink-2); }
+  .cite b { color: var(--ink); font-weight: 600; }
+  .cite.unverified b { color: var(--bad); }
+  .err { color: var(--bad); }
+  pre { white-space: pre-wrap; font: 14px/1.5 ui-sans-serif, -apple-system, "Segoe UI", sans-serif; margin: 0; }
+  .trace { font: 12px/1.5 ui-monospace, Menlo, monospace; color: var(--ink-2); overflow-wrap: anywhere; margin: 0; padding-left: 16px; }
+  .note { color: var(--ink-3); font-size: 12px; margin: 8px 0 0; }
+  .bar-row { display: grid; grid-template-columns: 1fr; gap: 2px; margin-bottom: 8px; position: relative; }
+  .bar-label { font-size: 12px; color: var(--ink-2); }
+  .bar-track { display: flex; align-items: center; gap: 6px; }
+  .bar { height: 14px; background: var(--series); border-radius: 0 4px 4px 0; min-width: 2px; }
+  .bar-value { font-size: 12px; color: var(--ink); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  #tip { position: fixed; pointer-events: none; background: var(--ink); color: var(--panel); font-size: 12px; padding: 4px 8px; border-radius: 4px; display: none; max-width: 260px; z-index: 5; }
+  svg text { fill: var(--ink-2); font-size: 11px; }
+  .empty { color: var(--ink-3); font-size: 14px; }
+  .spin { display: inline-block; width: 12px; height: 12px; border: 2px solid var(--line); border-top-color: var(--accent); border-radius: 50%; animation: spin .8s linear infinite; vertical-align: -2px; margin-right: 6px; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  @media (prefers-reduced-motion: reduce) { .spin { animation: none; } }
+</style>
+</head>
+<body>
+<header>
+  <div>
+    <h1>Red<span>line</span></h1>
+    <div class="sub" id="project"></div>
+  </div>
+  <button class="primary" id="run">Run the agent on this letter</button>
+</header>
+<main>
+  <div>
+    <section id="letter-section">
+      <h2>Correction letter (fictional)</h2>
+      <div class="panel letter"><ol id="letter"></ol></div>
+    </section>
+    <section id="status-section" hidden><p id="status" aria-live="polite"></p></section>
+    <section id="queue-section" hidden>
+      <h2>Review queue</h2>
+      <div id="queue"></div>
+    </section>
+    <section id="response-section" hidden>
+      <h2>Response letter, from approved items</h2>
+      <div class="panel"><pre id="response"></pre></div>
+    </section>
+  </div>
+  <aside>
+    <section>
+      <h2 id="stats-title">Average days from application to permit</h2>
+      <div class="panel">
+        <div id="stats"></div>
+        <p class="note" id="stats-note"></p>
+      </div>
+    </section>
+    <section>
+      <h2>Agent eval score by run</h2>
+      <div class="panel"><div id="scores"></div>
+        <p class="note">Same letters and scorer every run. 100 is a perfect re-review. Letters are synthetic.</p></div>
+    </section>
+    <section id="trace-section" hidden>
+      <h2>Audit trail, from the TrueForge session</h2>
+      <div class="panel"><ol class="trace" id="trace"></ol><p class="note" id="session"></p></div>
+    </section>
+  </aside>
+</main>
+<div id="tip" role="status"></div>
+<script>
+const ROUTES = [
+  ["licensed_review", "Needs architect or engineer", "Held until a licensed professional signs off"],
+  ["other_agency", "Other agency", "The next step is outside this plan review"],
+  ["client_input", "Needs client input", "A fact or document from the owner, contractor or a consultant"],
+  ["agent_draft", "Routine paperwork", "Prepared by the agent, for sign-off"],
+  ["no_action", "No action", "Nothing to send"],
+];
+const $ = (id) => document.getElementById(id);
+const el = (tag, cls, text) => { const n = document.createElement(tag); if (cls) n.className = cls; if (text != null) n.textContent = text; return n; };
+let data, result, decisions = {};
+
+const tip = $("tip");
+function hover(node, text) {
+  node.addEventListener("mousemove", (e) => { tip.textContent = text; tip.style.display = "block"; tip.style.left = Math.min(e.clientX + 12, innerWidth - 270) + "px"; tip.style.top = e.clientY + 12 + "px"; });
+  node.addEventListener("mouseleave", () => { tip.style.display = "none"; });
+}
+
+function renderStats() {
+  const rows = data.stats.rows.filter((r) => r.permits >= 500).sort((a, b) => b.avg_days - a.avg_days).slice(0, 6);
+  const max = Math.max(...rows.map((r) => r.avg_days));
+  const nice = (s) => s.charAt(0) + s.slice(1).toLowerCase();
+  for (const r of rows) {
+    const row = el("div", "bar-row");
+    row.append(el("div", "bar-label", nice(r.review_type)));
+    const track = el("div", "bar-track");
+    const bar = el("div", "bar");
+    bar.style.width = `calc((100% - 56px) * ${r.avg_days / max})`;
+    track.append(bar, el("span", "bar-value", `${Math.round(r.avg_days)} days`));
+    row.append(track);
+    hover(row, `${nice(r.review_type)}: ${r.avg_days} days on average, ${r.permits.toLocaleString()} permits`);
+    $("stats").append(row);
+  }
+  $("stats-title").textContent = `Average days from application to permit, ${data.profile.name}`;
+  $("stats-note").textContent = `${data.stats.source}, ${data.stats.filter}, retrieved ${data.stats.retrieved}. ${data.stats.measure}`;
+}
+
+function renderScores() {
+  const runs = data.runs.map((r) => ({ run: Number(r.run), score: Number(r.score), session: r.session_id }));
+  if (!runs.length) return void ($("scores").append(el("p", "empty", "No eval runs yet.")));
+  const W = 300, H = 120, L = 28, R = 40, T = 10, B = 22;
+  const x = (i) => (runs.length === 1 ? (L + W - R) / 2 : L + (i * (W - L - R)) / (runs.length - 1));
+  const y = (s) => T + ((100 - s) * (H - T - B)) / 100;
+  const ns = "http://www.w3.org/2000/svg";
+  const svg = document.createElementNS(ns, "svg");
+  svg.setAttribute("viewBox", `0 0 ${W} ${H}`); svg.setAttribute("width", "100%"); svg.setAttribute("role", "img");
+  svg.setAttribute("aria-label", "Eval score by run: " + runs.map((r) => `run ${r.run} ${r.score}`).join(", "));
+  const add = (name, attrs, text) => { const n = document.createElementNS(ns, name); for (const k in attrs) n.setAttribute(k, attrs[k]); if (text != null) n.textContent = text; svg.append(n); return n; };
+  for (const g of [0, 50, 100]) {
+    add("line", { x1: L, x2: W - R, y1: y(g), y2: y(g), stroke: "var(--grid)" });
+    add("text", { x: L - 6, y: y(g) + 4, "text-anchor": "end" }, g);
+  }
+  if (runs.length > 1) add("polyline", { points: runs.map((r, i) => `${x(i)},${y(r.score)}`).join(" "), fill: "none", stroke: "var(--series)", "stroke-width": 2 });
+  runs.forEach((r, i) => {
+    add("circle", { cx: x(i), cy: y(r.score), r: 4, fill: "var(--series)", stroke: "var(--panel)", "stroke-width": 2 });
+    hover(add("circle", { cx: x(i), cy: y(r.score), r: 12, fill: "transparent" }), `Run ${r.run}: ${r.score}. Session ${r.session}`);
+    add("text", { x: x(i), y: H - 6, "text-anchor": "middle" }, `Run ${r.run}`);
+  });
+  const last = runs.length - 1;
+  add("text", { x: x(last) + 8, y: y(runs[last].score) + 4, style: "fill: var(--ink); font-weight: 600" }, runs[last].score);
+  $("scores").append(svg);
+}
+
+function citationLine(item) {
+  const entry = data.code.find((s) => s.id.toUpperCase() === (item.citation || "").toUpperCase());
+  if (!item.citation) return el("span", "cite", "No code section cited");
+  const n = el("span", "cite" + (entry ? "" : " unverified"));
+  n.append(el("b", null, item.citation), document.createTextNode(entry ? ` ${entry.title}` : " is not in the code index. Check before use."));
+  return n;
+}
+
+function renderQueue() {
+  const q = $("queue"); q.replaceChildren();
+  for (const [route, title, hint] of ROUTES) {
+    const items = result.items.filter((i) => i.route === route);
+    if (!items.length) continue;
+    const g = el("div", "group");
+    const h = el("h3", null, title); h.append(el("small", null, hint)); g.append(h);
+    for (const item of items) g.append(card(item));
+    q.append(g);
+  }
+  const known = new Set(ROUTES.map((r) => r[0]));
+  for (const item of result.items.filter((i) => !known.has(i.route))) q.append(card(item));
+  renderResponse();
+}
+
+function card(item) {
+  const comment = data.letter.comments.find((c) => c.id === item.comment);
+  const state = decisions[item.comment];
+  const c = el("div", "card" + (item.route === "licensed_review" ? " licensed" : "") + (state === "approve" ? " approved" : state === "reject" ? " rejected" : ""));
+  const top = el("div"); top.append(el("span", "tag", item.comment), el("span", "tag", item.discipline));
+  for (const s of item.sheets) top.append(el("span", "tag", s));
+  c.append(top, el("p", "quote", comment ? comment.text : "(Comment not in the letter)"), citationLine(item));
+  if (item.route === "no_action") return c;
+  const area = el("textarea"); area.value = item.draft; area.setAttribute("aria-label", `Draft response for ${item.comment}`);
+  area.disabled = !!state; area.addEventListener("input", () => { item.draft = area.value; });
+  const row = el("div", "actions");
+  if (state) {
+    row.append(el("span", "state " + (state === "approve" ? "ok" : "no"), state === "approve" ? "Approved" : "Rejected, sent to the agent's next improve run"));
+  } else {
+    const yes = el("button", null, item.route === "licensed_review" ? "Approve as licensed reviewer" : "Approve");
+    const no = el("button", null, "Reject");
+    yes.addEventListener("click", () => decide(item, "approve", ""));
+    no.addEventListener("click", () => {
+      const note = el("input"); note.placeholder = "What should the agent have done?"; note.setAttribute("aria-label", "Reject note");
+      note.style.cssText = "flex:1;min-width:200px;font:inherit;font-size:14px;padding:6px 8px;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--ink)";
+      const send = el("button", null, "Send rejection");
+      send.addEventListener("click", () => { if (note.value.trim()) decide(item, "reject", note.value.trim()); else note.focus(); });
+      row.replaceChildren(note, send); note.focus();
+    });
+    row.append(yes, no);
+  }
+  c.append(area, row);
+  return c;
+}
+
+async function decide(item, decision, note) {
+  const r = await fetch("/api/review", { method: "POST", body: JSON.stringify({ comment: item.comment, decision, note, route: item.route, citation: item.citation, session_id: result.session_id }) });
+  if (!r.ok) return setStatus("The decision wasn't saved. Try again.", true);
+  decisions[item.comment] = decision;
+  renderQueue();
+}
+
+function renderResponse() {
+  const { project } = data.letter;
+  const approved = result.items.filter((i) => decisions[i.comment] === "approve" && i.draft.trim());
+  const open = result.items.filter((i) => i.route !== "no_action" && !decisions[i.comment]).length;
+  $("response-section").hidden = false;
+  $("response").textContent = approved.length
+    ? [`Re: ${project.address}. Response to plan review corrections.`, "", ...approved.map((i) => `${i.comment}${i.citation ? ` (${i.citation})` : ""}: ${i.draft.trim()}`), "", open ? `${open} item(s) still awaiting sign-off.` : "All items reviewed."].join("\n")
+    : "Approve items above to build the response letter.";
+}
+
+function setStatus(text, isError, busy) {
+  $("status-section").hidden = false;
+  const s = $("status"); s.replaceChildren();
+  if (busy) s.append(el("span", "spin"));
+  s.append(document.createTextNode(text));
+  s.className = isError ? "err" : "";
+}
+
+$("run").addEventListener("click", async () => {
+  $("run").disabled = true; decisions = {};
+  $("queue-section").hidden = $("response-section").hidden = $("trace-section").hidden = true;
+  setStatus("The agent is reading the letter and looking up citations. This can take a minute.", false, true);
+  try {
+    const r = await fetch("/api/analyze", { method: "POST" });
+    const body = await r.json();
+    if (!r.ok) throw new Error(body.error);
+    result = body;
+    $("status-section").hidden = true; $("queue-section").hidden = false;
+    renderQueue();
+    $("trace").replaceChildren(...result.trace.map((t) => el("li", null, `${t.name} ${t.args}`)));
+    if (!result.trace.length) $("trace").append(el("li", null, "No tool calls in this session."));
+    $("session").textContent = `Session ${result.session_id}`;
+    $("trace-section").hidden = false;
+  } catch (e) {
+    setStatus(`The agent couldn't run: ${e.message}`, true);
+  } finally {
+    $("run").disabled = false; $("run").textContent = "Run the agent again";
+  }
+});
+
+(async () => {
+  data = await (await fetch("/api/bootstrap")).json();
+  const { project, comments } = data.letter;
+  $("project").textContent = `${project.address} · ${data.profile.name} · ${project.reviewer}`;
+  for (const c of comments) {
+    const li = el("li"); li.append(el("span", "tag", c.id), el("span", "tag", c.heading), document.createTextNode(c.text));
+    $("letter").append(li);
+  }
+  renderStats(); renderScores();
+})();
+</script>
+</body>
+</html>

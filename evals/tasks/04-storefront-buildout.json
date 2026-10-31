@@ -1,0 +1,35 @@
+{
+  "id": "04-storefront-buildout",
+  "title": "Storefront cafe build-out",
+  "holdout": false,
+  "project": {
+    "jurisdiction": "chicago",
+    "address": "4400 W Specimen Rd (fictional)",
+    "description": "Tenant build-out of a ground floor storefront as a small cafe in an existing mixed-use building. Zoning district B3-2. Standard Plan Review.",
+    "reviewer": "Department of Buildings, first review cycle"
+  },
+  "sheets": [
+    { "id": "T-001", "title": "Title sheet" },
+    { "id": "A-101", "title": "Floor plan" },
+    { "id": "A-201", "title": "Storefront elevation" },
+    { "id": "A-601", "title": "Door schedule" },
+    { "id": "M-101", "title": "Mechanical plan" },
+    { "id": "P-101", "title": "Plumbing plan" }
+  ],
+  "comments": [
+    { "id": "C1", "heading": "Zoning", "text": "The new canopy projects over the sidewalk. A public way use permit from the Department of Transportation is needed for this projection." },
+    { "id": "C2", "heading": "Building", "text": "The existing step at the main entrance is shown to remain. Show the accessible route into the space." },
+    { "id": "C3", "heading": "Building", "text": "Per 13-160, the rear exit door is drawn swinging against the direction of egress. Correct the swing on the plan and the door schedule." },
+    { "id": "C4", "heading": "Building", "text": "The occupant load calculation is not on the floor plan." },
+    { "id": "C5", "heading": "Mechanical", "text": "The kitchen exhaust hood on the mechanical plan is not coordinated with the equipment layout. Provide the exhaust design." },
+    { "id": "C6", "heading": "General", "text": "The title block on M-101 shows a former project address. Correct the title block." }
+  ],
+  "expected": [
+    { "comment": "C1", "disciplines": ["zoning", "admin"], "citations": ["14B-32"], "route": "other_agency", "sheets": [], "revision_marks": false, "why": "The Department of Transportation issues this. It is an encroachment into the public way." },
+    { "comment": "C2", "disciplines": ["accessibility"], "citations": ["14B-11"], "route": "licensed_review", "sheets": ["A-101"], "revision_marks": true, "why": "How the route works at an existing step is a design and code judgment." },
+    { "comment": "C3", "disciplines": ["egress"], "citations": ["14B-10-1010"], "route": "licensed_review", "sheets": ["A-101", "A-601"], "revision_marks": true, "why": "Title 13 was replaced. Both the plan and the schedule change, as the comment says." },
+    { "comment": "C4", "disciplines": ["egress"], "citations": ["14B-10-1004"], "route": "licensed_review", "sheets": ["A-101"], "revision_marks": true, "why": "The occupant load is the architect's calculation. Don't supply a number." },
+    { "comment": "C5", "disciplines": ["mep"], "citations": ["14M"], "route": "licensed_review", "sheets": ["M-101"], "revision_marks": true, "why": "Exhaust design is engineering work." },
+    { "comment": "C6", "disciplines": ["admin"], "citations": [null, "14A-4", "DOB-CPC"], "route": "agent_draft", "sheets": ["M-101"], "revision_marks": true, "why": "Clerical title block fix, but still a sheet revision and marked like one." }
+  ]
+}

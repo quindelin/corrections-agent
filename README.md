@@ -1,208 +1,197 @@
-# TrueForge starter: an agent that gets better every time it runs
+# Redline: a permit corrections agent that gets better every time it runs
 
-Starter repo for the **Stranger Builds** challenge *"Build an agent that gets better every time it runs"* (sponsor: [TrueForge](https://trueforge.dev) by TrueFoundry).
+Redline turns a building department's correction letter into a ready-to-review response package: each comment sorted, cited to the governing code section, routed to whoever has to act, and drafted. Anything that needs a licensed professional's judgment is held for their sign-off.
 
-It gives you a working loop on day one, so you spend the week on the agent:
+Built on [TrueForge](https://trueforge.dev) for the **Stranger Builds** challenge *"Build an agent that gets better every time it runs"*, from the TrueForge starter.
+
+**Why corrections:** about two-thirds of Chicago permit time is spent with the applicant, not the city. The Department of Buildings reported 50 of 71 days in [November 2024](https://www.chicago.gov/content/dam/city/depts/obm/supp_info/2025Budget/2025BudgetOpeningStatements/Department%20Hearing%20Opening%20Statement%20DOB%20-%20FINAL.pdf), and [secondary reporting](https://chicagocitywire.com/chicago-buildings-department-reports-88-day-average-permit-time-down-slightly-in-volume) of October 2026 testimony gives about two-thirds of 88 days. The 117-day figure in the demo is a different measure, so don't compare it with these.
+
+**Who it's for:** small architecture firms and permit expediters filing 2 to 6 flats, coach houses and renovations.
 
 ```
-run the evals ──► score ──► the agent rewrites its own instructions/skill ──► run again ──► higher score?
-   (TrueForge session)         (from its failures, committed with Agent-Session: <id>)
+run the letters ──► the re-review scores them ──► the agent rewrites its own playbook ──► run again ──► higher score?
+ (TrueForge session)     (evals/score.ts)          (committed with Agent-Session: <id>)
 ```
-
-The example agent is a **code reviewer**: it reads a small code change and lists the real problems in it as JSON. Its playbook is a `review-checklist` skill that starts short on purpose. Swap in your own agent and tasks; keep the loop.
 
 ## Run 1 vs run N
 
-> Fill this in at the end. Five lines max. Keep the heading: the challenge checks for it.
+> Not run yet. Fill this in after the first real runs. Five lines max. Keep the heading: the challenge checks for it.
 
-- **Task and score:** _e.g. review 4 small code changes; score = 100 × mean(issues caught − 0.5 × noise comments) per task._
-- **Run 1 → run N:** _e.g. 50 → 91.67 (`runs/summary.csv`)._
-- **The change that did it:** _link to the commit with `Agent-Session:`._
-- **What the agent learned:** _one sentence, e.g. "it only checked 3 kinds of bugs; it now also checks mutable defaults, unawaited async callbacks, N+1 queries, leaks and logged secrets."_
-- **What still fails:** _e.g. the holdout task's inverted range check (`||` vs `&&`)._
+- **Task and score:**
+- **Run 1 → run N:**
+- **The change that did it:**
+- **What the agent learned:**
+- **What still fails:**
 
-## What the challenge asks
+## What the agent does
 
-Build an agent on TrueForge that looks at its own runs, rewrites its own skills or instructions, and does the job better the next time. Then prove it in a public repo. You **complete** the challenge when your repo shows all four:
+For each comment in a letter, the agent returns:
 
-1. **GitHub:** a public repo, created on or after Sat 31 Oct, **not a fork** (made from this template is fine).
-2. **TrueForge runtime:** your agent runs on TrueForge, and each run you count is a TrueForge session.
-3. **Run 1 vs a later run:** same tasks, same scorer. The later run comes after at least one change the agent made to itself.
-4. **The agent changed itself, and it got better:** a commit with the agent's change to `agent/`, between run 1 and the later run, ending with `Agent-Session: <session_id>`, and a higher score after it.
+| Field | What it means |
+|---|---|
+| `discipline` | What the comment is really about, whatever heading it sits under |
+| `citation` | The governing entry, found with the code lookup tools |
+| `route` | `licensed_review`, `agent_draft`, `client_input`, `other_agency` or `no_action` |
+| `sheets` | Which sheets must be revised |
+| `draft` | The line for the response letter |
 
-The rule: **the agent writes the change.** You can review it, keep it or drop it. You don't write it.
+## How it learns
 
-## What's in here
+The scorer plays the part of the city's re-review. It returns a number and the reasons, and `npm run improve` gives the failed letters to the agent, which rewrites its own skills. Holdout letters count in the score but are never shown to it.
+
+A second signal comes from the demo's review queue: when an architect rejects an item and says why, the note goes to `feedback/reviews.jsonl`, and the next `improve` reads it.
+
+The agent sorts what it learns by where it holds:
+
+- `agent/skills/correction-playbook/` holds rules that apply anywhere.
+- `agent/skills/local-chicago/` holds rules about one place.
+
+## Built for many places
+
+Everything specific to a place lives in a jurisdiction pack. The tools, scorer and playbook are shared.
 
 ```
-agent/
-  agent.json                      name, description, model, skill_mode (inline | git)
-  instructions.md                 the agent's instructions (its system prompt)
-  skills/review-checklist/SKILL.md  its playbook, the part it rewrites most
-evals/
-  tasks/*.json                    the fixed task set (04 is a holdout: scored, never shown to improve)
-  score.ts                        deterministic scorer → one number, higher is better
-scripts/
-  setup.ts                        create/update the TrueForge agent from agent/
-  run-evals.ts                    one run = one TrueForge session; scores it, saves runs/run-NN/, adds a row to summary.csv
-  improve.ts                      the agent reads its failed run and rewrites agent/; commits with Agent-Session
-  export-session.ts               save any TrueForge session (session, turns, events) as JSON
-  lib.ts                          shared helpers (TrueForge SDK client, git, files)
-runs/summary.csv                  one row per run
+jurisdictions/<id>/
+  profile.json        who reviews, the code basis, the correction process
+  code.json           the code index the agent can cite
+  permit-stats.json   permit statistics snapshot (optional)
+agent/skills/local-<id>/SKILL.md   rules the agent has learned about this place
 ```
 
-## Quickstart (about 5 minutes)
+To add a place, add its pack and a `local-<id>` skill, then add letters to `evals/tasks/` with `"jurisdiction": "<id>"` **before that place's own run 1**. The MCP tools pick up new packs on restart. Every tool takes a jurisdiction id, and a citation only counts if it's in that place's index.
 
-You need Node.js 22.14+, git, and one model key (a TrueFoundry AI Gateway key, your own OpenAI/Anthropic/Gemini/... key, or any OpenAI-compatible endpoint).
+In `inline` skill mode every local skill is pasted into the instructions, which won't scale past a handful of places. `git` skill mode is the way to load them on demand, and we haven't tested it here.
 
-**0. Make your repo** (on or after Sat 31 Oct). On GitHub, click **Use this template → Create a new repository**. Don't fork. Then clone it.
+[docs/locale-research.md](docs/locale-research.md) covers which places to add next and what differs between them. It recommends Evanston, Naperville and Seattle next, and identifies gaps in this design:
 
-**1. Start TrueForge** in its own terminal, and keep it running:
+- Code edition must resolve from the application date, not only the place.
+- Code indexes should layer model, state and local text, so places on the same edition share work.
+- Response formats need structured fields, because they vary widely and can decide whether a resubmittal is accepted.
+- Routing has no outcome yet for disputing a comment.
+- Learned rules need a scope and an expiry, so they don't outlive a code change.
 
-```bash
-npx @truefoundry/trueforge@latest
-```
+## How it uses TrueForge
 
-Open http://localhost:8790 → **Settings → Models** → pick your provider → paste your key → **Create**. Note the model name it shows, written `provider/model` (e.g. `anthropic/claude-sonnet-4-6`, `openai/gpt-5.2`).
+- **Runtime:** the agent runs on TrueForge, and each run or demo analysis is a session.
+- **SDK:** agent sync, sessions, turns and session export, in `scripts/lib.ts`.
+- **MCP tools:** `mcp/server.ts` is registered as the `permit-research` connector, with `list_jurisdictions`, `search_code`, `get_section` and `permit_stats`.
+- **Audit trail:** the demo shows every tool call from the session export.
 
-**2. Install and configure:**
+TrueForge doesn't choose models per task or per subagent yet ([docs](https://trueforge.dev/models)), so one model does all of this. The architect sign-off is in the demo app, not a TrueForge tool approval.
 
-```bash
-npm install
-cp .env.example .env
-# set TF_MODEL=provider/model in .env if it isn't anthropic/claude-sonnet-4-6
-```
+## Quickstart
 
-**3. Create the agent:**
+You need Node.js 22.14+, git, and one model key.
 
-```bash
-npm run setup
-# ✓ Agent "code-reviewer" (...) is in sync with agent/ at 1a2b3c4
-```
-
-It's now under **Agents** in the TrueForge UI; click **Try** to chat with it.
-
-**4. Run 1 (your baseline):**
-
-```bash
-npm run run-evals
-# Run 01: agent "code-reviewer" at 1a2b3c4, 4 tasks
-#   01-python-utils          0.67
-#   ...
-# Run 01 score: 50 (0/4 tasks passed, 5414 tokens)
-# ✓ Committed runs/run-01. Next: npm run improve
-```
-
-After run 1, **don't change `evals/` again.** Same tasks, same scorer, every run.
-
-**5. Let the agent improve itself, then run again:**
-
-```bash
-npm run improve      # the agent rewrites agent/ from its failures; committed with Agent-Session: <id>
-git show             # review it. Keep it, or drop it: git reset --hard HEAD~1 and improve again
-npm run run-evals    # run 2
-```
-
-Repeat as often as you like. Then fill in **Run 1 vs run N** above, and push.
-
-## The loop, step by step
-
-**`npm run run-evals`**
-1. Refuses to run if `agent/` or `evals/` has uncommitted changes, so `agent_commit` always says exactly what ran.
-2. Syncs the TrueForge agent with `agent/` (`agents.update`), so the files and the agent can't drift.
-3. Opens **one TrueForge session** for the run. Each task is one **root turn** in it (`previousTurnId: "none"`), so tasks don't see each other.
-4. Scores every reply with `evals/score.ts`, exports the session, and writes:
-   - `runs/run-NN/results.json`: each reply and its score details
-   - `runs/run-NN/score.json`: the run's numbers
-   - `runs/run-NN/session.json`: the session, its turns and every event, from TrueForge
-   - a new row in `runs/summary.csv`: `run, session_id, agent_commit, score, date_utc, tasks_passed, tasks_total, tokens, tool_calls, duration_s`
-5. Commits `runs/` as `run NN: score X` (skip with `--no-commit`).
-
-**`npm run improve`** (options: `--run NN`, `--coach`, `--no-commit`)
-1. Takes the failed tasks from the last run (never the holdout ones), with the scorer's feedback: what was missed, what was noise.
-2. Opens a TrueForge session **with the agent itself** and asks it for new versions of its files. With `--coach`, a separate inline TrueForge "coach" agent on the same model writes them instead (allowed: "the agent, or a TrueForge agent coaching it").
-3. Checks the answer: only `agent/instructions.md` and `agent/skills/*/SKILL.md` may change; skills keep their frontmatter; the JSON output format stays; and the new text **must not quote the eval tasks** (task ids, file names, the buggy lines), so the agent learns rules, not answers.
-4. Writes the files, saves the improve session to `runs/run-NN/improve-session.json`, and commits:
-
-   ```
-   agent: learn from run 01
-
-   I only checked three kinds of problems; I now also check ...
-
-   Agent-Session: 01m5sab7yga874pqmr33w87hra
-   ```
-
-**`npm run export-session -- <session_id> [out.json]`**: any session as JSON (e.g. one you ran in the UI). TrueForge has no export button yet; this pages through `sessions.get`, `sessions.listTurns` and `sessions.listTurnEvents`.
-
-**`npm run score -- runs/run-NN`** re-scores a saved run. **`npm run score -- --selftest`** checks the scorer on perfect, empty and noisy answers.
-
-## Make it yours
-
-Pick your task and your scorer **before run 1**; after run 1 they're frozen.
-
-- **The agent:** edit `agent/agent.json` (name, model), `agent/instructions.md` and the skill. Rename or add skills under `agent/skills/<name>/SKILL.md`.
-- **The tasks:** put 3 or more in `evals/tasks/*.json` (5+ makes your score harder to argue with). Mark one or two `"holdout": true`: they count in the score, but `improve` never shows them to the agent. If the holdout score goes up too, the agent learned something general.
-- **The prompt per task:** `taskPrompt()` in `scripts/lib.ts`.
-- **The scorer:** `evals/score.ts`. It must give **one number, higher is better**: tasks passed, a checker, tests, a judge prompt. Want to measure "cheaper"? Use tasks solved per 1,000 tokens (`score.json` has the tokens).
-- **The improve prompt:** in `scripts/improve.ts`. Its overfitting guard is tuned for this example; adapt it to your tasks.
-
-Some ideas from the challenge brief: a PR reviewer that sharpens its checklist; issue → PR with memory (run tests in the sandbox); an overnight janitor on a TrueForge schedule; subagents that coach each other; the cheaper agent.
-
-## Skills and the sandbox
-
-`agent/agent.json` has `"skill_mode"`:
-
-- **`inline`** (default, no sandbox, nothing to install): `setup` pastes each `SKILL.md` into the agent's instructions. The agent rewrites the files; `setup` pushes them with `agents.update`. Works everywhere, including Windows.
-- **`git`**: real TrueForge [skills](https://trueforge.dev/skills). `setup` registers each `agent/skills/<name>` from your **public** repo (`SKILL_REPO_URL` in `.env`), pinned to the commit that runs, and turns the sandbox on. Push before each `run-evals`. Skills need a sandbox:
-  - local `npx` on **macOS**: built-in local sandbox;
-  - local `npx` on **Linux**: built-in local sandbox once `bubblewrap`, `socat` and `ripgrep` are installed (restart TrueForge after);
-  - Windows or hosted setups: [Daytona](https://trueforge.dev/sandbox) (has a free trial).
-
-The challenge asks you to use **two or more** of: skills, subagents, MCP tools, the sandbox, schedules, human checkpoints, the SDK. This starter already uses the SDK; `git` mode adds skills and the sandbox. Subagents are on by default in TrueForge agents.
-
-### Local or open models
-
-Any OpenAI-compatible endpoint works as a `custom` provider (**Settings → Models → Add custom provider**). If it runs on your own machine (Ollama, vLLM, LM Studio), TrueForge blocks private addresses by default; start it with your host allowed:
+**1. Start TrueForge** in its own terminal. The allowed host lets it reach the local MCP server.
 
 ```bash
 OUTBOUND_URL_ALLOWED_HOSTS='["127.0.0.1"]' npx @truefoundry/trueforge@latest
 ```
 
-and use `http://127.0.0.1:<port>/v1` as the base URL.
+Open http://localhost:8790 → **Settings → Models** → pick your provider → paste your key → **Create**.
 
-## What the judges check
+**2. Install, and start the tools** in a second terminal:
 
-Automatically, for everyone:
-- the repo is public, not a fork, and was created on or after 31 Oct;
-- `agent/`, `evals/tasks/` (3+ tasks), `evals/score.*`, `runs/summary.csv` and this README with a **Run 1 vs run N** section exist;
-- `summary.csv` has 2+ runs, and a later run scores higher than run 1;
-- a commit that changes `agent/` and ends with `Agent-Session:` comes after run 1's commit and before the later run's.
+```bash
+npm install
+```
 
-For finalists, judges look deeper: they open the sessions (`runs/run-NN/session.json`), the diffs and the scorer, and may ask you to run it again live. Keep it honest: same tasks, same scorer, every run.
+```bash
+npm run mcp
+```
 
-You also send: a video (up to 2 minutes), three lines (what it does, how it uses TrueForge, what it learned), and a half-page feedback note on TrueForge.
+**3. Create the agent.** `agent/agent.json` uses `truefoundry/claude-haiku-4-5`, a custom provider pointing at a TrueFoundry AI Gateway. For another model, set `TF_MODEL=provider/model` in `.env` (copy it from `.env.example`).
+
+```bash
+npm run setup
+```
+
+**4. Run the loop.** Don't change `evals/` after run 1.
+
+```bash
+npm run run-evals
+```
+
+```bash
+npm run improve
+```
+
+```bash
+npm run run-evals
+```
+
+Review each change with `git show`. To drop one: `git reset --hard HEAD~1`, then improve again. The rule is that **the agent writes the change**: you can keep it or drop it, but you don't edit it.
+
+**5. Open the review queue:**
+
+```bash
+npm run demo
+```
+
+Then go to http://localhost:8792.
+
+## The scorer
+
+`evals/score.ts` is deterministic. Each comment scores 0 to 1:
+
+| Part | Weight | Full marks when |
+|---|---|---|
+| Route | 0.35 | It goes to whoever has to act. **Sending a licensed item past the professional scores the whole comment 0.** |
+| Citation | 0.20 | It's an accepted entry. Same chapter or title gets half. An id not in the index gets 0. |
+| Discipline | 0.15 | It matches the substance of the comment |
+| Sheets | 0.15 | All required sheets are listed, with a 0.25 penalty per extra sheet |
+| Draft | 0.15 | It passes the checks below |
+
+Draft checks: a correction eligible for Certified Plan Corrections says the revision is bubbled, dated and initialed (zoning items are excluded). A licensed item makes no compliance claim. No numbers appear that weren't in the letter or project details. No response is written where none is needed.
+
+The run score is 100 × the mean letter score. `score.json` also records holdout score and unsafe routes.
+
+```bash
+npm run score -- --selftest
+```
+
+## What's real and what isn't
+
+- **Real:** Chicago permit statistics (City of Chicago Data Portal), and code section numbers and titles (Municipal Code of Chicago, American Legal, 2026 S-74).
+- **Our paraphrase:** the scope line on each code entry. Title 14B incorporates the 2018 IBC by reference, so the index holds no code text. Full text is [on ICC's site](https://codes.iccsafe.org/content/CHIBC2019P1).
+- **Partly verified:** the Certified Plan Corrections rules (bubble, date, initial; zoning excluded) come from search excerpts of the city's pages, which blocked direct fetching. Confirm them against the pages, because the scorer depends on them.
+- **Edition limit:** the code index and evals cover the current 2019 Chicago Building Code. The 2026 Ordinance is optional now and mandatory for projects starting on or after December 1, 2026, and isn't indexed yet. Section numbers may change.
+- **Synthetic:** all 8 eval letters and the demo letter. Correction letters generally aren't public, so we wrote them, including the Title 13 references used as a stale-citation trap.
+- **Not validated by a licensed professional:** the expected answers are our best judgment. A score here means agreement with our answer key, not that a city would accept the response. The top priority for making this real is to get actual letters and an architect's review of the key.
+- **Designed to start low:** the playbook starts short on purpose, and the scorer rewards specific practices that the playbook doesn't state at first. That's the point of the challenge, but read run 1 with that in mind.
+- **Not legal or code advice.** A licensed professional reviews everything before it's filed.
+
+## Layout
+
+```
+agent/            agent.json, instructions.md, skills/ (what the agent rewrites)
+evals/            tasks/*.json (07 and 08 are holdouts), score.ts
+jurisdictions/    one pack per place
+mcp/server.ts     the research tools
+demo/             the review queue
+feedback/         architect decisions from the demo (created on first use)
+scripts/          setup, run-evals, improve, export-session
+runs/             one folder per run, plus summary.csv
+docs/             locale research
+```
 
 ## Troubleshooting
 
-- **`Can't reach TrueForge`**: is `npx @truefoundry/trueforge@latest` still running? Different port? Set `TRUEFORGE_BASE_URL`.
-- **`Model "..." is not configured`**: add the provider in Settings → Models, and set `TF_MODEL` to the exact `provider/model` name shown there.
-- **A task shows `[error: ...]`**: the model call failed (key, quota, model name). The run still saves; fix it and run again before you count it.
-- **`agent/ or evals/ has uncommitted changes`**: commit them. (`--allow-dirty` exists for experiments; the row is marked `-dirty`, don't count it.)
-- **`skills require a sandbox provider`** in `git` mode: see *Skills and the sandbox*.
-- **The model rejects `temperature`** (some reasoning models do): remove `params` in `agent/agent.json`.
+- **`Can't reach TrueForge`**: is it still running? For another port, set `TRUEFORGE_BASE_URL`.
+- **`The permit-research MCP server isn't running`**: run `npm run mcp`.
+- **`Model "..." is not configured`**: add the provider in Settings → Models, and set `TF_MODEL` to the exact name shown there.
+- **Tool calls fail, or the connector is blocked**: start TrueForge with `OUTBOUND_URL_ALLOWED_HOSTS` as in step 1.
+- **`agent/ or evals/ has uncommitted changes`**: commit them, so `agent_commit` says exactly what ran.
+- **The model rejects `temperature`**: remove `params` in `agent/agent.json`.
 
-## Status of this starter (v0)
+## Challenge checklist
 
-Built against TrueForge `@truefoundry/trueforge` 0.180.0 and `@truefoundry/trueforge-sdk` 0.180.0 (23 Oct 2026).
-
-- Tested end to end against a real local TrueForge server (npx, local mode) with a **mock** OpenAI-compatible model: `setup`, `run-evals` (run 1), `improve` (commit with `Agent-Session:`), `run-evals` (run 2), `export-session`, `score`. Not yet run with a real model key.
-- TODO(verify): `skill_mode: "git"` end to end. Skill registration (`settings.skills.createOrUpdate`) is accepted by the server; running the skill needs a sandbox, which our test machine didn't have. See https://trueforge.dev/skills and https://trueforge.dev/sandbox.
-- TODO(verify): the local sandbox on macOS needs no extra packages (from TrueForge's source, `packages/trueforge/src/sandbox/local`; not in the docs yet).
-- TODO: a scheduled variant (TrueForge [schedules](https://trueforge.dev/schedules)) that runs the evals nightly.
-
-## Contributing
-
-See [CONTRIBUTING.md](CONTRIBUTING.md), including how to go for the **PR prize** by contributing to [TrueForge](https://github.com/truefoundry/trueforge) itself.
+- Public repo, created on or after 31 Oct, not a fork.
+- `agent/`, `evals/tasks/` (3+), `evals/score.*`, `runs/summary.csv` and the **Run 1 vs run N** section exist.
+- `summary.csv` has 2+ runs, and a later run scores higher than run 1.
+- A commit that changes `agent/` and ends with `Agent-Session:` sits between run 1's commit and the later run's.
+- Also send: a video (up to 2 minutes), three lines, and a half-page feedback note on TrueForge.
 
 ## License
 

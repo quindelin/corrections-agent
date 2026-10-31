@@ -1,0 +1,36 @@
+{
+  "id": "03-coach-house",
+  "title": "Coach house additional dwelling unit",
+  "holdout": false,
+  "project": {
+    "jurisdiction": "chicago",
+    "address": "3300 N Placeholder Ct (fictional)",
+    "description": "New two-story coach house with one dwelling unit over a garage, behind an existing building. Standard Plan Review.",
+    "reviewer": "Department of Buildings, first review cycle"
+  },
+  "sheets": [
+    { "id": "T-001", "title": "Title sheet" },
+    { "id": "A-001", "title": "Site plan" },
+    { "id": "A-101", "title": "Floor plans" },
+    { "id": "A-201", "title": "Exterior elevations" },
+    { "id": "A-301", "title": "Building sections" },
+    { "id": "A-601", "title": "Window schedule" },
+    { "id": "E-101", "title": "Electrical plans" }
+  ],
+  "comments": [
+    { "id": "C1", "heading": "Zoning", "text": "Show on the site plan that the coach house does not remove required off-street parking." },
+    { "id": "C2", "heading": "Building", "text": "Glazed and openable areas for the second floor bedroom are not shown, so natural light and ventilation can't be verified. Add them to the window schedule." },
+    { "id": "C3", "heading": "General", "text": "Per former 13-64, smoke alarm locations are not shown. Show them on the electrical plan." },
+    { "id": "C4", "heading": "Building", "text": "The rear exterior wall is close to the lot line. Its fire-resistance rating is not indicated on the elevation." },
+    { "id": "C5", "heading": "General", "text": "A notarized letter from the owner authorizing the expediter is missing from the application." },
+    { "id": "C6", "heading": "General", "text": "For your information, an inspector will be assigned when the permit is issued. No response is needed." }
+  ],
+  "expected": [
+    { "comment": "C1", "disciplines": ["zoning"], "citations": ["17-10"], "route": "licensed_review", "sheets": ["A-001"], "revision_marks": false, "why": "Parking layout is a design matter shown on the site plan, under the parking chapter of the zoning ordinance." },
+    { "comment": "C2", "disciplines": ["interior_environment"], "citations": ["14B-12-1204", "14B-12-1202"], "route": "licensed_review", "sheets": ["A-601"], "revision_marks": true, "why": "Window areas are design data for the architect. Don't invent areas." },
+    { "comment": "C3", "disciplines": ["fire"], "citations": ["14B-9-907"], "route": "licensed_review", "sheets": ["E-101"], "revision_marks": true, "why": "Title 13 was replaced. Detection layout is a life-safety design decision, despite the General heading." },
+    { "comment": "C4", "disciplines": ["fire"], "citations": ["14B-7-705"], "route": "licensed_review", "sheets": ["A-201"], "revision_marks": true, "why": "Exterior wall rating is fire-resistance design, not an elevation drafting note." },
+    { "comment": "C5", "disciplines": ["admin"], "citations": ["14A-4", null], "route": "client_input", "sheets": [], "revision_marks": false, "why": "Only the owner can sign this letter." },
+    { "comment": "C6", "disciplines": ["admin"], "citations": [null, "14A-5"], "route": "no_action", "sheets": [], "revision_marks": false, "why": "Informational; the letter says no response is needed." }
+  ]
+}

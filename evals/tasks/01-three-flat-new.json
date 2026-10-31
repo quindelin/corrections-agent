@@ -1,0 +1,40 @@
+{
+  "id": "01-three-flat-new",
+  "title": "New three-flat",
+  "holdout": false,
+  "project": {
+    "jurisdiction": "chicago",
+    "address": "1200 N Sample Ave (fictional)",
+    "description": "New three-story residential building with three dwelling units. Zoning district RT-4. Standard Plan Review.",
+    "reviewer": "Department of Buildings, first review cycle"
+  },
+  "sheets": [
+    { "id": "T-001", "title": "Title sheet and sheet index" },
+    { "id": "A-001", "title": "Site plan" },
+    { "id": "A-101", "title": "Basement and first floor plans" },
+    { "id": "A-102", "title": "Second and third floor plans" },
+    { "id": "A-201", "title": "Exterior elevations" },
+    { "id": "A-301", "title": "Building sections" },
+    { "id": "A-302", "title": "Stair sections and details" },
+    { "id": "A-601", "title": "Door and window schedules" },
+    { "id": "S-101", "title": "Foundation plan" },
+    { "id": "S-102", "title": "Floor framing plans" },
+    { "id": "S-501", "title": "Structural details" }
+  ],
+  "comments": [
+    { "id": "C1", "heading": "Building", "text": "Per 13-160, headroom at the rear stair landing under the third floor joists is not dimensioned. Show the headroom on the stair section and coordinate it with the framing plan." },
+    { "id": "C2", "heading": "Zoning", "text": "The rear setback dimension on the site plan does not match the building footprint on the first floor plan. Reconcile the two sheets." },
+    { "id": "C3", "heading": "General", "text": "The application lists the general contractor's license as pending. Provide the contractor's current license number." },
+    { "id": "C4", "heading": "General", "text": "The door schedule does not show fire protection ratings for the unit entry doors that open onto the rear stair enclosure. Add the ratings." },
+    { "id": "C5", "heading": "General", "text": "Note: review fees will be recalculated when the permit is issued. No response is needed." },
+    { "id": "C6", "heading": "General", "text": "The sheet index on the title sheet omits S-501, which is included in the set. Correct the index." }
+  ],
+  "expected": [
+    { "comment": "C1", "disciplines": ["egress"], "citations": ["14B-10-1011"], "route": "licensed_review", "sheets": ["A-302", "S-102"], "revision_marks": true, "why": "Title 13 was replaced; the current stair section is in 14B-10. Whether the framing works is the architect's call, and both named sheets change." },
+    { "comment": "C2", "disciplines": ["zoning"], "citations": ["17-2"], "route": "licensed_review", "sheets": ["A-001", "A-101"], "revision_marks": false, "why": "Which dimension is right is a design question, and either sheet may be the wrong one." },
+    { "comment": "C3", "disciplines": ["admin"], "citations": ["14A-4", null], "route": "client_input", "sheets": [], "revision_marks": false, "why": "Only the contractor or owner has the license number." },
+    { "comment": "C4", "disciplines": ["fire"], "citations": ["14B-7-716"], "route": "licensed_review", "sheets": ["A-601"], "revision_marks": true, "why": "Rating selection is a life-safety design decision. It is about fire protection, despite the General heading." },
+    { "comment": "C5", "disciplines": ["admin"], "citations": [null, "14A-4"], "route": "no_action", "sheets": [], "revision_marks": false, "why": "The letter says no response is needed." },
+    { "comment": "C6", "disciplines": ["admin"], "citations": [null, "14A-4", "DOB-CPC"], "route": "agent_draft", "sheets": ["T-001"], "revision_marks": true, "why": "A clerical index fix needs no design judgment, but it is still a sheet revision and gets marked like one." }
+  ]
+}

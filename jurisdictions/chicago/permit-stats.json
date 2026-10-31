@@ -1,0 +1,54 @@
+{
+  "source": "City of Chicago Data Portal, Building Permits (ydr8-5enu)",
+  "url": "https://data.cityofchicago.org/Buildings/Building-Permits/ydr8-5enu",
+  "filter": "issue_date >= 2025-01-01, processing_time >= 0",
+  "measure": "processing_time: days from application start to permit issue. It does not split city time from applicant time.",
+  "retrieved": "2026-10-31",
+  "rows": [
+    {
+      "review_type": "EXPRESS PERMIT PROGRAM",
+      "permits": 37860,
+      "avg_days": 8.3
+    },
+    {
+      "review_type": "STANDARD PLAN REVIEW",
+      "permits": 6697,
+      "avg_days": 117.0
+    },
+    {
+      "review_type": "SELF CERT",
+      "permits": 5622,
+      "avg_days": 53.5
+    },
+    {
+      "review_type": "SIGN PERMIT",
+      "permits": 4148,
+      "avg_days": 77.4
+    },
+    {
+      "review_type": "CONVEYANCE DEVICE PERMIT",
+      "permits": 2015,
+      "avg_days": 2.2
+    },
+    {
+      "review_type": "DEMOLITION PERMIT",
+      "permits": 1221,
+      "avg_days": 28.5
+    },
+    {
+      "review_type": "EASY PERMIT",
+      "permits": 817,
+      "avg_days": 2.3
+    },
+    {
+      "review_type": "DIRECT DEVELOPER SERVICES",
+      "permits": 568,
+      "avg_days": 158.5
+    },
+    {
+      "review_type": "TRADITIONAL DEVELOPER SERVICES",
+      "permits": 12,
+      "avg_days": 7.2
+    }
+  ]
+}

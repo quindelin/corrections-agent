@@ -1,0 +1,35 @@
+{
+  "id": "02-two-flat-rehab",
+  "title": "Two-flat gut rehab with rear porch",
+  "holdout": false,
+  "project": {
+    "jurisdiction": "chicago",
+    "address": "2200 W Example St (fictional)",
+    "description": "Interior rehabilitation of an existing two-flat and replacement of the rear porch. Zoning district RS-3. Standard Plan Review.",
+    "reviewer": "Department of Buildings, first review cycle"
+  },
+  "sheets": [
+    { "id": "T-001", "title": "Title sheet and code summary" },
+    { "id": "A-001", "title": "Site plan" },
+    { "id": "A-101", "title": "Floor plans" },
+    { "id": "A-301", "title": "Wall sections" },
+    { "id": "A-501", "title": "Porch details" },
+    { "id": "S-201", "title": "Porch framing plan" }
+  ],
+  "comments": [
+    { "id": "C1", "heading": "Structural", "text": "The rear porch framing plan does not state the design live load. Note the design loads on the plan." },
+    { "id": "C2", "heading": "Building", "text": "Picket spacing at the second floor porch guard is not shown. Provide a guard detail." },
+    { "id": "C3", "heading": "Building", "text": "Identify the work area and the classification of the work under the rehabilitation code in the code summary." },
+    { "id": "C4", "heading": "Zoning", "text": "The new porch roof extends into the required rear yard. This needs a variation from the Zoning Board of Appeals before zoning can approve the plans." },
+    { "id": "C5", "heading": "Energy", "text": "Compliance documentation for the new exterior wall insulation is not included. Provide the insulation values on the wall sections." },
+    { "id": "C6", "heading": "General", "text": "Provide a current plat of survey with the application." }
+  ],
+  "expected": [
+    { "comment": "C1", "disciplines": ["structural"], "citations": ["14B-16-1607", "14B-16-1603"], "route": "licensed_review", "sheets": ["S-201"], "revision_marks": true, "why": "Design loads are the engineer's to set. Don't propose a value." },
+    { "comment": "C2", "disciplines": ["egress"], "citations": ["14B-10-1015"], "route": "licensed_review", "sheets": ["A-501"], "revision_marks": true, "why": "A guard is a life-safety detail for the architect, filed under means of egress." },
+    { "comment": "C3", "disciplines": ["admin", "interior_environment"], "citations": ["14R"], "route": "licensed_review", "sheets": ["T-001"], "revision_marks": true, "why": "Classifying work under the rehabilitation code is a professional code interpretation, not paperwork." },
+    { "comment": "C4", "disciplines": ["zoning"], "citations": ["17-13"], "route": "other_agency", "sheets": [], "revision_marks": false, "why": "The next step is at the Zoning Board of Appeals, not a sheet revision." },
+    { "comment": "C5", "disciplines": ["energy"], "citations": ["14N", "14B-13"], "route": "licensed_review", "sheets": ["A-301"], "revision_marks": true, "why": "Insulation values are design data from the architect, and the Energy Transformation Code governs." },
+    { "comment": "C6", "disciplines": ["admin"], "citations": ["14A-4", null], "route": "client_input", "sheets": [], "revision_marks": false, "why": "The owner commissions the survey." }
+  ]
+}

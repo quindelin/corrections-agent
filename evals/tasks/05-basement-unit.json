@@ -1,0 +1,34 @@
+{
+  "id": "05-basement-unit",
+  "title": "Basement unit added to a three-flat",
+  "holdout": false,
+  "project": {
+    "jurisdiction": "chicago",
+    "address": "5500 S Illustrative Blvd (fictional)",
+    "description": "Conversion of the basement of an existing three-flat to a new fourth dwelling unit. Zoning district RT-4. Standard Plan Review.",
+    "reviewer": "Department of Buildings, first review cycle"
+  },
+  "sheets": [
+    { "id": "T-001", "title": "Title sheet" },
+    { "id": "A-001", "title": "Site plan and zoning data" },
+    { "id": "A-101", "title": "Basement plan" },
+    { "id": "A-301", "title": "Building section" },
+    { "id": "A-501", "title": "Assembly details" }
+  ],
+  "comments": [
+    { "id": "C1", "heading": "Building", "text": "The ceiling height in the basement bedroom is not shown. Dimension it on the section." },
+    { "id": "C2", "heading": "Building", "text": "A second exit from the basement unit is not indicated on the plan." },
+    { "id": "C3", "heading": "Zoning", "text": "The added unit increases density. Show the lot area per unit calculation in the zoning data." },
+    { "id": "C4", "heading": "General", "text": "The fire-resistance rating of the floor assembly between the basement unit and the first floor is not shown. Indicate it on the section and provide the assembly detail." },
+    { "id": "C5", "heading": "General", "text": "Provide the asbestos survey from the owner's environmental consultant." },
+    { "id": "C6", "heading": "General", "text": "The drawing date on the title sheet differs from the date on the rest of the set. Correct it." }
+  ],
+  "expected": [
+    { "comment": "C1", "disciplines": ["interior_environment"], "citations": ["14B-12-1207"], "route": "licensed_review", "sheets": ["A-301"], "revision_marks": true, "why": "Interior space dimensions need a field-verified dimension from the architect." },
+    { "comment": "C2", "disciplines": ["egress"], "citations": ["14B-10-1006"], "route": "licensed_review", "sheets": ["A-101"], "revision_marks": true, "why": "Exit count and layout is a life-safety design decision." },
+    { "comment": "C3", "disciplines": ["zoning"], "citations": ["17-2"], "route": "licensed_review", "sheets": ["A-001"], "revision_marks": false, "why": "The density calculation is the architect's under the residential district rules. Don't compute it." },
+    { "comment": "C4", "disciplines": ["fire"], "citations": ["14B-7-711"], "route": "licensed_review", "sheets": ["A-301", "A-501"], "revision_marks": true, "why": "Assembly rating is fire-resistance design, despite the General heading, and both named sheets change." },
+    { "comment": "C5", "disciplines": ["admin"], "citations": ["14A-4", null], "route": "client_input", "sheets": [], "revision_marks": false, "why": "It comes from the owner's consultant, so ask the owner." },
+    { "comment": "C6", "disciplines": ["admin"], "citations": [null, "14A-4", "DOB-CPC"], "route": "agent_draft", "sheets": ["T-001"], "revision_marks": true, "why": "Clerical, but a sheet revision." }
+  ]
+}

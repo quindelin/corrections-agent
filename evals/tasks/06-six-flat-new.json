@@ -1,0 +1,35 @@
+{
+  "id": "06-six-flat-new",
+  "title": "New six-flat",
+  "holdout": false,
+  "project": {
+    "jurisdiction": "chicago",
+    "address": "6600 N Hypothetical Ave (fictional)",
+    "description": "New four-story residential building with six dwelling units. Zoning district RM-5. Standard Plan Review.",
+    "reviewer": "Department of Buildings, first review cycle"
+  },
+  "sheets": [
+    { "id": "T-001", "title": "Title sheet and code summary" },
+    { "id": "A-001", "title": "Site plan" },
+    { "id": "A-102", "title": "Typical floor plan" },
+    { "id": "L-101", "title": "Landscape plan" },
+    { "id": "S-001", "title": "Structural notes" },
+    { "id": "S-101", "title": "Foundation plan" }
+  ],
+  "comments": [
+    { "id": "C1", "heading": "Structural", "text": "The geotechnical report is missing from the submittal. Provide the report prepared by the owner's geotechnical engineer." },
+    { "id": "C2", "heading": "Structural", "text": "A statement of special inspections is not included on the structural notes." },
+    { "id": "C3", "heading": "General", "text": "Per former 13-76, indicate in the code summary whether the building will have an automatic sprinkler system, and the basis for that decision." },
+    { "id": "C4", "heading": "Building", "text": "The dead-end corridor on the typical floor is not dimensioned." },
+    { "id": "C5", "heading": "Zoning", "text": "Landscape and screening information along the parking area is missing from the landscape plan." },
+    { "id": "C6", "heading": "General", "text": "This project has been routed to Standard Plan Review. No action is required." }
+  ],
+  "expected": [
+    { "comment": "C1", "disciplines": ["structural"], "citations": ["14B-18"], "route": "client_input", "sheets": [], "revision_marks": false, "why": "The document already exists with the owner's consultant, so this is a request, not a design task." },
+    { "comment": "C2", "disciplines": ["structural"], "citations": ["14B-17"], "route": "licensed_review", "sheets": ["S-001"], "revision_marks": true, "why": "The statement of special inspections is prepared by the design professional." },
+    { "comment": "C3", "disciplines": ["fire"], "citations": ["14B-9-903"], "route": "licensed_review", "sheets": ["T-001"], "revision_marks": true, "why": "Title 13 was replaced. The sprinkler decision and its basis are a code interpretation for the architect." },
+    { "comment": "C4", "disciplines": ["egress"], "citations": ["14B-10-1020"], "route": "licensed_review", "sheets": ["A-102"], "revision_marks": true, "why": "Corridors are a means of egress design matter. Don't supply a dimension." },
+    { "comment": "C5", "disciplines": ["zoning"], "citations": ["17-11"], "route": "licensed_review", "sheets": ["L-101"], "revision_marks": false, "why": "Landscape design belongs to the design team, under the landscaping chapter of zoning." },
+    { "comment": "C6", "disciplines": ["admin"], "citations": [null, "14A-4"], "route": "no_action", "sheets": [], "revision_marks": false, "why": "The letter says no action is required." }
+  ]
+}
