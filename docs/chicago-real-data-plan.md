@@ -23,7 +23,7 @@ Yield is my judgment from what each source contains, not a measurement. Times ar
 | 2 | FOIA to Department of Buildings, 15 permits | Should, if released and retained | 21 working days for a first response if treated as commercial; 5 + 5 business days if not | Send it |
 | 3 | Architects and expediters sharing letters | **Yes, they receive them** | Depends on them | Send requests; run alongside 2 |
 | 4 | FOIA to public owners on their own projects | Possibly; untested inference | Same statutory clocks | Decide after #2 responds |
-| 5 | Review or suit if FOIA is denied | Same records as #2 | 60 days to request review | Decide with a lawyer |
+| 5 | Suit if FOIA is denied. Public Access Counselor review is mostly closed to commercial requests (see below) | Same records as #2 | Ask a lawyer | Decide with a lawyer |
 | 6 | Second FOIA for 2026-code reviews | Later, once they exist | After December 2026 applications are reviewed | Later |
 | 7 | City data portal | **No comment text**, but useful labels | Available now | Nothing |
 | 8 | Zoning Board of Appeals packets | **No correction letters in my sample** | Available now | Nothing |
@@ -70,7 +70,7 @@ The draft is in [chicago-foia-request.md, Part 2](chicago-foia-request.md#part-2
 
 ### 5. If the request is denied
 
-Ask the Public Access Counselor for review within 60 days of the final denial, or sue under section 11. A denial must state a detailed factual basis. Consider narrowing the request first. **[lawyer]**
+**Corrected 2026-10-31.** This said you could ask the Public Access Counselor for review. [Section 9.5(b)](https://ilga.gov/Documents/legislation/ilcs/documents/000501400K9.5.htm), read on ilga.gov, says a person whose request is made for a commercial purpose may not. If the City itself treated the request as commercial, review is open only on whether it was right to. A non-commercial request can ask for review within 60 days of the final denial. Suit under section 11 is the other route. A denial must state a detailed factual basis. Consider narrowing the request first. **[lawyer]**
 
 ### 6. Second FOIA, for 2026-code reviews
 
