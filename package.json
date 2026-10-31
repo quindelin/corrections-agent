@@ -16,6 +16,9 @@
     "improve": "tsx scripts/improve.ts",
     "export-session": "tsx scripts/export-session.ts",
     "score": "tsx evals/score.ts",
+    "real:build": "tsx realdata/build-seattle.ts",
+    "real:run": "tsx realdata/run.ts",
+    "real:improve": "tsx realdata/improve.ts",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {

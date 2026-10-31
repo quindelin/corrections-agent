@@ -1,0 +1,3131 @@
+{
+ "note": "Real letters from Seattle's public Plan Comments dataset. Reviewers' code citations are hidden in the text and kept as labels. Contact details removed.",
+ "letters": [
+  {
+   "id": "01-drainage-7034014-CN",
+   "holdout": false,
+   "review_type": "Drainage",
+   "source": {
+    "letter": "https://web.seattle.gov/dpd/edms/GetDocument?id=11066735",
+    "permit": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=7034014-CN",
+    "document_date": "2024-11-01"
+   },
+   "project": {
+    "jurisdiction": "seattle",
+    "address": "2530 30TH AVE W",
+    "description": "Construct new two-family dwelling (Units 1 & 2) per plan. (Establish use as housing for two attached dwelling units and one detached dwelling unit per land use code. Construct new one and two-family dwellings per plan. Review and processing for two records under 7034014-CN) Permit class: Single Family/Duplex. Zoning: unknown.",
+    "reviewer": "Seattle SDCI, Correction Letter-Drainage-Cycle1"
+   },
+   "outcome": {
+    "review_cycles": 5,
+    "days_out_for_corrections": 202,
+    "days_city_review": 120
+   },
+   "comments": [
+    {
+     "id": "C1",
+     "text": "It appears that the project to the north at 2536 30th Ave W may be closely related to this project. As the project plans have not been submitted, it is not clear whether these two projects are closely related or not. The preliminary Site Plan for the project to the north shows shared access through a vehicle maneuvering using the lot to the south. Provide information to confirm if this project is closely related to any other projects that are being submitted. If the project is closely related, the thresholds must be considered using the total of all closely related projects. If this includes 5,000 SF or more of new plus replaced hard surface, the approved point of discharge will the Public Storm Main which will need to be extended from W Smith St. If the projects are not closely related, provide clear information including submitting a plan for the adjacent lot that there are no shared elements including access, utilities or other physical elements such as walls.Eric Dripps (4)",
+     "labels": {
+      "discipline": "drainage",
+      "citations": [],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C2",
+     "text": "The infeasibility for infiltrating facilities is not clear. There appears to be room for an infiltrating facility in between the DADU and the SFR or between the SFR and the 30th Ave W ROW. The Drainage report indicates that the test was completed at elevation 225. It appears that the driveway proposed grade is between 228 and 225. If locating an infiltration trench only for the DADU at the upper end of the driveway it is not clear why this infiltration test is not showing that this can be feasible. It only must be shown that the minimum vertical setbacks can be met for hard pan or groundwater. It is also not clear why the SFR could not discharge to an infiltration trench at the west end of the property adjacent to the ROW. There is no required setback from the ROW and a subsurface investigation could be conducted to confirm that the vertical setbacks could be met. If this proposed configuration is proposed, a simple test is only required (less than 2,000 Sf to a single facility). Provide additional information to confirm why infiltration is not feasible other than what is described in the Drainage Report that a test cannot be conducted onsite.",
+     "labels": {
+      "discipline": "drainage",
+      "citations": [],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C3",
+     "text": "Update the Onsite Stormwater Management Summary Sheet and workbook based on additional information for infiltration feasibility for the site.",
+     "labels": {
+      "discipline": "drainage",
+      "citations": [],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C4",
+     "text": "Update Exhibit A in the Memorandum of Drainage Control (MDC) base on the corrections for this project. Resubmit a Draft MDC. Once approved by this reviewer, the MDC must be signed and notarized by the owner and recorded with King County prior to approval of Drainage Review for this permit.",
+     "labels": {
+      "discipline": "drainage",
+      "citations": [],
+      "route": null,
+      "sheets": []
+     }
+    }
+   ]
+  },
+  {
+   "id": "02-zoning-7012750-CN",
+   "holdout": false,
+   "review_type": "Zoning",
+   "source": {
+    "letter": "https://web.seattle.gov/dpd/edms/GetDocument?id=10689578",
+    "permit": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=7012750-CN",
+    "document_date": "2024-07-15"
+   },
+   "project": {
+    "jurisdiction": "seattle",
+    "address": "1457 B 22ND AVE",
+    "description": "Construct new two-family dwelling (SFR1+AADU) per plan. (Establish use as single family residence with attached and detached accessory dwelling units per land use code. Construct (4) one-family dwellings and (1) two-family dwelling per plan. Review and processing for five records under 7012750-CN) Permit class: Single Family/Duplex. Zoning: RSL, RSL.",
+    "reviewer": "Seattle SDCI, Correction Letter-Zoning-Cycle2"
+   },
+   "outcome": {
+    "review_cycles": 7,
+    "days_out_for_corrections": 149,
+    "days_city_review": 163
+   },
+   "comments": [
+    {
+     "id": "C1",
+     "text": "Specific Details: Between CY1 and CY2 several dimensions on the site plan were removed. Please restore the required setback dimensions and the dimensions from the DADU eaves to the PL.Zoning - General and Special Corrections (1)",
+     "labels": {
+      "discipline": "zoning",
+      "citations": [],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C2",
+     "text": "[code reference removed] (Tree Requirements): Street Trees: [Repeat Correction] On the site plan sheet, show the location, size, and type of proposed street trees per [code reference removed] Obtain conceptual approval from SDOT ([email removed]) for the proposed type, number, and location of trees and provide proof of approval (emails, etc.) with your correction response.Zoning - [code reference removed] - Neighborhood Residential (2)",
+     "labels": {
+      "discipline": "zoning",
+      "citations": [
+       "SMC 23.44.020",
+       "SMC 23.44"
+      ],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C3",
+     "text": "[code reference removed] (RSL Dwelling Unit Size): Document Compliance: The maximum dwelling unit size standard per [code reference removed] is separate from the maximum ADU size standards in [code reference removed], therefore the analyses should be different. Include additional information that demonstrates compliance with [code reference removed], the maximum net unit area of any dwelling unit, including ADU floor area, is 2200 square feet. There should be 3 different calculations for each SFR and its respective ADU demonstrating how each is under 2200 square feet. For example, SFR1+AADU=(983.95+983.93) 1967.88 sf < 2200 sf. Also, it is confusing why the plans state \"3810 sf allowable GFA: 2902.11 sf chargeable floor area provided.\" in the \"Floor area summary - RSL\" table on sheet A 1.2. Please clarify how you are getting to 3810 sf and 2902.11 sf.",
+     "labels": {
+      "discipline": "zoning",
+      "citations": [
+       "SMC 23.44.018",
+       "SMC 23.44.041"
+      ],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C4",
+     "text": "[code reference removed] (Improvement Requirements for Existing Streets in Residential and Commercial Zones): Pedestrian Updates in Urban Village: [Repeat Correction] This project is located in an urban village. Per [code reference removed], the sidewalks, curbs, curb ramps, and accessible crossings may need to be brought into compliance in order to meet standards in the Right-of-Way Improvements Manual. Please provide proof of correspondence with SDOT confirming or negating the need for pedestrian circulation updates. Contact Jackson Keenan-Koch ([email removed]).Zoning - [code reference removed] - Streets, Alleys, and Easements (1)",
+     "labels": {
+      "discipline": "zoning",
+      "citations": [
+       "SMC 23.53.015",
+       "SMC 23.53.006",
+       "SMC 23.53"
+      ],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C5",
+     "text": "[code reference removed] (Waste and Recycling): Solid Waste Storage and Access in RSL Zones: (FYI) Please review the recommended solid waste plan provided by SPU in the portal, the document contains solid waste code and best practices for development with accessory dwelling units.Zoning - [code reference removed] - Parking, Access, and Solid Waste (1)",
+     "labels": {
+      "discipline": "zoning",
+      "citations": [
+       "SMC 23.54.040",
+       "SMC 23.54"
+      ],
+      "route": null,
+      "sheets": []
+     }
+    }
+   ]
+  },
+  {
+   "id": "03-ordinance-7016457-CN",
+   "holdout": false,
+   "review_type": "Ordinance",
+   "source": {
+    "letter": "https://web.seattle.gov/dpd/edms/GetDocument?id=10489554",
+    "permit": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=7016457-CN",
+    "document_date": "2024-05-15"
+   },
+   "project": {
+    "jurisdiction": "seattle",
+    "address": "2018 C S INGERSOLL PL",
+    "description": "Construct South DADU 1 per plan [Establish use as north and middle single-family residences (SFR) with a south detached accessory dwelling unit (DADU) per land use code. Construct as one-family dwellings; review and process for three records under 7016457-CN]. Permit class: Single Family/Duplex. Zoning: unknown.",
+    "reviewer": "Seattle SDCI, Correction Letter-Ordinance/Structural-Cycle1"
+   },
+   "outcome": {
+    "review_cycles": 5,
+    "days_out_for_corrections": 255,
+    "days_city_review": 234
+   },
+   "comments": [
+    {
+     "id": "C1",
+     "text": "This project has been reviewed for conformance with one or more of the following codes: 2018 Seattle Building Code (SBC); 2018 Seattle Existing Building Code (SEBC); 2018 Seattle Energy Code (SEC) Include reference to the SEC on the plans. Sheet A0.0Ordinance (1) n strict accordance with t he 2018 International Bu ode, and all relevant prov udes adherence to licens s synonymous with S.B.C de/Zoning Ordinance bein tly notify and engage wit",
+     "labels": {
+      "discipline": null,
+      "citations": [],
+      "route": "no_action",
+      "sheets": [
+       "A0.0O"
+      ]
+     }
+    },
+    {
+     "id": "C2",
+     "text": "Specify that the exterior wall less than 5' - 0\" from the fire separation line shall be symmetrically rated one hour wall Sheet A3.0Ordinance Structural (4)",
+     "labels": {
+      "discipline": "fire",
+      "citations": [],
+      "route": "licensed_review",
+      "sheets": [
+       "A3.0O"
+      ]
+     }
+    },
+    {
+     "id": "C3",
+     "text": "Revise the specification of the exterior wall supporting the cantilevered portion of the building to be one-hour fire rated W5 in lieu of W1 per [code reference removed] at both SFR 2 and DADU which cantilever over the common driveway access.",
+     "labels": {
+      "discipline": "fire",
+      "citations": [
+       "SBC 704"
+      ],
+      "route": "licensed_review",
+      "sheets": []
+     }
+    },
+    {
+     "id": "C4",
+     "text": "Specify safety glazing for the fenestration at the top stair landing and within the door swing of the laundry closet doors or demonstrate that it is exempt. Sheet A2.1",
+     "labels": {
+      "discipline": null,
+      "citations": [],
+      "route": null,
+      "sheets": [
+       "A2.1"
+      ]
+     }
+    },
+    {
+     "id": "C5",
+     "text": "Specify safety glazing for the fenestration at the top stair landing and within the door swing of the laundry closet doors or demonstrate that it is exempt. Sheet A2.2 Sheet A2.2 5'-0\" W1 16 2\"2'-0\" 5 1/2\"2'-0\" H H 33'-8\" H H1'-5 1/2\" 2'-0\" 5 1/2\"2'-0\"",
+     "labels": {
+      "discipline": null,
+      "citations": [],
+      "route": null,
+      "sheets": [
+       "A2.2"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "04-zoning-6938531-CN",
+   "holdout": false,
+   "review_type": "Zoning",
+   "source": {
+    "letter": "https://web.seattle.gov/dpd/edms/GetDocument?id=10138005",
+    "permit": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=6938531-CN",
+    "document_date": "2024-01-30"
+   },
+   "project": {
+    "jurisdiction": "seattle",
+    "address": "5924 28TH AVE S",
+    "description": "Establish new detached accessory dwelling unit per land use code. Construct one-family dwelling per plan Permit class: Single Family/Duplex. Zoning: NR3.",
+    "reviewer": "Seattle SDCI, Correction Letter-Zoning-Cycle3"
+   },
+   "outcome": {
+    "review_cycles": 5,
+    "days_out_for_corrections": 243,
+    "days_city_review": 61
+   },
+   "comments": [
+    {
+     "id": "C1",
+     "text": "Please note, the zoning review cannot be completed until the associated short plat (3040432-LU) is complete and recorded.Please note, the zoning review cannot be completed until the associated short plat (3040432-LU) is complete and recorded. (1)",
+     "labels": {
+      "discipline": "zoning",
+      "citations": [],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C2",
+     "text": "[code reference removed] (Yards): Rear Yard Coverage: If the DADU is located in the required rear yard, please provide the required rear yard coverage calculations under [code reference removed] and Table A for [code reference removed] [code reference removed] (Yards): Rear Yard Coverage: If the DADU is located in the required rear yard, please provide the required rear yard coverage calculations under [code reference removed] and Table A for [code reference removed] (1)",
+     "labels": {
+      "discipline": "zoning",
+      "citations": [
+       "SMC 23.44.014",
+       "SMC 23.44.041"
+      ],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C3",
+     "text": "[code reference removed] (Yards): Rear Yard: If any part of the DADU is located in the required rear yard, please demonstrate compliance with the standards outlined Table A for [code reference removed] for DADUs located in required rear yards. Note, as the DADU is proposed to be converted from a garage, the standard in [code reference removed] applies. If an exception to a standard is requested, please clearly outline the requested exception. [code reference removed] (Yards): Rear Yard: If any part of the DADU is located in the required rear yard, please demonstrate compliance with the standards outlined Table A for [code reference removed] for DADUs located in required rear yards. Note, as the DADU is proposed to be converted from a garage, the standard in [code reference removed] applies. If an exception to a standard is requested, please clearly outline the requested exception. (1)",
+     "labels": {
+      "discipline": "zoning",
+      "citations": [
+       "SMC 23.44.014",
+       "SMC 23.44.041"
+      ],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C4",
+     "text": "[code reference removed] (Yards): Required Rear yard: Please revise the site plan to demonstrate compliance with the required rear yard standard as outlined in [code reference removed] Please reference the associated short plat for the rear yard designation measurement. After the rear yard is designated, please revise the location of the required 5' side yards on the site plan. If you have additional questions about measuring the required rear yard, please send me an email prior to the next correction cycle. Please also update the diagram on sheet A-1.0 to reflect the accurate yard designations.[code reference removed] (Yards): Required Rear yard: Please revise the site plan to demonstrate compliance with the required rear yard standard as outlined in [code reference removed] Please reference the associated short plat for the rear yard designation measurement. After the rear yard is designated, please revise the location of the required 5' side yards on the site plan. If you have additional questions about measuring the required rear yard, please send me an email prior to the next correction cycle. Please also update the diagram on sheet A-1.0 to reflect the accurate yard designations. (1)",
+     "labels": {
+      "discipline": "zoning",
+      "citations": [
+       "SMC 23.44.014"
+      ],
+      "route": null,
+      "sheets": [
+       "A-1.0"
+      ]
+     }
+    },
+    {
+     "id": "C5",
+     "text": "[code reference removed] (Accessory Dwelling Units): DADU Average Grade: Please revise the elevation diagrams to reflect the accurate average grade calculation as provided on Sheet A-1.0.[code reference removed] (Accessory Dwelling Units): DADU Average Grade: Please revise the elevation diagrams to reflect the accurate average grade calculation as provided on Sheet A-1.0. (1)",
+     "labels": {
+      "discipline": "zoning",
+      "citations": [
+       "SMC 23.44.041"
+      ],
+      "route": null,
+      "sheets": [
+       "A-1.0.S",
+       "A-1.0."
+      ]
+     }
+    },
+    {
+     "id": "C6",
+     "text": "[code reference removed] (Accessory Dwelling Units): DADU Height: It appears portions of the DADU that are not part of the butterfly roof are over the 18' height limit per the north elevation. Please revise the DADU to meet the height limit in Table A for [code reference removed] or provide a code section that allows this portion of the DADU to remain over the height limit.[code reference removed] (Accessory Dwelling Units): DADU Height: It appears portions of the DADU that are not part of the butterfly roof are over the 18' height limit per the north elevation. Please revise the DADU to meet the height limit in Table A for [code reference removed] or provide a code section that allows this portion of the DADU to remain over the height limit. (1)",
+     "labels": {
+      "discipline": "zoning",
+      "citations": [
+       "SMC 23.44.041"
+      ],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C7",
+     "text": "[code reference removed] (Accessory Dwelling Units): DADU Size: Please revise the proposed DADU GFA as a garage is not proposed on Level 1. Confirm the proposed DADU does not exceed 1,000 sf in accordance with Table A for [code reference removed] [code reference removed] (Accessory Dwelling Units): DADU Size: Please revise the proposed DADU GFA as a garage is not proposed on Level 1. Confirm the proposed DADU does not exceed 1,000 sf in accordance with Table A for [code reference removed] (1)",
+     "labels": {
+      "discipline": "zoning",
+      "citations": [
+       "SMC 23.44.041"
+      ],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C8",
+     "text": "[code reference removed] (Accessory Dwelling Units): Separation: The minimum separation between the DADU and the SFR is 5' according to Table A for [code reference removed] This separation standards includes eaves as determined by Director's Rule 10-95. Please revise the separation to meet this standard.[code reference removed] (Accessory Dwelling Units): Separation: The minimum separation between the DADU and the SFR is 5' according to Table A for [code reference removed] This separation standards includes eaves as determined by Director's Rule 10-95. Please revise the separation to meet this standard. (1)",
+     "labels": {
+      "discipline": "zoning",
+      "citations": [
+       "SMC 23.44.041"
+      ],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C9",
+     "text": "[code reference removed] (Required Parking and Maximum Parking Limits): Required Parking: The proposed DADU is removing the legal existing and required parking from the development site. Please show at least 1, 8' x 6' parking space for the existing SFR in accordance with [code reference removed] The DADU is not required to have a parking space, but if one is shown, it must meet the standards in [code reference removed] As a new building is not being constructed, only an existing building proposed to be converted, EV parking is not required in accordance with [code reference removed] [code reference removed] (Required Parking and Maximum Parking Limits): Required Parking: The proposed DADU is removing the legal existing and required parking from the development site. Please show at least 1, 8' x 6' parking space for the existing SFR in accordance with [code reference removed] The DADU is not required to have a parking space, but if one is shown, it must meet the standards in [code reference removed] As a new building is not being constructed, only an existing building proposed to be converted, EV parking is not required in accordance with [code reference removed] (1) LO G Le D Le NG SFR &",
+     "labels": {
+      "discipline": "zoning",
+      "citations": [
+       "SMC 23.54.015",
+       "SMC 23.54.030"
+      ],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C10",
+     "text": "[code reference removed] (Parking and Access): Curb Cut Identification: On the site plan, dimension the existing curb cut and confirm it is proposed to remain.[code reference removed] (Parking and Access): Curb Cut Identification: On the site plan, dimension the existing curb cut and confirm it is proposed to remain. (1)",
+     "labels": {
+      "discipline": "zoning",
+      "citations": [
+       "SMC 23.54.030"
+      ],
+      "route": null,
+      "sheets": []
+     }
+    }
+   ]
+  },
+  {
+   "id": "05-zoning-7026975-CN",
+   "holdout": false,
+   "review_type": "Zoning",
+   "source": {
+    "letter": "https://web.seattle.gov/dpd/edms/GetDocument?id=11227229",
+    "permit": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=7026975-CN",
+    "document_date": "2024-12-26"
+   },
+   "project": {
+    "jurisdiction": "seattle",
+    "address": "533 N 70TH ST",
+    "description": "Construct new two family dwelling per plan (Establish use as single family residence with attached and detached accessory dwelling units per land use code. Construct new one and two family dwellings per plan. Review and processing for two records under 7026975-CN) Permit class: Single Family/Duplex. Zoning: NR3, NR3.",
+    "reviewer": "Seattle SDCI, Correction Letter-Zoning-Cycle3"
+   },
+   "outcome": {
+    "review_cycles": 4,
+    "days_out_for_corrections": 70,
+    "days_city_review": 134
+   },
+   "comments": [
+    {
+     "id": "C1",
+     "text": "Demolition Permit: This project is contingent upon issuance of a demolition permit. Demolition permit 7026976-DM must be issued prior to zoning approval.Zoning - General and Special Corrections (2)",
+     "labels": {
+      "discipline": "zoning",
+      "citations": [],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C2",
+     "text": "Master Use Permit: Please note zoning approval for the construction permit cannot be issued until the short plat has been recorded. Please update the parcel number/legal description after recording.",
+     "labels": {
+      "discipline": "zoning",
+      "citations": [],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C3",
+     "text": "[code reference removed] (Accessory Dwelling Units): Thank you for labeling the structure to be built to Green Building standards. Please embed the completed Green Building Development form and Inspection form directly into the plan set.Zoning - [code reference removed] - Neighborhood Residential (1)",
+     "labels": {
+      "discipline": "zoning",
+      "citations": [
+       "SMC 23.44.041",
+       "SMC 23.44"
+      ],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C4",
+     "text": "[code reference removed] (Access easement standards): Please provide a recorded shared access easement that complies with [code reference removed] Label the recording number on plans.Zoning - [code reference removed] - Streets, Alleys, and Easements (1) 211.2 5'-0\" 2'-6\" CONCRETE WALK CCESS0\"",
+     "labels": {
+      "discipline": "zoning",
+      "citations": [
+       "SMC 23.53.025",
+       "SMC 23.53"
+      ],
+      "route": null,
+      "sheets": []
+     }
+    }
+   ]
+  },
+  {
+   "id": "06-eca-geotech-7080840-CN",
+   "holdout": false,
+   "review_type": "ECA GeoTech",
+   "source": {
+    "letter": "https://web.seattle.gov/dpd/edms/GetDocument?id=11789193",
+    "permit": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=7080840-CN",
+    "document_date": "2025-06-11"
+   },
+   "project": {
+    "jurisdiction": "seattle",
+    "address": "7264 27TH AVE NE",
+    "description": "Allow new detached accessory dwelling unit to existing single family use per land use code. Construct new one family dwelling per plan Permit class: Single Family/Duplex. Zoning: unknown.",
+    "reviewer": "Seattle SDCI, Correction Letter-ECA GeoTech-Cycle1"
+   },
+   "outcome": {
+    "review_cycles": 3,
+    "days_out_for_corrections": 33,
+    "days_city_review": 43
+   },
+   "comments": [
+    {
+     "id": "C1",
+     "text": "[code reference removed] B.1. Provide a note on the plan that the site is designated as a potential landslide area due to steep slopes.ECA GeoTech (8)",
+     "labels": {
+      "discipline": "geotech",
+      "citations": [
+       "SMC 25.09.330"
+      ],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C2",
+     "text": "[code reference removed] A. Please add the following notes to the site plan. These notes and requirements are in lieu of establishing a formalized seasonal grading restriction on the project and constitute the customary requirements that would be instituted for a seasonal grading extension: A site visit from the Geotechnical Special Inspector shall occur during each day of active grading and in the event of significant rainfall which might compromise stabilization measures between November 1 and March 31. The determination of what constitutes significant rainfall is subject to the discretion of the Geotechnical Special Inspector. However, as a minimum standard, the Geotechnical Special Inspector is required to conduct a site visit if more than one-half inch of precipitation occurs on any given day. Any recommendations required to maintain stability of excavations and proper functioning of the sediment/erosion control system provided by the Geotechnical Special Inspector and SDCI personnel shall be implemented immediately. The Geotechnical Special Inspector shall provide copies of field reports to SDCI Site Development Services Section no later than 48 hours after each inspection. The field r",
+     "labels": {
+      "discipline": "geotech",
+      "citations": [
+       "SMC 22.17"
+      ],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C3",
+     "text": "[code reference removed] A. (1) Please update the plan set to clearly show how footing drains are hydraulically connected to the drainage conveyance system and approved discharge point. (2) In addition to footing drains, please update the plan set to clearly show how stormwater is collected and hydraulically connected to the drainage conveyance system and approved discharge point. (3) Please contact [email removed] for an approved discharge point. Please upload a copy of the approval email to the project portal.",
+     "labels": {
+      "discipline": "geotech",
+      "citations": [
+       "SMC 22.17"
+      ],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C4",
+     "text": "[code reference removed] C. Associated Earth Sciences, Inc. (AESI) prepared a geotechnical report, dated December 26, 2024, for the proposed development. (1) Please update plan sheet S-1 to include a reference to the geotechnical report. (2) Please revise the plan set to incorporate the geotechnical engineer's recommendations.",
+     "labels": {
+      "discipline": "geotech",
+      "citations": [
+       "SMC 25.09.330"
+      ],
+      "route": null,
+      "sheets": [
+       "S-1"
+      ]
+     }
+    },
+    {
+     "id": "C5",
+     "text": "This project has been reviewed for conformance with one or more of the following codes: 2021 Seattle Building Code (SBC); 2021 Seattle Existing Building Code (SEBC); Grading Code; Environmentally Critical Areas Regulations (ECA). B BASEMEN EMENT",
+     "labels": {
+      "discipline": "geotech",
+      "citations": [],
+      "route": "no_action",
+      "sheets": []
+     }
+    },
+    {
+     "id": "C6",
+     "text": "[code reference removed] Nominate a geotechnical engineering firm on the enclosed SDCI Geotechnical Special Inspections Schedule form. This form must be signed by the owner or owner's representative; the form cannot be signed by the contractor nor the geotechnical engineer. The nomination form is available on the permit portal named \"Special Inspection Notice\". The Inspection Agency must be the same engineer/firm that prepared the geotechnical report. If the owner nominates a different engineer/firm to act as the Geotechnical Special Inspector, the new engineer must review the original geotechnical report and submit a letter indicating a review was performed, along with a statement of agreement with the evaluation and provisions contained in the report. If the new engineer does not agree with aspects of the report, rebuttal evaluations and recommendations must be included in the review letter. The plans must be revised accordingly and submitted to SDCI for review. Please do not fill in special inspection items on the permit portal. Requests for changes of Special Inspection Agency that occur during plan review should be submitted with corrected plans. If the request occurs after permit issu",
+     "labels": {
+      "discipline": "geotech",
+      "citations": [
+       "SMC 22.17"
+      ],
+      "route": "client_input",
+      "sheets": []
+     }
+    },
+    {
+     "id": "C7",
+     "text": "[code reference removed] A. Provide a signed and stamped letter from the geotechnical engineer that includes review of the updated plans and provides a minimal risk statement in accordance with Director's Rule 5-2016. The plan review/minimal risk letter must be based upon review of plans with all substantial geotechnical recommendations incorporated.",
+     "labels": {
+      "discipline": "geotech",
+      "citations": [
+       "SMC 22.17"
+      ],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C8",
+     "text": "[code reference removed] C. We require a recorded Potential Landslide Area Covenant prior to issuance of this permit application. You can find the blank covenant and instructions here: http://www.seattle.gov/Documents/Departments/SDCI/Forms/PotentialLandslideAreaCovenant .pdf For your response to this correction item, upload a draft of the unsigned and unrecorded covenant for the reviewer to check. Upload the covenant as a separate document from the plan set and write Draft Potential Landslide Area Covenant in the description. Include information on which signature page you intend to use, the name(s) of the people who will sign, and their relationship to the property (e.g. Owner, Governor of LLC). The reviewer will check the draft covenant during the next review cycle, and will either (1) provide review comments on the covenant through a new correction notice or (2) give you notice that you can record the covenant with the King County Recorders Office. https://www.kingcounty.gov/depts/records-licensing/recorders-office/recording-documents.asp x. Please do not record the document until after the SDCI reviewer has checked your draft. If there are errors in it, you will need to record a correct",
+     "labels": {
+      "discipline": "geotech",
+      "citations": [
+       "SMC 22.17"
+      ],
+      "route": null,
+      "sheets": []
+     }
+    }
+   ]
+  },
+  {
+   "id": "07-energy-6954695-CN",
+   "holdout": false,
+   "review_type": "Energy",
+   "source": {
+    "letter": "https://web.seattle.gov/dpd/edms/GetDocument?id=10836466",
+    "permit": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=6954695-CN",
+    "document_date": "2024-08-23"
+   },
+   "project": {
+    "jurisdiction": "seattle",
+    "address": "7811 GREENWOOD AVE N",
+    "description": "Establish use as multifamily and construct apartment occupy per plan. Permit class: Multifamily. Zoning: unknown.",
+    "reviewer": "Seattle SDCI, Correction Letter-Energy-Cycle3"
+   },
+   "outcome": {
+    "review_cycles": 8,
+    "days_out_for_corrections": 301,
+    "days_city_review": 237
+   },
+   "comments": [
+    {
+     "id": "C1",
+     "text": "Total Building Performance (TBP) Compliance Path: a. The building permit application for project utilizing the Total Building Performance compliance path ([code reference removed] shall include in one submittal all building and mechanical drawings and all information necessary to verify that the building envelope and mechanical design for the project corresponds with the annual energy analysis per [code reference removed] As the mechanical drawings have not been submitted, the TBP report has not been reviewed. The mechanical permit shall be included with this construction permit. b. If credit is proposed to be taken for the lighting energy savings, then an electrical permit application shall be submitted and approved prior to the issuance of the building permit per [code reference removed] and TIP 423. Where lighting neither exists nor is submitted with design documents, lighting shall comply with but not exceed the requirements of ASHRAE 90.1 Section 9. Lighting power for the proposed design shall be determined in accordance with the building area method per ASHRAE 90.1 Table G3.1 #6c. c. The summary compliance report generated from the ASHRAE Standard 90.1 Performance Based Compliance worksheet shall be included in the T",
+     "labels": {
+      "discipline": "energy",
+      "citations": [
+       "SEC C407"
+      ],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C2",
+     "text": "Solar Readiness/ A1.05: In addition to the requirements of [code reference removed] (renewable energy), a solar zone in compliance with [code reference removed] through C411.8 shall be indicated on the roof plan or on another structure elsewhere on the site per [code reference removed] The PV (photovoltaic) interconnection provisions for solar readiness in compliance with [code reference removed] shall also be indicated on the drawings. In addition, how the solar readiness zone is determined shall be noted on the drawing. Cycle 2: The PV (photovoltaic) interconnection provisions for solar readiness in compliance with [code reference removed] shall also be indicated on the drawing. Cycle 3: Notes showing required compliance have been added as indicated in the correction response. However, the added notes regarding the PV interconnection provisions for solar readiness can ’t be located on the drawing. SOLAR PANEL READY ZO",
+     "labels": {
+      "discipline": "energy",
+      "citations": [
+       "SEC C412",
+       "SEC C411"
+      ],
+      "route": null,
+      "sheets": []
+     }
+    }
+   ]
+  },
+  {
+   "id": "08-ordinance-structural-7049529-CN",
+   "holdout": false,
+   "review_type": "Ordinance Structural",
+   "source": {
+    "letter": "https://web.seattle.gov/dpd/edms/GetDocument?id=11601210",
+    "permit": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=7049529-CN",
+    "document_date": "2025-04-21"
+   },
+   "project": {
+    "jurisdiction": "seattle",
+    "address": "3822 50TH AVE SW",
+    "description": "Construct west one-family dwelling (Establish use as single-family dwelling unit and allow detached accessory dwelling unit per land use code. Construct (2) one-family dwelling units per plan. Review & process for (2) records under 7049529-CN) Permit class: Single Family/Duplex. Zoning: NR3.",
+    "reviewer": "Seattle SDCI, Correction Letter-Ordinance-Cycle2"
+   },
+   "outcome": {
+    "review_cycles": 3,
+    "days_out_for_corrections": 27,
+    "days_city_review": 98
+   },
+   "comments": [
+    {
+     "id": "C1",
+     "text": "This project has been reviewed for conformance with one or more of the following codes: 2021 Seattle Residential Code (SRC).Ordinance Structural (4)",
+     "labels": {
+      "discipline": null,
+      "citations": [],
+      "route": "no_action",
+      "sheets": []
+     }
+    },
+    {
+     "id": "C2",
+     "text": "[code reference removed] and [code reference removed] - GARAGE DWELLING FIRE SEPARATION - Provide a fire separation between the dwelling and private garage. Show or note on the plans the following (A10 DADU -Garage Level Floor Plan): a) Resolved b) Min. 1/2 ” gypsum wallboard wrapping posts, beams and walls supporting the dwelling above the garage. CORRECTION CYCLE 2 - Show wrapping of exposed beam and post. (A10 DADU - Garage Level Floor Plan)",
+     "labels": {
+      "discipline": null,
+      "citations": [
+       "SRC R302"
+      ],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C3",
+     "text": "[code reference removed] - SAFETY GLAZING - Clearly indicate on the plans each location where safety glazing is required. See the following locations of concern: a) [code reference removed] - The sidelights of doors A and B on the primary dwelling main floor, in the plane of the door within 24 inches of the door jamb. (A3) b) Resolved c) Resolved CORRECTION CYCLE 2 - Show that the sidelights of the 'B' doors have safety glazing. (A3 Main Floor Plan)",
+     "labels": {
+      "discipline": null,
+      "citations": [
+       "SRC R308"
+      ],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C4",
+     "text": "[code reference removed] - PRIMARY EGRESS - Provide at least one side-hinged egress door with a min. clear width of 32 inches for the DADU. (A10 DADU - Main Floor Plan): (NB: A 32-inch wide door typically does not provide 32 inches of clear width. A 34-inch wide door with swing-clear hinges or a 36-inch wide door with standard hinges typically provides 32 inches of clear width.) CORRECTION CYCLE 2 - 32-inch door is provided, which does not typically meet egress width requirements as noted above. Show how a door complying with the minimum clear width is provided. General Com RAGET10'-0\" M 2'-8\"",
+     "labels": {
+      "discipline": "egress",
+      "citations": [
+       "SRC R311"
+      ],
+      "route": "licensed_review",
+      "sheets": []
+     }
+    }
+   ]
+  },
+  {
+   "id": "09-ordinance-6955269-CN",
+   "holdout": false,
+   "review_type": "Ordinance",
+   "source": {
+    "letter": "https://web.seattle.gov/dpd/edms/GetDocument?id=9723175",
+    "permit": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=6955269-CN",
+    "document_date": "2023-09-15"
+   },
+   "project": {
+    "jurisdiction": "seattle",
+    "address": "1806 E MERCER ST",
+    "description": "Construct east apartment (Establish use as multi-family residence (rowhouse) per land use code. Construct 3-unit apartment occupy per plan. Construct alterations to existing one-family dwelling per plan. Review & process for (2) records under 6955269-CN). Permit class: Single Family/Duplex. Zoning: LR1.",
+    "reviewer": "Seattle SDCI, Correction Letter-Ordinance-Cycle1"
+   },
+   "outcome": {
+    "review_cycles": 10,
+    "days_out_for_corrections": 298,
+    "days_city_review": 259
+   },
+   "comments": [
+    {
+     "id": "C1",
+     "text": "This project has been reviewed for conformance with one or more of the following codes: 2018 Seattle Building Code (SBC); 2018 Seattle Existing Building Code (SEBC); 2018 Seattle Energy Code (SEC); Grading Code; Environmentally Critical Areas Regulations (ECA).Ordinance (9)",
+     "labels": {
+      "discipline": null,
+      "citations": [],
+      "route": "no_action",
+      "sheets": []
+     }
+    },
+    {
+     "id": "C2",
+     "text": "Proposal includes a common garage below separate dwelling units. Under the building code, townhouse units are req'd to be continuous from ground to sky per SBC Ch. 2 definition - \"Townhouse Units\". Dwelling units under this proposal will be reviewed as apartments over common parking area. Complete the following - (a) Specify governing code for architectural design w/ note in plan set - 2018 SBC. (b) Revise the plan set to include building code analysis for the proposal. Include the following items - [code reference removed] - Occupancy classification. [code reference removed] - Dwelling unit separation requirements. [code reference removed] - Allowable stories per occupancy & construction type. [code reference removed] - Occupancy Separation. [code reference removed] - Construction type and fire-resistance construction requirements. [code reference removed] - Fire-resistance construction requirements based on fire separation distance. [code reference removed] - Individual encasement for structural members where req'd. [code reference removed] - Maximum area of openings per story based on fire separation distance. [code reference removed] - Parapet, OR, parapet exception analysis. [code reference removed] - Fire sprinkler information. [code reference removed], 1006.3.3 - Egress diagrams showing exit requirements. [code reference removed]",
+     "labels": {
+      "discipline": null,
+      "citations": [
+       "SBC 420",
+       "SBC 504",
+       "SBC 508",
+       "SBC 601",
+       "SBC 602",
+       "SBC 704",
+       "SBC 705",
+       "SBC 903",
+       "SBC 1006"
+      ],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C3",
+     "text": "Revised Code of Washington (RCW) [code reference removed] requires that the developers of multi-unit residential buildings comply with one of the two options listed below. Indicate which option will be used and provide electronic copies of the required documents as specified. Option 1: a) Submit plans, details, and specifications for the construction of the building enclosure, per [code reference removed] The building enclosure design documents must be signed and sealed by an architect or engineer licensed in the State of Washington, per [code reference removed] b) Provide a statement on the plans or in a letter, signed and stamped as above, in substantially the following form: \"The undersigned has provided building enclosure documents that in my professional judgment are appropriate to satisfy the requirements of [code reference removed] through [code reference removed]. ” c) Submit to the building inspector, a letter signed by a third-party qualified inspector certifying that the building enclosure has been inspected during construction and has been constructed in substantial compliance with the building enclosure design documents, per [code reference removed] A final inspection will not be approved, nor a final certificate of occupancy issued ",
+     "labels": {
+      "discipline": null,
+      "citations": [],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C4",
+     "text": "Grading Ordinance Grading Code [code reference removed] - Provide section details showing maximum excavation profiles at the north, south & west ends of the proposed structure. Use 1H:1V profile cut. Specifically, show with notes and graphics that the excavation req'd for the proposal does not extend beyond the north and south property lines, and does not compromise the structural integrity of the existing house to remain west of the proposed building.",
+     "labels": {
+      "discipline": null,
+      "citations": [
+       "SMC 22.17"
+      ],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C5",
+     "text": "[code reference removed] - Complete the following - (a) 1EW2/A5.0 - Provide (1) layer of 5/8\" Type X GWB on each side of stud wall per referenced test file. (b) F1/A5.0 - Upload test file FC 5530 as a supplemental document. (c) 1Wx/A5.0 - Provide (1) layer of 5/8\" Type X GWB on each side of stud wall per referenced test file.",
+     "labels": {
+      "discipline": "fire",
+      "citations": [
+       "SBC 703"
+      ],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C6",
+     "text": "[code reference removed] - Level 0/A1.0 - EERO windows are not permitted to open below decks (building area per SBC Ch. 2 definition \"Area, Building\". Reference (2) EERO windows in the Flex/Media spaces. Revise the design to show the the EERO windows open directly to a yard or public way. DS 1",
+     "labels": {
+      "discipline": "egress",
+      "citations": [
+       "SBC 1030"
+      ],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C7",
+     "text": "[code reference removed] - 2/A3.1 - Provide graphics/notes clarifying the roof assembly/insulation at the exterior stair and landing serving the roof deck.",
+     "labels": {
+      "discipline": null,
+      "citations": [
+       "SBC 1202"
+      ],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C8",
+     "text": "[code reference removed], 1206.3 - A5.0 - Where unit separation is required, revise details to include reference to test file showing rating information for sound (STC, IIC).",
+     "labels": {
+      "discipline": null,
+      "citations": [
+       "SBC 1206"
+      ],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C9",
+     "text": "[code reference removed] – Revise the plans to clearly show safety glazing at each location it is required. See the following locations of concern: a) [code reference removed] - Glazing near walking surfaces - see SF4, east elevation, level 1 - A1.1. Also, complete the following - b) 4/A2.0 - F10/A2.0 - Appears to be missing on the plan sheet. Revise to include. Show req'd safety glazing at this location. c) Revise the plan set to include elevations for the inner facing exterior walls where there is separation between the (2) units at level 2 & above. 6' - 0\" F4",
+     "labels": {
+      "discipline": null,
+      "citations": [
+       "SBC 2406"
+      ],
+      "route": null,
+      "sheets": []
+     }
+    }
+   ]
+  },
+  {
+   "id": "10-addressing-7048319-CN",
+   "holdout": false,
+   "review_type": "Addressing",
+   "source": {
+    "letter": "https://web.seattle.gov/dpd/edms/GetDocument?id=11162079",
+    "permit": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=7048319-CN",
+    "document_date": "2024-12-03"
+   },
+   "project": {
+    "jurisdiction": "seattle",
+    "address": "2203 NE 82ND ST",
+    "description": "Establish use as single-family residence with attached accessory dwelling unit per land use code. Construct a two-family dwelling per plan. Permit class: Single Family/Duplex. Zoning: NR3, NR3.",
+    "reviewer": "Seattle SDCI, Correction Letter-Addressing-Cycle1"
+   },
+   "outcome": {
+    "review_cycles": 4,
+    "days_out_for_corrections": 41,
+    "days_city_review": 81
+   },
+   "comments": [
+    {
+     "id": "C1",
+     "text": "Please ADD a Site Plan, per Tip 103 - Site PlanAddressing (2)",
+     "labels": {
+      "discipline": "addressing",
+      "citations": [],
+      "route": "agent_draft",
+      "sheets": []
+     }
+    },
+    {
+     "id": "C2",
+     "text": "Please clarify if there will be a SFR and DADU or if this is for a SFR with AADU. Please be sure to mark the primary entrances for both on the site plan. CT INFOR G",
+     "labels": {
+      "discipline": "addressing",
+      "citations": [],
+      "route": "agent_draft",
+      "sheets": []
+     }
+    }
+   ]
+  },
+  {
+   "id": "11-tree-7074538-CN",
+   "holdout": false,
+   "review_type": "Tree",
+   "source": {
+    "letter": "https://web.seattle.gov/dpd/edms/GetDocument?id=11685545",
+    "permit": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=7074538-CN",
+    "document_date": "2025-05-13"
+   },
+   "project": {
+    "jurisdiction": "seattle",
+    "address": "1215 B NE 64TH ST",
+    "description": "Allow attached accessory dwelling unit to existing single-family residence per plan. Construct as substantial alterations for voluntary seismic retrofit and to finish basement as dwelling unit per plan. Permit class: Single Family/Duplex. Zoning: NR3.",
+    "reviewer": "Seattle SDCI, Correction Letter-Tree-Cycle2"
+   },
+   "outcome": {
+    "review_cycles": 4,
+    "days_out_for_corrections": 9,
+    "days_city_review": 69
+   },
+   "comments": [
+    {
+     "id": "C1",
+     "text": "Please provide an arborist report and ISA basic risk assessment form to document the existing conditions in regards to the proposed removal of the tier 2 cedar tree, The arborist report should be provided by a registered provider: https://www.seattle.gov/trees/service-providers per risk assessment section requirements of directors rule 7-2024 https://www.seattle.gov/dpd/codes/dr/DR%207-2024.pdfTree (4)",
+     "labels": {
+      "discipline": "tree",
+      "citations": [],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C2",
+     "text": "Tree Replacement Requirements ([code reference removed]: Tier 1, Tier 2, and Tier 3 trees removed, must be replaced by one or more new trees designed to result, upon maturity, in a canopy cover that is at least roughly proportional to the canopy cover prior to tree removal. Replacement trees must also be native and/or culturally significant, and resilient to climate change ([code reference removed] Show replacement trees including Genus and species on the replanting site plan per Directors rule 12-2023 or refer to Directors rule 8-2023 if on site planting cannot be achieved. https://www.seattle.gov/dpd/codes/dr/12-2023.pdf https://www.seattle.gov/dpd/codes/dr/8-2023.pdf",
+     "labels": {
+      "discipline": "tree",
+      "citations": [
+       "SMC 25.11.090"
+      ],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C3",
+     "text": "Please add the following text in relation to the proposed replacement tree: For each relocated or required replacement tree, maintenance and monitoring is required for a five-year period. The period begins when the replacement tree is planted. Maintenance and monitoring shall include the following: 1.Sufficient maintenance actions to ensure survival of the replacement tree: a. When more than one replacement tree is required, 80 percent survival of new trees planted at the end of five years; b. When one replacement tree is required, 100 percent survival of the new tree planted at the end of five years; 2.Replacement and replanting of failed trees; and 3.Photographic documentation of planting success retained for the five-year period. Submission of documentation to the Seattle Department of Construction and Inspections is not required unless requested by the Department.",
+     "labels": {
+      "discipline": "tree",
+      "citations": [],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C4",
+     "text": "Per the requirements of Directors rule 12-2023 indicate the proposed method of irrigation for the replacement tree on the plan set 1",
+     "labels": {
+      "discipline": "tree",
+      "citations": [],
+      "route": null,
+      "sheets": []
+     }
+    }
+   ]
+  },
+  {
+   "id": "12-drainage-6823941-CN",
+   "holdout": false,
+   "review_type": "Drainage",
+   "source": {
+    "letter": "https://web.seattle.gov/dpd/edms/GetDocument?id=8391592",
+    "permit": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=6823941-CN",
+    "document_date": "2022-08-19"
+   },
+   "project": {
+    "jurisdiction": "seattle",
+    "address": "4448 CALIFORNIA AVE SW",
+    "description": "Construct new mixed-use building occupy per plan. Permit class: Multifamily. Zoning: NC2.",
+    "reviewer": "Seattle SDCI, 6823941-CN Plan Set_Cycle2_CJ_Summary + yazdidk"
+   },
+   "outcome": {
+    "review_cycles": 11,
+    "days_out_for_corrections": 452,
+    "days_city_review": 687
+   },
+   "comments": [
+    {
+     "id": "C1",
+     "text": "Sheet C1.0: Interceptor Swale shall meet the requirements of [code reference removed] of Volume 2 of the Seattle Stormwater manual BMP E2.80: Earth Dike and Drainage Swale and BMP E2.35: Check Dams,4.2.1.4. Please include a construction detail for interceptor Swale which meets the design criteria of BMP E2.35 and BMP E 2.80.Drainage (7)",
+     "labels": {
+      "discipline": "drainage",
+      "citations": [],
+      "route": null,
+      "sheets": [
+       "C1.0"
+      ]
+     }
+    },
+    {
+     "id": "C2",
+     "text": "Sheet C1.0: Please show and call out the existing side sewers as “Cap Existing Side Sewer ” unless the intent is to re-used the side sewer for the new building, call it as \"Temporarily Plug Existing Side Sewer for Re-use\".",
+     "labels": {
+      "discipline": "drainage",
+      "citations": [],
+      "route": null,
+      "sheets": [
+       "C1.0"
+      ]
+     }
+    },
+    {
+     "id": "C3",
+     "text": "Sheet C5.0: Please use the most up to date Standard Drainage and Wastewater Control (DWC) template details (Version 2022-05-24). Please show Bioretention Overflow Riser and Freeboard Dimensions Table (Version 2022-05-24). https://www.seattle.gov/documents/Departments/SDCI/Codes/SWTypicalDrainageDetails.pdf",
+     "labels": {
+      "discipline": "drainage",
+      "citations": [],
+      "route": null,
+      "sheets": [
+       "C5.0"
+      ]
+     }
+    },
+    {
+     "id": "C4",
+     "text": "Sheet C5.0: Please include a detail for Green Roof.",
+     "labels": {
+      "discipline": "drainage",
+      "citations": [],
+      "route": null,
+      "sheets": [
+       "C5.0"
+      ]
+     }
+    },
+    {
+     "id": "C5",
+     "text": "Memorandum of Drainage Control (MDC): Please check the box next to Catch Basin on page 2 of 5.",
+     "labels": {
+      "discipline": "drainage",
+      "citations": [],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C6",
+     "text": "Since some of the proposed side sewers (drainage and/or sanitary) have less than a 2% slope, a Side Sewer Release and Indemnification Agreement is required. Please fill out the form at the link below and submit a Draft Side Sewer Release and Indemnification Agreement with the next submittal. Once I approve it, it will need to be signed, notarized and recorded. http://www.seattle.gov/documents/Departments/SDCI/Forms/SideSewerReleaseIndemnificationAg reement.pdf",
+     "labels": {
+      "discipline": "drainage",
+      "citations": [],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C7",
+     "text": "Sheet C3.0: The existing side sewer serving 4444 California Ave SW St crosses the project property and appears to be in conflict with the proposed building. The existing side sewer must be relocated outside of the proposed building footprint and service maintained during and after construction. City records show an existing easement for the side sewer (#5955273). As there is an existing easement, in order to relocate the existing side sewer, a new side sewer easement will need to be recorded as part of the requirements for this building permit.",
+     "labels": {
+      "discipline": "drainage",
+      "citations": [],
+      "route": null,
+      "sheets": [
+       "C3.0"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "13-ordinance-7021533-CN",
+   "holdout": false,
+   "review_type": "Ordinance",
+   "source": {
+    "letter": "https://web.seattle.gov/dpd/edms/GetDocument?id=11188283",
+    "permit": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=7021533-CN",
+    "document_date": "2024-12-10"
+   },
+   "project": {
+    "jurisdiction": "seattle",
+    "address": "4335 NE 110TH ST",
+    "description": "Construct north/east two-family dwelling per plan. [Establish use as single-family with attached and detached accessory dwelling units per land use code. Construct one- and two-family dwellings per plan. Review and processing for (2) construction records under 7021533-CN.] Permit class: Single Family/Duplex. Zoning: NR2, NR2.",
+    "reviewer": "Seattle SDCI, Correction Letter-Ordinance-Cycle2"
+   },
+   "outcome": {
+    "review_cycles": 4,
+    "days_out_for_corrections": 125,
+    "days_city_review": 91
+   },
+   "comments": [
+    {
+     "id": "C1",
+     "text": "CYCLE 1 Sheet A2.1 [code reference removed] - Provide details and notes that clearly show a 1-hour rated floor/ceiling and/or wall assembly between the two dwelling units. [code reference removed] - Provide details and notes that clearly show how the rated wall assembly between the two dwelling units is continuous from foundation to underside of roof sheathing CYCLE 2 Repeat comment: [code reference removed] - Provide details or notes to clearly show the 1-hr wall assembly between the two dwellings is continuous to the underside of SFR roof sheathing.Ordinance (2)",
+     "labels": {
+      "discipline": "fire",
+      "citations": [
+       "SRC R302"
+      ],
+      "route": "licensed_review",
+      "sheets": [
+       "A2.1"
+      ]
+     }
+    },
+    {
+     "id": "C2",
+     "text": "CYCLE 1 Sheet A1.0 Grading Code [code reference removed] - The excavations for the project appear to be up to +/-11ft deep. Based on the excavation slopes recommended by the geotechnical engineer, it appears that the excavations may encroach on the neighboring property when working near the property line. Provide an excavation plan showing the proposed excavations. At critical points near property lines, show sections with proposed excavation profiles. Additionally, provide EITHER of the following: a) Proof that the properties are in common ownership; OR b) A letter signed by the adjacent property owner that provides written permission for temporary encroachment during construction. The letter must specify the type and extent of encroachment, confirm that the property must be restored to at least the original condition, and include the printed/typed name of the neighboring owner(s) and a date. NOTE: if this option is used, a note must be added to the site plan stating that there is an agreement with the adjacent property owner and the letter must be uploaded as a separate document in the portal; OR c) A recorded easement granted by the fee owner of the encroached-upon property, which authori",
+     "labels": {
+      "discipline": null,
+      "citations": [
+       "SMC 22.17"
+      ],
+      "route": null,
+      "sheets": [
+       "A1.0"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "14-eca-geotech-6950457-CN",
+   "holdout": false,
+   "review_type": "ECA GeoTech",
+   "source": {
+    "letter": "https://web.seattle.gov/dpd/edms/GetDocument?id=9255767",
+    "permit": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=6950457-CN",
+    "document_date": "2023-05-04"
+   },
+   "project": {
+    "jurisdiction": "seattle",
+    "address": "6763 38TH AVE S",
+    "description": "Construct south new two family dwelling per plan. (Establish use as single family residence with attached accessory dwelling unit per land use code. Construct 2 new two family dwellings per plan. Review & processing for 2 records under 6950457-CN) Permit class: Single Family/Duplex. Zoning: RSL, RSL.",
+    "reviewer": "Seattle SDCI, Correction Letter-Geo Soils-Cycle1"
+   },
+   "outcome": {
+    "review_cycles": 7,
+    "days_out_for_corrections": 504,
+    "days_city_review": 307
+   },
+   "comments": [
+    {
+     "id": "C1",
+     "text": "[code reference removed] A. Provide a signed and stamped letter from the geotechnical engineer that includes review of the plans in accordance with Director's Rule 5-2016. The plan review letter must be based upon review of plans with all substantial geotechnical recommendations incorporated.",
+     "labels": {
+      "discipline": "geotech",
+      "citations": [
+       "SMC 22.17"
+      ],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C2",
+     "text": "[code reference removed] A and Director's Rule 10-2009. SDCI allows the use of axial compressive loading only for pin piles. Please revise the design shown so that lateral loads are resisted by other means. The structural calculations appear to be using passive pressures on the piles.",
+     "labels": {
+      "discipline": "geotech",
+      "citations": [
+       "SMC 22.17"
+      ],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C3",
+     "text": "[code reference removed] C.The geotechnical report uploaded is missing the test pit logs, which are necessary to evaluate if pin piles are required for all of the proposed foundations. Please upload the report with all of the logs included. Additional plan review and assignment of geotechnical special inspections will occur in a subsequent review cycle. Sheet S2.0 ECA GeoTech (3)",
+     "labels": {
+      "discipline": "geotech",
+      "citations": [
+       "SMC 25.09.330"
+      ],
+      "route": null,
+      "sheets": [
+       "S2.0"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "15-tree-7034484-CN",
+   "holdout": false,
+   "review_type": "Tree",
+   "source": {
+    "letter": "https://web.seattle.gov/dpd/edms/GetDocument?id=10939770",
+    "permit": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=7034484-CN",
+    "document_date": "2024-09-24"
+   },
+   "project": {
+    "jurisdiction": "seattle",
+    "address": "9228 9TH AVE NW",
+    "description": "Allow new attached accessory dwelling unit to existing single family use per land use code. Construct substantial alterations for a two family dwelling per plan. Permit class: Single Family/Duplex. Zoning: NR3.",
+    "reviewer": "Seattle SDCI, Correction Letter-Tree-Cycle1"
+   },
+   "outcome": {
+    "review_cycles": 2,
+    "days_out_for_corrections": 123,
+    "days_city_review": 37
+   },
+   "comments": [
+    {
+     "id": "C1",
+     "text": "Please show Tree 3, listed on the arborist report on the site plan if it is still present.Deborah McGarry (4)",
+     "labels": {
+      "discipline": "tree",
+      "citations": [],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C2",
+     "text": "Removal of Tree 2 must meet tree replacement requirements. The note refers to replacement trees but I do not see any on the site plan or on any other plan sheet. Tier 1, Tier 2, and Tier 3 trees removed in association with development must be replaced by one or more new trees designed to result, upon maturity, in a canopy cover that is at least roughly proportional to the canopy cover prior to tree removal. Replacement trees must also be native and/or culturally significant, and resilient to climate change ([code reference removed] Please refer to Director ’s Rule 12-2023 for more information about tree replacement requirements. Please note that the GreenFactor Plant list referenced in this rule only lists bioretention trees, which are only appropriate in wet areas. Please choose a drought-tolerant species. Feel free to email me with species selection questions.",
+     "labels": {
+      "discipline": "tree",
+      "citations": [
+       "SMC 25.11.090"
+      ],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C3",
+     "text": "Please add the following text in relation to the proposed replacement trees: \"For each relocated or required replacement tree, maintenance and monitoring is required for a five-year period. The period begins when the replacement tree is planted. Maintenance and monitoring shall include the following:1.Sufficient maintenance actions to ensure survival of the replacement tree:a. When more than one replacement tree is required, 80 percent survival of new trees planted at the end of five years;b. When one replacement tree is required, 100 percent survival of the new tree planted at the end of five years;2.Replacement and replanting of failed trees; and3.Photographic documentation of planting success retained for the five-year period. Submission of documentation to the Seattle Department of Construction and Inspections is not required unless requested by the Department.\"",
+     "labels": {
+      "discipline": "tree",
+      "citations": [],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C4",
+     "text": "You must show compliance with the tree replacement, maintenance and monitoring, and payment in lieu, if elected, requirements in the plan set of a building permit. Your plan set for a project where tree replacement is required by [code reference removed] must include the following information:  Summary table showing tree replacement,  Proposed tree replacements: locations, genus and species, and size of trees,  Proposed irrigation",
+     "labels": {
+      "discipline": "tree",
+      "citations": [
+       "SMC 25.11"
+      ],
+      "route": null,
+      "sheets": []
+     }
+    }
+   ]
+  },
+  {
+   "id": "16-drainage-7001531-CN",
+   "holdout": false,
+   "review_type": "Drainage",
+   "source": {
+    "letter": "https://web.seattle.gov/dpd/edms/GetDocument?id=10845517",
+    "permit": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=7001531-CN",
+    "document_date": "2024-08-27"
+   },
+   "project": {
+    "jurisdiction": "seattle",
+    "address": "4421 2ND AVE NE",
+    "description": "Establish use as single family residence with attached accessory dwelling units per land use code. Construct as residential townhouse per plan. Permit class: Single Family/Duplex. Zoning: unknown.",
+    "reviewer": "Seattle SDCI, Correction Letter-Drainage-Cycle1"
+   },
+   "outcome": {
+    "review_cycles": 3,
+    "days_out_for_corrections": 59,
+    "days_city_review": 93
+   },
+   "comments": [
+    {
+     "id": "C1",
+     "text": "A Memorandum of Drainage Control (MDC) is required prior to approval of this building permit per [code reference removed] B.1.d. The draft MDC is approved by this reviewer. The MDC must be signed and notarized by the owner and recorded with King County prior to approval of Drainage Review for this permit. Note: Exhibit A for the MDC is generated by the On-site Stormwater Management Calculator. Attach Exhibit A to the MDC form at the link found above. Submit MDC (1)",
+     "labels": {
+      "discipline": "drainage",
+      "citations": [
+       "SMC 22.80"
+      ],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C2",
+     "text": "Because project ’s proposed side sewer/service drain will cross another ’s property or properties, a new Side Sewer Easement Agreement is required prior to approval of this building permit per [code reference removed] A. Please submit a draft Side Sewer Easement Agreement. Submit the unrecorded, but completed form for review with the next submittal. Once we verify that it has been prepared correctly, it must be signed and notarized by the owner/s of properties that must be crossed (Grantor/s) as well as the owner of the project property (Grantee) and then recorded with King County before the Building Permit may be approved. The forms for the Side Sewer Easement Agreement can be found on the SDCI Stormwater Code Website under the Forms and Documents section... http://www.seattle.gov/sdci/codes/codes-we-enforce-(a-z)/stormwater-codeSubmit SS Easement (1)",
+     "labels": {
+      "discipline": "drainage",
+      "citations": [
+       "SMC 21.16.250"
+      ],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C3",
+     "text": "Because the project ’s proposed side sewer/service drain will be shared by other parcels/lots, a recorded Joint Use and Maintenance Agreement is required prior to approval of this building permit per [code reference removed] B. Please submit a draft Joint Use and Maintenance Agreement form. Submit the unrecorded, but completed form for review with the next submittal. Once we verify that it has been prepared correctly, it must be signed and notarized by all owners of properties that will be served by the shares side sewer and recorded with King County before the Building Permit may be approved. The forms for the Joint Use and Maintenance Agreement can be found on the SDCI Stormwater Code Website under the Forms and Documents section... http://www.seattle.gov/sdci/codes/codes-we-enforce-(a-z)/stormwater-codeSubmit SS JUMA (1)",
+     "labels": {
+      "discipline": "drainage",
+      "citations": [
+       "SMC 21.16.250"
+      ],
+      "route": null,
+      "sheets": []
+     }
+    }
+   ]
+  },
+  {
+   "id": "17-ordinance-structural-6974061-CN",
+   "holdout": false,
+   "review_type": "Ordinance Structural",
+   "source": {
+    "letter": "https://web.seattle.gov/dpd/edms/GetDocument?id=10549603",
+    "permit": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=6974061-CN",
+    "document_date": "2024-06-03"
+   },
+   "project": {
+    "jurisdiction": "seattle",
+    "address": "4584 22ND AVE SW",
+    "description": "Construct new two family dwelling and detached accessory garage per plan. (Establish use as single family residence with attached and detached accessory dwelling units per land use code. Construct new two family dwelling and detached accessory garage and alterations to existing one family dwelling per plan. Review and processing for two records under 6974061-CN.) Permit class: Single Family/Duplex. Zoning: NR3, NR3.",
+    "reviewer": "Seattle SDCI, Correction Letter-Ordinance-Cycle2"
+   },
+   "outcome": {
+    "review_cycles": 6,
+    "days_out_for_corrections": 168,
+    "days_city_review": 189
+   },
+   "comments": [
+    {
+     "id": "C1",
+     "text": "This project has been reviewed for conformance with one or more of the following codes: 2018 Seattle Residential Code (SRC).Ordinance Structural (4)",
+     "labels": {
+      "discipline": null,
+      "citations": [],
+      "route": "no_action",
+      "sheets": []
+     }
+    },
+    {
+     "id": "C2",
+     "text": "[code reference removed], [code reference removed] - FIRE SEPARATION DISTANCE LINE - It looks like fire rated exterior walls, projections, and eaves are required where the existing building (DADU) and the new building (SFR, AADU) are close to each other along the east wall of the DADU. To determine where, revise the drawings to show an imaginary line (the \"fire separation distance line\") between the two buildings on site plan A1.0 and provide dimensions from each building to this line. Fire protection is required within 5 feet of this line (measured perpendicular to the foundation wall). If either building has walls and/or eaves that are less than 5 feet from the line, show on the plans where the 1-hour protection and limited openings per [code reference removed] is required: a) Provide details and callouts of a one-hour a fire-rated wall assembly where required. Include an assembly test reference on the drawings (such as UL or GA). b) Show fire-rated eaves and projections (such as porches) where required. c) Resolved d) Remove and reduce openings as required by this section. e) Resolved CORRECTION CYCLE 2 - Based on the fire separation distance line shown on A1.0 Proposed Site Plan, a) Several walls on the w",
+     "labels": {
+      "discipline": "fire",
+      "citations": [
+       "SRC R302"
+      ],
+      "route": "licensed_review",
+      "sheets": []
+     }
+    },
+    {
+     "id": "C3",
+     "text": "[code reference removed] - EMERGENCY ESCAPE AND RESCUE OPENING (EERO) DIMENSIONS - Window E used for emergency escape and rescue in SFR Level 1 Bedroom 2 appears to require specialized hardware to achieve required clear (e.g., unobstructed when opening) dimensions. Either: Provide notes on the drawings indicating manufacturer-provided hardware is to be provided where required to meet clear emergency escape and rescue dimensions. Or: Show the clear egress width, height, and area from the manufacturer to confirm that these windows meet emergency egress dimensional requirements. CORRECTION CYCLE 2 - Note in A6.0 window schedule appears to be applied to window D, the single-hung window, not window E, the casement window labeled \"egress\" in the plans. Please revise window schedule to apply the hardware to Window E. E 1",
+     "labels": {
+      "discipline": "egress",
+      "citations": [
+       "SRC R310"
+      ],
+      "route": "licensed_review",
+      "sheets": []
+     }
+    },
+    {
+     "id": "C4",
+     "text": "[code reference removed] - DOOR THRESHOLD HEIGHT - Doors 14 and 16 on the east side of the AADU (A2.2) appear to be more than 7-3/4\" above the paver patio surface on both 1/A9.0 details. Revise drawings to show how the door threshold complies with the maximum height above the adjacent surface. CORRECTION CYCLE 2 - 3/A9.0 still appears to show an excess of 8 inches between the floor height and the finish grade. Please revise drawings to show that the thresholds of doors 14 and 16 are no more than 7-3/4\" above adjacent grade. RESILIENT CAULK",
+     "labels": {
+      "discipline": "egress",
+      "citations": [
+       "SRC R311"
+      ],
+      "route": "licensed_review",
+      "sheets": []
+     }
+    }
+   ]
+  },
+  {
+   "id": "18-ordinance-structural-7086237-CN",
+   "holdout": false,
+   "review_type": "Ordinance Structural",
+   "source": {
+    "letter": "https://web.seattle.gov/dpd/edms/GetDocument?id=11906668",
+    "permit": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=7086237-CN",
+    "document_date": "2025-07-15"
+   },
+   "project": {
+    "jurisdiction": "seattle",
+    "address": "703 N 75TH ST",
+    "description": "Allow attached accessory dwelling unit to existing single-family use per land use code. Construct alterations and convert one-family dwelling to two-family dwelling per plan. Permit class: Single Family/Duplex. Zoning: unknown.",
+    "reviewer": "Seattle SDCI, Correction Letter-Ordinance/Structural-Cycle1"
+   },
+   "outcome": {
+    "review_cycles": 3,
+    "days_out_for_corrections": 4,
+    "days_city_review": 35
+   },
+   "comments": [
+    {
+     "id": "C1",
+     "text": "CODE EDITION. This project has been reviewed for conformance with one or more of the following codes: 2021 Seattle Residential Code (SRC); 2021 Seattle Energy Code (SEC). Revise the plans to specify these code editions.Ordinance Structural (9)",
+     "labels": {
+      "discipline": null,
+      "citations": [],
+      "route": "no_action",
+      "sheets": []
+     }
+    },
+    {
+     "id": "C2",
+     "text": "PLAN REQUIREMENTS. [code reference removed] The plans are missing information to complete the initial review including but not limited to: existing vs. new construction & egress information). Below is a list of correction items based on the information provided on the plans. Once corrected plans are submitted for review clarifying the scope of work additional correction items may follow depending on the information provided.",
+     "labels": {
+      "discipline": null,
+      "citations": [
+       "SRC R105"
+      ],
+      "route": "no_action",
+      "sheets": []
+     }
+    },
+    {
+     "id": "C3",
+     "text": "AADU. [code reference removed] (SHEET 3) For the new dwelling unit added within an existing one-family dwelling , provide ONE of the following: 1). A note on the plans that all smoke alarms in the AADU and primary dwelling unit are interconnected, OR 2). Details and notes that clearly show ALL of the following: a). 1-hour rated floor/ceiling and/or wall assembly between the two dwelling units. b). 1-hour rated structure supporting the rated floor/ceiling assembly. c). An airborne sound rating of STC 45 or better per [code reference removed] for the assemblies separating the units.",
+     "labels": {
+      "discipline": "fire",
+      "citations": [
+       "SRC R302",
+       "SRC R334"
+      ],
+      "route": "licensed_review",
+      "sheets": []
+     }
+    },
+    {
+     "id": "C4",
+     "text": "EGRESS WINDOWS [code reference removed] (SHEET 3) At the existing basement it is not clear if the bedrooms are existing or new? On the plans if the bedrooms are existing label them accordingly. AND revise the plans to clearly specify \"the replacement windows shall be permitted to be of the same operating style as the existing window or a style that provides for an equal or greater window opening area than the existing window\". Alternatively, if the bedrooms are new revise the plans to provide egress windows compliant with [code reference removed] - [code reference removed].",
+     "labels": {
+      "discipline": "egress",
+      "citations": [
+       "SRC R310"
+      ],
+      "route": "licensed_review",
+      "sheets": []
+     }
+    },
+    {
+     "id": "C5",
+     "text": "GUARD, [code reference removed] (SHEET 2) The plans shows a French door on the south elevation at the upper floor. Is there an existing deck and/or guard at this location? If so, revise the plans to clearly show label the existing deck and/or guard. Alternatively, revise the plans to provide a guard AND provide notes and/or details that clearly indicate conformance with the following guard(rail) requirements: a) [code reference removed] - Min. 36 inch height. b) [code reference removed] - Max. opening such that a 4-inch sphere cannot pass through. c) [code reference removed] - Designed to resist a 200 lb concentrated load on the top rail and 50 lb load over a 12 ”x12” area on all guardrail infill components. d). If the guardrail system is vendor designed and intent is to provide it in a deferred submittal, include a note on the plans indicating as such and show the extent of the vendor designed components. The guardrail supporting structure shall be designed and detailed as part of the permit plans, it shall not be part of a deferred submittal.",
+     "labels": {
+      "discipline": "egress",
+      "citations": [
+       "SRC R312",
+       "SRC R301"
+      ],
+      "route": "licensed_review",
+      "sheets": []
+     }
+    },
+    {
+     "id": "C6",
+     "text": "PLAN REQUIREMENTS. [code reference removed] (SHEET 3) At the lower floor plan it is not clear what is existing vs. new construction. It appears new windows are being added to the bedrooms, but it is not clear if the window openings are existing or being increased in size. Are there any other alterations proposed on this level? Revise the lower level plan to clearly label existing vs. new construction (i.e new kitchen cabinets, altered window openings, convert garage to bonus rm?, etc.).",
+     "labels": {
+      "discipline": null,
+      "citations": [
+       "SRC R105"
+      ],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C7",
+     "text": "PLAN REQUIREMENTS. [code reference removed] It appears the scope of work is to construct alterations to an existing single family residence to add an attached accessory dwelling unit (AADU) in the lower level? On the plans correct the following: 1). Revise the plans to provide a description of work. 2). Label the lower level \"AADU floor plan\" to clearly identify the AADU location in the building. 3). Provide a north arrow on the floor plans.",
+     "labels": {
+      "discipline": null,
+      "citations": [
+       "SRC R105"
+      ],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C8",
+     "text": "STRUCTURAL. (S-1) The plans provide structural details. Provide structural plans to clarify the extents of the structural alterations proposed to coordinate with the structural details provided.",
+     "labels": {
+      "discipline": "structural",
+      "citations": [],
+      "route": "licensed_review",
+      "sheets": []
+     }
+    },
+    {
+     "id": "C9",
+     "text": "STRUCTURAL. (SHEET 4) For the new windows shown on the plans provide structural details/notes to clearly show the extents of the structural alterations.",
+     "labels": {
+      "discipline": "structural",
+      "citations": [],
+      "route": "licensed_review",
+      "sheets": []
+     }
+    }
+   ]
+  },
+  {
+   "id": "19-energy-6932686-CN",
+   "holdout": false,
+   "review_type": "Energy",
+   "source": {
+    "letter": "https://web.seattle.gov/dpd/edms/GetDocument?id=9981171",
+    "permit": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=6932686-CN",
+    "document_date": "2023-12-05"
+   },
+   "project": {
+    "jurisdiction": "seattle",
+    "address": "3321 E TERRACE ST",
+    "description": "Establish use as single family residence with two attached accessory dwelling unit per land use code. Construct 3-unit townhouse structure per plan. Permit class: Single Family/Duplex. Zoning: NR3, NR3.",
+    "reviewer": "Seattle SDCI, Correction Letter-Energy-Cycle1"
+   },
+   "outcome": {
+    "review_cycles": 7,
+    "days_out_for_corrections": 449,
+    "days_city_review": 144
+   },
+   "comments": [
+    {
+     "id": "C1",
+     "text": "Sheet A130 [code reference removed]: Please note on drawing that the design professional or builder shall complete and post a \"Compliance Certificate\" at designated location to final inspection. A single blank form should be included on the plan drawings. This is available online at http://www.energy.wsu.edu/Documents/Compliance%20Certificate%202018%20WSEC.pdfEnergy (4)",
+     "labels": {
+      "discipline": "energy",
+      "citations": [
+       "SEC R401"
+      ],
+      "route": null,
+      "sheets": [
+       "A130"
+      ]
+     }
+    },
+    {
+     "id": "C2",
+     "text": "Sheet A130 [code reference removed]: Provide a completed Heating Equipment Sizing calculation. Calculation forms are available online at https://www.energy.wsu.edu/Documents/2018-2021%20Heating%20System%20Sizing%20Works heet~20230712.xlsx",
+     "labels": {
+      "discipline": "energy",
+      "citations": [
+       "SEC 403"
+      ],
+      "route": null,
+      "sheets": [
+       "A130"
+      ]
+     }
+    },
+    {
+     "id": "C3",
+     "text": "Sheet A301 [code reference removed]: Show the locations of all local exhaust fans, such as Bathroom, toilet room, kitchen fans, and note that the exhaust air shall vent directly to the exterior of the building per M1504.3.",
+     "labels": {
+      "discipline": "energy",
+      "citations": [
+       "SRC M1505"
+      ],
+      "route": null,
+      "sheets": [
+       "A301"
+      ]
+     }
+    },
+    {
+     "id": "C4",
+     "text": "Sheet A301 [code reference removed]: Indicate which one of the following four types of mechanical whole house ventilation systems is being provided: 1.[code reference removed] – Exhaust Fan system. 2.[code reference removed] – Supply Fan system. 3.[code reference removed] – Balanced whole house Ventilation (HRV) system. 4.[code reference removed] – Furnace Integrated supply. 2018 WA ENERGY FINDING PROJECTS SHALL COMPLY WIT 2018 WASHINGTON S ENERGY CODE N SHALL COMPLY WITH ONE OF T",
+     "labels": {
+      "discipline": "energy",
+      "citations": [
+       "SRC M1505"
+      ],
+      "route": null,
+      "sheets": [
+       "A301"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "20-energy-7064431-CN",
+   "holdout": false,
+   "review_type": "Energy",
+   "source": {
+    "letter": "https://web.seattle.gov/dpd/edms/GetDocument?id=11353974",
+    "permit": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=7064431-CN",
+    "document_date": "2025-02-06"
+   },
+   "project": {
+    "jurisdiction": "seattle",
+    "address": "4413 50TH AVE SW",
+    "description": "Allow a detached accessory dwelling unit per the land use code. Construct a one-family dwelling per plans Permit class: Single Family/Duplex. Zoning: NR3.",
+    "reviewer": "Seattle SDCI, Correction Letter-Energy-Cycle1"
+   },
+   "outcome": {
+    "review_cycles": 3,
+    "days_out_for_corrections": 72,
+    "days_city_review": 68
+   },
+   "comments": [
+    {
+     "id": "C1",
+     "text": "This project has been reviewed for conformance with one or more of the following codes: 2021 Seattle Mechanical Code (SMC); 2021 Seattle Energy Code (SEC); 2021 Seattle Fuel Gas Code (SFGC); 2021 Seattle Residential Code (SRC); and 2021 Seattle Building Code (SBC).Energy (4)",
+     "labels": {
+      "discipline": "energy",
+      "citations": [],
+      "route": "no_action",
+      "sheets": []
+     }
+    },
+    {
+     "id": "C2",
+     "text": "A4.0 DADU section: a. Provide R-21+R-12c.i. for 2x6 wood frame exterior walls per 2021 Seattle Energy Code option 1.3 of [code reference removed] requirement. b. Provide R-10 c.i. for perimeter and under entire slab on grade for compliance of option 1.3 of [code reference removed] requirement. c. Provide R-60 for all roof for compliance of option 1.3 of [code reference removed] requirement.",
+     "labels": {
+      "discipline": "energy",
+      "citations": [],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C3",
+     "text": "A4.0, DADU section: The garage door, wall, roof and slab on grade of the heated garage are required to be in compliance with option 1.3 of [code reference removed] also. Please call out insulation R values and maximum U factor.",
+     "labels": {
+      "discipline": "energy",
+      "citations": [],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C4",
+     "text": "A4.0, [code reference removed] selection: Option 5.1 receives 0.5 credit only (not 1.5). Please revise. 58\" TYPE X G 5.1",
+     "labels": {
+      "discipline": "energy",
+      "citations": [],
+      "route": null,
+      "sheets": []
+     }
+    }
+   ]
+  },
+  {
+   "id": "21-ordinance-structural-7017302-CN",
+   "holdout": true,
+   "review_type": "Ordinance Structural",
+   "source": {
+    "letter": "https://web.seattle.gov/dpd/edms/GetDocument?id=11228376",
+    "permit": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=7017302-CN",
+    "document_date": "2024-12-26"
+   },
+   "project": {
+    "jurisdiction": "seattle",
+    "address": "4520 SW BRACE POINT DR",
+    "description": "Construct south single family dwelling per plan. (Establish use as single family residence with detached accessory dwelling unit per land use code. Construct two new single family dwellings per plan. Review and processing for two records under 7017302-CN.) Permit class: Single Family/Duplex. Zoning: unknown.",
+    "reviewer": "Seattle SDCI, Correction Letter-ECA GeoTech-Cycle2"
+   },
+   "outcome": {
+    "review_cycles": 5,
+    "days_out_for_corrections": 190,
+    "days_city_review": 206
+   },
+   "comments": [
+    {
+     "id": "C1",
+     "text": "Repeated and Revised See design data on sheet G1. It appears at rest earth pressures do not match the geotechnical report for this site (see report by geotech consultants, inc. dated June 6, 2024). Revise to match.JBronner (3)",
+     "labels": {
+      "discipline": "structural",
+      "citations": [],
+      "route": "licensed_review",
+      "sheets": [
+       "G1."
+      ]
+     }
+    },
+    {
+     "id": "C2",
+     "text": "Repeated and Revised [code reference removed] B. Show temporary excavation plan. At a minimum include top of excavation elevation, bottom of excavation elevation, ultrablock wall layout, maximum cut slopes and lateral extents of excavation in regards to property line. Show where on site plan ultra block wall will be used. Note that section B-B' on A1.0 shows ultra block wall greater than 7ft max wall hight and is out of compliance with recommendations from geotechnical report.",
+     "labels": {
+      "discipline": "geotech",
+      "citations": [
+       "SMC 22.17"
+      ],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C3",
+     "text": "REPEATED [code reference removed] A. Provide a signed and stamped letter from the geotechnical engineer that includes review of the plans and provides a minimal risk statement in accordance with Director's Rule 5-2016. The plan review/minimal risklettermust be based upon review of plans with all substantial geotechnical recommendations incorporated.",
+     "labels": {
+      "discipline": "geotech",
+      "citations": [
+       "SMC 22.17"
+      ],
+      "route": null,
+      "sheets": []
+     }
+    }
+   ]
+  },
+  {
+   "id": "22-ordinance-structural-7030263-CN",
+   "holdout": false,
+   "review_type": "Ordinance Structural",
+   "source": {
+    "letter": "https://web.seattle.gov/dpd/edms/GetDocument?id=10924694",
+    "permit": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=7030263-CN",
+    "document_date": "2024-09-19"
+   },
+   "project": {
+    "jurisdiction": "seattle",
+    "address": "4048 32ND AVE W",
+    "description": "Construct west two-family dwelling per plan. [Establish single-family use with attached and detached accessory dwelling units per land use plan. Construct one- and two-family dwellings per plan. Review and processing for (2) construction records under 7030263-CN.] Permit class: Single Family/Duplex. Zoning: NR3, NR3.",
+    "reviewer": "Seattle SDCI, Correction Letter-Ordinance/Structural-Cycle1"
+   },
+   "outcome": {
+    "review_cycles": 3,
+    "days_out_for_corrections": 71,
+    "days_city_review": 86
+   },
+   "comments": [
+    {
+     "id": "C1",
+     "text": "No Action Required Code Edition: This project has been reviewed for ordinance conformance with the 2018 Seattle Residential Code (SRC) and structural conformance with the 2018 Seattle Building Code (SBC).Ordinance Structural (4)",
+     "labels": {
+      "discipline": null,
+      "citations": [],
+      "route": "no_action",
+      "sheets": []
+     }
+    },
+    {
+     "id": "C2",
+     "text": "A3.5: [code reference removed] - Fire-Resistant Construction (Projections): Projections within 2 feet of a fire separation line are not permitted. Projections between 2 feet and 5 feet of a property line are required to be rated from the underside with a 1 hour assembly. Provide details for a 1 hour assembly. Note: The DADU appears to be approx. 1'-7\" from the fire separation line. Revise the plan set.",
+     "labels": {
+      "discipline": "fire",
+      "citations": [
+       "SRC R302"
+      ],
+      "route": "licensed_review",
+      "sheets": []
+     }
+    },
+    {
+     "id": "C3",
+     "text": "A5.0 & A5.1: [code reference removed] - Roof Ventilation: The building sections show unvented roof assemblies. The details on sheets A5.0 & A5.1 show vented roof details. Revise the plan set to coordinate the details with the proposed roof assembly.",
+     "labels": {
+      "discipline": null,
+      "citations": [
+       "SRC R806"
+      ],
+      "route": null,
+      "sheets": [
+       "A5.0"
+      ]
+     }
+    },
+    {
+     "id": "C4",
+     "text": "S4.1: Structural - Revise the plan set to show what is supporting the south end of the SFR, level 2 beam (2-7). 264'-0\" (2) ≠CS16(2) ≠CS16C4",
+     "labels": {
+      "discipline": "structural",
+      "citations": [],
+      "route": "licensed_review",
+      "sheets": []
+     }
+    }
+   ]
+  },
+  {
+   "id": "23-ordinance-structural-7055255-CN",
+   "holdout": false,
+   "review_type": "Ordinance Structural",
+   "source": {
+    "letter": "https://web.seattle.gov/dpd/edms/GetDocument?id=11275766",
+    "permit": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=7055255-CN",
+    "document_date": "2025-01-14"
+   },
+   "project": {
+    "jurisdiction": "seattle",
+    "address": "11318 GOODWIN WAY NE",
+    "description": "Allow attached accessory dwelling unit to single-family use per land use code. Construct as substantial alterations to existing residence for two-family dwelling with attached garage per plan. Permit class: Single Family/Duplex. Zoning: NR2.",
+    "reviewer": "Seattle SDCI, Correction Letter-Ordinance/Structural-Cycle1"
+   },
+   "outcome": {
+    "review_cycles": 2,
+    "days_out_for_corrections": 26,
+    "days_city_review": 74
+   },
+   "comments": [
+    {
+     "id": "C1",
+     "text": "A0.0: Code Edition - Revise the plan set to state that this project has been reviewed for ordinance conformance with the 2021 Seattle Residential Code (SRC) and structural conformance with the 2021 Seattle Building Code (SBC).Ordinance Structural (4)",
+     "labels": {
+      "discipline": null,
+      "citations": [],
+      "route": "no_action",
+      "sheets": []
+     }
+    },
+    {
+     "id": "C2",
+     "text": "A1 & A3: [code reference removed] and [code reference removed] - Fire Resistant Construction (Garages): Provide a fire separation between the dwelling and private garage. Show or note on the plans the following: - 1-3/8 ” solid-core wood, 1-3/8\" solid or honeycomb steel, or 20 min. rated garage/dwelling door equipped with a self-closing device.",
+     "labels": {
+      "discipline": "fire",
+      "citations": [
+       "SRC R302"
+      ],
+      "route": "licensed_review",
+      "sheets": []
+     }
+    },
+    {
+     "id": "C3",
+     "text": "A5: [code reference removed] - Roof Ventilation: Revise the plan set to provide calculations to show the area of the roof, area of venting required, and area of venting provided. Include the size, spacing and location of roof vents on the plans.",
+     "labels": {
+      "discipline": null,
+      "citations": [
+       "SRC R806"
+      ],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C4",
+     "text": "S3: Structural - Revise the plan set to confirm how the level 2, south, exterior walls transfer their lateral loads down to the foundation. \"Garag 658,07 s",
+     "labels": {
+      "discipline": "structural",
+      "citations": [],
+      "route": "licensed_review",
+      "sheets": []
+     }
+    }
+   ]
+  },
+  {
+   "id": "24-structural-engineer-6918054-CN",
+   "holdout": false,
+   "review_type": "Structural Engineer",
+   "source": {
+    "letter": "https://web.seattle.gov/dpd/edms/GetDocument?id=10679163",
+    "permit": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=6918054-CN",
+    "document_date": "2024-07-09"
+   },
+   "project": {
+    "jurisdiction": "seattle",
+    "address": "133 NE 60TH ST",
+    "description": "Construct two-family dwelling per plan. Shoring included. (Establish use as detached single-family dwelling and attached accessory dwelling units per land use code. Construct two-family dwelling and neighboring rockery per plan. Shoring included. Review and processing for two records under 6918054-CN) Permit class: Single Family/Duplex. Zoning: NR3, NR3.",
+    "reviewer": "Seattle SDCI, Correction Letter-Structural Engineer-Cycle1"
+   },
+   "outcome": {
+    "review_cycles": 5,
+    "days_out_for_corrections": 101,
+    "days_city_review": 143
+   },
+   "comments": [
+    {
+     "id": "C1",
+     "text": "This project has been reviewed for conformance with one or more of the following codes: 2018 Seattle Building Code (SBC)Structural Engineer (5)",
+     "labels": {
+      "discipline": "structural",
+      "citations": [],
+      "route": "no_action",
+      "sheets": []
+     }
+    },
+    {
+     "id": "C2",
+     "text": "Sheet S2.2 Shear walls at Grid 10, Grid 2 and 1.5 Provide structural calculations that include wall elevation diagrams to illustrate the shear wall load path across wall openings and from floor to floor until the load effects reach the foundation system for the shear walls at Grid 10, 2 and 1.5.",
+     "labels": {
+      "discipline": "structural",
+      "citations": [],
+      "route": "licensed_review",
+      "sheets": [
+       "S2.2"
+      ]
+     }
+    },
+    {
+     "id": "C3",
+     "text": "Sheet S2.2 Exterior wall opening framing Provide structural calculations to verify the member sizes including wall studs and member connections for the framings around large exterior wall openings, such as the wall openings at Grid 10 and Grid 2/1.5, under the combined load effects of gravity and C&C wind loading",
+     "labels": {
+      "discipline": "structural",
+      "citations": [],
+      "route": "licensed_review",
+      "sheets": [
+       "S2.2"
+      ]
+     }
+    },
+    {
+     "id": "C4",
+     "text": "[code reference removed] - Complete and return the SDCI Statement of Structural Special Inspections (uploaded under the latest \"Special Inspection notification.pdf\" in the permit record), signed by the owner or engineer or architect acting as the owner ’s agent. The designated special inspection agency shall be WABO registered. Note: SDCI will not accept the signature of the contractor on the statement.",
+     "labels": {
+      "discipline": "structural",
+      "citations": [
+       "SBC 1704"
+      ],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C5",
+     "text": "S3.1 Basement wall to floor framing connection a) Provide structural calculations to verify the capacities of the basement wall to floor framing connections under the lateral soil pressure and seismic load. b) Provide structural calculations to verify the load path of basement wall top reactions through floor framing under unbalanced soil pressure and seismic loading.",
+     "labels": {
+      "discipline": "structural",
+      "citations": [],
+      "route": "licensed_review",
+      "sheets": []
+     }
+    }
+   ]
+  },
+  {
+   "id": "25-zoning-7028776-CN",
+   "holdout": true,
+   "review_type": "Zoning",
+   "source": {
+    "letter": "https://web.seattle.gov/dpd/edms/GetDocument?id=11458685",
+    "permit": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=7028776-CN",
+    "document_date": "2025-03-11"
+   },
+   "project": {
+    "jurisdiction": "seattle",
+    "address": "14023 1ST AVE NW",
+    "description": "Construct west single family dwelling per plan. (Establish use as single-family with attached accessory dwelling unit [AADU] and detached accessory dwelling unit [DADU] per land use code. Construct one- and two-family dwellings per plan. Review and processing for (2) construction records under 7028776-CN.) Permit class: Single Family/Duplex. Zoning: NR2, NR2.",
+    "reviewer": "Seattle SDCI, Correction Letter-Zoning-Cycle3"
+   },
+   "outcome": {
+    "review_cycles": 4,
+    "days_out_for_corrections": 68,
+    "days_city_review": 162
+   },
+   "comments": [
+    {
+     "id": "C1",
+     "text": "Thank you for providing the Green Building Standard Development Site Form. However, the Statement of Green Building Inspection is also required. Please upload both of the completed forms to the portal and ensure they are both embedded within the plan set. Zoning (2)",
+     "labels": {
+      "discipline": "zoning",
+      "citations": [],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C2",
+     "text": "[code reference removed] (Tree Requirements): Street Trees: On the site plan sheet, show the location, size, and type of proposed street trees in accordance with [code reference removed] Obtain conceptual approval from SDOT for the proposed type, number, and location of trees and provide proof of approval (e.g., stamped plans and/or emails) with your correction response. See information here on how to obtain conceptual approval from SDOT: https://seattlegov.zendesk.com/hc/en-us/articles/360048504614-How-Do-I-Submit-a n-Urban-Forestry-Application-for-Street-Trees-Conceptual-Approval-by-the-SDOT-L andscape-Architect-Office",
+     "labels": {
+      "discipline": "zoning",
+      "citations": [
+       "SMC 23.44.020"
+      ],
+      "route": null,
+      "sheets": []
+     }
+    }
+   ]
+  },
+  {
+   "id": "26-tree-7045935-CN",
+   "holdout": false,
+   "review_type": "Tree",
+   "source": {
+    "letter": "https://web.seattle.gov/dpd/edms/GetDocument?id=11187688",
+    "permit": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=7045935-CN",
+    "document_date": "2024-12-10"
+   },
+   "project": {
+    "jurisdiction": "seattle",
+    "address": "2515 35TH AVE W",
+    "description": "Establish use as single family residence with detached garage per land use code. Construct new single-family residence with basement and detached garage. Permit class: Single Family/Duplex. Zoning: NR3.",
+    "reviewer": "Seattle SDCI, Correction Letter-Tree-Cycle1"
+   },
+   "outcome": {
+    "review_cycles": 3,
+    "days_out_for_corrections": 16,
+    "days_city_review": 102
+   },
+   "comments": [
+    {
+     "id": "C1",
+     "text": "Please include the tree information within the plan set. The arborist report Site plan includes all the required information that needs to be part of the approved plans. The following two corrections are for the site replacement trees and should be added to the tree site plan:Paul Humphries (4)",
+     "labels": {
+      "discipline": "tree",
+      "citations": [],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C2",
+     "text": "Please add the following text in relation to the proposed replacement trees.. For each relocated or required replacement tree, maintenance and monitoring is required for a five-year period. The period begins when the replacement tree is planted. Maintenance and monitoring shall include the following: 1.Sufficient maintenance actions to ensure survival of the replacement tree: a. When more than one replacement tree is required, 80 percent survival of new trees planted at the end of five years; b. When one replacement tree is required, 100 percent survival of the new tree planted at the end of five years; 2.Replacement and replanting of failed trees; and 3.Photographic documentation of planting success retained for the five-year period. Submission of documentation to the Seattle Department of Construction and Inspections is not Genus and required unless requested by the Department.",
+     "labels": {
+      "discipline": "tree",
+      "citations": [],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C3",
+     "text": "Per the requirements of Directors rule 12-2023 indicate the proposed method of irrigation for the replacement trees on the plan set",
+     "labels": {
+      "discipline": "tree",
+      "citations": [],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C4",
+     "text": "Please show and label the overhanging tier 2 cedar and on site tree #11 and the required temporary protection fence, consistent with the arborist report site plan. Per the requirements of [code reference removed] B 1 and 2.",
+     "labels": {
+      "discipline": "tree",
+      "citations": [],
+      "route": null,
+      "sheets": []
+     }
+    }
+   ]
+  },
+  {
+   "id": "27-ordinance-structural-7076645-CN",
+   "holdout": false,
+   "review_type": "Ordinance Structural",
+   "source": {
+    "letter": "https://web.seattle.gov/dpd/edms/GetDocument?id=11760749",
+    "permit": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=7076645-CN",
+    "document_date": "2025-06-04"
+   },
+   "project": {
+    "jurisdiction": "seattle",
+    "address": "559 S CONCORD ST",
+    "description": "Allow new attached accessory dwelling unit to existing single family use per land use code. Construct addition and substantial alterations for a two family dwelling per plan Permit class: Single Family/Duplex. Zoning: unknown.",
+    "reviewer": "Seattle SDCI, Correction Letter-Ordinance/Structural-Cycle1"
+   },
+   "outcome": {
+    "review_cycles": 2,
+    "days_out_for_corrections": 72,
+    "days_city_review": 32
+   },
+   "comments": [
+    {
+     "id": "C1",
+     "text": "This project has been reviewed for conformance with the 2021 Seattle Residential Code (SRC) and 2021 Seattle Building Code (SBC).Ordinance Structural (4)",
+     "labels": {
+      "discipline": null,
+      "citations": [],
+      "route": "no_action",
+      "sheets": []
+     }
+    },
+    {
+     "id": "C2",
+     "text": "Sheet A2.0 [code reference removed] - Clearly indicate on the plans each location where safety glazing is required. See the following locations of concern: a) [code reference removed] - The window(s) with a sill height of less than 18 inches and glazing area greater than 9 SF. See windows W203 and W204. b) [code reference removed] - The window in enclosures, fences, or wall(s) that directly face the tub, shower, or pool. See window W201 adjacent to the tub. c) [code reference removed] - The window adjacent to the walking surface of stairs or landings. See window W205.",
+     "labels": {
+      "discipline": null,
+      "citations": [
+       "SRC R308"
+      ],
+      "route": null,
+      "sheets": [
+       "A2.0"
+      ]
+     }
+    },
+    {
+     "id": "C3",
+     "text": "Sheet A1.1 [code reference removed] – Revise the plans to provide an emergency escape (egress) window for both “Bed 1 ” and “Bed 2 ” in the basement AADU unit with a sill height such that there ’s a maximum 44 ” from the floor to the clear opening. For each bedroom, the plans currently propose a higher sill height greater than this 44 ” plus a “9” step at each with the following note, “per SDCI TIP 116a, emergency escape sill height compliance provided by a single 9 ” W x 8 ” T constructed step …”. This step provision (max 8 ” riser, btw) does not apply since these spaces were not built as sleeping rooms or converted or established by permit as sleeping rooms. See this code interpretation for reference: https://www.seattle.gov/documents/Departments/SDCI/Codes/2012SEBC4031ReplacementBedroom Window.pdf These bedrooms are newly proposed and require the 44 ” maximum clear opening height without the step; please revise accordingly.",
+     "labels": {
+      "discipline": "egress",
+      "citations": [
+       "SRC R310"
+      ],
+      "route": "licensed_review",
+      "sheets": [
+       "A1.1"
+      ]
+     }
+    },
+    {
+     "id": "C4",
+     "text": "Sheet S2.0 1. The plan 11/S2.0 is labeled as \"upper floor framing/basement level wall plan\". This appears to be the main level framing/basement level wall plan. Please verify and clarify/revise accordingly. 2. The foundation plan 9/S2.0 includes three references to X/S-XXX. Please revise to reference the intended details. General C CMSA SA CMSFD 1ESCAPE SIL PROVIDED CONSTRUC OF THE WI UPPER FLOOR FRAM",
+     "labels": {
+      "discipline": null,
+      "citations": [],
+      "route": null,
+      "sheets": [
+       "S2.0"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "28-zoning-6994779-CN",
+   "holdout": false,
+   "review_type": "Zoning",
+   "source": {
+    "letter": "https://web.seattle.gov/dpd/edms/GetDocument?id=10726219",
+    "permit": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=6994779-CN",
+    "document_date": "2024-07-24"
+   },
+   "project": {
+    "jurisdiction": "seattle",
+    "address": "3900 E MCGRAW ST",
+    "description": "Construct new one-family dwelling per plan Permit class: Single Family/Duplex. Zoning: NR3, NR3.",
+    "reviewer": "Seattle SDCI, Correction Letter-Zoning-Cycle2"
+   },
+   "outcome": {
+    "review_cycles": 4,
+    "days_out_for_corrections": 44,
+    "days_city_review": 68
+   },
+   "comments": [
+    {
+     "id": "C1",
+     "text": "[code reference removed] (Yards): Yards: Please include a required rear yard calculation, showing how you've gotten to 20'-2\" for a rear yard depth. (see Table A for [code reference removed] - [code reference removed] - Neighborhood Residential (3)",
+     "labels": {
+      "discipline": "zoning",
+      "citations": [
+       "SMC 23.44.014",
+       "SMC 23.44"
+      ],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C2",
+     "text": "[code reference removed] (Tree Requirements): Compliance Note: On the site plan sheet or analysis sheet, provide a general compliance note for [code reference removed] There appears to be new proposed (replacement) trees on-site. When new trees are planted during development the owner is required to maintain the trees and keep them healthy for 5 years after final inspection.",
+     "labels": {
+      "discipline": "zoning",
+      "citations": [
+       "SMC 23.44.020"
+      ],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C3",
+     "text": "[code reference removed] (Tree Requirements): Thank you for the update on the SDOTTREE permit submittal. Please be sure to show the location of proposed street trees on the site plan once approved by SDOT. Also, once the conceptual approval stamp has been provided on the SDOTTREE landscape plans be sure to include this sheet (with stamp) in these plans. :",
+     "labels": {
+      "discipline": "zoning",
+      "citations": [
+       "SMC 23.44.020"
+      ],
+      "route": null,
+      "sheets": []
+     }
+    }
+   ]
+  },
+  {
+   "id": "29-zoning-7001530-CN",
+   "holdout": false,
+   "review_type": "Zoning",
+   "source": {
+    "letter": "https://web.seattle.gov/dpd/edms/GetDocument?id=10854104",
+    "permit": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=7001530-CN",
+    "document_date": "2024-08-29"
+   },
+   "project": {
+    "jurisdiction": "seattle",
+    "address": "4417 2ND AVE NE",
+    "description": "Establish use as single family residence with attached accessory dwelling units per land use code. Construct 3-unit townhouse per plan. Permit class: Single Family/Duplex. Zoning: unknown.",
+    "reviewer": "Seattle SDCI, Correction Letter-Zoning-Cycle1"
+   },
+   "outcome": {
+    "review_cycles": 3,
+    "days_out_for_corrections": 62,
+    "days_city_review": 92
+   },
+   "comments": [
+    {
+     "id": "C1",
+     "text": "Master Use Permit: Review Timing: Currently this project is being reviewed under Master Use Permit (MUP) 3041800-LU. After the MUP has been issued, I will need to verify the project scope and application of development standards are consistent between the MUP and the building permit. Zoning review cannot be approved until the MUP has been issued. Please incorporate any required conditions of the MUP decision into the plan set and note any changes between the MUP and building permit in your response letter. Additionally, mark the MUP pages in this plan set as FOR REFERENCE ONLY.Zoning - General and Special Corrections (4)",
+     "labels": {
+      "discipline": "zoning",
+      "citations": [],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C2",
+     "text": "If the maneuvering easement is included in the related MUP, please include the record number (3041800-LU) in the \"MANEUVERING EASEMENT\" note on the site plan. If it is a separate easement to be recorded, please include the recording number in this note.",
+     "labels": {
+      "discipline": "zoning",
+      "citations": [],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C3",
+     "text": "Any construction activity (pavers, walkways, steps, retaining walls, etc.) within the right-of-way requires separate review from SDOT and cannot be approved under this permit. Please update the plan set to include the following note: \"No features or structures within the right-of-way reviewed or approved under this permit.\"",
+     "labels": {
+      "discipline": "zoning",
+      "citations": [],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C4",
+     "text": "A landscape plan is called out on the site plan to cover the SDOT tree protection requirements, there does not appear to be a landscape plan provided. Please remove this note or update to reference the area of the plans where the SDOT tree protection information is located.",
+     "labels": {
+      "discipline": "zoning",
+      "citations": [],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C5",
+     "text": "[code reference removed] (Tree Requirements): Street Trees: On the site plan sheet, show the location, size, and type of proposed street trees in accordance with [code reference removed] Obtain conceptual approval from SDOT ([email removed]) for the proposed type, number, and location of trees and include the conceptual approval stamp on the site plan sheet once received. The Zoning review on this permit cannot be approved until conceptual approval for street trees is obtained from SDOT.Zoning - [code reference removed] - Neighborhood Residential (4)",
+     "labels": {
+      "discipline": "zoning",
+      "citations": [
+       "SMC 23.44.020",
+       "SMC 23.44"
+      ],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C6",
+     "text": "[code reference removed] (Floor Area Ratio): The FAR diagrams show a 200 SF exemption labeled on the SFR garage, this should be 250 SF exemption. It appears to be a minor typo, the calculation uses the 250 SF number. Also, the total FAR calculation appears to be using the total size of the garage for the first floor of the SFR, it shows 258.53 instead of 474.56. Please update the diagrams and calculations.",
+     "labels": {
+      "discipline": "zoning",
+      "citations": [
+       "SMC 23.44.011"
+      ],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C7",
+     "text": "[code reference removed] (Accessory Dwelling Units): Scooter Garages: The following elements are required to document how the AADU scooter garages are designed, arranged, and intended to be used by two-wheeled vehicles... (1) Provide a minimum of a 5-foot access pathway from the street to the garage. (2) Any access door to the garage must be at least 48 ” wide (the minimum width of a double door) to allow a vehicle to be pushed or ridden into the space.",
+     "labels": {
+      "discipline": "zoning",
+      "citations": [
+       "SMC 23.44.041"
+      ],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C8",
+     "text": "[code reference removed] (Height Limits): Please label the pitch of the roof for both AADU's that surpass the max allowable base structure height on the south elevation drawing on sheet A3.1. E AVE NEOT TREE PROTECTION",
+     "labels": {
+      "discipline": "zoning",
+      "citations": [
+       "SMC 23.44.012"
+      ],
+      "route": null,
+      "sheets": [
+       "A3.1."
+      ]
+     }
+    },
+    {
+     "id": "C9",
+     "text": "[code reference removed] (Parking and Access): Curb Cut Identification: On the site plan please update the curb cut label to indicate whether this is a new proposed curb cut or existing curb cut.Zoning - [code reference removed] - Parking, Access, and Solid Waste (1)",
+     "labels": {
+      "discipline": "zoning",
+      "citations": [
+       "SMC 23.54.030",
+       "SMC 23.54"
+      ],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C10",
+     "text": "Please update the embedded Statement of Green Building Inspection Form with the completed version.Zoning - [code reference removed] - Green Building - CN/PH (1)",
+     "labels": {
+      "discipline": "zoning",
+      "citations": [
+       "SMC 23.58"
+      ],
+      "route": null,
+      "sheets": []
+     }
+    }
+   ]
+  },
+  {
+   "id": "30-drainage-7004518-CN",
+   "holdout": true,
+   "review_type": "Drainage",
+   "source": {
+    "letter": "https://web.seattle.gov/dpd/edms/GetDocument?id=11278516",
+    "permit": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=7004518-CN",
+    "document_date": "2025-01-14"
+   },
+   "project": {
+    "jurisdiction": "seattle",
+    "address": "3207 NE 77TH ST",
+    "description": "Establish use as single family residences with attached accessory dwelling unit per land use code. Construct two family dwelling per plan. Permit class: Single Family/Duplex. Zoning: NR3, NR3.",
+    "reviewer": "Seattle SDCI, Correction Letter-Drainage-Cycle2"
+   },
+   "outcome": {
+    "review_cycles": 3,
+    "days_out_for_corrections": 80,
+    "days_city_review": 92
+   },
+   "comments": [
+    {
+     "id": "C1",
+     "text": "Sheet C3.1: Repeated correction: Curb discharge is permitted for this project, but since the curb is less than 4-inches tall, a Curb Discharge Concrete Culvert With Steel Plate will be required. Also, show and call out the Curb Discharge Concrete Culvert With Steel Plat in the plan view extending from the property line to the curb with the cast-in-place box located within the property line. Note: The use of such a Curb Discharge Concrete Culvert With Steel Plate box require an annual/long term SDOT Street Use Permit and an annual fee will be charged.Drainage (5)",
+     "labels": {
+      "discipline": "drainage",
+      "citations": [],
+      "route": null,
+      "sheets": [
+       "C3.1"
+      ]
+     }
+    },
+    {
+     "id": "C2",
+     "text": "C 3.1: Footing drains cannot be discharged to the Non Infiltrating Bio Retention Planter. Per the Side Sewer Director's Rule 4-2011, Section VII.C.5 “In no case shall downspouts be connected directly to a groundwater collection system or the tight line connection from a groundwater collection system. ” On the DWC Plan, please show a separate foundation/footing drain collection line and a separate storm drain collection system. Please show and label the Footing drains being routed to an onsite catch basin with a minimum 2-foot-deep sump with a down-turned elbow on the outlet prior to connecting to the proposed Infiltrating Drywell.",
+     "labels": {
+      "discipline": "drainage",
+      "citations": [],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C3",
+     "text": "Sheet C3.1: Side Sewer Release and Indemnification Agreement: Since some of the proposed side sewers (drainage and/or sanitary) have less than a 2% slope, a recorded Side Sewer Release and Indemnification Agreement is required with side sewer permit application. http://www.seattle.gov/documents/Departments/SDCI/Forms/SideSewerReleaseIndemnificationAgreement.pdf",
+     "labels": {
+      "discipline": "drainage",
+      "citations": [],
+      "route": null,
+      "sheets": [
+       "C3.1"
+      ]
+     }
+    },
+    {
+     "id": "C4",
+     "text": "Sheet C3.2: Please show the As-built Measurements/Notes column.",
+     "labels": {
+      "discipline": "drainage",
+      "citations": [],
+      "route": null,
+      "sheets": [
+       "C3.2"
+      ]
+     }
+    },
+    {
+     "id": "C5",
+     "text": "Sheet C3.2: A recorded Memorandums of Drainage Control required with side sewer permit application.",
+     "labels": {
+      "discipline": "drainage",
+      "citations": [],
+      "route": null,
+      "sheets": [
+       "C3.2"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "31-ordinance-structural-6937577-CN",
+   "holdout": true,
+   "review_type": "Ordinance Structural",
+   "source": {
+    "letter": "https://web.seattle.gov/dpd/edms/GetDocument?id=11856243",
+    "permit": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=6937577-CN",
+    "document_date": "2025-07-01"
+   },
+   "project": {
+    "jurisdiction": "seattle",
+    "address": "4111 SW JUNEAU ST",
+    "description": "Construct west one-family dwelling (Establish use as single-family residence [existing single-family residence to remain] per land use code. Construct one-family dwelling and construct alterations to exterior deck attached to existing one-family dwelling per plan. Review & process for (2) records under 6937577-CN) Permit class: Single Family/Duplex. Zoning: unknown.",
+    "reviewer": "Seattle SDCI, Correction Letter-Ordinance/Structural-Cycle7"
+   },
+   "outcome": {
+    "review_cycles": 8,
+    "days_out_for_corrections": 570,
+    "days_city_review": 136
+   },
+   "comments": [
+    {
+     "id": "C1",
+     "text": "This project has been reviewed for conformance with one or more of the following codes: 2018 Seattle Residential Code (SRC) Corrections are relatively minor; please contact me once revised submittal has been uploaded to the portal, and I will expedite the review.Ordinance Structural (2)",
+     "labels": {
+      "discipline": null,
+      "citations": [],
+      "route": "no_action",
+      "sheets": []
+     }
+    },
+    {
+     "id": "C2",
+     "text": "3rd Floor/A-2.1 - Repeat Previous Correction Item - Skylight cannot be tempered or heat strengthened glass. Include specific notes for one of the other design options if using a screen exception. Previous Correction - [code reference removed] - 3rd Floor/A-2.1 - The skylight located exceeds the limitations of [code reference removed] Provide a screen having a maximum 1 inch x 1 inch mesh and capable of supporting twice the weight of the glazing, OR, add specific notes for (1) of the options under [code reference removed] that is not fully tempered or heat strengthened glass. General Com S Skylight glazing shall",
+     "labels": {
+      "discipline": null,
+      "citations": [
+       "SRC R308"
+      ],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C3",
+     "text": "Level 2/S2.1, PSW/S5.3 - 2015 - SDPWS - 4.3.6.4.2.1 - Revise the perforated shear wall detailing to include anchors for uniform uplift at bottom of wall sheathing for full height walls. Previous Correction - 2015 - SDPWS - 4.3.6.4.4 - Level 1 Shear Walls/S2.1 - Continuous load path to the foundation appears to be missing at clouded hold down locations. Revise to include hold downs at foundation level or clarify the code path used.Structural Engineer (1)",
+     "labels": {
+      "discipline": "structural",
+      "citations": [],
+      "route": "licensed_review",
+      "sheets": []
+     }
+    }
+   ]
+  },
+  {
+   "id": "32-drainage-7070053-CN",
+   "holdout": false,
+   "review_type": "Drainage",
+   "source": {
+    "letter": "https://web.seattle.gov/dpd/edms/GetDocument?id=11914343",
+    "permit": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=7070053-CN",
+    "document_date": "2025-07-17"
+   },
+   "project": {
+    "jurisdiction": "seattle",
+    "address": "7718 HOLDEN PL SW",
+    "description": "Allow a detached accessory dwelling unit per the land use code. Construct a one-family dwelling accessory to a single-family residence per plans Permit class: Single Family/Duplex. Zoning: unknown.",
+    "reviewer": "Seattle SDCI, Correction Letter-Drainage-Cycle2"
+   },
+   "outcome": {
+    "review_cycles": 3,
+    "days_out_for_corrections": 22,
+    "days_city_review": 41
+   },
+   "comments": [
+    {
+     "id": "C1",
+     "text": "Sheet A1.3: Please show and label the roof drains being routed to an onsite catch basin with a minimum 2-foot-deep sump with a down-turned elbow on the outlet prior to connecting to the existing combined side sewer within property lines. Please show the DADU's sanitary sewer connection downstream of the proposed catch basin for the roof drain.Drainage (3)",
+     "labels": {
+      "discipline": "drainage",
+      "citations": [],
+      "route": null,
+      "sheets": [
+       "A1.3"
+      ]
+     }
+    },
+    {
+     "id": "C2",
+     "text": "Sheet A1.3: Please show the pipe's slope for the proposed storm and sanitary pipes or add a note that all storm and sanitary pipes must have a minimum 2% slope.",
+     "labels": {
+      "discipline": "drainage",
+      "citations": [],
+      "route": null,
+      "sheets": [
+       "A1.3"
+      ]
+     }
+    },
+    {
+     "id": "C3",
+     "text": "Sheet A1.3: Onsite Stormwater Management (OSM): Please leave the box next to “Total Pollution Generating Hard Surface Area ” blank in the “Site Information ” section of the Onsite Stormwater Management List Approach Calculator site and drainage control summary.",
+     "labels": {
+      "discipline": "drainage",
+      "citations": [],
+      "route": null,
+      "sheets": [
+       "A1.3"
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "33-ordinance-structural-7065717-CN",
+   "holdout": false,
+   "review_type": "Ordinance Structural",
+   "source": {
+    "letter": "https://web.seattle.gov/dpd/edms/GetDocument?id=11662527",
+    "permit": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=7065717-CN",
+    "document_date": "2025-05-07"
+   },
+   "project": {
+    "jurisdiction": "seattle",
+    "address": "4531 CORLISS AVE N",
+    "description": "Construct east one family dwelling per plan. (Construct (3) one-family dwelling per plan. Review and process for 3 records under 7065717-CN) Permit class: Single Family/Duplex. Zoning: unknown.",
+    "reviewer": "Seattle SDCI, 7065717-CN OS_Cycle1_Summary + SancheM"
+   },
+   "outcome": {
+    "review_cycles": 5,
+    "days_out_for_corrections": 55,
+    "days_city_review": 108
+   },
+   "comments": [
+    {
+     "id": "C1",
+     "text": "FYI - NO CORRECTION RESPONSE REQUIRED. CODE EDITION. (G1.1) This project has been reviewed for conformance with one or more of the following codes: 2021 Seattle Residential Code (SRC); 2021 Seattle Energy Code (SEC); Grading Code.Ordinance Structural (8)",
+     "labels": {
+      "discipline": null,
+      "citations": [],
+      "route": "no_action",
+      "sheets": []
+     }
+    },
+    {
+     "id": "C2",
+     "text": "SFR 1. SAFETY GLAZING. [code reference removed] (A3.1) Clearly indicate on the plans each location where safety glazing is required for SFR 1. See the following locations of concern: a) [code reference removed] - At the 2nd & 3rd floor the window labeled \"O\" on the southeast with a sill height of less than 18 inches and glazing area greater than 9 SF.",
+     "labels": {
+      "discipline": null,
+      "citations": [
+       "SRC R308"
+      ],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C3",
+     "text": "SFR 1. EGRESS. [code reference removed] (A1.0) The screened solid waste is an obstruction for the north egress window at bedroom 1 on level 1 for SFR 1. Revise plans to show that the north emergency escape and rescue opening opens directly to a yard that provides a 36\" wide unobstructed path to a public way.",
+     "labels": {
+      "discipline": "egress",
+      "citations": [
+       "SRC R310"
+      ],
+      "route": "licensed_review",
+      "sheets": []
+     }
+    },
+    {
+     "id": "C4",
+     "text": "SFR 3. EGRESS. [code reference removed] (A1.0) The screened solid waste is an obstruction for the north egress window at the north 2nd floor bedroom. Revise plans to show that the north emergency escape and rescue opening opens directly to a yard that provides a 36\" wide unobstructed path to a public way.",
+     "labels": {
+      "discipline": "egress",
+      "citations": [
+       "SRC R310"
+      ],
+      "route": "licensed_review",
+      "sheets": []
+     }
+    },
+    {
+     "id": "C5",
+     "text": "PLAN REQUIREMENTS. [code reference removed] (2/A5.1) It does not appear the party wall section detail applies to this project. Revise the plans to remove this detail from the plan set to avoid confusion during inspections.",
+     "labels": {
+      "discipline": null,
+      "citations": [
+       "SRC R105"
+      ],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C6",
+     "text": "SFR 3. PLAN REQUIREMENTS. [code reference removed] (A2.4 & A3.5) At SFR 3 level 2 add the windows on the west to coordinate with the west elevation or vise versa.",
+     "labels": {
+      "discipline": null,
+      "citations": [
+       "SRC R105"
+      ],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C7",
+     "text": "SFR 3. PLAN REQUIREMENTS. [code reference removed] (A2.4) At SFR 3 it appears the kitchen layout is missing. Correct this drafting error to clearly show the kitchen.",
+     "labels": {
+      "discipline": null,
+      "citations": [
+       "SRC R105"
+      ],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C8",
+     "text": "SFR 3. PLAN REQUIREMENTS. [code reference removed] (A2.5) At SFR 3 at level 3 it appears the interior door are missing? If so, revise the plans accordingly. CODE, THE SEA 2021 SEAT 2021 SEAT 2021 SEAT 2021 SEAT 2021 SEAT 2021 WAS 2021 USEA 2021 SEAT R O 2' Conc 3 113.98' WRC S8 TYP. 6'-0\" YP. '-6\" N 8 WRC REE PROTECTION FENCE W/ SIGN 2 K PRIMARY BEDROOM S",
+     "labels": {
+      "discipline": null,
+      "citations": [
+       "SRC R105"
+      ],
+      "route": null,
+      "sheets": []
+     }
+    }
+   ]
+  },
+  {
+   "id": "34-zoning-6702370-CN",
+   "holdout": false,
+   "review_type": "Zoning",
+   "source": {
+    "letter": "https://web.seattle.gov/dpd/edms/GetDocument?id=9326103",
+    "permit": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=6702370-CN",
+    "document_date": "2023-05-24"
+   },
+   "project": {
+    "jurisdiction": "seattle",
+    "address": "830 S CONCORD ST",
+    "description": "Construct new single family residence with attached garage on vacant lot per plan. Permit class: Single Family/Duplex. Zoning: SF 5000.",
+    "reviewer": "Seattle SDCI, Correction Letter-Zoning-Cycle2"
+   },
+   "outcome": {
+    "review_cycles": 5,
+    "days_out_for_corrections": 1825,
+    "days_city_review": 111
+   },
+   "comments": [
+    {
+     "id": "C1",
+     "text": "The associated LBA 3033984-LU needs to be finalized prior to zoning approval. Please include the approved and recorded plat in the plan set.Zoning (2)",
+     "labels": {
+      "discipline": "zoning",
+      "citations": [],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C2",
+     "text": "S Concord St does not currently exist. Prior to zoning approval, a 60% SIP needs to be completed.",
+     "labels": {
+      "discipline": "zoning",
+      "citations": [],
+      "route": null,
+      "sheets": []
+     }
+    }
+   ]
+  },
+  {
+   "id": "35-ordinance-structural-7065126-CN",
+   "holdout": false,
+   "review_type": "Ordinance Structural",
+   "source": {
+    "letter": "https://web.seattle.gov/dpd/edms/GetDocument?id=11566212",
+    "permit": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=7065126-CN",
+    "document_date": "2025-04-10"
+   },
+   "project": {
+    "jurisdiction": "seattle",
+    "address": "8022 FAUNTLEROY WAY SW",
+    "description": "Establish use as single-family residence with attached accessory dwelling unit per land use code. Construct new two-family dwelling per plan. Permit class: Single Family/Duplex. Zoning: unknown.",
+    "reviewer": "Seattle SDCI, Correction Letter-Ordinance-Cycle1"
+   },
+   "outcome": {
+    "review_cycles": 3,
+    "days_out_for_corrections": 57,
+    "days_city_review": 104
+   },
+   "comments": [
+    {
+     "id": "C1",
+     "text": "This project has been reviewed for conformance with one or more of the following codes: 2021 Seattle Residential Code (SRC)Ordinance Structural (6)",
+     "labels": {
+      "discipline": null,
+      "citations": [],
+      "route": "no_action",
+      "sheets": []
+     }
+    },
+    {
+     "id": "C2",
+     "text": "Sheet C1.0, it appear there is proposed work beyond the property line into the ROW, please clarify. [code reference removed] - Encroachments over the right-of-way require approval from SDOT. Add notes to the plans to indicate that a separate SDOT Street Use permit is required for this work.",
+     "labels": {
+      "discipline": null,
+      "citations": [
+       "SBC 3201"
+      ],
+      "route": null,
+      "sheets": [
+       "C1.0"
+      ]
+     }
+    },
+    {
+     "id": "C3",
+     "text": "Sheet A2.0, it appears there is no door opening to access the ADU garage. Please clarify. Access to ADU garage shall not lead through main SFR area.",
+     "labels": {
+      "discipline": null,
+      "citations": [],
+      "route": null,
+      "sheets": [
+       "A2.0"
+      ]
+     }
+    },
+    {
+     "id": "C4",
+     "text": "[code reference removed] - Provide details and notes that clearly show a 1-hour rated ceiling assembly between the two dwelling units. Sheet A4.0, clarify floor type F6 has the required fire rating.",
+     "labels": {
+      "discipline": "fire",
+      "citations": [
+       "SRC R302"
+      ],
+      "route": "licensed_review",
+      "sheets": [
+       "A4.0"
+      ]
+     }
+    },
+    {
+     "id": "C5",
+     "text": "[code reference removed] - Clearly indicate on the plans each location where safety glazing is required. See the following locations of concern: e) [code reference removed] - The window(s) in enclosures, fences, or wall(s) that directly face the tub, shower, or pool.",
+     "labels": {
+      "discipline": null,
+      "citations": [
+       "SRC R308"
+      ],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C6",
+     "text": "[code reference removed] - For the unvented roof assembly using spray foam insulation, provide the following on the drawings: a) A detail of the proposed assembly that clearly shows compliance with one of the 4 assembly options from [code reference removed], Item 5. Include the R-value of the foam insulation. b) The following note: “A copy of the ICC-ES Report for the insulation product must be provided on site for the field inspector. ” c) The following note: “The applied spray foam must be installed in accordance with the manufacturer ’s instructions by a certified installer. ” OTHER APPLICABLE CODES, STANDARDS, &",
+     "labels": {
+      "discipline": null,
+      "citations": [
+       "SRC R806"
+      ],
+      "route": null,
+      "sheets": []
+     }
+    }
+   ]
+  },
+  {
+   "id": "36-structural-engineer-7017301-CN",
+   "holdout": false,
+   "review_type": "Structural Engineer",
+   "source": {
+    "letter": "https://web.seattle.gov/dpd/edms/GetDocument?id=11170454",
+    "permit": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=7017301-CN",
+    "document_date": "2024-12-05"
+   },
+   "project": {
+    "jurisdiction": "seattle",
+    "address": "4469 LINDEN AVE N",
+    "description": "Construct east two-family dwelling per plan. (Establish use as townhouse per land use code. Construct two 2-family buildings per plan. Review and process for two records under 7017301-CN) Permit class: Single Family/Duplex. Zoning: LR3.",
+    "reviewer": "Seattle SDCI, Correction Letter-Structural Engineer-Cycle2"
+   },
+   "outcome": {
+    "review_cycles": 5,
+    "days_out_for_corrections": 147,
+    "days_city_review": 112
+   },
+   "comments": [
+    {
+     "id": "C1",
+     "text": "FYI ONLY, NO RESPONSE REQUIRED. This project has been reviewed for conformance with one or more of the following codes: 2018 Seattle Building Code (SBC)Structural Engineer (4)",
+     "labels": {
+      "discipline": "structural",
+      "citations": [],
+      "route": "no_action",
+      "sheets": []
+     }
+    },
+    {
+     "id": "C2",
+     "text": "Drawing S3.4 - The architectural drawings have been revised this cycle to show that the small rooftop east of grid D is much steeper than before (see drawing A4.0) and potentially cannot be framed in the same way as before. Clarify what is the framing for this roof and which details are applicable for attaching each edge of this steep roof framing.",
+     "labels": {
+      "discipline": "structural",
+      "citations": [],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C3",
+     "text": "Original correction: Please provide designs of open guardrail systems, or else confirm if they will be a deferred submittal (for example, those shown on the exterior decks of drawings A3.0 thru A3.3 and on stair/landing detail 1/A5.0. Current cycle correction: This correction has largely been resolved. FYI, for this SBC project, SDCI is adding the prefabricated steel guards to our list of required deferred submittals. Please address the following: 1) For the steel guard shown on detail 1/A5.0, provide anchorage details that develop its forces into the stairs and landing, and cut these details on the plans.",
+     "labels": {
+      "discipline": "structural",
+      "citations": [],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C4",
+     "text": "AWC SDPWS-2015 4.3.5.2 The perforated shearwalls on this project have been revised to force transfer around openings shear walls (FTAO). Please address the following: 1) Per item 4 of this code section, collectors shall be provided full wall length. It appears that the shearwall double top plate will typically suffice for this purpose. Calculation page 454 shows that wall line 3 story 3 of the east building is designed as a single FTAO shearwall. It appears from the architectural elevation on drawing A3.2, however, that the centermost window of this shearwall is too high to allow for a continuous double top plate (even though structural detail FRH shows it should be continuous here). Either justify how the architectural fenestration details assure that the window placement shown on this elevation will have a continuous double top plate, or else provide an alternative structural resolution. 2) ASCE 7-16 12.1.2 - If using the dead loads that are within a wood shearwall to help reduce net uplift at the shearwall end, reviewer will accept using a tributary length of the shearwall that is the least of the following: a) half the total shearwall length; b) a portion of the shearwall lengt",
+     "labels": {
+      "discipline": "structural",
+      "citations": [],
+      "route": "licensed_review",
+      "sheets": []
+     }
+    }
+   ]
+  },
+  {
+   "id": "37-energy-6907149-CN",
+   "holdout": true,
+   "review_type": "Energy",
+   "source": {
+    "letter": "https://web.seattle.gov/dpd/edms/GetDocument?id=8305408",
+    "permit": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=6907149-CN",
+    "document_date": "2022-07-28"
+   },
+   "project": {
+    "jurisdiction": "seattle",
+    "address": "811 NW 63RD ST",
+    "description": "Establish use as rowhouses and construct two-family dwelling per plan. Permit class: Single Family/Duplex. Zoning: LR1.",
+    "reviewer": "Seattle SDCI, Correction Letter-Energy-Cycle1"
+   },
+   "outcome": {
+    "review_cycles": 5,
+    "days_out_for_corrections": 307,
+    "days_city_review": 692
+   },
+   "comments": [
+    {
+     "id": "C1",
+     "text": "Sheet G0-01 2018 [code reference removed] Ventilation Quality Adjustment: edit the whole house exhaust fan CFM as required by section M1505.4.3.1 (to close this comment increase the listed 50 CFM to 75 CFM).Energy (3)",
+     "labels": {
+      "discipline": "energy",
+      "citations": [
+       "SRC M1505"
+      ],
+      "route": null,
+      "sheets": [
+       "G0"
+      ]
+     }
+    },
+    {
+     "id": "C2",
+     "text": "Sheet G0-01 Edit the 0.30 U max. typo to list 0.28 U, as required per energy credit #1.3.",
+     "labels": {
+      "discipline": "energy",
+      "citations": [],
+      "route": null,
+      "sheets": [
+       "G0"
+      ]
+     }
+    },
+    {
+     "id": "C3",
+     "text": "This project has been reviewed for conformance with the 2018 Seattle Energy Code (SEC). [This note is FYI: no response required] PER VENTILATION. THE DUC 018 [code reference removed] all be he and",
+     "labels": {
+      "discipline": "energy",
+      "citations": [
+       "SRC M1505"
+      ],
+      "route": "no_action",
+      "sheets": []
+     }
+    }
+   ]
+  },
+  {
+   "id": "38-energy-7069044-CN",
+   "holdout": false,
+   "review_type": "Energy",
+   "source": {
+    "letter": "https://web.seattle.gov/dpd/edms/GetDocument?id=11635879",
+    "permit": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=7069044-CN",
+    "document_date": "2025-04-30"
+   },
+   "project": {
+    "jurisdiction": "seattle",
+    "address": "319 NW 87TH ST",
+    "description": "Construct SFR/AADU per plans (Establish use as a single-family residence with both an attached and detached accessory dwelling unit per the land use code. Construct both a one- and a two-family dwelling per plans. Reviews and processing for (2) -CN's under 7069044) Permit class: Single Family/Duplex. Zoning: NR3, NR3.",
+    "reviewer": "Seattle SDCI, Correction Letter-Energy-Cycle1"
+   },
+   "outcome": {
+    "review_cycles": 2,
+    "days_out_for_corrections": null,
+    "days_city_review": 76
+   },
+   "comments": [
+    {
+     "id": "C1",
+     "text": "Additional Energy Efficiency Requirements/ A2.1: a. Each dwelling unit shall comply with sufficient options from 2021 [code reference removed] and [code reference removed] The sum of credits from [code reference removed] and [code reference removed] shall meet the requirements of [code reference removed] Please note on the plans which options will be incorporated for the additional energy efficiency requirements, provide the details of each option and follow the procedural requirements in [code reference removed] to document the credits. b. 8.0 credits are required for the SFR, and 5.0 credits are required for the AADU and DADU per [code reference removed]",
+     "labels": {
+      "discipline": "energy",
+      "citations": [
+       "SEC R406"
+      ],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C2",
+     "text": "Compliance Certificate, Energy Notes/ A2.1: a. Please note on the drawing that the design professional or builder shall complete and post a \"Compliance Certificate\" at designated location to final inspection per [code reference removed] A single blank form should be included on the plan drawings. This is available online at WSU Energy Program > Building Efficiency > Energy Code > Code Forms. Alternatively, the web link can be noted on the drawing showing where a blank compliance certificate can be downloaded. b. All permanently installed lighting fixtures, excluding kitchen appliance lighting fixtures, shall contain only high-efficacy lighting sources per [code reference removed] This requirement shall be noted on the drawing. c. The heating and cooling for the accessory dwelling unit shall be controllable with a separate programmable thermostat in accordance with [code reference removed] per [code reference removed] This requirement shall be noted on the drawing.",
+     "labels": {
+      "discipline": "energy",
+      "citations": [
+       "SEC R401",
+       "SEC R404",
+       "SEC R403",
+       "SEC R501"
+      ],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C3",
+     "text": "Ventilation Notes/ A2.1: In addition to the Ventilation Note #1, the exhaust outlets and the operable openings shall be shown on the elevation plans in compliance with [code reference removed]",
+     "labels": {
+      "discipline": "energy",
+      "citations": [
+       "SRC M1504"
+      ],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C4",
+     "text": "Wall Assembly W1/ A4.1: Intermediate framing and headers insulated with a minimum of R-10 insulation are required for the R-21 wood framed walls 16 inches on center in order to achieve above grade wall U-factor of 0.056 or less per [code reference removed] Intermediate framing and the R-10 insulated headers shall be indicated in thewall assembly. The wall U-factor in compliance with [code reference removed] shall also be indicated in the wall assembly. DE SBC). .0 .5 ENE 1. 2. VE 1. 2. x x x x x",
+     "labels": {
+      "discipline": "energy",
+      "citations": [
+       "SEC R402"
+      ],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C5",
+     "text": "For information only: This project has been reviewed for conformance with one or more of the following codes: 2021 Seattle Mechanical Code (SMC); 2021 Seattle Energy Code (SEC); 2021 Seattle Fuel Gas Code (SFGC); 2021 Seattle Residential Code (SRC); and 2021 Seattle Building Code (SBC).Energy (5)",
+     "labels": {
+      "discipline": "energy",
+      "citations": [],
+      "route": "no_action",
+      "sheets": []
+     }
+    }
+   ]
+  },
+  {
+   "id": "39-zoning-7040541-CN",
+   "holdout": true,
+   "review_type": "Zoning",
+   "source": {
+    "letter": "https://web.seattle.gov/dpd/edms/GetDocument?id=11017412",
+    "permit": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=7040541-CN",
+    "document_date": "2024-10-16"
+   },
+   "project": {
+    "jurisdiction": "seattle",
+    "address": "9815 FREMONT AVE N",
+    "description": "Establish use as single-family residence per land use code. Construct single-family dwelling per plan. Permit class: Single Family/Duplex. Zoning: NR3.",
+    "reviewer": "Seattle SDCI, Correction Letter-Zoning-Cycle2"
+   },
+   "outcome": {
+    "review_cycles": 4,
+    "days_out_for_corrections": 21,
+    "days_city_review": 51
+   },
+   "comments": [
+    {
+     "id": "C1",
+     "text": "[REPEAT CORRECTION] [code reference removed] (Tree Requirements): Compliance Note: On the site plan sheet or analysis sheet, provide a general compliance note for [code reference removed][REPEAT CORRECTION] [code reference removed] (Tree Requirements): Compliance Note: On the site plan sheet or analysis sheet, provide a general compliance note for [code reference removed] (1)",
+     "labels": {
+      "discipline": "zoning",
+      "citations": [
+       "SMC 23.44.020"
+      ],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C2",
+     "text": "REPEAT CORRECTION] [code reference removed] (Tree Requirements): Street Trees: Please obtain conceptual approval from SDOT ([email removed]) for the street trees required. The site plan must show the type, number, and location of trees and provide proof of approval (emails, etc.) with your correction response.REPEAT CORRECTION] [code reference removed] (Tree Requirements): Street Trees: Please obtain conceptual approval from SDOT ([email removed]) for the street trees required. The site plan must show the type, number, and location of trees and provide proof of approval (emails, etc.) with your correction response. (1)",
+     "labels": {
+      "discipline": "zoning",
+      "citations": [
+       "SMC 23.44.020"
+      ],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C3",
+     "text": "[code reference removed] (Height Limits): Average Grade Calculation: Midpoint C used to calculate average grade is different than midpoint c shown on the average grade diagram. Please revise and update elevation diagrams as necessary. [code reference removed] (Height Limits): Average Grade Calculation: Midpoint C used to calculate average grade is different than midpoint c shown on the average grade diagram. Please revise and update elevation diagrams as necessary. (1)",
+     "labels": {
+      "discipline": "zoning",
+      "citations": [
+       "SMC 23.44.012"
+      ],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C4",
+     "text": "[code reference removed] (Height Limits): Butterfly Roof: [code reference removed] only allows pitched roofs 5' above the allowed height limit. Per this section, no portion of a shed or butterfly roof, except on a dormer, shall be permitted to extend beyond the maximum height limit, as determined under [code reference removed] Please revise the plans to meet the allowed height standards.[code reference removed] (Height Limits): Butterfly Roof: [code reference removed] only allows pitched roofs 5' above the allowed height limit. Per this section, no portion of a shed or butterfly roof, except on a dormer, shall be permitted to extend beyond the maximum height limit, as determined under [code reference removed] Please revise the plans to meet the allowed height standards. (1)",
+     "labels": {
+      "discipline": "zoning",
+      "citations": [
+       "SMC 23.44.012"
+      ],
+      "route": null,
+      "sheets": []
+     }
+    }
+   ]
+  },
+  {
+   "id": "40-fire-6983417-CN",
+   "holdout": false,
+   "review_type": "Fire",
+   "source": {
+    "letter": "https://web.seattle.gov/dpd/edms/GetDocument?id=10426415",
+    "permit": "https://services.seattle.gov/portal/customize/LinkToRecord.aspx?altId=6983417-CN",
+    "document_date": "2024-04-26"
+   },
+   "project": {
+    "jurisdiction": "seattle",
+    "address": "125 15TH AVE",
+    "description": "Construct multi-family apartment building occupy per plan. Mechanical included. Permit class: Multifamily. Zoning: LR3.",
+    "reviewer": "Seattle SDCI, Correction Letter"
+   },
+   "outcome": {
+    "review_cycles": 5,
+    "days_out_for_corrections": 206,
+    "days_city_review": 108
+   },
+   "comments": [
+    {
+     "id": "C1",
+     "text": "Delete these sections, they do not apply.Fire (10)",
+     "labels": {
+      "discipline": "fire",
+      "citations": [],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C2",
+     "text": "Revise this section, a standpipe is required.",
+     "labels": {
+      "discipline": "fire",
+      "citations": [],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C3",
+     "text": "Revise notes to reference NFPA standards for the fire protection systems: 903 NFPA 13 automatic sprinkler system per 2016 NFPA 13 standard 905 Standpipe system per 2016 NFPA 14 standard 906 Portable fire extinguishers per 2018 NFPA 10 standard 907 Fire alarm system per 2016 NFPA 72 standard. 907.2.10 Smoke alarms per 2016 NFPA 72 standard Chapter 29 915 Carbon monoxide alarms per 2015 NFPA 720 standard PARAPETS [code reference removed] FIRE BARRIERS SBC OUP R OCCUPANCIES SS",
+     "labels": {
+      "discipline": "fire",
+      "citations": [
+       "SBC 705"
+      ],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C4",
+     "text": "Specify building address so it is visible from the street. See specific requirements in [code reference removed]",
+     "labels": {
+      "discipline": "fire",
+      "citations": [
+       "SFC 505"
+      ],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C5",
+     "text": "Show location of 2-way Fire Department Connection (FDC) on both plans and elevations: a. FDC shall be located on the address side of the building and shall face and be visible from the street. b. FDC shall be located on, or in front of, the wall line closest to the street. c. Locate and dimension FDC a minimum of 3 feet from exit doors. d. Show and dimension FDC a minimum of 18 inches and a maximum of 48 inches above adjacent grade. e. FDC shall have 3-foot clearance all around. Coordinate landscaping to provide visibility and clearances. f. See SFD Administrative Rule 9.03.20 [code reference removed] for FDC located over a raised planter.",
+     "labels": {
+      "discipline": "fire",
+      "citations": [],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C6",
+     "text": "Show and specify a fire alarm control panel (FACP) in the main lobby on the address side of the building: a. The FACP shall be located in the lobby, not the vestibule. b. The FACP shall be visible from, and within 25 feet of, the entry or interior vestibule door. c. The two-way communication system central control station shall be located adjacent to the FACP. d. The firefighter ’s smoke control panel shall be located adjacent to the FACP. The devices shall be locked or provided with locking covers.",
+     "labels": {
+      "discipline": "fire",
+      "citations": [],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C7",
+     "text": "Delete this section.",
+     "labels": {
+      "discipline": "fire",
+      "citations": [],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C8",
+     "text": "The parapet (details 4/S4.3 and 8/S4.3) does not appear to be designed for the guard loading per [code reference removed] within 10 feet of the roof access required per [code reference removed] Coordinate with the structural engineer.",
+     "labels": {
+      "discipline": "fire",
+      "citations": [
+       "SBC 1607",
+       "SBC 1011"
+      ],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C9",
+     "text": "Specify: Primary Elevator Recall is at Level 1. Secondary Elevator Recall is at Basement Level. LOBBY 2 TO PROVIDE ROOF AC LANS LOPE/8\" / 12\"",
+     "labels": {
+      "discipline": "fire",
+      "citations": [],
+      "route": null,
+      "sheets": []
+     }
+    },
+    {
+     "id": "C10",
+     "text": "The parapet (details 4/S4.3 and 8/S4.3) does not appear to be designed for the guard loading per [code reference removed] within 10 feet of the roof access required per [code reference removed] Revise plans and details as required. Coordinate with the architect.",
+     "labels": {
+      "discipline": "fire",
+      "citations": [
+       "SBC 1607",
+       "SBC 1011"
+      ],
+      "route": null,
+      "sheets": []
+     }
+    }
+   ]
+  }
+ ]
+}

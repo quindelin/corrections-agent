@@ -1,0 +1,12 @@
+{
+  "id": "seattle",
+  "name": "City of Seattle, Washington",
+  "authority": "Seattle Department of Construction and Inspections (SDCI)",
+  "code_basis": "Seattle codes based on the 2021 International Codes with state and local amendments. Real letters in the dataset span earlier editions too, back to 2012.",
+  "correction_process": {
+    "name": "Respond to review comments",
+    "entry_id": "SDCI-RESPONSE"
+  },
+  "data_source": "https://data.seattle.gov/Built-Environment/Plan-Comments/e285-aq8h",
+  "status": "active"
+}

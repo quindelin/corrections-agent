@@ -1,0 +1,23 @@
+{
+  "source": "City of Seattle Open Data, Building Permits (76t5-zqzr), for permits in the Plan Comments dataset",
+  "url": "https://data.seattle.gov/Built-Environment/Building-Permits/76t5-zqzr",
+  "filter": "707 permits with at least one recorded review cycle",
+  "measure": "avg_days here is the median days out for corrections, with the applicant. This is a sample, not all Seattle permits.",
+  "retrieved": "2026-10-31",
+  "rows": [
+    {
+      "review_type": "Single Family/Duplex",
+      "permits": 635,
+      "median_cycles": 3,
+      "avg_days": 53,
+      "median_days_city": 85
+    },
+    {
+      "review_type": "Multifamily",
+      "permits": 72,
+      "median_cycles": 6,
+      "avg_days": 129,
+      "median_days_city": 142
+    }
+  ]
+}

@@ -1,0 +1,670 @@
+{
+ "note": "A first-cycle comment counts as recurring when a later cycle on the same permit, review type and subject has wording that overlaps at least 50%. This undercounts rewritten comments and can't say why it recurred.",
+ "comments": 26299,
+ "permits": 707,
+ "letters": 6296,
+ "by_review_type": [
+  {
+   "review_type": "Zoning",
+   "count": 5999
+  },
+  {
+   "review_type": "Drainage",
+   "count": 4536
+  },
+  {
+   "review_type": "Ordinance Structural",
+   "count": 4392
+  },
+  {
+   "review_type": "Energy",
+   "count": 3290
+  },
+  {
+   "review_type": "ECA GeoTech",
+   "count": 1633
+  },
+  {
+   "review_type": "Tree",
+   "count": 1619
+  },
+  {
+   "review_type": "Ordinance",
+   "count": 1111
+  },
+  {
+   "review_type": "Structural Engineer",
+   "count": 1013
+  },
+  {
+   "review_type": "Addressing",
+   "count": 588
+  },
+  {
+   "review_type": "Not recorded",
+   "count": 342
+  },
+  {
+   "review_type": "MHA",
+   "count": 305
+  },
+  {
+   "review_type": "Fire",
+   "count": 283
+  },
+  {
+   "review_type": "Geo Soils",
+   "count": 262
+  },
+  {
+   "review_type": "Revegetation",
+   "count": 220
+  },
+  {
+   "review_type": "Housing",
+   "count": 166
+  },
+  {
+   "review_type": "Mechanical",
+   "count": 156
+  },
+  {
+   "review_type": "Land Use",
+   "count": 137
+  },
+  {
+   "review_type": "City Light",
+   "count": 135
+  },
+  {
+   "review_type": "Design Review",
+   "count": 65
+  },
+  {
+   "review_type": "Conveyance",
+   "count": 11
+  },
+  {
+   "review_type": "ECA Wetland",
+   "count": 9
+  },
+  {
+   "review_type": "Floodplain",
+   "count": 7
+  },
+  {
+   "review_type": "ECA Riparian",
+   "count": 5
+  },
+  {
+   "review_type": "ECA Wildlife",
+   "count": 4
+  },
+  {
+   "review_type": "Shoreline",
+   "count": 2
+  },
+  {
+   "review_type": "Ordinance/Structural",
+   "count": 2
+  },
+  {
+   "review_type": "Author: hirschh",
+   "count": 2
+  },
+  {
+   "review_type": "Author: AMY",
+   "count": 1
+  },
+  {
+   "review_type": "Policy",
+   "count": 1
+  },
+  {
+   "review_type": "Author: Sung Lee",
+   "count": 1
+  },
+  {
+   "review_type": "Author: EdwardJ2",
+   "count": 1
+  },
+  {
+   "review_type": "Page Index: 24Ordinance/Structural (1)",
+   "count": 1
+  }
+ ],
+ "recurrence": [
+  {
+   "subject": "Zoning: General and Special Corrections",
+   "first_cycle_comments": 33,
+   "permits": 21,
+   "recurred": 8,
+   "recurred_share": 24.2
+  },
+  {
+   "subject": "Zoning: Zoning - SMC 23.53 - Streets, Alleys, and Easements",
+   "first_cycle_comments": 96,
+   "permits": 71,
+   "recurred": 23,
+   "recurred_share": 24
+  },
+  {
+   "subject": "Drainage: Submit MDC",
+   "first_cycle_comments": 59,
+   "permits": 57,
+   "recurred": 14,
+   "recurred_share": 23.7
+  },
+  {
+   "subject": "Zoning: Zoning - SMC 23.58D - Green Building - CN/PH",
+   "first_cycle_comments": 40,
+   "permits": 39,
+   "recurred": 9,
+   "recurred_share": 22.5
+  },
+  {
+   "subject": "MHA: MHA - SMC 23.58B and 23.58C - Mandatory",
+   "first_cycle_comments": 45,
+   "permits": 38,
+   "recurred": 9,
+   "recurred_share": 20
+  },
+  {
+   "subject": "ECA GeoTech: Plan review and minimal risk",
+   "first_cycle_comments": 96,
+   "permits": 92,
+   "recurred": 19,
+   "recurred_share": 19.8
+  },
+  {
+   "subject": "Revegetation: ECA Revegetation",
+   "first_cycle_comments": 122,
+   "permits": 45,
+   "recurred": 23,
+   "recurred_share": 18.9
+  },
+  {
+   "subject": "Mechanical: General",
+   "first_cycle_comments": 67,
+   "permits": 9,
+   "recurred": 12,
+   "recurred_share": 17.9
+  },
+  {
+   "subject": "MHA: MHA - SMC 23.58B and 23.58C - Mandatory Housing Affordability",
+   "first_cycle_comments": 35,
+   "permits": 27,
+   "recurred": 6,
+   "recurred_share": 17.1
+  },
+  {
+   "subject": "Ordinance: 10 Means of Egress",
+   "first_cycle_comments": 70,
+   "permits": 23,
+   "recurred": 11,
+   "recurred_share": 15.7
+  },
+  {
+   "subject": "Ordinance: 00 General",
+   "first_cycle_comments": 47,
+   "permits": 29,
+   "recurred": 7,
+   "recurred_share": 14.9
+  },
+  {
+   "subject": "Ordinance Structural: 312 Guards and Window Fall Protection",
+   "first_cycle_comments": 76,
+   "permits": 64,
+   "recurred": 11,
+   "recurred_share": 14.5
+  },
+  {
+   "subject": "Zoning: Zoning – SMC 23.45 – Multifamily",
+   "first_cycle_comments": 70,
+   "permits": 12,
+   "recurred": 10,
+   "recurred_share": 14.3
+  },
+  {
+   "subject": "Drainage: OSM",
+   "first_cycle_comments": 85,
+   "permits": 45,
+   "recurred": 12,
+   "recurred_share": 14.1
+  },
+  {
+   "subject": "Ordinance: 07 Fire Resistive Assemblies",
+   "first_cycle_comments": 102,
+   "permits": 27,
+   "recurred": 14,
+   "recurred_share": 13.7
+  },
+  {
+   "subject": "ECA GeoTech: Special Inspector nomination",
+   "first_cycle_comments": 86,
+   "permits": 83,
+   "recurred": 11,
+   "recurred_share": 12.8
+  },
+  {
+   "subject": "Ordinance Structural: Substantial Alteration",
+   "first_cycle_comments": 36,
+   "permits": 22,
+   "recurred": 4,
+   "recurred_share": 11.1
+  },
+  {
+   "subject": "Ordinance Structural: 310 Emergency Escape",
+   "first_cycle_comments": 139,
+   "permits": 112,
+   "recurred": 15,
+   "recurred_share": 10.8
+  },
+  {
+   "subject": "Structural Engineer: 16 Lateral Design",
+   "first_cycle_comments": 234,
+   "permits": 66,
+   "recurred": 25,
+   "recurred_share": 10.7
+  },
+  {
+   "subject": "ECA GeoTech: Potential landslide area covenant",
+   "first_cycle_comments": 30,
+   "permits": 30,
+   "recurred": 3,
+   "recurred_share": 10
+  },
+  {
+   "subject": "Ordinance: 11 Accessibility",
+   "first_cycle_comments": 30,
+   "permits": 6,
+   "recurred": 3,
+   "recurred_share": 10
+  },
+  {
+   "subject": "Ordinance Structural: Appendix T",
+   "first_cycle_comments": 31,
+   "permits": 29,
+   "recurred": 3,
+   "recurred_share": 9.7
+  },
+  {
+   "subject": "Ordinance Structural: 302 Fire Separation",
+   "first_cycle_comments": 717,
+   "permits": 340,
+   "recurred": 67,
+   "recurred_share": 9.3
+  },
+  {
+   "subject": "Zoning: Zoning – SMC 23.44 – Single-Family Residential",
+   "first_cycle_comments": 493,
+   "permits": 87,
+   "recurred": 45,
+   "recurred_share": 9.1
+  },
+  {
+   "subject": "Drainage: MDC",
+   "first_cycle_comments": 68,
+   "permits": 68,
+   "recurred": 6,
+   "recurred_share": 8.8
+  },
+  {
+   "subject": "Ordinance Structural: 311 Means of Egress",
+   "first_cycle_comments": 136,
+   "permits": 93,
+   "recurred": 12,
+   "recurred_share": 8.8
+  },
+  {
+   "subject": "ECA GeoTech: Temporary Shoring and Excavation plan",
+   "first_cycle_comments": 47,
+   "permits": 38,
+   "recurred": 4,
+   "recurred_share": 8.5
+  },
+  {
+   "subject": "Tree: Land Use Code Title 23 Tree Identification",
+   "first_cycle_comments": 47,
+   "permits": 46,
+   "recurred": 4,
+   "recurred_share": 8.5
+  },
+  {
+   "subject": "Zoning: Zoning - General and Special Corrections",
+   "first_cycle_comments": 349,
+   "permits": 148,
+   "recurred": 29,
+   "recurred_share": 8.3
+  },
+  {
+   "subject": "Zoning: Zoning - SMC 23.44 - Neighborhood Residential",
+   "first_cycle_comments": 1477,
+   "permits": 238,
+   "recurred": 123,
+   "recurred_share": 8.3
+  },
+  {
+   "subject": "Ordinance Structural: Administration",
+   "first_cycle_comments": 141,
+   "permits": 88,
+   "recurred": 11,
+   "recurred_share": 7.8
+  },
+  {
+   "subject": "Ordinance Structural: Engineered Lateral",
+   "first_cycle_comments": 133,
+   "permits": 77,
+   "recurred": 9,
+   "recurred_share": 6.8
+  },
+  {
+   "subject": "Drainage: DWC",
+   "first_cycle_comments": 216,
+   "permits": 57,
+   "recurred": 14,
+   "recurred_share": 6.5
+  },
+  {
+   "subject": "Structural Engineer: 17 Special Inspections",
+   "first_cycle_comments": 48,
+   "permits": 43,
+   "recurred": 3,
+   "recurred_share": 6.3
+  },
+  {
+   "subject": "Drainage: General",
+   "first_cycle_comments": 1471,
+   "permits": 195,
+   "recurred": 91,
+   "recurred_share": 6.2
+  },
+  {
+   "subject": "Ordinance Structural: 315 Carbon Monoxide Alarms",
+   "first_cycle_comments": 86,
+   "permits": 75,
+   "recurred": 5,
+   "recurred_share": 5.8
+  },
+  {
+   "subject": "Zoning: Zoning - SMC 23.54 - Parking, Access, and Solid",
+   "first_cycle_comments": 220,
+   "permits": 108,
+   "recurred": 12,
+   "recurred_share": 5.5
+  },
+  {
+   "subject": "Zoning: Zoning – SMC 23.54 – Parking, Access, and Solid",
+   "first_cycle_comments": 37,
+   "permits": 18,
+   "recurred": 2,
+   "recurred_share": 5.4
+  },
+  {
+   "subject": "Drainage: Drainage Review",
+   "first_cycle_comments": 113,
+   "permits": 35,
+   "recurred": 6,
+   "recurred_share": 5.3
+  },
+  {
+   "subject": "Structural Engineer: 00 General",
+   "first_cycle_comments": 77,
+   "permits": 50,
+   "recurred": 4,
+   "recurred_share": 5.2
+  },
+  {
+   "subject": "Ordinance Structural: Structural Design Criteria",
+   "first_cycle_comments": 78,
+   "permits": 52,
+   "recurred": 4,
+   "recurred_share": 5.1
+  },
+  {
+   "subject": "Tree: Tree Replacement Requirements (SMC 25.11.090)",
+   "first_cycle_comments": 39,
+   "permits": 38,
+   "recurred": 2,
+   "recurred_share": 5.1
+  },
+  {
+   "subject": "Ordinance Structural: 806 Roof Ventilation",
+   "first_cycle_comments": 120,
+   "permits": 107,
+   "recurred": 6,
+   "recurred_share": 5
+  },
+  {
+   "subject": "Ordinance Structural: 301 Design Criteria",
+   "first_cycle_comments": 80,
+   "permits": 42,
+   "recurred": 4,
+   "recurred_share": 5
+  },
+  {
+   "subject": "Energy: Missing whole house ventilation method",
+   "first_cycle_comments": 40,
+   "permits": 35,
+   "recurred": 2,
+   "recurred_share": 5
+  },
+  {
+   "subject": "Zoning: Zoning - SMC 23.45 - Multifamily",
+   "first_cycle_comments": 246,
+   "permits": 47,
+   "recurred": 12,
+   "recurred_share": 4.9
+  },
+  {
+   "subject": "Ordinance: 01 Administration",
+   "first_cycle_comments": 47,
+   "permits": 23,
+   "recurred": 2,
+   "recurred_share": 4.3
+  },
+  {
+   "subject": "Structural Engineer: 18 Foundations & Retaining Walls",
+   "first_cycle_comments": 69,
+   "permits": 39,
+   "recurred": 3,
+   "recurred_share": 4.3
+  },
+  {
+   "subject": "Energy: General",
+   "first_cycle_comments": 2055,
+   "permits": 420,
+   "recurred": 86,
+   "recurred_share": 4.2
+  },
+  {
+   "subject": "Ordinance Structural: 308 Safety Glazing",
+   "first_cycle_comments": 219,
+   "permits": 162,
+   "recurred": 9,
+   "recurred_share": 4.1
+  },
+  {
+   "subject": "Ordinance Structural: 314 Smoke Alarms",
+   "first_cycle_comments": 173,
+   "permits": 133,
+   "recurred": 7,
+   "recurred_share": 4
+  },
+  {
+   "subject": "Tree: General Tree Comment",
+   "first_cycle_comments": 520,
+   "permits": 210,
+   "recurred": 20,
+   "recurred_share": 3.8
+  },
+  {
+   "subject": "Ordinance Structural: 401.5 Protection of Adjoining Propery",
+   "first_cycle_comments": 30,
+   "permits": 23,
+   "recurred": 1,
+   "recurred_share": 3.3
+  },
+  {
+   "subject": "Ordinance Structural: Wood Framing",
+   "first_cycle_comments": 67,
+   "permits": 41,
+   "recurred": 2,
+   "recurred_share": 3
+  },
+  {
+   "subject": "Structural Engineer: 16 Gravity Design",
+   "first_cycle_comments": 34,
+   "permits": 24,
+   "recurred": 1,
+   "recurred_share": 2.9
+  },
+  {
+   "subject": "Ordinance Structural: Scope",
+   "first_cycle_comments": 104,
+   "permits": 65,
+   "recurred": 3,
+   "recurred_share": 2.9
+  },
+  {
+   "subject": "Ordinance Structural: 334 Sound Separation",
+   "first_cycle_comments": 38,
+   "permits": 31,
+   "recurred": 1,
+   "recurred_share": 2.6
+  },
+  {
+   "subject": "Zoning: DADU gross floor area",
+   "first_cycle_comments": 38,
+   "permits": 31,
+   "recurred": 1,
+   "recurred_share": 2.6
+  },
+  {
+   "subject": "Drainage: CSC/Soil Plan",
+   "first_cycle_comments": 42,
+   "permits": 26,
+   "recurred": 1,
+   "recurred_share": 2.4
+  },
+  {
+   "subject": "Tree: Tree Establishment (25.11.090)",
+   "first_cycle_comments": 42,
+   "permits": 42,
+   "recurred": 1,
+   "recurred_share": 2.4
+  },
+  {
+   "subject": "Addressing: Addressing",
+   "first_cycle_comments": 240,
+   "permits": 212,
+   "recurred": 5,
+   "recurred_share": 2.1
+  },
+  {
+   "subject": "Energy: Missing equipment sizing form or calculation",
+   "first_cycle_comments": 57,
+   "permits": 55,
+   "recurred": 1,
+   "recurred_share": 1.8
+  },
+  {
+   "subject": "Ordinance Structural: 309 Garages",
+   "first_cycle_comments": 61,
+   "permits": 53,
+   "recurred": 1,
+   "recurred_share": 1.6
+  },
+  {
+   "subject": "Zoning: Zoning - SMC 23.54 - Parking, Access, and Solid Waste",
+   "first_cycle_comments": 131,
+   "permits": 65,
+   "recurred": 2,
+   "recurred_share": 1.5
+  },
+  {
+   "subject": "Ordinance Structural: Foundations",
+   "first_cycle_comments": 45,
+   "permits": 29,
+   "recurred": 0,
+   "recurred_share": 0
+  },
+  {
+   "subject": "Addressing: 2012 SBC => 2015 SBC",
+   "first_cycle_comments": 35,
+   "permits": 30,
+   "recurred": 0,
+   "recurred_share": 0
+  },
+  {
+   "subject": "Zoning: Lot Coverage",
+   "first_cycle_comments": 53,
+   "permits": 46,
+   "recurred": 0,
+   "recurred_share": 0
+  },
+  {
+   "subject": "Energy: Missing Certificate, insulation (Mandatory)",
+   "first_cycle_comments": 33,
+   "permits": 33,
+   "recurred": 0,
+   "recurred_share": 0
+  },
+  {
+   "subject": "Energy: Missing Lighting, high efficacy lamps",
+   "first_cycle_comments": 46,
+   "permits": 45,
+   "recurred": 0,
+   "recurred_share": 0
+  },
+  {
+   "subject": "Energy: Missing Report, envelope air leakage",
+   "first_cycle_comments": 34,
+   "permits": 34,
+   "recurred": 0,
+   "recurred_share": 0
+  },
+  {
+   "subject": "Energy: Missing local exhaust fan on drawing",
+   "first_cycle_comments": 44,
+   "permits": 36,
+   "recurred": 0,
+   "recurred_share": 0
+  },
+  {
+   "subject": "undefined: Cloud+",
+   "first_cycle_comments": 39,
+   "permits": 22,
+   "recurred": 0,
+   "recurred_share": 0
+  },
+  {
+   "subject": "undefined: Callout",
+   "first_cycle_comments": 41,
+   "permits": 22,
+   "recurred": 0,
+   "recurred_share": 0
+  },
+  {
+   "subject": "Zoning: Primary residence floor plans",
+   "first_cycle_comments": 33,
+   "permits": 32,
+   "recurred": 0,
+   "recurred_share": 0
+  },
+  {
+   "subject": "Tree: Tree replacement summary",
+   "first_cycle_comments": 36,
+   "permits": 36,
+   "recurred": 0,
+   "recurred_share": 0
+  },
+  {
+   "subject": "Zoning: ZONING",
+   "first_cycle_comments": 33,
+   "permits": 6,
+   "recurred": 0,
+   "recurred_share": 0
+  }
+ ]
+}
