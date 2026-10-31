@@ -84,7 +84,7 @@ appendFileSync(
   [run, session.id, agentCommit, total.score, date, total.tasks_passed, total.tasks_total, stats.tokens, stats.toolCalls, durationS].join(",") + "\n",
 );
 
-console.log(`\nRun ${nn} score: ${total.score} (${total.tasks_passed}/${total.tasks_total} tasks passed, ${stats.tokens} tokens)`);
+console.log(`\nRun ${nn} score: ${total.score} (holdout ${total.holdout_score}, ${total.tasks_passed}/${total.tasks_total} tasks passed, ${total.unsafe_routes} unsafe routes, ${stats.tokens} tokens)`);
 
 // 6. Commit the run, so git history reads: run 1 → agent change → run N.
 if (!flag("no-commit")) {

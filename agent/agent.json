@@ -1,9 +1,10 @@
 {
-  "name": "code-reviewer",
-  "description": "Reviews a small code change and lists the real problems in it, as JSON.",
+  "name": "redline",
+  "description": "Turns a building permit correction letter into a triaged, cited response package for the architect to review. Starts in Chicago; each place is a jurisdiction pack.",
   "model": {
-    "name": "anthropic/claude-sonnet-4-6",
+    "name": "truefoundry/claude-haiku-4-5",
     "params": { "temperature": 0 }
   },
-  "skill_mode": "inline"
+  "skill_mode": "inline",
+  "mcp_servers": [{ "name": "permit-research", "url": "http://127.0.0.1:8791/mcp" }]
 }

@@ -1,0 +1,35 @@
+{
+  "id": "08-mixed-use",
+  "title": "Mixed-use building",
+  "holdout": true,
+  "project": {
+    "jurisdiction": "chicago",
+    "address": "8800 S Exemplar Dr (fictional)",
+    "description": "New three-story building with ground floor retail and two dwelling units above. Zoning district B3-2. Standard Plan Review.",
+    "reviewer": "Department of Buildings, first review cycle"
+  },
+  "sheets": [
+    { "id": "T-001", "title": "Title sheet" },
+    { "id": "A-101", "title": "First floor plan" },
+    { "id": "A-201", "title": "Exterior elevations" },
+    { "id": "A-501", "title": "Fire-rated assembly details" },
+    { "id": "S-102", "title": "Roof framing plan" },
+    { "id": "E-101", "title": "Electrical plans" }
+  ],
+  "comments": [
+    { "id": "C1", "heading": "General", "text": "Exit signs in the retail space are not shown on the first floor plan." },
+    { "id": "C2", "heading": "Zoning", "text": "The projecting sign extends over the sidewalk. A public way use permit from the Department of Transportation is needed." },
+    { "id": "C3", "heading": "Building", "text": "Per 13-76, firestopping details for pipe penetrations through the rated floor are not included. Add them to the assembly details." },
+    { "id": "C4", "heading": "Structural", "text": "Snow drift on the lower roof at the parapet is not addressed on the roof framing plan." },
+    { "id": "C5", "heading": "General", "text": "The owner's estimated cost of work is blank on the application." },
+    { "id": "C6", "heading": "General", "text": "The title block on E-101 carries an old project number. Correct the title block." }
+  ],
+  "expected": [
+    { "comment": "C1", "disciplines": ["egress"], "citations": ["14B-10-1013"], "route": "licensed_review", "sheets": ["A-101"], "revision_marks": true, "why": "Exit signs are part of the means of egress design." },
+    { "comment": "C2", "disciplines": ["zoning", "admin"], "citations": ["14B-32", "17-12"], "route": "other_agency", "sheets": [], "revision_marks": false, "why": "The Department of Transportation issues this." },
+    { "comment": "C3", "disciplines": ["fire"], "citations": ["14B-7-714"], "route": "licensed_review", "sheets": ["A-501"], "revision_marks": true, "why": "Title 13 was replaced. Penetration protection is fire-resistance design." },
+    { "comment": "C4", "disciplines": ["structural"], "citations": ["14B-16-1608"], "route": "licensed_review", "sheets": ["S-102"], "revision_marks": true, "why": "Snow drift design is the engineer's. Don't supply a load." },
+    { "comment": "C5", "disciplines": ["admin"], "citations": ["14A-4", null], "route": "client_input", "sheets": [], "revision_marks": false, "why": "Only the owner knows the cost." },
+    { "comment": "C6", "disciplines": ["admin"], "citations": [null, "14A-4", "DOB-CPC"], "route": "agent_draft", "sheets": ["E-101"], "revision_marks": true, "why": "Clerical, but a sheet revision." }
+  ]
+}

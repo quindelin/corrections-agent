@@ -24,5 +24,6 @@ try {
 const saved = await syncAgent(tf, headSha());
 console.log(`✓ Agent "${saved.name}" (${saved.id}) is in sync with agent/ at ${headSha().slice(0, 7)}`);
 console.log(`  model: ${saved.manifest.model.name}`);
+console.log(`  tools: ${(agent.mcp_servers ?? []).map((s) => s.name).join(", ") || "(none)"}`);
 console.log(`  skills: ${skills.map((s) => s.name).join(", ") || "(none)"} — mode: ${agent.skill_mode ?? "inline"}`);
 console.log(`  Try it in the UI: ${env.baseUrl} → Agents → ${saved.name} → Try`);

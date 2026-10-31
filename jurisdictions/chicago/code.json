@@ -1,0 +1,390 @@
+{
+  "note": "Section numbers and titles are from the Municipal Code of Chicago (American Legal, 2026 S-74). Scope lines are our own short paraphrases, not code text; Title 14B incorporates the 2018 IBC by reference, so read the full text at https://codes.iccsafe.org/content/CHIBC2019P1 before relying on a section.",
+  "sections": [
+    {
+      "id": "14A-4",
+      "title": "Permits",
+      "scope": "Administrative rules for permit applications, required documents, and permit review."
+    },
+    {
+      "id": "14A-5",
+      "title": "Inspection and observation of permitted work",
+      "scope": "Inspections of work done under a permit."
+    },
+    {
+      "id": "14A-10",
+      "title": "Approvals and appeals",
+      "scope": "Administrative approvals, alternatives, and appeals of code decisions."
+    },
+    {
+      "id": "14B-3",
+      "title": "Occupancy classification and use",
+      "scope": "How a building or space is classified by occupancy group."
+    },
+    {
+      "id": "14B-7-705",
+      "title": "Exterior walls",
+      "scope": "Fire-resistance and opening limits for exterior walls, including near lot lines."
+    },
+    {
+      "id": "14B-7-706",
+      "title": "Fire walls",
+      "scope": "Fire walls that divide a building into separate buildings for code purposes."
+    },
+    {
+      "id": "14B-7-707",
+      "title": "Fire barriers",
+      "scope": "Fire-resistance-rated walls that separate occupancies and enclose shafts or exits."
+    },
+    {
+      "id": "14B-7-708",
+      "title": "Fire partitions",
+      "scope": "Rated walls between dwelling units and along corridors."
+    },
+    {
+      "id": "14B-7-711",
+      "title": "Floor and roof assemblies",
+      "scope": "Fire-resistance of floor and roof assemblies, including separation between units."
+    },
+    {
+      "id": "14B-7-713",
+      "title": "Shaft enclosures",
+      "scope": "Enclosure of vertical shafts that pass through floors."
+    },
+    {
+      "id": "14B-7-714",
+      "title": "Penetrations",
+      "scope": "Firestopping where pipes, ducts, and conduit pass through rated assemblies."
+    },
+    {
+      "id": "14B-7-716",
+      "title": "Opening protectives",
+      "scope": "Rated doors, shutters, and windows in rated walls."
+    },
+    {
+      "id": "14B-7-718",
+      "title": "Concealed spaces",
+      "scope": "Fireblocking and draftstopping in concealed spaces such as attics and floor cavities."
+    },
+    {
+      "id": "14B-9-903",
+      "title": "Automatic sprinkler systems",
+      "scope": "Where sprinklers are required and how the system is designed."
+    },
+    {
+      "id": "14B-9-905",
+      "title": "Standpipe systems",
+      "scope": "Where standpipes are required."
+    },
+    {
+      "id": "14B-9-907",
+      "title": "Fire alarm and detection systems",
+      "scope": "Fire alarm, smoke alarm, and detection requirements by occupancy."
+    },
+    {
+      "id": "14B-9-912",
+      "title": "Fire department connections",
+      "scope": "Location and access of fire department connections."
+    },
+    {
+      "id": "14B-9-915",
+      "title": "Carbon monoxide detection",
+      "scope": "Where carbon monoxide detection is required."
+    },
+    {
+      "id": "14B-10-1003",
+      "title": "General means of egress",
+      "scope": "General egress rules, including headroom, protruding objects, and floor level changes."
+    },
+    {
+      "id": "14B-10-1004",
+      "title": "Occupant load",
+      "scope": "How occupant load is calculated."
+    },
+    {
+      "id": "14B-10-1005",
+      "title": "Means of egress sizing",
+      "scope": "Required egress width based on occupant load."
+    },
+    {
+      "id": "14B-10-1006",
+      "title": "Number of exits and exit access doorways",
+      "scope": "How many exits a space or story must have."
+    },
+    {
+      "id": "14B-10-1007",
+      "title": "Exit and exit access doorway configuration",
+      "scope": "Separation and arrangement of exits."
+    },
+    {
+      "id": "14B-10-1008",
+      "title": "Means of egress illumination",
+      "scope": "Lighting along the path of egress, including emergency power."
+    },
+    {
+      "id": "14B-10-1010",
+      "title": "Doors, gates and turnstiles",
+      "scope": "Egress door size, swing, hardware, and landings."
+    },
+    {
+      "id": "14B-10-1011",
+      "title": "Stairways",
+      "scope": "Stair width, risers and treads, headroom, landings, and stair enclosures."
+    },
+    {
+      "id": "14B-10-1013",
+      "title": "Exit signs",
+      "scope": "Where exit signs are required."
+    },
+    {
+      "id": "14B-10-1014",
+      "title": "Handrails",
+      "scope": "Handrail height, graspability, and continuity."
+    },
+    {
+      "id": "14B-10-1015",
+      "title": "Guards",
+      "scope": "Guard height and openings at drop-offs, porches, and balconies."
+    },
+    {
+      "id": "14B-10-1017",
+      "title": "Exit access travel distance",
+      "scope": "Maximum travel distance to an exit."
+    },
+    {
+      "id": "14B-10-1020",
+      "title": "Corridors",
+      "scope": "Corridor width, rating, and dead ends."
+    },
+    {
+      "id": "14B-10-1023",
+      "title": "Interior exit stairways and ramps",
+      "scope": "Enclosure and rating of interior exit stairs."
+    },
+    {
+      "id": "14B-10-1027",
+      "title": "Exterior exit stairways and ramps",
+      "scope": "Exterior exit stairs, including rear stairs and porches used as exits."
+    },
+    {
+      "id": "14B-10-1028",
+      "title": "Exit discharge",
+      "scope": "The path from the exit to the public way."
+    },
+    {
+      "id": "14B-11-1107",
+      "title": "Dwelling units and sleeping units",
+      "scope": "Accessibility requirements for dwelling units."
+    },
+    {
+      "id": "14B-11",
+      "title": "Accessibility",
+      "scope": "Accessibility requirements for buildings and sites generally, including accessible routes and entrances."
+    },
+    {
+      "id": "14B-12-1202",
+      "title": "Ventilation",
+      "scope": "Natural and mechanical ventilation of occupied spaces."
+    },
+    {
+      "id": "14B-12-1204",
+      "title": "Lighting",
+      "scope": "Natural and artificial light in habitable rooms."
+    },
+    {
+      "id": "14B-12-1205",
+      "title": "Yards and courts",
+      "scope": "Yards and courts that serve required windows."
+    },
+    {
+      "id": "14B-12-1207",
+      "title": "Interior space dimensions",
+      "scope": "Minimum room sizes and ceiling heights."
+    },
+    {
+      "id": "14B-12-1209",
+      "title": "Toilet and bathroom requirements",
+      "scope": "Finishes and privacy in toilet rooms and bathrooms."
+    },
+    {
+      "id": "14B-12-1212",
+      "title": "Residential security devices",
+      "scope": "Security devices on dwelling doors and windows."
+    },
+    {
+      "id": "14B-13",
+      "title": "Energy efficiency",
+      "scope": "Points to the energy code for building energy requirements."
+    },
+    {
+      "id": "14B-14",
+      "title": "Exterior walls",
+      "scope": "Weather protection and materials of exterior wall coverings."
+    },
+    {
+      "id": "14B-15",
+      "title": "Roof assemblies and rooftop structures",
+      "scope": "Roof coverings and structures on the roof, such as decks and penthouses."
+    },
+    {
+      "id": "14B-16-1603",
+      "title": "Construction documents",
+      "scope": "Structural information that must appear on construction documents, such as design loads."
+    },
+    {
+      "id": "14B-16-1604",
+      "title": "General design requirements",
+      "scope": "Strength and serviceability requirements for structural design."
+    },
+    {
+      "id": "14B-16-1607",
+      "title": "Live loads",
+      "scope": "Design live loads, including floors, roofs, and decks."
+    },
+    {
+      "id": "14B-16-1608",
+      "title": "Snow loads",
+      "scope": "Design snow loads, including drift on lower roofs."
+    },
+    {
+      "id": "14B-16-1609",
+      "title": "Wind loads",
+      "scope": "Design wind loads."
+    },
+    {
+      "id": "14B-17",
+      "title": "Special inspections and tests",
+      "scope": "Special inspections and the statement of special inspections."
+    },
+    {
+      "id": "14B-18",
+      "title": "Soils and foundations",
+      "scope": "Geotechnical investigations, footings, and foundations, including underpinning and retaining."
+    },
+    {
+      "id": "14B-21",
+      "title": "Masonry",
+      "scope": "Masonry construction and design."
+    },
+    {
+      "id": "14B-22",
+      "title": "Steel",
+      "scope": "Structural steel construction and design."
+    },
+    {
+      "id": "14B-23",
+      "title": "Wood",
+      "scope": "Wood framing, connections, and design."
+    },
+    {
+      "id": "14B-24",
+      "title": "Glass and glazing",
+      "scope": "Glazing materials, including safety glazing at hazardous locations."
+    },
+    {
+      "id": "14B-32",
+      "title": "Encroachments into the public way",
+      "scope": "Canopies, signs, and other projections over public property."
+    },
+    {
+      "id": "14B-33",
+      "title": "Work site safety and operations",
+      "scope": "Protection of the public and adjoining property during construction."
+    },
+    {
+      "id": "14E",
+      "title": "Electrical Code",
+      "scope": "Electrical systems and installations."
+    },
+    {
+      "id": "14F",
+      "title": "2026 Interim Fire Prevention Code",
+      "scope": "Fire prevention requirements for buildings in use."
+    },
+    {
+      "id": "14G",
+      "title": "Fuel Gas Code",
+      "scope": "Fuel gas piping and appliances."
+    },
+    {
+      "id": "14M",
+      "title": "Mechanical Code",
+      "scope": "Heating, ventilation, and exhaust systems."
+    },
+    {
+      "id": "14N",
+      "title": "2022 Energy Transformation Code",
+      "scope": "Building energy requirements, including insulation and compliance documentation."
+    },
+    {
+      "id": "14P",
+      "title": "Plumbing Code",
+      "scope": "Plumbing fixtures, water, and drainage."
+    },
+    {
+      "id": "14R",
+      "title": "Building Rehabilitation Code",
+      "scope": "Work on existing buildings, including alterations and changes of occupancy."
+    },
+    {
+      "id": "14X",
+      "title": "Minimum Requirements for Existing Buildings",
+      "scope": "Ongoing minimum requirements for existing buildings."
+    },
+    {
+      "id": "17-2",
+      "title": "Residential districts",
+      "scope": "Zoning rules for residential districts, including allowed uses, density, height, and setbacks."
+    },
+    {
+      "id": "17-3",
+      "title": "Business and commercial districts",
+      "scope": "Zoning rules for business and commercial districts."
+    },
+    {
+      "id": "17-9",
+      "title": "Use regulations",
+      "scope": "Use-specific zoning standards."
+    },
+    {
+      "id": "17-10",
+      "title": "Parking and loading",
+      "scope": "Required off-street parking and loading."
+    },
+    {
+      "id": "17-11",
+      "title": "Landscaping and screening",
+      "scope": "Landscape and screening requirements."
+    },
+    {
+      "id": "17-12",
+      "title": "Signs",
+      "scope": "Zoning rules for signs."
+    },
+    {
+      "id": "17-13",
+      "title": "Review and approval procedures",
+      "scope": "Zoning approvals, including variations and special uses before the Zoning Board of Appeals."
+    },
+    {
+      "id": "17-15",
+      "title": "Nonconformities",
+      "scope": "Existing uses and structures that no longer conform to zoning."
+    },
+    {
+      "id": "17-17",
+      "title": "Terminology and measurements",
+      "scope": "Zoning definitions and how height, area, and setbacks are measured."
+    },
+    {
+      "id": "DOB-CPC",
+      "title": "Certified Plan Corrections (Department of Buildings process)",
+      "scope": "Not a code section. Standard Plan Review applications use this program for most corrections after a full review. The design professional revises the drawings for each correction, and bubbles, dates and initials each change. Certification is on Form 420, signed and sealed by each professional of record. It excludes zoning, geotechnical and stormwater items, incomplete applications, and disputed comments. No response within 120 days means withdrawal. Source: chicago.gov Department of Buildings pages, seen through search excerpts; confirm before relying on this."
+    },
+    {
+      "id": "T13-LEGACY",
+      "title": "Former Title 13 (legacy building code)",
+      "scope": "Not a current citation for most work. The Title 14 series (14A, 14B, and others) replaced it; the Chicago Building Code in 14B applies to most permit applications started on or after August 1, 2020. Convert a Title 13 reference to the current section that covers the same subject."
+    }
+  ]
+}

@@ -1,14 +1,16 @@
 {
-  "name": "trueforge-starter",
+  "name": "redline",
   "version": "0.1.0",
   "private": true,
-  "description": "Starter repo for the Stranger Builds TrueForge challenge: an agent that gets better every time it runs.",
+  "description": "A self-improving agent that answers building permit correction letters, built on TrueForge.",
   "license": "MIT",
   "type": "module",
   "engines": {
     "node": ">=22.14"
   },
   "scripts": {
+    "mcp": "tsx mcp/server.ts",
+    "demo": "tsx demo/server.ts",
     "setup": "tsx scripts/setup.ts",
     "run-evals": "tsx scripts/run-evals.ts",
     "improve": "tsx scripts/improve.ts",
@@ -17,7 +19,9 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@truefoundry/trueforge-sdk": "^0.180.0"
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "@truefoundry/trueforge-sdk": "^0.180.0",
+    "zod": "^4.6.7"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",

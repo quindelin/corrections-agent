@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "truefoundry": {
+      "type": "http",
+      "url": "https://stranger-builds.truefoundry.cloud/stranger-builds/mcp"
+    }
+  }
+}

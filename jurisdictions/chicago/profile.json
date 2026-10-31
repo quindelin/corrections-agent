@@ -1,0 +1,34 @@
+{
+  "id": "chicago",
+  "name": "City of Chicago, Illinois",
+  "authority": "Department of Buildings",
+  "code_basis": "Chicago Construction Codes (Title 14 series).",
+  "code_text_url": "https://codes.iccsafe.org/content/CHIBC2019P1",
+  "correction_process": {
+    "name": "Certified Plan Corrections",
+    "entry_id": "DOB-CPC",
+    "excludes": [
+      "zoning",
+      "geotechnical",
+      "stormwater",
+      "incomplete applications",
+      "disputed comments"
+    ]
+  },
+  "data_source": "https://data.cityofchicago.org/Buildings/Building-Permits/ydr8-5enu",
+  "status": "active",
+  "code_editions": [
+    {
+      "name": "2019 Chicago Building Code, based on the 2018 IBC",
+      "applies": "Most applications started from August 1, 2020, until the 2026 Ordinance becomes mandatory",
+      "in_code_index": true
+    },
+    {
+      "name": "2026 Ordinance, described by a trade group as aligned with the 2024 model codes",
+      "applies": "Optional from October 1, 2026; mandatory for projects starting the application process on or after December 1, 2026",
+      "in_code_index": false,
+      "source": "https://www.chicago.gov/content/dam/city/depts/bldgs/general/CodeModernization/CodeMemo2026-001.pdf",
+      "verified": "search excerpt only, 2026-10-31"
+    }
+  ]
+}

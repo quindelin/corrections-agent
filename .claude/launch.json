@@ -1,0 +1,23 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "trueforge",
+      "runtimeExecutable": "env",
+      "runtimeArgs": ["OUTBOUND_URL_ALLOWED_HOSTS=[\"127.0.0.1\"]", "npx", "-y", "@truefoundry/trueforge@0.182.0"],
+      "port": 8790
+    },
+    {
+      "name": "mcp",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "mcp"],
+      "port": 8791
+    },
+    {
+      "name": "demo",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "demo"],
+      "port": 8792
+    }
+  ]
+}

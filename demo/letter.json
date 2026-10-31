@@ -1,0 +1,27 @@
+{
+  "note": "Fictional letter written for the demo. It is not in the eval set.",
+  "project": {
+    "jurisdiction": "chicago",
+    "address": "9100 N Demonstration Ave (fictional)",
+    "description": "New three-story residential building with three dwelling units. Zoning district RT-4. Standard Plan Review.",
+    "reviewer": "Department of Buildings, first review cycle"
+  },
+  "sheets": [
+    { "id": "T-001", "title": "Title sheet and sheet index" },
+    { "id": "A-001", "title": "Site plan" },
+    { "id": "A-101", "title": "First floor plan" },
+    { "id": "A-301", "title": "Building sections" },
+    { "id": "A-302", "title": "Stair sections and details" },
+    { "id": "A-601", "title": "Door and window schedules" },
+    { "id": "S-102", "title": "Floor framing plans" },
+    { "id": "E-101", "title": "Electrical plans" }
+  ],
+  "comments": [
+    { "id": "C1", "heading": "Building", "text": "Per 13-160, the riser and tread dimensions at the rear stair are not shown. Dimension them on the stair section." },
+    { "id": "C2", "heading": "General", "text": "The fire-resistance rating of the walls between dwelling units is not indicated. Show the rating on the building section." },
+    { "id": "C3", "heading": "Zoning", "text": "The front porch extends into the required front setback. A variation from the Zoning Board of Appeals is needed." },
+    { "id": "C4", "heading": "General", "text": "The owner's signature is missing from the application." },
+    { "id": "C5", "heading": "General", "text": "The title block on A-601 shows the wrong sheet number. Correct it." },
+    { "id": "C6", "heading": "General", "text": "Note: this review does not include the electrical permit. No response is needed." }
+  ]
+}

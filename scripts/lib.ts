@@ -7,11 +7,14 @@ import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { TrueForge, TrueForgeApi } from "@truefoundry/trueforge-sdk";
+import type { ScoredTask } from "../evals/score.ts";
 
 export const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 export const AGENT_DIR = join(ROOT, "agent");
 export const TASKS_DIR = join(ROOT, "evals", "tasks");
 export const RUNS_DIR = join(ROOT, "runs");
+/** Sign-off decisions from the demo's review queue. improve reads these along with the eval results. */
+export const FEEDBACK_FILE = join(ROOT, "feedback", "reviews.jsonl");
 export const SUMMARY_CSV = join(RUNS_DIR, "summary.csv");
 
 // ---------- config ----------
@@ -70,6 +73,8 @@ export interface AgentFile {
   model: { name: string; params?: Record<string, unknown> };
   /** "inline": skills are pasted into the instructions (no sandbox). "git": real TrueForge skills (needs a sandbox and a public repo). */
   skill_mode?: "inline" | "git";
+  /** MCP connectors this agent uses. setup registers them in TrueForge and attaches them to the agent. */
+  mcp_servers?: { name: string; url: string }[];
 }
 
 export interface SkillFile {
@@ -121,13 +126,16 @@ export function buildManifest(gitRef?: string): TrueForgeApi.AgentSpec {
   const config: TrueForgeApi.RuntimeConfig = {
     askUserQuestions: { enabled: false }, // evals run unattended: never pause for a question
     generativeUi: { enabled: false }, // we want plain text + JSON back
+    dynamicSubAgents: { enabled: false }, // one agent, so runs are comparable
   };
+  // Research tools are read-only, so they never pause for approval. Sign-off on the output happens in the demo's review queue.
+  const mcpServers = (agent.mcp_servers ?? []).map((s) => ({ name: s.name, preload: true, requireApprovalForTools: [] }));
   if (mode === "inline") {
     // Simplest path, no sandbox: the playbook lives in the instructions, and the agent rewrites it.
     const inlined = skills
       .map((s) => `\n\n---\n\n# Skill: ${s.name}\n\n_${s.description}_\n\n${s.body.trim()}`)
       .join("");
-    return { model: agent.model, instructions: instructions.trim() + inlined, config };
+    return { model: agent.model, instructions: instructions.trim() + inlined, mcpServers, config };
   }
   // "git" mode: real TrueForge skills, cloned from this repo at the commit that runs (needs a sandbox).
   if (!gitRef) die("skill_mode git needs a git ref");
@@ -135,6 +143,7 @@ export function buildManifest(gitRef?: string): TrueForgeApi.AgentSpec {
     model: agent.model,
     instructions: instructions.trim(),
     skills: skills.map((s) => ({ name: s.name })),
+    mcpServers,
     config: { ...config, sandbox: { enabled: true } }, // skills require the sandbox
   };
 }
@@ -164,6 +173,14 @@ export async function syncAgent(tf: TrueForge, gitRef: string): Promise<TrueForg
       });
     }
   }
+  for (const s of agent.mcp_servers ?? []) {
+    const health = await fetch(new URL("/health", s.url)).catch(() => null);
+    if (!health?.ok) die(`The ${s.name} MCP server isn't running at ${s.url}. Start it: npm run mcp`);
+    // settings.mcpServers.createOrUpdate: register the connector by name, so the agent can attach it.
+    await tf.settings.mcpServers.createOrUpdate({
+      manifest: { type: "remote", name: s.name, description: "Local code lookup and permit statistics, by jurisdiction.", url: s.url },
+    });
+  }
   const manifest = buildManifest(gitRef);
   const existing = await findAgent(tf, agent.name);
   if (existing) {
@@ -182,16 +199,9 @@ export async function findAgent(tf: TrueForge, name: string): Promise<TrueForgeA
 
 // ---------- tasks ----------
 
-export interface Task {
-  id: string;
-  title: string;
-  /** Holdout tasks are run and scored, but improve never shows them to the agent. */
-  holdout?: boolean;
-  language: string;
-  filename: string;
-  context: string;
-  code: string[];
-  expected: { line: number; categories: string[]; why: string }[];
+export interface Task extends ScoredTask {
+  project: ScoredTask["project"] & { address: string; reviewer: string };
+  sheets: { id: string; title: string }[];
 }
 
 export function loadTasks(): Task[] {
@@ -201,21 +211,20 @@ export function loadTasks(): Task[] {
     .map((f) => JSON.parse(readFileSync(join(TASKS_DIR, f), "utf8")) as Task);
 }
 
-export function numbered(code: string[]): string {
-  const w = String(code.length).length;
-  return code.map((l, i) => `${String(i + 1).padStart(w)} | ${l}`).join("\n");
-}
-
-/** The message the agent gets for one task. Same text every run. */
-export function taskPrompt(t: Task): string {
+/** The message the agent gets for one correction letter. Same text every run. */
+export function taskPrompt(t: Pick<Task, "project" | "sheets" | "comments">): string {
   return [
-    `Review this change. File: \`${t.filename}\`. What the change does: ${t.context}`,
+    "Answer this correction letter.",
     "",
-    "Line numbers are on the left of the `|`.",
+    `Jurisdiction id: ${t.project.jurisdiction}`,
+    `Project: ${t.project.address}. ${t.project.description}`,
+    `Reviewer: ${t.project.reviewer}`,
     "",
-    "```" + t.language,
-    numbered(t.code),
-    "```",
+    "Sheet index:",
+    ...t.sheets.map((s) => `- ${s.id}: ${s.title}`),
+    "",
+    "Correction letter:",
+    ...t.comments.map((c) => `${c.id} [${c.heading}] ${c.text}`),
   ].join("\n");
 }
 

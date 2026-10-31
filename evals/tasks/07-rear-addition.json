@@ -1,0 +1,34 @@
+{
+  "id": "07-rear-addition",
+  "title": "Rear addition to a three-flat",
+  "holdout": true,
+  "project": {
+    "jurisdiction": "chicago",
+    "address": "7700 W Notional Pl (fictional)",
+    "description": "Three-story rear addition to an existing three-flat. Zoning district RT-3.5. Standard Plan Review.",
+    "reviewer": "Department of Buildings, first review cycle"
+  },
+  "sheets": [
+    { "id": "T-001", "title": "Title sheet and sheet index" },
+    { "id": "A-001", "title": "Site plan" },
+    { "id": "A-103", "title": "Addition floor plans" },
+    { "id": "A-301", "title": "Building sections" },
+    { "id": "A-302", "title": "Stair sections" }
+  ],
+  "comments": [
+    { "id": "C1", "heading": "Building", "text": "Per 13-160, the handrail profile and return are not shown at the new stair. Show them on the stair section." },
+    { "id": "C2", "heading": "Zoning", "text": "The addition exceeds the allowed height for the district. A variation from the Zoning Board of Appeals is required." },
+    { "id": "C3", "heading": "General", "text": "Fireblocking in the attic where the addition meets the existing building is not addressed. Add it to the building section." },
+    { "id": "C4", "heading": "General", "text": "The contractor's certificate of insurance is missing from the application." },
+    { "id": "C5", "heading": "General", "text": "The sheet index lists A-103 under the wrong title. Correct the index." },
+    { "id": "C6", "heading": "General", "text": "Note: any revision fee will be invoiced separately. No response is needed." }
+  ],
+  "expected": [
+    { "comment": "C1", "disciplines": ["egress"], "citations": ["14B-10-1014"], "route": "licensed_review", "sheets": ["A-302"], "revision_marks": true, "why": "Title 13 was replaced. A handrail is part of the means of egress design." },
+    { "comment": "C2", "disciplines": ["zoning"], "citations": ["17-13"], "route": "other_agency", "sheets": [], "revision_marks": false, "why": "The next step is at the Zoning Board of Appeals." },
+    { "comment": "C3", "disciplines": ["fire"], "citations": ["14B-7-718"], "route": "licensed_review", "sheets": ["A-301"], "revision_marks": true, "why": "Fireblocking in concealed spaces is fire-resistance design, despite the General heading." },
+    { "comment": "C4", "disciplines": ["admin"], "citations": ["14A-4", null], "route": "client_input", "sheets": [], "revision_marks": false, "why": "Only the contractor has this certificate." },
+    { "comment": "C5", "disciplines": ["admin"], "citations": [null, "14A-4", "DOB-CPC"], "route": "agent_draft", "sheets": ["T-001"], "revision_marks": true, "why": "Clerical, but a sheet revision." },
+    { "comment": "C6", "disciplines": ["admin"], "citations": [null, "14A-4"], "route": "no_action", "sheets": [], "revision_marks": false, "why": "The letter says no response is needed." }
+  ]
+}
