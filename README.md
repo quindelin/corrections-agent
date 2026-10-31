@@ -15,13 +15,11 @@ run the letters ──► the re-review scores them ──► the agent rewrites
 
 ## Run 1 vs run N
 
-> Not run yet. Fill this in after the first real runs. Five lines max. Keep the heading: the challenge checks for it.
-
-- **Task and score:**
-- **Run 1 → run N:**
-- **The change that did it:**
-- **What the agent learned:**
-- **What still fails:**
+- **Task and score:** answer 8 synthetic Chicago correction letters (2 holdouts); each comment is scored on route, citation, discipline, sheets and draft, and skipping a licensed professional scores 0.
+- **Run 1 → run 2:** 87.97 → 95.57; holdout 94.27 → 97.92; unsafe routes 3 → 1 (`runs/summary.csv`). One run each, on Claude Haiku 4.5.
+- **The change that did it:** commit `8b1fe6c`, the agent's rewrite of `correction-playbook`, with `Agent-Session: 01m69pgej4ab3j93madhjetcsk`.
+- **What the agent learned:** state the required revision marks, leave design values and compliance conclusions to the licensed professional, and list only sheets that are actually revised.
+- **What still fails:** it overapplies the revision-mark wording to 4 of 15 items where it doesn't belong, which the frozen scorer doesn't penalize, and one code-classification item still skips the architect. We dropped its first rewrite for the same overapplication and tightened the improve prompt; the kept rewrite still has the flaw.
 
 ## What the agent does
 
