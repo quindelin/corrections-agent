@@ -7,8 +7,8 @@ description: The checklist to run on every correction comment. Use it each time 
 
 Go through every item for each comment.
 
-1. **Discipline.** What is the comment really about?
-2. **Citation.** Which section governs it? Look it up.
+1. **Discipline.** What is the comment really about? Use the city's stated review category if available.
+2. **Citation.** Which section governs it? Look it up with search_code and get_section. Use similar_comments to see what this city's reviewers cite on similar topics, then confirm the id.
 3. **Route.** Who has to act next?
    - If the comment asks for design data, dimensions, calculations, or professional judgment (e.g., "show," "dimension," "indicate," "provide," "add"), route to `licensed_review`.
    - If the comment asks for a document or fact from outside the design team (owner, contractor, consultant, other agency), route to `client_input` or `other_agency`.
@@ -23,4 +23,4 @@ Go through every item for each comment.
    - For `agent_draft` items: state the clerical correction that will be made.
    - For `client_input` and `other_agency` items: state what will be submitted or obtained.
    - For `no_action` items: use `""`.
-   - All `licensed_review`, `agent_draft`, `client_input`, and `other_agency` items must include: "will be bubbled, dated and initialed" or equivalent language indicating the revision is marked per Certified Plan Corrections protocol.
+   - Do not add required wording unless the city's own correction letters show it uses that language.
