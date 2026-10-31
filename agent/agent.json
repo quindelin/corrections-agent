@@ -1,10 +1,17 @@
 {
-  "name": "redline",
+  "name": "redline-skills",
   "description": "Turns a building permit correction letter into a triaged, cited response package for the architect to review. Starts in Chicago; each place is a jurisdiction pack.",
   "model": {
     "name": "truefoundry/claude-haiku-4-5",
-    "params": { "temperature": 0 }
+    "params": {
+      "temperature": 0
+    }
   },
-  "skill_mode": "inline",
-  "mcp_servers": [{ "name": "permit-research", "url": "http://127.0.0.1:8791/mcp" }]
+  "skill_mode": "git",
+  "mcp_servers": [
+    {
+      "name": "permit-research-main",
+      "url": "http://127.0.0.1:8793/mcp"
+    }
+  ]
 }
