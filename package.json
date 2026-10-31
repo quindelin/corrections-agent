@@ -19,6 +19,7 @@
     "real:build": "tsx realdata/build-seattle.ts",
     "real:run": "tsx realdata/run.ts",
     "real:improve": "tsx realdata/improve.ts",
+    "check:services": "tsx scripts/check-services.ts",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {

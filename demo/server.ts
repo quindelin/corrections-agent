@@ -325,6 +325,7 @@ async function handleProduct(req: IncomingMessage, res: ServerResponse): Promise
 
 createServer(async (req, res) => {
   try {
+    if (req.method === "GET" && req.url === "/health") return send(res, 200, { status: "ok" });
     if (API_KEY && req.url?.startsWith("/api/") && req.headers["x-redline-key"] !== API_KEY) return send(res, 401, { error: "Missing or wrong service key." });
     if (await handleProduct(req, res)) return;
     if (req.method === "GET" && req.url === "/") {

@@ -131,6 +131,7 @@ Review each change with `git show`. To drop one: `git reset --hard HEAD~1`, then
 npm run demo
 ```
 
+To package it for a container host, see [docs/deploy.md](docs/deploy.md).
 
 ## The scorer
 
@@ -174,7 +175,8 @@ demo/             the review queue
 feedback/         architect decisions from the demo (created on first use)
 scripts/          setup, run-evals, improve, export-session
 runs/             one folder per run, plus summary.csv
-docs/             locale research
+docs/             locale research, deployment
+deploy/           Dockerfiles, compose and Fly.io config
 ```
 
 ## Troubleshooting

@@ -1,0 +1,17 @@
+# Private: no [http_service] and no [[services]]. The MCP server has no auth, so don't add either.
+# Deploy from the repo root, the build context:
+#   fly deploy --config deploy/fly/mcp.toml --dockerfile deploy/Dockerfile --ha=false --no-public-ips
+
+app = "redline-mcp"
+primary_region = "iad"
+
+[experimental]
+  cmd = ["node", "--import", "tsx", "mcp/server.ts"]
+
+[env]
+  MCP_HOST = "::"
+  MCP_PORT = "8791"
+
+[[vm]]
+  size = "shared-cpu-1x"
+  memory = "512mb"
