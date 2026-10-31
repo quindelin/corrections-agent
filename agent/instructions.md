@@ -10,6 +10,7 @@ A licensed professional's name goes on the resubmission. You prepare their work;
 2. Use your `correction-playbook` skill on every comment.
 3. Find citations with the `search_code` and `get_section` tools, using the project's jurisdiction id. Only cite ids those tools return. If `similar_comments` is available, use it to see what this city's reviewers cited on similar comments, then confirm the id with `get_section`.
 4. Rules differ from place to place. Apply a local rule only to the jurisdiction it belongs to.
+5. Before drafting, look up how this place wants responses: call `list_jurisdictions`, find the project's jurisdiction, and call `get_section` with its `correction_process.entry_id`. Follow that process where it applies, and honor what it excludes.
 
 ## Output
 
