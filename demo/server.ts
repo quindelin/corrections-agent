@@ -13,7 +13,8 @@ import { fileURLToPath } from "node:url";
 import { parseItems } from "../evals/score.ts";
 import { client, exportSession, FEEDBACK_FILE, headSha, readAgent, ROOT, runTurn, SUMMARY_CSV, syncAgent } from "../scripts/lib.ts";
 import { MAX_LETTER_CHARS, parseLetter, type ParsedComment } from "./parse-letter.ts";
-import { readPdfText } from "./read-pdf.ts";
+import { readUpload } from "./read-upload.ts";
+import { stripPersonal } from "./strip-personal.ts";
 import { jobResponse, startJob, type JobOutcome } from "./jobs.ts";
 import { createReport, exportDoc, loadReport, newReportId, permitAlreadyUnlocked, publicView, updateReport, type Report } from "./reports.ts";
 import { allowFreeRun, getStore, startMaintenance } from "./store.ts";
@@ -156,14 +157,12 @@ const PERMIT_PATTERNS = [/\b\d{7}-[A-Z]{2}(?![A-Za-z0-9])/, /\b1\d{8}\b/];
 const placeName = (id: string) => packs.find((p) => p.profile.id === id)?.profile.name ?? null;
 
 async function extract(b: Record<string, unknown>) {
-  let text = String(b.text ?? "");
-  if (b.pdf_base64) {
-    text = await readPdfText(new Uint8Array(Buffer.from(String(b.pdf_base64), "base64")));
-    if (text.replace(/\s/g, "").length < 40) return { error: "This PDF looks like a scan, so we can't read its text yet. Paste the comments instead." };
-  }
-  const comments = parseLetter(text);
+  const upload = await readUpload(b);
+  if (upload.error) return { error: upload.error, reason: upload.reason };
+  const text = upload.text ?? "";
   return {
-    comments,
+    comments: upload.comments ?? [],
+    warnings: upload.warnings ?? [],
     jurisdiction: PLACE_HINTS.find(([, re]) => re.test(text))?.[0] ?? null,
     permit_number: PERMIT_PATTERNS.map((re) => text.match(re)?.[0]).find(Boolean) ?? null,
   };
@@ -178,14 +177,15 @@ async function runReport(b: Record<string, unknown>, client: string): Promise<Jo
     return { status: 200, value: { stop: "edition", message: "Your application is under Chicago's 2026 ordinance, which Redline doesn't cover yet, so there's nothing to pay. Leave your email and we'll tell you when it does." } };
   }
   const comments = (Array.isArray(b.comments) ? b.comments : [])
-    .map((c, i) => ({ id: `C${i + 1}`, heading: String((c as ParsedComment).heading ?? "Pasted").slice(0, 120), text: String((c as ParsedComment).text ?? "").slice(0, 3000).trim() }))
+    // The user can edit comments in the browser, so what comes back is stripped again before it's kept.
+    .map((c, i) => ({ id: `C${i + 1}`, heading: stripPersonal(String((c as ParsedComment).heading ?? "Pasted").slice(0, 120)), text: stripPersonal(String((c as ParsedComment).text ?? "").slice(0, 3000)).trim() }))
     .filter((c) => c.text)
     .slice(0, 40);
   if (!comments.length) return { status: 400, value: { error: "No comments to review." } };
   if (!(await allowFreeRun(client, FREE_RUNS_PER_HOUR))) return { status: 429, value: { error: "That's the limit of free previews for now. Try again in an hour." } };
 
   const permit = String(b.permit_number ?? "").trim().slice(0, 40) || null;
-  const project = String(b.project ?? "").slice(0, 600);
+  const project = stripPersonal(String(b.project ?? "").slice(0, 600));
   const letter: Letter = { project: { jurisdiction, address: "Not given", description: project || "Not given.", reviewer: place }, sheets: [], comments };
   const run = await analyze(letter);
   const nextRound = await permitAlreadyUnlocked(permit);

@@ -22,7 +22,9 @@
     "real:check-chicago": "tsx realdata/check-chicago.ts",
     "store": "tsx demo/store-cli.ts",
     "test:demo": "node --import tsx --test --test-concurrency=1 demo/*.test.ts",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test demo/*.test.ts",
+    "intake:measure": "tsx demo/measure-intake.ts"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.32.2",
