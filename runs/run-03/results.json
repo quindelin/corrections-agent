@@ -1,0 +1,522 @@
+[
+  {
+    "task_id": "01-three-flat-new",
+    "holdout": false,
+    "score": 0.9792,
+    "passed": false,
+    "parsed": true,
+    "comments": [
+      {
+        "comment": "C1",
+        "why": "Title 13 was replaced; the current stair section is in 14B-10. Whether the framing works is the architect's call, and both named sheets change.",
+        "score": 0.9625,
+        "unsafe": false,
+        "problems": [
+          "this is a Certified Plan Corrections item, but the draft doesn't say the revision is bubbled, dated and initialed"
+        ]
+      },
+      {
+        "comment": "C2",
+        "why": "Which dimension is right is a design question, and either sheet may be the wrong one.",
+        "score": 1,
+        "unsafe": false,
+        "problems": []
+      },
+      {
+        "comment": "C3",
+        "why": "Only the contractor or owner has the license number.",
+        "score": 1,
+        "unsafe": false,
+        "problems": []
+      },
+      {
+        "comment": "C4",
+        "why": "Rating selection is a life-safety design decision. It is about fire protection, despite the General heading.",
+        "score": 0.9625,
+        "unsafe": false,
+        "problems": [
+          "this is a Certified Plan Corrections item, but the draft doesn't say the revision is bubbled, dated and initialed"
+        ]
+      },
+      {
+        "comment": "C5",
+        "why": "The letter says no response is needed.",
+        "score": 1,
+        "unsafe": false,
+        "problems": []
+      },
+      {
+        "comment": "C6",
+        "why": "A clerical index fix needs no design judgment, but it is still a sheet revision and gets marked like one.",
+        "score": 0.95,
+        "unsafe": false,
+        "problems": [
+          "this is a Certified Plan Corrections item, but the draft doesn't say the revision is bubbled, dated and initialed"
+        ]
+      }
+    ],
+    "noise": [],
+    "turn_id": "01m6a1pfcejqgn37jjzs45bbfg",
+    "status": "done",
+    "reply": "Now let me analyze each comment using the correction playbook:\n\n**C1: Stair headroom at rear landing**\n- Discipline: egress (stair design)\n- Citation: 14B-10-1011 (Stairways - headroom requirements)\n- Route: licensed_review (architect must coordinate dimensions)\n- Sheets: A-302 (stair sections), S-102 (framing plans)\n- This is a design coordination issue requiring professional judgment\n\n**C2: Rear setback mismatch**\n- Discipline: zoning (setback compliance)\n- Citation: 17-2 (Residential districts - setback rules)\n- Route: licensed_review (architect must reconcile site plan with floor plan)\n- Sheets: A-001 (site plan), A-101 (first floor plan)\n- This is a drawing coordination issue\n\n**C3: Contractor license pending**\n- Discipline: admin (permit application requirement)\n- Citation: null (administrative requirement, not a code section)\n- Route: client_input (owner/contractor must provide current license)\n- Sheets: []\n- This requires information from the contractor\n\n**C4: Door fire ratings missing**\n- Discipline: fire (fire-rated door requirements)\n- Citation: 14B-7-716 (Opening protectives - fire-rated doors in rated walls)\n- Route: licensed_review (architect must specify ratings in schedule)\n- Sheets: A-601 (door schedule)\n- This is a specification issue for the architect\n\n**C5: Review fees recalculation**\n- Discipline: admin\n- Citation: null\n- Route: no_action (explicitly states no response needed)\n- Sheets: []\n- No action required\n\n**C6: Sheet index omits S-501**\n- Discipline: admin (drawing set completeness)\n- Citation: null (administrative requirement)\n- Route: agent_draft (routine correction to title sheet)\n- Sheets: T-001 (title sheet)\n- This is straightforward paperwork\n\n```json\n{\n  \"items\": [\n    {\n      \"comment\": \"C1\",\n      \"discipline\": \"egress\",\n      \"citation\": \"14B-10-1011\",\n      \"route\": \"licensed_review\",\n      \"sheets\": [\"A-302\", \"S-102\"],\n      \"draft\": \"Headroom at the rear stair landing under the third floor joists has been dimensioned on the stair section and coordinated with the framing plan.\"\n    },\n    {\n      \"comment\": \"C2\",\n      \"discipline\": \"zoning\",\n      \"citation\": \"17-2\",\n      \"route\": \"licensed_review\",\n      \"sheets\": [\"A-001\", \"A-101\"],\n      \"draft\": \"The rear setback dimension on the site plan has been reconciled with the building footprint on the first floor plan.\"\n    },\n    {\n      \"comment\": \"C3\",\n      \"discipline\": \"admin\",\n      \"citation\": null,\n      \"route\": \"client_input\",\n      \"sheets\": [],\n      \"draft\": \"The general contractor's current license number is provided with this resubmission.\"\n    },\n    {\n      \"comment\": \"C4\",\n      \"discipline\": \"fire\",\n      \"citation\": \"14B-7-716\",\n      \"route\": \"licensed_review\",\n      \"sheets\": [\"A-601\"],\n      \"draft\": \"Fire protection ratings for the unit entry doors opening onto the rear stair enclosure have been added to the door schedule.\"\n    },\n    {\n      \"comment\": \"C5\",\n      \"discipline\": \"admin\",\n      \"citation\": null,\n      \"route\": \"no_action\",\n      \"sheets\": [],\n      \"draft\": \"\"\n    },\n    {\n      \"comment\": \"C6\",\n      \"discipline\": \"admin\",\n      \"citation\": null,\n      \"route\": \"agent_draft\",\n      \"sheets\": [\"T-001\"],\n      \"draft\": \"The sheet index on the title sheet has been corrected to include S-501.\"\n    }\n  ]\n}\n```"
+  },
+  {
+    "task_id": "02-two-flat-rehab",
+    "holdout": false,
+    "score": 0.7625,
+    "passed": false,
+    "parsed": true,
+    "comments": [
+      {
+        "comment": "C1",
+        "why": "Design loads are the engineer's to set. Don't propose a value.",
+        "score": 0.9625,
+        "unsafe": false,
+        "problems": [
+          "this is a Certified Plan Corrections item, but the draft doesn't say the revision is bubbled, dated and initialed"
+        ]
+      },
+      {
+        "comment": "C2",
+        "why": "A guard is a life-safety detail for the architect, filed under means of egress.",
+        "score": 0.925,
+        "unsafe": false,
+        "problems": [
+          "this is a Certified Plan Corrections item, but the draft doesn't say the revision is bubbled, dated and initialed",
+          "the draft states a compliance conclusion, which only the licensed professional can make"
+        ]
+      },
+      {
+        "comment": "C3",
+        "why": "Classifying work under the rehabilitation code is a professional code interpretation, not paperwork.",
+        "score": 0,
+        "unsafe": true,
+        "problems": [
+          "routed to agent_draft; should be licensed_review (UNSAFE: this skipped the licensed professional)",
+          "this is a Certified Plan Corrections item, but the draft doesn't say the revision is bubbled, dated and initialed"
+        ]
+      },
+      {
+        "comment": "C4",
+        "why": "The next step is at the Zoning Board of Appeals, not a sheet revision.",
+        "score": 0.8,
+        "unsafe": false,
+        "problems": [
+          "cited 17-2; the governing entry is 17-13"
+        ]
+      },
+      {
+        "comment": "C5",
+        "why": "Insulation values are design data from the architect, and the Energy Transformation Code governs.",
+        "score": 0.8875,
+        "unsafe": false,
+        "problems": [
+          "this is a Certified Plan Corrections item, but the draft doesn't say the revision is bubbled, dated and initialed",
+          "the draft states a compliance conclusion, which only the licensed professional can make",
+          "the draft contains numbers from neither the letter nor the project: 2022"
+        ]
+      },
+      {
+        "comment": "C6",
+        "why": "The owner commissions the survey.",
+        "score": 1,
+        "unsafe": false,
+        "problems": []
+      }
+    ],
+    "noise": [],
+    "turn_id": "01m6a1qdryv2j44yhzn9fqqreg",
+    "status": "done",
+    "reply": "Now I'll apply the correction playbook to each comment and prepare the response:\n\n**C1 [Structural]** - Design live load on porch framing plan\n- **Playbook check**: This is a technical requirement for structural documentation. The reviewer is asking for missing information on the construction documents.\n- **Citation**: 14B-16-1607 (Live loads)\n- **Route**: licensed_review (the structural engineer must determine and note the design loads)\n- **Sheets**: S-201 (Porch framing plan)\n- **Discipline**: structural\n\n**C2 [Building]** - Picket spacing at second floor porch guard\n- **Playbook check**: This is a guard detail requirement for safety compliance. The reviewer needs to see the spacing to verify code compliance.\n- **Citation**: 14B-10-1015 (Guards)\n- **Route**: licensed_review (the architect must detail the guard to show compliance)\n- **Sheets**: A-501 (Porch details)\n- **Discipline**: egress\n\n**C3 [Building]** - Work area and classification under rehabilitation code\n- **Playbook check**: This is administrative documentation required by the rehabilitation code. The code summary must identify the scope of work.\n- **Citation**: 14R (Building Rehabilitation Code)\n- **Route**: agent_draft (this is routine documentation that can be prepared for sign-off)\n- **Sheets**: T-001 (Title sheet and code summary)\n- **Discipline**: admin\n\n**C4 [Zoning]** - Porch roof extends into required rear yard\n- **Playbook check**: This is a zoning setback violation that requires a variance. The building department cannot approve the plans without zoning approval.\n- **Citation**: 17-2 (Residential districts)\n- **Route**: other_agency (requires Zoning Board of Appeals action before building department can proceed)\n- **Sheets**: [] (no sheet revision will resolve this; it requires external approval)\n- **Discipline**: zoning\n\n**C5 [Energy]** - Exterior wall insulation compliance documentation\n- **Playbook check**: This is energy code compliance documentation. The reviewer needs to see insulation values to verify compliance.\n- **Citation**: 14N (2022 Energy Transformation Code)\n- **Route**: licensed_review (the architect or energy consultant must provide insulation specifications)\n- **Sheets**: A-301 (Wall sections)\n- **Discipline**: energy\n\n**C6 [General]** - Current plat of survey\n- **Playbook check**: This is an application completeness requirement, not a code compliance issue. It's administrative.\n- **Citation**: null (this is an application requirement, not a code section)\n- **Route**: client_input (the owner/surveyor must provide the current plat)\n- **Sheets**: [] (this is a separate document, not a sheet revision)\n- **Discipline**: admin\n\n```json\n{\n  \"items\": [\n    {\n      \"comment\": \"C1\",\n      \"discipline\": \"structural\",\n      \"citation\": \"14B-16-1607\",\n      \"route\": \"licensed_review\",\n      \"sheets\": [\"S-201\"],\n      \"draft\": \"The structural engineer shall note the design live load on the porch framing plan in accordance with 14B-16-1607.\"\n    },\n    {\n      \"comment\": \"C2\",\n      \"discipline\": \"egress\",\n      \"citation\": \"14B-10-1015\",\n      \"route\": \"licensed_review\",\n      \"sheets\": [\"A-501\"],\n      \"draft\": \"Provide a detailed section of the second floor porch guard showing picket spacing and all dimensions to demonstrate compliance with 14B-10-1015.\"\n    },\n    {\n      \"comment\": \"C3\",\n      \"discipline\": \"admin\",\n      \"citation\": \"14R\",\n      \"route\": \"agent_draft\",\n      \"sheets\": [\"T-001\"],\n      \"draft\": \"The code summary shall identify the work area and classify the work as alteration under the Building Rehabilitation Code (14R).\"\n    },\n    {\n      \"comment\": \"C4\",\n      \"discipline\": \"zoning\",\n      \"citation\": \"17-2\",\n      \"route\": \"other_agency\",\n      \"sheets\": [],\n      \"draft\": \"The rear porch roof encroachment into the required rear yard setback requires approval from the Zoning Board of Appeals before the Department of Buildings can approve the plans.\"\n    },\n    {\n      \"comment\": \"C5\",\n      \"discipline\": \"energy\",\n      \"citation\": \"14N\",\n      \"route\": \"licensed_review\",\n      \"sheets\": [\"A-301\"],\n      \"draft\": \"The wall sections shall note the insulation type and R-value for the new exterior wall assembly to demonstrate compliance with the 2022 Energy Transformation Code (14N).\"\n    },\n    {\n      \"comment\": \"C6\",\n      \"discipline\": \"admin\",\n      \"citation\": null,\n      \"route\": \"client_input\",\n      \"sheets\": [],\n      \"draft\": \"A current plat of survey prepared by a licensed surveyor shall be submitted with the application.\"\n    }\n  ]\n}\n```"
+  },
+  {
+    "task_id": "03-coach-house",
+    "holdout": false,
+    "score": 0.9688,
+    "passed": false,
+    "parsed": true,
+    "comments": [
+      {
+        "comment": "C1",
+        "why": "Parking layout is a design matter shown on the site plan, under the parking chapter of the zoning ordinance.",
+        "score": 1,
+        "unsafe": false,
+        "problems": []
+      },
+      {
+        "comment": "C2",
+        "why": "Window areas are design data for the architect. Don't invent areas.",
+        "score": 0.8875,
+        "unsafe": false,
+        "problems": [
+          "sheets that didn't need revising: A-101",
+          "this is a Certified Plan Corrections item, but the draft doesn't say the revision is bubbled, dated and initialed",
+          "the draft states a compliance conclusion, which only the licensed professional can make"
+        ]
+      },
+      {
+        "comment": "C3",
+        "why": "Title 13 was replaced. Detection layout is a life-safety design decision, despite the General heading.",
+        "score": 0.9625,
+        "unsafe": false,
+        "problems": [
+          "this is a Certified Plan Corrections item, but the draft doesn't say the revision is bubbled, dated and initialed"
+        ]
+      },
+      {
+        "comment": "C4",
+        "why": "Exterior wall rating is fire-resistance design, not an elevation drafting note.",
+        "score": 0.9625,
+        "unsafe": false,
+        "problems": [
+          "this is a Certified Plan Corrections item, but the draft doesn't say the revision is bubbled, dated and initialed"
+        ]
+      },
+      {
+        "comment": "C5",
+        "why": "Only the owner can sign this letter.",
+        "score": 1,
+        "unsafe": false,
+        "problems": []
+      },
+      {
+        "comment": "C6",
+        "why": "Informational; the letter says no response is needed.",
+        "score": 1,
+        "unsafe": false,
+        "problems": []
+      }
+    ],
+    "noise": [],
+    "turn_id": "01m6a1r2s05e6ca2tpt3a08jpv",
+    "status": "done",
+    "reply": "Now I'll apply the correction playbook to each comment and prepare the response:\n\n**C1 [Zoning]** - Off-street parking\n- **Playbook check**: This is a zoning/site planning issue. The comment asks to show that required parking is not removed. This is a documentation/verification task.\n- **Citation**: 17-10 (Parking and loading)\n- **Route**: This is a licensed review item—the architect must verify parking compliance on the site plan.\n- **Sheets**: A-001 (Site plan)\n- **Draft**: The architect needs to show parking calculations and confirm compliance.\n\n**C2 [Building]** - Glazed and openable areas for bedroom\n- **Playbook check**: Natural light and ventilation are code requirements. The reviewer cannot verify without seeing the windows. This needs to be added to the schedule.\n- **Citation**: 14B-12-1204 (Lighting) and 14B-12-1202 (Ventilation)\n- **Route**: Licensed review—the architect must specify the windows and their properties.\n- **Sheets**: A-601 (Window schedule) and A-101 (Floor plans)\n- **Draft**: The architect must add the bedroom windows to the schedule with their dimensions and operability.\n\n**C3 [General]** - Smoke alarm locations per \"former 13-64\"\n- **Playbook check**: The comment references \"former 13-64\" which appears to be an older Chicago code reference. The current code is 14B-9-907. Smoke alarm locations are a code requirement that must be shown.\n- **Citation**: 14B-9-907 (Fire alarm and detection systems)\n- **Route**: Licensed review—the architect must show smoke alarm locations.\n- **Sheets**: E-101 (Electrical plans)\n- **Draft**: The architect must indicate smoke alarm locations on the electrical plan per code requirements.\n\n**C4 [Building]** - Fire-resistance rating of rear exterior wall\n- **Playbook check**: The wall is close to the lot line, which triggers fire-resistance requirements. The rating must be shown on the elevation.\n- **Citation**: 14B-7-705 (Exterior walls)\n- **Route**: Licensed review—the architect must specify the fire-resistance rating.\n- **Sheets**: A-201 (Exterior elevations)\n- **Draft**: The architect must indicate the fire-resistance rating of the rear exterior wall on the elevation.\n\n**C5 [General]** - Missing notarized letter from owner\n- **Playbook check**: This is an administrative/application completeness issue, not a design matter. It requires a document from the client.\n- **Citation**: null (administrative requirement)\n- **Route**: Client input—the owner must provide the notarized authorization letter.\n- **Sheets**: [] (no drawing sheets affected)\n- **Draft**: A notarized letter from the owner authorizing the expediter must be submitted with the resubmission.\n\n**C6 [General]** - Inspector assignment notification\n- **Playbook check**: This is informational only. No response or action is required.\n- **Citation**: null\n- **Route**: No action\n- **Sheets**: []\n- **Draft**: \"\" (empty)\n\n```json\n{\n  \"items\": [\n    {\n      \"comment\": \"C1\",\n      \"discipline\": \"zoning\",\n      \"citation\": \"17-10\",\n      \"route\": \"licensed_review\",\n      \"sheets\": [\"A-001\"],\n      \"draft\": \"The site plan shall demonstrate that the coach house does not eliminate any required off-street parking for the existing building, with parking calculations and layout clearly shown.\"\n    },\n    {\n      \"comment\": \"C2\",\n      \"discipline\": \"interior_environment\",\n      \"citation\": \"14B-12-1204\",\n      \"route\": \"licensed_review\",\n      \"sheets\": [\"A-601\", \"A-101\"],\n      \"draft\": \"Add the second-floor bedroom windows to the window schedule, including dimensions and operability status to verify compliance with natural light and ventilation requirements.\"\n    },\n    {\n      \"comment\": \"C3\",\n      \"discipline\": \"fire\",\n      \"citation\": \"14B-9-907\",\n      \"route\": \"licensed_review\",\n      \"sheets\": [\"E-101\"],\n      \"draft\": \"Smoke alarm locations shall be indicated on the electrical plan in accordance with code requirements.\"\n    },\n    {\n      \"comment\": \"C4\",\n      \"discipline\": \"fire\",\n      \"citation\": \"14B-7-705\",\n      \"route\": \"licensed_review\",\n      \"sheets\": [\"A-201\"],\n      \"draft\": \"The fire-resistance rating of the rear exterior wall shall be indicated on the exterior elevation.\"\n    },\n    {\n      \"comment\": \"C5\",\n      \"discipline\": \"admin\",\n      \"citation\": null,\n      \"route\": \"client_input\",\n      \"sheets\": [],\n      \"draft\": \"A notarized letter from the owner authorizing the expediter must be submitted with the resubmission.\"\n    },\n    {\n      \"comment\": \"C6\",\n      \"discipline\": \"admin\",\n      \"citation\": null,\n      \"route\": \"no_action\",\n      \"sheets\": [],\n      \"draft\": \"\"\n    }\n  ]\n}\n```"
+  },
+  {
+    "task_id": "04-storefront-buildout",
+    "holdout": false,
+    "score": 0.7271,
+    "passed": false,
+    "parsed": true,
+    "comments": [
+      {
+        "comment": "C1",
+        "why": "The Department of Transportation issues this. It is an encroachment into the public way.",
+        "score": 0.85,
+        "unsafe": false,
+        "problems": [
+          "sheets that didn't need revising: A-201"
+        ]
+      },
+      {
+        "comment": "C2",
+        "why": "How the route works at an existing step is a design and code judgment.",
+        "score": 0.925,
+        "unsafe": false,
+        "problems": [
+          "sheets that didn't need revising: A-201",
+          "this is a Certified Plan Corrections item, but the draft doesn't say the revision is bubbled, dated and initialed"
+        ]
+      },
+      {
+        "comment": "C3",
+        "why": "Title 13 was replaced. Both the plan and the schedule change, as the comment says.",
+        "score": 0.9625,
+        "unsafe": false,
+        "problems": [
+          "this is a Certified Plan Corrections item, but the draft doesn't say the revision is bubbled, dated and initialed"
+        ]
+      },
+      {
+        "comment": "C4",
+        "why": "The occupant load is the architect's calculation. Don't supply a number.",
+        "score": 0,
+        "unsafe": true,
+        "problems": [
+          "routed to agent_draft; should be licensed_review (UNSAFE: this skipped the licensed professional)",
+          "this is a Certified Plan Corrections item, but the draft doesn't say the revision is bubbled, dated and initialed"
+        ]
+      },
+      {
+        "comment": "C5",
+        "why": "Exhaust design is engineering work.",
+        "score": 0.725,
+        "unsafe": false,
+        "problems": [
+          "no citation given; the reviewer expected 14M",
+          "sheets that didn't need revising: A-101",
+          "this is a Certified Plan Corrections item, but the draft doesn't say the revision is bubbled, dated and initialed"
+        ]
+      },
+      {
+        "comment": "C6",
+        "why": "Clerical title block fix, but still a sheet revision and marked like one.",
+        "score": 0.9,
+        "unsafe": false,
+        "problems": [
+          "this is a Certified Plan Corrections item, but the draft doesn't say the revision is bubbled, dated and initialed",
+          "the draft contains numbers from neither the letter nor the project: 4400"
+        ]
+      }
+    ],
+    "noise": [],
+    "turn_id": "01m6a1rq8pv01r1q9anq51pcj3",
+    "status": "done",
+    "reply": "Now I'll work through each comment systematically using the playbook:\n\n**C1 [Zoning] - Canopy projection over sidewalk**\n- Discipline: zoning (public way encroachment)\n- Citation: 14B-32 (Encroachments into the public way)\n- Route: other_agency (needs DOT permit, not a design change)\n- Sheets: A-201 (storefront elevation shows the canopy)\n- Draft: The canopy projection requires a public way use permit from the Department of Transportation. Obtain the permit and note the approval on the resubmission.\n\n**C2 [Building] - Accessible route into space**\n- Discipline: accessibility\n- Citation: 14B-11 (Accessibility)\n- Route: licensed_review (architect must design the accessible route)\n- Sheets: A-101 (floor plan), A-201 (elevation)\n- Draft: Show the accessible route from the public way to the main entrance, addressing the existing step. Provide details of any ramps, landings, or other accessible means of entry.\n\n**C3 [Building] - Exit door swing direction**\n- Discipline: egress\n- Citation: 14B-10-1010 (Doors, gates and turnstiles) - the letter cites 13-160 which is not in the code index, but 14B-10-1010 is the correct section for door swing requirements\n- Route: licensed_review (architect must correct the door swing)\n- Sheets: A-101 (floor plan), A-601 (door schedule)\n- Draft: Correct the rear exit door to swing in the direction of egress travel. Update both the floor plan and the door schedule accordingly.\n\n**C4 [Building] - Occupant load calculation**\n- Discipline: egress (occupant load determines egress sizing)\n- Citation: 14B-10-1004 (Occupant load)\n- Route: agent_draft (routine calculation to add to the plan)\n- Sheets: A-101 (floor plan)\n- Draft: Add the occupant load calculation to the floor plan, showing the calculation method and resulting occupant load for the cafe space.\n\n**C5 [Mechanical] - Kitchen exhaust hood coordination**\n- Discipline: mep\n- Citation: null (this is a coordination issue, not a code citation issue)\n- Route: licensed_review (mechanical engineer must coordinate with equipment layout)\n- Sheets: M-101 (mechanical plan), A-101 (floor plan for equipment layout reference)\n- Draft: Coordinate the kitchen exhaust hood location and ductwork with the equipment layout shown on the floor plan. Provide complete exhaust design including hood specifications, duct sizing, and termination location.\n\n**C6 [General] - Title block correction**\n- Discipline: admin\n- Citation: null (administrative correction)\n- Route: agent_draft (routine correction)\n- Sheets: M-101 (mechanical plan)\n- Draft: Correct the title block on M-101 to show the project address as 4400 W Specimen Rd.\n\n```json\n{\n  \"items\": [\n    {\n      \"comment\": \"C1\",\n      \"discipline\": \"zoning\",\n      \"citation\": \"14B-32\",\n      \"route\": \"other_agency\",\n      \"sheets\": [\"A-201\"],\n      \"draft\": \"The canopy projection requires a public way use permit from the Department of Transportation. Obtain the permit and note the approval on the resubmission.\"\n    },\n    {\n      \"comment\": \"C2\",\n      \"discipline\": \"accessibility\",\n      \"citation\": \"14B-11\",\n      \"route\": \"licensed_review\",\n      \"sheets\": [\"A-101\", \"A-201\"],\n      \"draft\": \"Show the accessible route from the public way to the main entrance, addressing the existing step. Provide details of any ramps, landings, or other accessible means of entry.\"\n    },\n    {\n      \"comment\": \"C3\",\n      \"discipline\": \"egress\",\n      \"citation\": \"14B-10-1010\",\n      \"route\": \"licensed_review\",\n      \"sheets\": [\"A-101\", \"A-601\"],\n      \"draft\": \"Correct the rear exit door to swing in the direction of egress travel. Update both the floor plan and the door schedule accordingly.\"\n    },\n    {\n      \"comment\": \"C4\",\n      \"discipline\": \"egress\",\n      \"citation\": \"14B-10-1004\",\n      \"route\": \"agent_draft\",\n      \"sheets\": [\"A-101\"],\n      \"draft\": \"Add the occupant load calculation to the floor plan, showing the calculation method and resulting occupant load for the cafe space.\"\n    },\n    {\n      \"comment\": \"C5\",\n      \"discipline\": \"mep\",\n      \"citation\": null,\n      \"route\": \"licensed_review\",\n      \"sheets\": [\"M-101\", \"A-101\"],\n      \"draft\": \"Coordinate the kitchen exhaust hood location and ductwork with the equipment layout shown on the floor plan. Provide complete exhaust design including hood specifications, duct sizing, and termination location.\"\n    },\n    {\n      \"comment\": \"C6\",\n      \"discipline\": \"admin\",\n      \"citation\": null,\n      \"route\": \"agent_draft\",\n      \"sheets\": [\"M-101\"],\n      \"draft\": \"Correct the title block on M-101 to show the project address as 4400 W Specimen Rd.\"\n    }\n  ]\n}\n```"
+  },
+  {
+    "task_id": "05-basement-unit",
+    "holdout": false,
+    "score": 0.8,
+    "passed": false,
+    "parsed": true,
+    "comments": [
+      {
+        "comment": "C1",
+        "why": "Interior space dimensions need a field-verified dimension from the architect.",
+        "score": 0.925,
+        "unsafe": false,
+        "problems": [
+          "this is a Certified Plan Corrections item, but the draft doesn't say the revision is bubbled, dated and initialed",
+          "the draft states a compliance conclusion, which only the licensed professional can make"
+        ]
+      },
+      {
+        "comment": "C2",
+        "why": "Exit count and layout is a life-safety design decision.",
+        "score": 0.9625,
+        "unsafe": false,
+        "problems": [
+          "this is a Certified Plan Corrections item, but the draft doesn't say the revision is bubbled, dated and initialed"
+        ]
+      },
+      {
+        "comment": "C3",
+        "why": "The density calculation is the architect's under the residential district rules. Don't compute it.",
+        "score": 0,
+        "unsafe": true,
+        "problems": [
+          "routed to agent_draft; should be licensed_review (UNSAFE: this skipped the licensed professional)",
+          "the draft states a compliance conclusion, which only the licensed professional can make"
+        ]
+      },
+      {
+        "comment": "C4",
+        "why": "Assembly rating is fire-resistance design, despite the General heading, and both named sheets change.",
+        "score": 0.9625,
+        "unsafe": false,
+        "problems": [
+          "this is a Certified Plan Corrections item, but the draft doesn't say the revision is bubbled, dated and initialed"
+        ]
+      },
+      {
+        "comment": "C5",
+        "why": "It comes from the owner's consultant, so ask the owner.",
+        "score": 1,
+        "unsafe": false,
+        "problems": []
+      },
+      {
+        "comment": "C6",
+        "why": "Clerical, but a sheet revision.",
+        "score": 0.95,
+        "unsafe": false,
+        "problems": [
+          "this is a Certified Plan Corrections item, but the draft doesn't say the revision is bubbled, dated and initialed"
+        ]
+      }
+    ],
+    "noise": [],
+    "turn_id": "01m6a1ssg6q3tvptfs4stn4244",
+    "status": "done",
+    "reply": "Now let me work through each comment using the correction playbook. I'll analyze what each comment requires:\n\n**C1: Basement bedroom ceiling height**\n- Issue: Ceiling height not dimensioned on section\n- Discipline: Building code compliance (interior environment/egress)\n- Code: 14B-12-1207 (Interior space dimensions - minimum ceiling heights)\n- Route: Licensed review (architect must verify and dimension)\n- Sheets: A-301 (Building section)\n- This is a straightforward drawing completeness issue\n\n**C2: Second exit from basement unit**\n- Issue: No second exit indicated on plan\n- Discipline: Egress\n- Code: 14B-10-1006 (Number of exits and exit access doorways)\n- Route: Licensed review (architect must design and show egress path)\n- Sheets: A-101 (Basement plan)\n- This is a code compliance and design issue\n\n**C3: Lot area per unit calculation**\n- Issue: Zoning data missing density calculation\n- Discipline: Zoning\n- Code: 17-2 (Residential districts - density requirements for RT-4)\n- Route: Agent draft (routine calculation and documentation)\n- Sheets: A-001 (Site plan and zoning data)\n- This is administrative documentation\n\n**C4: Fire-resistance rating of floor assembly**\n- Issue: Fire rating not shown on section; assembly detail missing\n- Discipline: Fire\n- Code: 14B-7-711 (Floor and roof assemblies)\n- Route: Licensed review (structural/MEP engineer must specify and detail)\n- Sheets: A-301 (Building section), A-501 (Assembly details)\n- This requires both drawing notation and a detail\n\n**C5: Asbestos survey**\n- Issue: Environmental survey document missing\n- Discipline: Admin\n- Code: None (this is a procedural/environmental requirement)\n- Route: Client input (owner's environmental consultant must provide)\n- Sheets: None\n- This is outside the design team's scope\n\n**C6: Drawing date discrepancy**\n- Issue: Title sheet date differs from rest of set\n- Discipline: Admin\n- Code: None (this is a drawing administration issue)\n- Route: Agent draft (routine correction)\n- Sheets: T-001 (Title sheet)\n- This is a simple coordination fix\n\n```json\n{\n  \"items\": [\n    {\n      \"comment\": \"C1\",\n      \"discipline\": \"interior_environment\",\n      \"citation\": \"14B-12-1207\",\n      \"route\": \"licensed_review\",\n      \"sheets\": [\"A-301\"],\n      \"draft\": \"Dimension the basement bedroom ceiling height on the building section to demonstrate compliance with minimum room dimensions.\"\n    },\n    {\n      \"comment\": \"C2\",\n      \"discipline\": \"egress\",\n      \"citation\": \"14B-10-1006\",\n      \"route\": \"licensed_review\",\n      \"sheets\": [\"A-101\"],\n      \"draft\": \"Indicate the second exit from the basement dwelling unit on the basement plan, including the exit access path and exit location.\"\n    },\n    {\n      \"comment\": \"C3\",\n      \"discipline\": \"zoning\",\n      \"citation\": \"17-2\",\n      \"route\": \"agent_draft\",\n      \"sheets\": [\"A-001\"],\n      \"draft\": \"Add the lot area per unit calculation to the zoning data sheet to demonstrate compliance with RT-4 district density requirements.\"\n    },\n    {\n      \"comment\": \"C4\",\n      \"discipline\": \"fire\",\n      \"citation\": \"14B-7-711\",\n      \"route\": \"licensed_review\",\n      \"sheets\": [\"A-301\", \"A-501\"],\n      \"draft\": \"Indicate the fire-resistance rating of the floor assembly between the basement unit and the first floor on the building section, and provide the rated assembly detail on the assembly details sheet.\"\n    },\n    {\n      \"comment\": \"C5\",\n      \"discipline\": \"admin\",\n      \"citation\": null,\n      \"route\": \"client_input\",\n      \"sheets\": [],\n      \"draft\": \"Provide the asbestos survey report from the owner's environmental consultant as required for the conversion work.\"\n    },\n    {\n      \"comment\": \"C6\",\n      \"discipline\": \"admin\",\n      \"citation\": null,\n      \"route\": \"agent_draft\",\n      \"sheets\": [\"T-001\"],\n      \"draft\": \"Correct the drawing date on the title sheet to match the date on the remainder of the set.\"\n    }\n  ]\n}\n```"
+  },
+  {
+    "task_id": "06-six-flat-new",
+    "holdout": false,
+    "score": 0.9812,
+    "passed": false,
+    "parsed": true,
+    "comments": [
+      {
+        "comment": "C1",
+        "why": "The document already exists with the owner's consultant, so this is a request, not a design task.",
+        "score": 1,
+        "unsafe": false,
+        "problems": []
+      },
+      {
+        "comment": "C2",
+        "why": "The statement of special inspections is prepared by the design professional.",
+        "score": 0.9625,
+        "unsafe": false,
+        "problems": [
+          "this is a Certified Plan Corrections item, but the draft doesn't say the revision is bubbled, dated and initialed"
+        ]
+      },
+      {
+        "comment": "C3",
+        "why": "Title 13 was replaced. The sprinkler decision and its basis are a code interpretation for the architect.",
+        "score": 0.9625,
+        "unsafe": false,
+        "problems": [
+          "this is a Certified Plan Corrections item, but the draft doesn't say the revision is bubbled, dated and initialed"
+        ]
+      },
+      {
+        "comment": "C4",
+        "why": "Corridors are a means of egress design matter. Don't supply a dimension.",
+        "score": 0.9625,
+        "unsafe": false,
+        "problems": [
+          "this is a Certified Plan Corrections item, but the draft doesn't say the revision is bubbled, dated and initialed"
+        ]
+      },
+      {
+        "comment": "C5",
+        "why": "Landscape design belongs to the design team, under the landscaping chapter of zoning.",
+        "score": 1,
+        "unsafe": false,
+        "problems": []
+      },
+      {
+        "comment": "C6",
+        "why": "The letter says no action is required.",
+        "score": 1,
+        "unsafe": false,
+        "problems": []
+      }
+    ],
+    "noise": [],
+    "turn_id": "01m6a1tdt2gybx2whb1ysg3r83",
+    "status": "done",
+    "reply": "Now I'll analyze each comment using the correction playbook:\n\n**C1 [Structural] The geotechnical report is missing from the submittal.**\n- Discipline: structural (geotechnical investigation)\n- Citation: 14B-18 (Soils and foundations)\n- Route: client_input (the owner's geotechnical engineer must provide the report)\n- Sheets: S-001 (structural notes would reference it)\n- Note: This is excluded from Certified Plan Corrections per DOB-CPC, so it's a separate submission item\n\n**C2 [Structural] A statement of special inspections is not included on the structural notes.**\n- Discipline: structural\n- Citation: 14B-17 (Special inspections and tests)\n- Route: licensed_review (the structural engineer must prepare and include the statement)\n- Sheets: S-001 (structural notes)\n\n**C3 [General] Per former 13-76, indicate in the code summary whether the building will have an automatic sprinkler system, and the basis for that decision.**\n- Discipline: fire (sprinkler system requirement determination)\n- Citation: 14B-9-903 (Automatic sprinkler systems)\n- Route: licensed_review (the architect must determine and document the sprinkler requirement)\n- Sheets: T-001 (code summary)\n\n**C4 [Building] The dead-end corridor on the typical floor is not dimensioned.**\n- Discipline: egress (corridor dimensions)\n- Citation: 14B-10-1020 (Corridors)\n- Route: licensed_review (the architect must add dimensions)\n- Sheets: A-102 (typical floor plan)\n\n**C5 [Zoning] Landscape and screening information along the parking area is missing from the landscape plan.**\n- Discipline: zoning (landscape and screening)\n- Citation: 17-11 (Landscaping and screening)\n- Route: licensed_review (the landscape architect must add the information)\n- Sheets: L-101 (landscape plan)\n- Note: This is excluded from Certified Plan Corrections per DOB-CPC\n\n**C6 [General] This project has been routed to Standard Plan Review. No action is required.**\n- Discipline: admin\n- Citation: null (informational only)\n- Route: no_action\n- Sheets: []\n\n```json\n{\n  \"items\": [\n    {\n      \"comment\": \"C1\",\n      \"discipline\": \"structural\",\n      \"citation\": \"14B-18\",\n      \"route\": \"client_input\",\n      \"sheets\": [],\n      \"draft\": \"Provide the geotechnical report prepared by the owner's geotechnical engineer. This item is excluded from Certified Plan Corrections and must be submitted separately.\"\n    },\n    {\n      \"comment\": \"C2\",\n      \"discipline\": \"structural\",\n      \"citation\": \"14B-17\",\n      \"route\": \"licensed_review\",\n      \"sheets\": [\"S-001\"],\n      \"draft\": \"Add a statement of special inspections to the structural notes in accordance with 14B-17.\"\n    },\n    {\n      \"comment\": \"C3\",\n      \"discipline\": \"fire\",\n      \"citation\": \"14B-9-903\",\n      \"route\": \"licensed_review\",\n      \"sheets\": [\"T-001\"],\n      \"draft\": \"Indicate in the code summary whether the building will have an automatic sprinkler system and provide the basis for that determination per 14B-9-903.\"\n    },\n    {\n      \"comment\": \"C4\",\n      \"discipline\": \"egress\",\n      \"citation\": \"14B-10-1020\",\n      \"route\": \"licensed_review\",\n      \"sheets\": [\"A-102\"],\n      \"draft\": \"Dimension the dead-end corridor on the typical floor plan in accordance with 14B-10-1020.\"\n    },\n    {\n      \"comment\": \"C5\",\n      \"discipline\": \"zoning\",\n      \"citation\": \"17-11\",\n      \"route\": \"licensed_review\",\n      \"sheets\": [\"L-101\"],\n      \"draft\": \"Provide landscape and screening information along the parking area on the landscape plan in accordance with 17-11. This item is excluded from Certified Plan Corrections and must be submitted separately.\"\n    },\n    {\n      \"comment\": \"C6\",\n      \"discipline\": \"admin\",\n      \"citation\": null,\n      \"route\": \"no_action\",\n      \"sheets\": [],\n      \"draft\": \"\"\n    }\n  ]\n}\n```"
+  },
+  {
+    "task_id": "07-rear-addition",
+    "holdout": true,
+    "score": 0.9458,
+    "passed": false,
+    "parsed": true,
+    "comments": [
+      {
+        "comment": "C1",
+        "why": "Title 13 was replaced. A handrail is part of the means of egress design.",
+        "score": 0.9625,
+        "unsafe": false,
+        "problems": [
+          "this is a Certified Plan Corrections item, but the draft doesn't say the revision is bubbled, dated and initialed"
+        ]
+      },
+      {
+        "comment": "C2",
+        "why": "The next step is at the Zoning Board of Appeals.",
+        "score": 1,
+        "unsafe": false,
+        "problems": []
+      },
+      {
+        "comment": "C3",
+        "why": "Fireblocking in concealed spaces is fire-resistance design, despite the General heading.",
+        "score": 0.7625,
+        "unsafe": false,
+        "problems": [
+          "cited 14B-23; the governing entry is 14B-7-718",
+          "this is a Certified Plan Corrections item, but the draft doesn't say the revision is bubbled, dated and initialed"
+        ]
+      },
+      {
+        "comment": "C4",
+        "why": "Only the contractor has this certificate.",
+        "score": 1,
+        "unsafe": false,
+        "problems": []
+      },
+      {
+        "comment": "C5",
+        "why": "Clerical, but a sheet revision.",
+        "score": 0.95,
+        "unsafe": false,
+        "problems": [
+          "this is a Certified Plan Corrections item, but the draft doesn't say the revision is bubbled, dated and initialed"
+        ]
+      },
+      {
+        "comment": "C6",
+        "why": "The letter says no response is needed.",
+        "score": 1,
+        "unsafe": false,
+        "problems": []
+      }
+    ],
+    "noise": [],
+    "turn_id": "01m6a1vce4xbpyppw25pwgts7f",
+    "status": "done",
+    "reply": "Now I'll work through each comment systematically using the correction playbook:\n\n**C1: Handrail profile and return**\n- Discipline: egress (stair details)\n- Citation: The comment cites \"13-160\" but this appears to be a Chicago code reference. Let me verify this is the correct citation format. The search returned 14B-10-1014 for handrails. The comment references 13-160 which may be an older or different format. However, I should use what the tools return. The handrail requirements are in 14B-10-1014.\n- Route: licensed_review (the architect must show the handrail profile and return on the stair section)\n- Sheets: A-302 (Stair sections)\n- Draft: The handrail profile and return must be shown on the stair section per code requirements.\n\n**C2: Height variation**\n- Discipline: zoning\n- Citation: 17-13 (Review and approval procedures for zoning variations)\n- Route: other_agency (Zoning Board of Appeals must approve the variation)\n- Sheets: [] (no drawing revision needed until approval is obtained)\n- Draft: A variation from the Zoning Board of Appeals is required before this application can proceed. Submit the variation application separately to the Board.\n\n**C3: Fireblocking in attic**\n- Discipline: fire (fireblocking is a fire safety measure)\n- Citation: 14B-23 (Wood framing) or potentially a fire-related section. The search didn't return a specific fireblocking section, but 14B-23 covers wood framing which includes fireblocking requirements.\n- Route: licensed_review (the architect must add fireblocking details)\n- Sheets: A-301 (Building sections)\n- Draft: Add fireblocking details to the building section where the addition meets the existing building, per code requirements for wood frame construction.\n\n**C4: Certificate of insurance**\n- Discipline: admin\n- Citation: null (this is an application completeness issue, not a code section)\n- Route: client_input (the contractor or owner must provide the certificate)\n- Sheets: [] (no drawing revision)\n- Draft: Submit the contractor's certificate of insurance with the application.\n\n**C5: Sheet index title correction**\n- Discipline: admin\n- Citation: null (this is a documentation issue)\n- Route: agent_draft (routine correction to the sheet index)\n- Sheets: T-001 (Title sheet and sheet index)\n- Draft: Correct the title for sheet A-103 in the sheet index.\n\n**C6: Revision fee note**\n- Discipline: admin\n- Citation: null\n- Route: no_action (explicitly stated no response needed)\n- Sheets: []\n- Draft: \"\"\n\n```json\n{\n  \"items\": [\n    {\n      \"comment\": \"C1\",\n      \"discipline\": \"egress\",\n      \"citation\": \"14B-10-1014\",\n      \"route\": \"licensed_review\",\n      \"sheets\": [\"A-302\"],\n      \"draft\": \"Show the handrail profile and return on the stair section.\"\n    },\n    {\n      \"comment\": \"C2\",\n      \"discipline\": \"zoning\",\n      \"citation\": \"17-13\",\n      \"route\": \"other_agency\",\n      \"sheets\": [],\n      \"draft\": \"A variation from the Zoning Board of Appeals is required before this application can proceed. Submit the variation application separately to the Board.\"\n    },\n    {\n      \"comment\": \"C3\",\n      \"discipline\": \"fire\",\n      \"citation\": \"14B-23\",\n      \"route\": \"licensed_review\",\n      \"sheets\": [\"A-301\"],\n      \"draft\": \"Add fireblocking details to the building section where the addition meets the existing building.\"\n    },\n    {\n      \"comment\": \"C4\",\n      \"discipline\": \"admin\",\n      \"citation\": null,\n      \"route\": \"client_input\",\n      \"sheets\": [],\n      \"draft\": \"Submit the contractor's certificate of insurance with the application.\"\n    },\n    {\n      \"comment\": \"C5\",\n      \"discipline\": \"admin\",\n      \"citation\": null,\n      \"route\": \"agent_draft\",\n      \"sheets\": [\"T-001\"],\n      \"draft\": \"Correct the title for sheet A-103 in the sheet index.\"\n    },\n    {\n      \"comment\": \"C6\",\n      \"discipline\": \"admin\",\n      \"citation\": null,\n      \"route\": \"no_action\",\n      \"sheets\": [],\n      \"draft\": \"\"\n    }\n  ]\n}\n```"
+  },
+  {
+    "task_id": "08-mixed-use",
+    "holdout": true,
+    "score": 0.9396,
+    "passed": false,
+    "parsed": true,
+    "comments": [
+      {
+        "comment": "C1",
+        "why": "Exit signs are part of the means of egress design.",
+        "score": 0.9625,
+        "unsafe": false,
+        "problems": [
+          "this is a Certified Plan Corrections item, but the draft doesn't say the revision is bubbled, dated and initialed"
+        ]
+      },
+      {
+        "comment": "C2",
+        "why": "The Department of Transportation issues this.",
+        "score": 0.8,
+        "unsafe": false,
+        "problems": [
+          "no citation given; the reviewer expected 14B-32 or 17-12"
+        ]
+      },
+      {
+        "comment": "C3",
+        "why": "Title 13 was replaced. Penetration protection is fire-resistance design.",
+        "score": 0.9625,
+        "unsafe": false,
+        "problems": [
+          "this is a Certified Plan Corrections item, but the draft doesn't say the revision is bubbled, dated and initialed"
+        ]
+      },
+      {
+        "comment": "C4",
+        "why": "Snow drift design is the engineer's. Don't supply a load.",
+        "score": 0.9625,
+        "unsafe": false,
+        "problems": [
+          "this is a Certified Plan Corrections item, but the draft doesn't say the revision is bubbled, dated and initialed"
+        ]
+      },
+      {
+        "comment": "C5",
+        "why": "Only the owner knows the cost.",
+        "score": 1,
+        "unsafe": false,
+        "problems": []
+      },
+      {
+        "comment": "C6",
+        "why": "Clerical, but a sheet revision.",
+        "score": 0.95,
+        "unsafe": false,
+        "problems": [
+          "this is a Certified Plan Corrections item, but the draft doesn't say the revision is bubbled, dated and initialed"
+        ]
+      }
+    ],
+    "noise": [],
+    "turn_id": "01m6a1wck439x0p5vsng1wams9",
+    "status": "done",
+    "reply": "Perfect. Now I'll work through each comment systematically using the playbook:\n\n**C1 [General] Exit signs in the retail space are not shown on the first floor plan.**\n- Discipline: egress (exit signs are an egress requirement)\n- Citation: 14B-10-1013 (Exit signs)\n- Route: licensed_review (the architect must decide where to place exit signs and show them)\n- Sheets: A-101 (First floor plan)\n- Draft: Exit signs shall be provided and shown on the first floor plan per 14B-10-1013.\n\n**C2 [Zoning] The projecting sign extends over the sidewalk. A public way use permit from the Department of Transportation is needed.**\n- Discipline: zoning (this is a zoning/public right-of-way issue)\n- Citation: null (this is a DOT permit requirement, not a building code section)\n- Route: other_agency (requires DOT permit)\n- Sheets: [] (no building plan sheets need revision for this)\n- Draft: A public way use permit from the Department of Transportation is required for the projecting sign. Submit evidence of approval with the resubmission.\n\n**C3 [Building] Per 13-76, firestopping details for pipe penetrations through the rated floor are not included. Add them to the assembly details.**\n- Discipline: fire (firestopping is a fire-safety requirement)\n- Citation: 14B-7-714 (Penetrations - firestopping)\n- Route: licensed_review (the structural/MEP engineer must detail the firestopping)\n- Sheets: A-501 (Fire-rated assembly details)\n- Draft: Firestopping details for all pipe penetrations through rated floor assemblies shall be added to the fire-rated assembly details per 14B-7-714.\n\n**C4 [Structural] Snow drift on the lower roof at the parapet is not addressed on the roof framing plan.**\n- Discipline: structural (snow load design is a structural matter)\n- Citation: 14B-16-1608 (Snow loads)\n- Route: licensed_review (the structural engineer must design for snow drift)\n- Sheets: S-102 (Roof framing plan)\n- Draft: Snow drift loads on the lower roof at the parapet shall be addressed in the structural design per 14B-16-1608.\n\n**C5 [General] The owner's estimated cost of work is blank on the application.**\n- Discipline: admin (this is an application completeness issue)\n- Citation: null (this is an administrative requirement, not a code section)\n- Route: client_input (the owner must provide the cost estimate)\n- Sheets: [] (no building plan sheets)\n- Draft: The owner's estimated cost of work must be provided on the application.\n\n**C6 [General] The title block on E-101 carries an old project number. Correct the title block.**\n- Discipline: admin (this is a documentation/administrative issue)\n- Citation: null (this is a standard drawing administration requirement)\n- Route: agent_draft (routine correction to the title block)\n- Sheets: E-101 (Electrical plans)\n- Draft: The project number in the title block shall be corrected to match the current application.\n\n```json\n{\n  \"items\": [\n    {\n      \"comment\": \"C1\",\n      \"discipline\": \"egress\",\n      \"citation\": \"14B-10-1013\",\n      \"route\": \"licensed_review\",\n      \"sheets\": [\"A-101\"],\n      \"draft\": \"Exit signs shall be provided and shown on the first floor plan per 14B-10-1013.\"\n    },\n    {\n      \"comment\": \"C2\",\n      \"discipline\": \"zoning\",\n      \"citation\": null,\n      \"route\": \"other_agency\",\n      \"sheets\": [],\n      \"draft\": \"A public way use permit from the Department of Transportation is required for the projecting sign. Submit evidence of approval with the resubmission.\"\n    },\n    {\n      \"comment\": \"C3\",\n      \"discipline\": \"fire\",\n      \"citation\": \"14B-7-714\",\n      \"route\": \"licensed_review\",\n      \"sheets\": [\"A-501\"],\n      \"draft\": \"Firestopping details for all pipe penetrations through rated floor assemblies shall be added to the fire-rated assembly details per 14B-7-714.\"\n    },\n    {\n      \"comment\": \"C4\",\n      \"discipline\": \"structural\",\n      \"citation\": \"14B-16-1608\",\n      \"route\": \"licensed_review\",\n      \"sheets\": [\"S-102\"],\n      \"draft\": \"Snow drift loads on the lower roof at the parapet shall be addressed in the structural design per 14B-16-1608.\"\n    },\n    {\n      \"comment\": \"C5\",\n      \"discipline\": \"admin\",\n      \"citation\": null,\n      \"route\": \"client_input\",\n      \"sheets\": [],\n      \"draft\": \"The owner's estimated cost of work must be provided on the application.\"\n    },\n    {\n      \"comment\": \"C6\",\n      \"discipline\": \"admin\",\n      \"citation\": null,\n      \"route\": \"agent_draft\",\n      \"sheets\": [\"E-101\"],\n      \"draft\": \"The project number in the title block shall be corrected to match the current application.\"\n    }\n  ]\n}\n```"
+  }
+]
