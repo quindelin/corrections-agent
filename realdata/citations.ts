@@ -64,20 +64,43 @@ export function scrub(text: string): string {
 const NAME_TOKEN = "[name removed]";
 const WORD = "[A-Z][a-z]+(?:[A-Z][a-z]+)?(?:-[A-Z][a-z]+)?";
 const FULL_NAME = `${WORD} ${WORD}`;
-// Where the letters put staff names: in place of a section heading, as a markup author, as a contact, or in a signature.
+// Firms and places sit in the same spots as people. They aren't personal, and past comments read better with them kept.
+const NOT_A_PERSON = /^(?:The|Council)\b|\b(?:Ave|Avenue|St|Street|Place|Way|Bay|Park|Harbor|Beach|City|State|Washington|Tribe|Department|Group|Law|Labs|Programs|Solutions|Consultants|Engineers?|Engineering|Geotechnical|Geosciences)\b/;
+const CAPITALIZED_PAIR = /(?<![A-Za-z])[A-Z][a-z]{2,} [A-Z][a-z]{2,}(?:-[A-Z][a-z]+)?(?![A-Za-z])/g;
+// Where the letters put names. Each pattern captures any text to keep, then the name.
 const NAME_PATTERNS = [
-  new RegExp(`(?<![A-Za-z])()(${FULL_NAME}|[A-Z]{2}[a-z]{3,})(?= \\(\\d+\\))`, "g"),
-  new RegExp(`\\b(Author: )(${FULL_NAME})(?= Layer:)`, "g"),
-  new RegExp(`\\b(Contact(?: \\(FYI Item\\):)? )(${FULL_NAME})(?![A-Za-z])`, "g"),
-  new RegExp(`(?<![A-Za-z])()(${FULL_NAME})(?= *(?:\\[|- )? *Building Plans Examiner)`, "g"),
+  // In place of a section heading, often run into the sentence before it.
+  new RegExp(`()(${FULL_NAME}|[A-Z]{2}[a-z]{3,})(?= \\(\\d+\\))`, "g"),
+  // After a label or a word that introduces a person.
+  new RegExp(`\\b(Author: |Contact(?: \\(FYI Item\\):)? |Reviewer ?[-:] ?|(?:Best|Thanks|Regards|Sincerely),? |(?:[Pp]er|from|by|with|between|contact|email|to) )(${FULL_NAME})(?![A-Za-z])`, "g"),
+  // Before a job title, a removed contact detail, or a verb seen with a person.
+  new RegExp(`(?<![A-Za-z])()(${FULL_NAME})(?=,? *(?:\\[|- )? *(?:LU Planner|SDCI|P\\.?E\\.?\\b|S\\.?E\\.?\\b|(?:Building|Structural) Plans? Examiner|Permit Process))`, "g"),
+  new RegExp(`(?<![A-Za-z])()(${FULL_NAME})(?=(?: at| -| Email ?[-:])? *\\(?\\[(?:email|phone) removed)`, "g"),
+  new RegExp(`(?<![A-Za-z])()(${FULL_NAME})(?=,? (?:sent|the assigned|has transitioned))`, "g"),
 ];
 
 /**
- * Removes staff names, for the same reason as scrub. A word the city never uses in a subject line or review type counts
- * as part of a name, so "Neighborhood Residential (2)" stays and no list of names has to live in this public repo.
+ * Removes people's names, for the same reason as scrub. A word counts as part of a name if the city never uses it in a
+ * subject line or review type and rarely writes it in lowercase. So "Neighborhood Residential (2)" stays, and no list of
+ * names has to live in this public repo. It can't catch a first name alone.
+ *
+ * `names` looks only where names tend to go. `namesAndRarePairs` also removes any two capitalized words in a row made only
+ * of such words, wherever they are, unless the pair recurs like a phrase. That finds more people but also takes some plant
+ * and product names, so it's for the large set of past comments. The eval letters were read through by hand and only use `names`.
  */
-export function nameStripper(cityWords: Set<string>): (text: string) => string {
+export function nameStripper(comments: { comment?: string; commentsubject?: string; reviewtype?: string }[]) {
+  const cityWords = new Set(comments.flatMap((c) => `${c.commentsubject ?? ""} ${c.reviewtype ?? ""}`.toLowerCase().match(/[a-z]+/g) ?? []));
+  const lowercase = new Map<string, number>();
+  for (const c of comments) for (const w of scrub(c.comment ?? "").match(/(?<![A-Za-z])[a-z]+(?![A-Za-z])/g) ?? []) lowercase.set(w, (lowercase.get(w) ?? 0) + 1);
+  for (const [w, n] of lowercase) if (n >= 3) cityWords.add(w);
   // Text runs together in these letters, so "PlanAddressing" and "BZoning" have to be read as separate words.
-  const isName = (s: string) => s.replace(/([a-z])([A-Z])/g, "$1 $2").replace(/\b([A-Z])([A-Z][a-z])/g, "$1 $2").split(/[\s-]+/).some((w) => w.length > 1 && !cityWords.has(w.toLowerCase()));
-  return (text) => NAME_PATTERNS.reduce((t, re) => t.replace(re, (m, label: string, name: string) => (isName(name) ? label + NAME_TOKEN : m)), text);
+  const isName = (s: string) => {
+    const spaced = s.replace(/([a-z])([A-Z])/g, "$1 $2").replace(/\b([A-Z])([A-Z][a-z])/g, "$1 $2");
+    return !NOT_A_PERSON.test(spaced) && spaced.split(/[\s-]+/).some((w) => w.length > 1 && !cityWords.has(w.toLowerCase()));
+  };
+  const names = (text: string) => NAME_PATTERNS.reduce((t, re) => t.replace(re, (m, label: string, name: string) => (isName(name) ? label + NAME_TOKEN : m)), text);
+  const pairCounts = new Map<string, number>();
+  for (const c of comments) for (const [pair] of names(scrub(c.comment ?? "")).matchAll(CAPITALIZED_PAIR)) pairCounts.set(pair, (pairCounts.get(pair) ?? 0) + 1);
+  const isRarePair = (s: string) => (pairCounts.get(s) ?? 0) < 10 && !NOT_A_PERSON.test(s) && s.split(/[\s-]+/).every((w) => !cityWords.has(w.toLowerCase()));
+  return { names, namesAndRarePairs: (text: string) => names(text).replace(CAPITALIZED_PAIR, (m) => (isRarePair(m) ? NAME_TOKEN : m)) };
 }

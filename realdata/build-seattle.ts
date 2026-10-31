@@ -66,7 +66,7 @@ const permits = await cached<RawPermit[]>("permits.json", async () => {
 const permitBy = new Map(permits.map((p) => [p.permitnum, p]));
 console.log(`${comments.length} comments, ${permitNums.length} permits in comments, ${permits.length} permit records`);
 
-const stripNames = nameStripper(new Set(comments.flatMap((c) => `${c.commentsubject ?? ""} ${c.reviewtype ?? ""}`.toLowerCase().match(/[a-z]+/g) ?? [])));
+const stripNames = nameStripper(comments);
 const hash = (s: string) => createHash("sha1").update(s).digest("hex");
 const median = (xs: number[]) => {
   const s = [...xs].sort((a, b) => a - b);
@@ -139,7 +139,7 @@ for (const [url, list] of [...byLetter].sort((a, b) => hash(a[0]).localeCompare(
   const permit = permitBy.get(first.permitnum);
   if (!permit?.description) continue;
   const built: EvalComment[] = list.map((c, i) => {
-    const clean = stripNames(scrub(c.comment!)).slice(0, 1200);
+    const clean = stripNames.names(scrub(c.comment!)).slice(0, 1200);
     return {
       id: `C${i + 1}`,
       text: maskCitations(clean),
@@ -178,7 +178,7 @@ writeFileSync(join(OUT, "letters.json"), JSON.stringify({ note: "Real letters fr
 
 const corpus = comments
   .filter((c) => c.comment?.trim() && !usedPermits.has(c.permitnum))
-  .map((c) => ({ review_type: c.reviewtype ?? null, subject: c.commentsubject ?? null, cycle: Number(c.reviewcycle) || null, text: stripNames(scrub(c.comment!)).slice(0, 700), citations: findCitations(c.comment!) }));
+  .map((c) => ({ review_type: c.reviewtype ?? null, subject: c.commentsubject ?? null, cycle: Number(c.reviewcycle) || null, text: stripNames.namesAndRarePairs(scrub(c.comment!)).slice(0, 700), citations: findCitations(c.comment!) }));
 mkdirSync(PACK, { recursive: true });
 writeFileSync(join(PACK, "comments.jsonl"), corpus.map((c) => JSON.stringify(c)).join("\n") + "\n");
 
