@@ -1,0 +1,34 @@
+# The only public app. REDLINE_API_KEY and any Stripe values are Fly secrets, not set here.
+# Deploy from the repo root, the build context:
+#   fly deploy --config deploy/fly/api.toml --dockerfile deploy/Dockerfile --ha=false
+# Keep the hosts below in step with the app names in trueforge.toml and mcp.toml.
+
+app = "redline-api"
+primary_region = "iad"
+
+[env]
+  REDLINE_HOST = "::"
+  DEMO_PORT = "8792"
+  TRUEFORGE_BASE_URL = "http://redline-trueforge.internal:8790"
+  REDLINE_MCP_URL = "http://redline-mcp.internal:8791/mcp"
+
+[[mounts]]
+  source = "redline_api_data"
+  destination = "/data"
+
+[http_service]
+  internal_port = 8792
+  force_https = true
+  auto_stop_machines = "off"
+  min_machines_running = 1
+
+  [[http_service.checks]]
+    method = "GET"
+    path = "/health"
+    interval = "30s"
+    timeout = "5s"
+    grace_period = "30s"
+
+[[vm]]
+  size = "shared-cpu-1x"
+  memory = "512mb"

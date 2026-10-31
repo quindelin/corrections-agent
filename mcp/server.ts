@@ -174,6 +174,8 @@ function buildServer(): McpServer {
 }
 
 const PORT = Number(process.env.MCP_PORT ?? 8791);
+// Stays on loopback unless a deployment sets this. There's no auth here, so only ever bind it to a private network.
+const HOST = process.env.MCP_HOST ?? "127.0.0.1";
 
 createServer(async (req, res) => {
   if (req.url === "/health") return void res.writeHead(200).end("ok");
@@ -184,7 +186,7 @@ createServer(async (req, res) => {
   res.on("close", () => void server.close());
   await server.connect(transport);
   await transport.handleRequest(req, res);
-}).listen(PORT, "127.0.0.1", () => {
+}).listen(PORT, HOST, () => {
   const list = [...packs.values()].map((p) => `${p.profile.id} (${p.sections.length} entries, ${p.history.length} past comments)`).join(", ");
-  console.log(`permit-research MCP server on http://127.0.0.1:${PORT}/mcp: ${list}`);
+  console.log(`permit-research MCP server on http://${HOST}:${PORT}/mcp: ${list}`);
 });

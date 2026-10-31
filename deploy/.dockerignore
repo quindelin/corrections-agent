@@ -1,0 +1,8 @@
+# For deploy/Dockerfile.trueforge, whose build context is this folder.
+# deploy/Dockerfile builds from the repo root, so it uses the .dockerignore there instead.
+*
+!Dockerfile.trueforge
+!drop-root.sh
+!trueforge-entry.mjs
+!trueforge/package.json
+!trueforge/package-lock.json

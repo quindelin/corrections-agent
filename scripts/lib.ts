@@ -56,8 +56,9 @@ export function git(...args: string[]): string {
   return execFileSync("git", args, { cwd: ROOT, encoding: "utf8" }).trim();
 }
 
+/** The commit that's running. A container has no .git, so its image sets REDLINE_GIT_SHA at build time. */
 export function headSha(): string {
-  return git("rev-parse", "HEAD");
+  return process.env.REDLINE_GIT_SHA || git("rev-parse", "HEAD");
 }
 
 /** True when these paths have no uncommitted changes (staged, unstaged or untracked). */
@@ -89,6 +90,9 @@ export function readAgent(): { agent: AgentFile; instructions: string; skills: S
   const agent = JSON.parse(readFileSync(join(AGENT_DIR, "agent.json"), "utf8")) as AgentFile;
   if (process.env.TF_AGENT_NAME) agent.name = process.env.TF_AGENT_NAME;
   if (process.env.TF_MODEL) agent.model = { ...agent.model, name: process.env.TF_MODEL };
+  // agent.json points at 127.0.0.1, which in a container is the container itself. See docs/deploy.md.
+  const mcpUrl = process.env.REDLINE_MCP_URL;
+  if (mcpUrl) agent.mcp_servers = agent.mcp_servers?.map((s) => ({ ...s, url: mcpUrl }));
   const instructions = readFileSync(join(AGENT_DIR, "instructions.md"), "utf8");
   const skillsDir = join(AGENT_DIR, "skills");
   const skills: SkillFile[] = [];

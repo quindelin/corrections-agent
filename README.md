@@ -146,6 +146,8 @@ Reports, jobs, rate limits and the waitlist go through one interface, `demo/stor
 - **Not covered:** `feedback/reviews.jsonl` and the review queue's in-memory letters stay local to one instance, and retention doesn't reach them or TrueForge sessions. Report text isn't encrypted by this code, so use a database with encryption at rest. Existing local reports aren't copied into Postgres.
 - **Tests:** `npm run test:demo` runs the same behavior tests on both backends. Postgres is PGlite, the real engine compiled to WebAssembly, reached through the `pg` driver. It has one backend process, so statements never run truly in parallel. These tests have not run against a real Postgres server.
 
+To package it for a container host, see [docs/deploy.md](docs/deploy.md).
+
 ## The scorer
 
 `evals/score.ts` is deterministic. Each comment scores 0 to 1:
@@ -188,7 +190,8 @@ demo/             the review queue
 feedback/         architect decisions from the demo (created on first use)
 scripts/          setup, run-evals, improve, export-session
 runs/             one folder per run, plus summary.csv
-docs/             locale research
+docs/             locale research, deployment
+deploy/           Dockerfiles, compose and Fly.io config
 ```
 
 ## Troubleshooting

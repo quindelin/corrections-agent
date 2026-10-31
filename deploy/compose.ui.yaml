@@ -1,0 +1,12 @@
+# Optional: reach TrueForge's Settings UI from the machine running Docker. Loopback only, because anyone who can reach
+# this port is an admin. Stop using it once the model is set.
+#
+#   docker compose -f compose.yaml -f compose.ui.yaml up -d trueforge
+#   then open http://localhost:8790 (from another machine: ssh -L 8790:127.0.0.1:8790 you@server)
+#
+# NOT YET RUN: Docker wasn't available where this was written.
+
+services:
+  trueforge:
+    ports:
+      - "127.0.0.1:8790:8790"
