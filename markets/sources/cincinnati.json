@@ -1,0 +1,96 @@
+{
+  "name": "City of Cincinnati, Ohio",
+  "authority": "City of Cincinnati",
+  "fields": {
+    "permit": "number_key",
+    "text": "entry_comments",
+    "review_type": "item_id_desc",
+    "date": "entry_date",
+    "description": "desc_of_work",
+    "permit_class": "sub_type_desc",
+    "zoning": null,
+    "subject": null,
+    "letter": null,
+    "cycle": null
+  },
+  "shape": "row_per_letter",
+  "review_types": [
+    "BPE Review Letter Comments",
+    "ZPE Review Letter Comments",
+    "ENG CHANGE DENIED"
+  ],
+  "review_type_discipline": {
+    "BPE Review Letter Comments": null,
+    "ZPE Review Letter Comments": "zoning",
+    "MSD Eng-Building Permit Review": "drainage",
+    "Water Works Building Permit": null,
+    "ENG CHANGE DENIED": null
+  },
+  "families": [
+    {
+      "code": "RCO",
+      "name": "Residential Code of Ohio",
+      "kind": "irc",
+      "aliases": []
+    },
+    {
+      "code": "OBC",
+      "name": "OBC (full name not confirmed)",
+      "kind": "ibc",
+      "aliases": []
+    },
+    {
+      "code": "CBC",
+      "name": "CBC (full name not confirmed)",
+      "kind": "dashed_municipal",
+      "aliases": []
+    },
+    {
+      "code": "OEBC",
+      "name": "OEBC (full name not confirmed)",
+      "kind": "ibc",
+      "aliases": []
+    },
+    {
+      "code": "ICC",
+      "name": "ICC (full name not confirmed)",
+      "kind": "model",
+      "aliases": []
+    },
+    {
+      "code": "ASTM",
+      "name": "ASTM (full name not confirmed)",
+      "kind": "model",
+      "aliases": []
+    },
+    {
+      "code": "LOCAL",
+      "name": "LOCAL (full name not confirmed)",
+      "kind": "dashed_municipal",
+      "aliases": []
+    },
+    {
+      "code": "OMC",
+      "name": "OMC (full name not confirmed)",
+      "kind": "model",
+      "aliases": []
+    }
+  ],
+  "bare_section_family": "LOCAL",
+  "hints": [
+    "cincinnati"
+  ],
+  "id": "cincinnati",
+  "domain": "data.cincinnati-oh.gov",
+  "dataset": "thvx-5mem",
+  "review_type_route": {},
+  "retrieved": "2026-10-31",
+  "repairs": [
+    "CBC: kind ibc changed to dashed_municipal, from how its sections are written",
+    "LOCAL: added for sections cited with only a \"§\"",
+    "OMC: added, cited in 325 rows",
+    "\"MSD Eng-Building Permit Review\": removed from review types, 0% of rows cite a code and 73% hold a usable letter",
+    "\"Water Works Building Permit\": removed from review types, 0% of rows cite a code and 0% hold a usable letter"
+  ],
+  "code_basis": "Reviewers in the sampled comments cite: RCO, OBC, CBC, OEBC, ICC, ASTM, LOCAL, OMC. Editions vary by application date and aren't resolved here."
+}

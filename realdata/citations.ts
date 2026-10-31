@@ -104,3 +104,101 @@ export function nameStripper(comments: { comment?: string; commentsubject?: stri
   const isRarePair = (s: string) => (pairCounts.get(s) ?? 0) < 10 && !NOT_A_PERSON.test(s) && s.split(/[\s-]+/).every((w) => !cityWords.has(w.toLowerCase()));
   return { names, namesAndRarePairs: (text: string) => names(text).replace(CAPITALIZED_PAIR, (m) => (isRarePair(m) ? NAME_TOKEN : m)) };
 }
+
+/** Reviewers' own names too, for new places. Kept apart from scrub so Seattle's frozen letters rebuild the same. */
+export function scrubPeople(text: string): string {
+  return scrub(text)
+    .replace(/\b(reviewed|prepared|updated|revised|entered) by:?\s+[A-Z][a-z]+(?:\s+[A-Z]\.?)?\s+[A-Z][a-z'-]+/gi, "$1 by [name removed]")
+    .replace(/\bby\s+[a-z]+\.[a-z'-]+-?(?=\s|$)/g, "by [name removed]");
+}
+
+// ---------- any place: the same operations, built from a pack's citations.json ----------
+
+export type CodeKind = "ibc" | "irc" | "model" | "dotted_municipal" | "dashed_municipal";
+export interface CodeFamily {
+  code: string;
+  name: string;
+  kind: CodeKind;
+  aliases?: string[];
+}
+export interface CitationStyle {
+  families: CodeFamily[];
+  /** The family a bare "§ 1425-19" belongs to, when reviewers leave the code name off. */
+  bare_section_family?: string | null;
+}
+export interface Citations {
+  find(text: string): string[];
+  mask(text: string): string;
+  normalize(raw: string): string | null;
+  parent(id: string): string;
+}
+
+const esc = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+const LEAD = "[\\s:,.\\-()]*(?:Section|Sec\\.?|§|Table|Chapter)?\\s*";
+const isYear = (body: string) => /^(19|20)\d\d$/.test(body);
+
+function sectionId(family: CodeFamily, rawBody: string): string | null {
+  const body = rawBody.toUpperCase().replace(/[.\-]+$/, "");
+  if (isYear(body)) return null;
+  if (family.kind === "dashed_municipal") {
+    const m = body.match(/^(\d{3,4})-(\d+)/);
+    return m ? `${family.code} ${m[1]}-${m[2]}` : null;
+  }
+  if (family.kind === "dotted_municipal") {
+    const m = body.match(/^(\d{1,2})\.(\d{2})(?:\.(\d{3}))?/);
+    return m ? `${family.code} ${m.slice(1).filter(Boolean).join(".")}` : null;
+  }
+  const m = body.match(/^([A-Z]?\d{3,4})/);
+  return m ? `${family.code} ${m[1]}` : null;
+}
+
+export function citationsFor(style: CitationStyle): Citations {
+  const byCode = new Map(style.families.map((f) => [f.code.toUpperCase(), f]));
+  const names = style.families.flatMap((f) => [f.code, ...(f.aliases ?? [])].map((n) => ({ n, f })));
+  const ownerOf = (name: string) => names.find((x) => x.n.toLowerCase() === name.toLowerCase())?.f;
+  const pattern = names.map((x) => esc(x.n)).sort((a, b) => b.length - a.length).join("|");
+  const cite = new RegExp(`(?<![\\w])(${pattern})(?![\\w])${LEAD}([A-Z]?\\d[\\w.\\-()]*)`, "gi");
+  const bare = style.bare_section_family ? byCode.get(style.bare_section_family.toUpperCase()) : undefined;
+  const bareCite = /(?:§+|\b(?:Sections?|Sec\.|[Pp]er|[Uu]nder|[Oo]f)\b)\s*(\d{3,4}-\d+[\w.()]*)/g;
+
+  const hasModelCode = style.families.some((f) => ["ibc", "irc", "model"].includes(f.kind));
+  const masks = [
+    new RegExp(`(?<![\\w])(?:${pattern})(?![\\w])${LEAD}[A-Z]?\\d[\\w.\\-()]*`, "gi"),
+    /(?:\bSection|\bSec\.|§+)\s*[A-Z]?\d[\w.\-()]*/gi,
+    /\bTable\s+[A-Z]?\d+\.\d[\w.()]*/gi,
+    ...(style.families.some((f) => f.kind === "dashed_municipal") ? [/\b\d{3,4}-\d{1,3}(?:\.\d+)?(?:\([a-z0-9]+\))*/g] : []),
+    ...(style.families.some((f) => f.kind === "dotted_municipal") ? [/\b\d{1,2}\.\d{2}\.\d{3}(?:\.[A-Z0-9]+)*\b/g] : []),
+    // A model-code section with no code name in front, like "1705.3 Soils".
+    ...(hasModelCode ? [/\b[A-Z]?\d{3,4}\.\d[\d.]*(?:\(\d+\))?/g, /\bR\d{3}\b/g, /^\s*(?!19\d\d|20\d\d)[A-Z]?\d{3,4}(?=\s+[A-Z][a-z])/gm] : []),
+  ];
+
+  const find = (text: string) => {
+    const found = new Set<string>();
+    for (const m of text.matchAll(cite)) {
+      const f = ownerOf(m[1]);
+      const id = f && sectionId(f, m[2]);
+      if (id) found.add(id);
+    }
+    if (bare) {
+      for (const m of text.matchAll(bareCite)) {
+        const id = sectionId(bare, m[1]);
+        if (id) found.add(id);
+      }
+    }
+    return [...found];
+  };
+  return {
+    find,
+    mask: (text) => masks.reduce((t, re) => t.replace(re, MASK_TOKEN), text),
+    normalize: (raw) => find(raw)[0] ?? null,
+    parent: (id) => {
+      const [code, body = ""] = id.split(" ");
+      const kind = byCode.get(code.toUpperCase())?.kind;
+      if (kind === "dashed_municipal") return `${code} ${body.split("-")[0]}`;
+      if (kind === "dotted_municipal") return `${code} ${body.split(".").slice(0, 2).join(".")}`;
+      const digits = body.replace(/^[A-Z]/, "");
+      const letter = body.match(/^[A-Z]/)?.[0] ?? "";
+      return `${code} ${letter}${digits.length >= 4 ? digits.slice(0, 2) : digits.slice(0, 1)}`;
+    },
+  };
+}

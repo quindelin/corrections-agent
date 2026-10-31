@@ -21,15 +21,16 @@
     "real:improve": "tsx realdata/improve.ts",
     "real:check-chicago": "tsx realdata/check-chicago.ts",
     "store": "tsx demo/store-cli.ts",
-    "test:demo": "node --import tsx --test --test-concurrency=1 demo/*.test.ts",
-    "typecheck": "tsc --noEmit",
     "test": "tsx --test demo/*.test.ts",
     "intake:measure": "tsx demo/measure-intake.ts",
     "test:guard": "tsx --test demo/guard.test.ts",
     "real:guard": "tsx realdata/measure-guard.ts",
     "check:services": "tsx scripts/check-services.ts",
     "test:demo": "node --import tsx --test --test-concurrency=1 --test-timeout=120000 demo/*.test.ts",
-    "test:payments": "node --import tsx --test --test-timeout=120000 demo/payments.test.ts"
+    "test:payments": "node --import tsx --test --test-timeout=120000 demo/payments.test.ts",
+    "markets": "tsx markets/cli.ts",
+    "markets:test": "tsx markets/tests/unit.ts",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.32.2",

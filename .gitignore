@@ -9,3 +9,6 @@ node_modules/
 .cache/
 jurisdictions/*/comments.jsonl
 feedback/
+
+# Each market gets its own branch checked out here
+.market-worktrees/

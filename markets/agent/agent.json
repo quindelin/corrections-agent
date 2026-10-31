@@ -1,0 +1,8 @@
+{
+  "name": "redline-market",
+  "description": "Reads a public permit dataset and proposes how to turn it into a jurisdiction pack. Code checks every proposal against the real rows. It has no tools.",
+  "model": {
+    "name": "truefoundry/claude-haiku-4-5",
+    "params": { "temperature": 0 }
+  }
+}

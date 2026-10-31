@@ -72,6 +72,10 @@ In `inline` skill mode every local skill is pasted into the instructions, which 
 - Routing has no outcome yet for disputing a comment.
 - Learned rules need a scope and an expiry, so they don't outlive a code change.
 
+## Finding new places
+
+`npm run markets -- run` looks for places whose permit data shows corrections, then builds, scores and improves the agent for the best new one on its own branch, and stops for you to review. See [markets/README.md](markets/README.md).
+
 ## How it uses TrueForge
 
 - **Runtime:** the agent runs on TrueForge, and each run or demo analysis is a session.
@@ -186,6 +190,7 @@ agent/            agent.json, instructions.md, skills/ (what the agent rewrites)
 evals/            tasks/*.json (07 and 08 are holdouts), score.ts
 jurisdictions/    one pack per place
 mcp/server.ts     the research tools
+markets/          the agent that finds new places and makes Redline work there
 demo/             the review queue
 feedback/         architect decisions from the demo (created on first use)
 scripts/          setup, run-evals, improve, export-session

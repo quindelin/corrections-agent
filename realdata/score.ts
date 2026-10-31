@@ -8,14 +8,8 @@
 // Sending a licensed item past the professional scores that comment 0.
 // Metrics are reported separately on purpose: a blended number would hide a weak one.
 
-import { readFileSync } from "node:fs";
-import { dirname, join } from "node:path";
-import { fileURLToPath } from "node:url";
 import { parseItems, type Item } from "../evals/score.ts";
-import { normalize, parent } from "./citations.ts";
-
-const here = dirname(fileURLToPath(import.meta.url));
-const CODE_IDS = new Set((JSON.parse(readFileSync(join(here, "..", "jurisdictions", "seattle", "code.json"), "utf8")).sections as { id: string }[]).map((s) => s.id));
+import { loadPlace, type Place } from "./place.ts";
 
 export interface RealComment {
   id: string;
@@ -52,12 +46,12 @@ const FOREIGN_PROCESS = /Certified Plan|Form 420|Department of Buildings\b|\bbub
 function numbers(text: string): string[] {
   const cleaned = text
     .replace(/\b[A-Z]{1,3}[-.]?\d[\d.]*[A-Z]?\b/g, " ")
-    .replace(/\b(SMC|SBC|SRC|SEC|SFC)\s*[A-Z]?\d[\w.()-]*/gi, " ")
+    .replace(/\b[A-Z]{2,5}\s+[A-Z]?\d[\w.()-]*/g, " ")
     .replace(/\b\d{2}\.\d{2}\.\d{3}[\w.]*/g, " ");
   return cleaned.match(/\d+(?:\.\d+)?/g) ?? [];
 }
 
-function scoreComment(letter: RealLetter, c: RealComment, item: Item | undefined): CommentResult {
+function scoreComment(place: Place, letter: RealLetter, c: RealComment, item: Item | undefined): CommentResult {
   const { labels } = c;
   const empty = { discipline: "", citation: null, route: "", sheets: [] as string[] };
   const got = item ? { discipline: item.discipline, citation: item.citation, route: item.route, sheets: item.sheets } : empty;
@@ -70,11 +64,12 @@ function scoreComment(letter: RealLetter, c: RealComment, item: Item | undefined
   let citation: CommentResult["citation"] = null;
   let citationPoints = 0;
   if (labels.citations.length) {
+    const { normalize, parent } = place.citations;
     const id = got.citation ? normalize(got.citation) : null;
     if (!got.citation) citation = "missing";
     else if (id && labels.citations.includes(id)) (citation = "section"), (citationPoints = 1);
     else if (id && labels.citations.some((l) => parent(l) === parent(id))) (citation = "chapter"), (citationPoints = 0.5);
-    else if (!id || !CODE_IDS.has(id)) citation = "not_in_index";
+    else if (!id || !place.codeIds.has(id)) citation = "not_in_index";
     else citation = "wrong";
     if (citation !== "section") problems.push(`cited ${got.citation ?? "nothing"}; the reviewer cited ${labels.citations.join(" and ")}`);
   }
@@ -103,11 +98,11 @@ function scoreComment(letter: RealLetter, c: RealComment, item: Item | undefined
   return { comment: c.id, score: score === null ? null : Math.round(score * 10000) / 10000, discipline, citation, route, unsafe, compliance_claim: compliance, foreign_process: foreign, invented_numbers: invented, sheets_found, problems, got };
 }
 
-export function scoreLetter(letter: RealLetter, reply: string) {
+export function scoreLetter(letter: RealLetter, reply: string, place: Place = loadPlace(letter.project.jurisdiction)) {
   const items = parseItems(reply);
   const first = new Map<string, Item>();
   for (const item of items ?? []) if (!first.has(item.comment)) first.set(item.comment, item);
-  return { letter_id: letter.id, holdout: letter.holdout, review_type: letter.review_type, parsed: items !== null, comments: letter.comments.map((c) => scoreComment(letter, c, first.get(c.id))) };
+  return { letter_id: letter.id, holdout: letter.holdout, review_type: letter.review_type, parsed: items !== null, comments: letter.comments.map((c) => scoreComment(place, letter, c, first.get(c.id))) };
 }
 export type LetterScore = ReturnType<typeof scoreLetter>;
 

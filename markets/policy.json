@@ -1,0 +1,46 @@
+{
+  "_note": "Human-owned. The market agent reads this file and has no way to edit it. These numbers are judgment calls, explained in markets/README.md.",
+  "budget": {
+    "max_usd_per_cycle": 12,
+    "max_usd_per_day": 15,
+    "estimated_usd_per_letter": 0.09
+  },
+  "discovery": {
+    "catalogs": ["https://api.us.socrata.com/api/catalog/v1", "https://api.eu.socrata.com/api/catalog/v1"],
+    "queries": ["plan comments", "plan review comments", "plan review", "plan check", "permit review", "review cycles", "permit corrections", "correction comments", "building permit applications", "permit application review", "development review comments"],
+    "max_results_per_query": 60,
+    "min_rows": 500,
+    "min_correction_share": 0.3,
+    "min_median_text_length": 40,
+    "min_cycle_rows": 500,
+    "stale_after_days": 400
+  },
+  "evaluation": {
+    "letters": 40,
+    "min_letters": 24,
+    "min_holdout_comments": 25,
+    "min_discipline_labels": 0.3,
+    "min_citation_labels": 0.2,
+    "max_comments_per_letter": 10
+  },
+  "gate": {
+    "alpha": 0.05,
+    "max_improve_attempts": 2,
+    "bootstrap_samples": 4000,
+    "regression_margin_points": 3,
+    "max_new_compliance_claims": 2,
+    "max_new_failed_letters": 1
+  },
+  "readiness": {
+    "min_holdout_score": 70,
+    "min_citation_chapter_pct": 60,
+    "max_unsafe_routes": 0
+  },
+  "exclude": {
+    "denver": "City pays a competitor to reduce corrections. See docs/locale-research.md.",
+    "austin": "Archistar is live there. See docs/locale-research.md."
+  },
+  "worktree": {
+    "mcp_port": 8801
+  }
+}

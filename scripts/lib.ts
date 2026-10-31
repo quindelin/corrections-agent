@@ -9,7 +9,8 @@ import { fileURLToPath } from "node:url";
 import { TrueForge, TrueForgeApi } from "@truefoundry/trueforge-sdk";
 import type { ScoredTask } from "../evals/score.ts";
 
-export const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
+/** REDLINE_HOME points these tools at another checkout of the repo: the market loop's branch worktree. */
+export const ROOT = process.env.REDLINE_HOME ? resolve(process.env.REDLINE_HOME) : resolve(dirname(fileURLToPath(import.meta.url)), "..");
 export const AGENT_DIR = join(ROOT, "agent");
 export const TASKS_DIR = join(ROOT, "evals", "tasks");
 export const RUNS_DIR = join(ROOT, "runs");
@@ -19,7 +20,8 @@ export const SUMMARY_CSV = join(RUNS_DIR, "summary.csv");
 
 // ---------- config ----------
 
-if (existsSync(join(ROOT, ".env"))) process.loadEnvFile(join(ROOT, ".env"));
+const TOOL_ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
+if (existsSync(join(TOOL_ROOT, ".env"))) process.loadEnvFile(join(TOOL_ROOT, ".env"));
 
 export const env = {
   baseUrl: process.env.TRUEFORGE_BASE_URL ?? "http://localhost:8790",
@@ -93,6 +95,7 @@ export function readAgent(): { agent: AgentFile; instructions: string; skills: S
   // agent.json points at 127.0.0.1, which in a container is the container itself. See docs/deploy.md.
   const mcpUrl = process.env.REDLINE_MCP_URL;
   if (mcpUrl) agent.mcp_servers = agent.mcp_servers?.map((s) => ({ ...s, url: mcpUrl }));
+  if (process.env.TF_MCP_URL) agent.mcp_servers = [{ name: process.env.TF_MCP_NAME ?? "permit-research", url: process.env.TF_MCP_URL }];
   const instructions = readFileSync(join(AGENT_DIR, "instructions.md"), "utf8");
   const skillsDir = join(AGENT_DIR, "skills");
   const skills: SkillFile[] = [];
@@ -123,9 +126,10 @@ function parseFrontmatter(text: string): { meta: Record<string, string>; body: s
   return { meta, body: m[2] };
 }
 
-/** The TrueForge agent spec built from agent/. */
-export function buildManifest(gitRef?: string): TrueForgeApi.AgentSpec {
-  const { agent, instructions, skills } = readAgent();
+/** The TrueForge agent spec built from agent/. With a place, other places' local skills are left out, so their rules can't leak in. */
+export function buildManifest(gitRef?: string, opts: { place?: string } = {}): TrueForgeApi.AgentSpec {
+  const { agent, instructions, skills: allSkills } = readAgent();
+  const skills = opts.place ? allSkills.filter((s) => !s.name.startsWith("local-") || s.name === `local-${opts.place}`) : allSkills;
   const mode = agent.skill_mode ?? "inline";
   const config: TrueForgeApi.RuntimeConfig = {
     askUserQuestions: { enabled: false }, // evals run unattended: never pause for a question

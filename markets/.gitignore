@@ -1,0 +1,2 @@
+# Run state, cached rows and the spend ledger stay on this machine. Sources, policy and reports are meant to be committed.
+data/

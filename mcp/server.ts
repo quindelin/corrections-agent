@@ -18,7 +18,7 @@ import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StreamableHTTPServerTransport } from "@modelcontextprotocol/sdk/server/streamableHttp.js";
 import { z } from "zod";
 
-const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..", "jurisdictions");
+const ROOT = join(process.env.REDLINE_HOME ?? join(dirname(fileURLToPath(import.meta.url)), ".."), "jurisdictions");
 
 interface Section {
   id: string;
