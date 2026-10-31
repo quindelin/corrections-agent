@@ -1,0 +1,53 @@
+{
+  "families": [
+    {
+      "code": "RCO",
+      "name": "Residential Code of Ohio",
+      "kind": "irc",
+      "aliases": []
+    },
+    {
+      "code": "OBC",
+      "name": "OBC (full name not confirmed)",
+      "kind": "ibc",
+      "aliases": []
+    },
+    {
+      "code": "CBC",
+      "name": "CBC (full name not confirmed)",
+      "kind": "dashed_municipal",
+      "aliases": []
+    },
+    {
+      "code": "OEBC",
+      "name": "OEBC (full name not confirmed)",
+      "kind": "ibc",
+      "aliases": []
+    },
+    {
+      "code": "ICC",
+      "name": "ICC (full name not confirmed)",
+      "kind": "model",
+      "aliases": []
+    },
+    {
+      "code": "ASTM",
+      "name": "ASTM (full name not confirmed)",
+      "kind": "model",
+      "aliases": []
+    },
+    {
+      "code": "LOCAL",
+      "name": "LOCAL (full name not confirmed)",
+      "kind": "dashed_municipal",
+      "aliases": []
+    },
+    {
+      "code": "OMC",
+      "name": "OMC (full name not confirmed)",
+      "kind": "model",
+      "aliases": []
+    }
+  ],
+  "bare_section_family": "LOCAL"
+}

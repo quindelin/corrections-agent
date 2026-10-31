@@ -1,0 +1,3160 @@
+{
+  "note": "Mined from citations in City of Cincinnati, Ohio's public review comments, so it holds only sections reviewers have cited. Titles come from how reviewers wrote them. Spans code editions. Not code text.",
+  "sections": [
+    {
+      "id": "ASTM C208",
+      "title": "ASTM (full name not confirmed)",
+      "scope": "ASTM (full name not confirmed). Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "ASTM C411",
+      "title": "ASTM (full name not confirmed)",
+      "scope": "ASTM (full name not confirmed). Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "ASTM C926",
+      "title": "ASTM (full name not confirmed)",
+      "scope": "ASTM (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "ASTM C1063",
+      "title": "ASTM (full name not confirmed)",
+      "scope": "ASTM (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "ASTM D7032",
+      "title": "ASTM (full name not confirmed)",
+      "scope": "ASTM (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "ASTM E119",
+      "title": "ASTM (full name not confirmed)",
+      "scope": "ASTM (full name not confirmed). Cited 134 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "ASTM E199",
+      "title": "ASTM (full name not confirmed)",
+      "scope": "ASTM (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "ASTM E814",
+      "title": "ASTM (full name not confirmed)",
+      "scope": "ASTM (full name not confirmed). Cited 4 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "ASTM E1300",
+      "title": "ASTM (full name not confirmed)",
+      "scope": "ASTM (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "ASTM E2231",
+      "title": "ASTM (full name not confirmed)",
+      "scope": "ASTM (full name not confirmed). Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "ASTM E2568",
+      "title": "ASTM (full name not confirmed)",
+      "scope": "ASTM (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "ASTM E2570",
+      "title": "ASTM (full name not confirmed)",
+      "scope": "ASTM (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "ASTM E2634",
+      "title": "ASTM (full name not confirmed)",
+      "scope": "ASTM (full name not confirmed). Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "ASTM F2090",
+      "title": "ASTM (full name not confirmed)",
+      "scope": "ASTM (full name not confirmed). Cited 11 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "ASTM F2200",
+      "title": "ASTM (full name not confirmed)",
+      "scope": "ASTM (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "CBC 1101-05",
+      "title": "CBC (full name not confirmed)",
+      "scope": "CBC (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "CBC 1101-11",
+      "title": "The 8/18/23 Director's determination specifies the exterior f",
+      "scope": "CBC (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "CBC 1101-17",
+      "title": "The scope of work submitted under your Engineering Change (EC",
+      "scope": "CBC (full name not confirmed). Cited 27 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "CBC 1101-19",
+      "title": "Building permit application",
+      "scope": "CBC (full name not confirmed). Cited 1115 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "CBC 1101-21",
+      "title": "Clarify or provide the following",
+      "scope": "CBC (full name not confirmed). Cited 138 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "CBC 1101-23",
+      "title": "Construction Documents, Required Evidence of Responsibility",
+      "scope": "CBC (full name not confirmed). Cited 357 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "CBC 1101-25",
+      "title": "CBC (full name not confirmed)",
+      "scope": "CBC (full name not confirmed). Cited 4 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "CBC 1101-27",
+      "title": "CBC (full name not confirmed)",
+      "scope": "CBC (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "CBC 1101-29",
+      "title": "For Phased Construction, plans shall include the column loads",
+      "scope": "CBC (full name not confirmed). Cited 6 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "CBC 1101-33",
+      "title": "The Engineering Change (EC#1) submitted appears to be for alt",
+      "scope": "CBC (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "CBC 1101-37",
+      "title": "CBC (full name not confirmed)",
+      "scope": "CBC (full name not confirmed). Cited 7 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "CBC 1101-39",
+      "title": "Geotechnical Engineer shall provide a compliance letter that",
+      "scope": "CBC (full name not confirmed). Cited 71 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "CBC 1101-61",
+      "title": "Orders and Notice of Violations",
+      "scope": "CBC (full name not confirmed). Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "CBC 1101-63",
+      "title": "Dangerous and Unsafe Premise, OBC 1028",
+      "scope": "CBC (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "CBC 1101-79",
+      "title": "CBC (full name not confirmed)",
+      "scope": "CBC (full name not confirmed). Cited 3 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "CBC 1101-87",
+      "title": "A diaper changing station is required in a public toilet room",
+      "scope": "CBC (full name not confirmed). Cited 69 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "CBC 1101-1934",
+      "title": "CBC (full name not confirmed)",
+      "scope": "CBC (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "CBC 1105-03",
+      "title": "Show how the roof storm water is collected & connected to the",
+      "scope": "CBC (full name not confirmed). Cited 4 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "CBC 1109-01",
+      "title": "Specify/show the Flood Protection Elevation (FPE) and Base Fl",
+      "scope": "CBC (full name not confirmed). Cited 6 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "CBC 1109-2",
+      "title": "Your dwelling is located in a Flood Hazard Zone",
+      "scope": "CBC (full name not confirmed). Cited 12 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "CBC 1109-3",
+      "title": "Plans shall declare your method for providing floodproofing t",
+      "scope": "CBC (full name not confirmed). Cited 46 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "CBC 1109-6",
+      "title": "The proposed cost of the improvements exceeds the market valu",
+      "scope": "CBC (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "CBC 1109-09",
+      "title": "Post-Construction Certifications Required",
+      "scope": "CBC (full name not confirmed). Cited 13 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "CBC 1109-11",
+      "title": "All mechanical, electrical, plumbing equipment and devices an",
+      "scope": "CBC (full name not confirmed). Cited 53 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "CBC 1109-19",
+      "title": "Excavation & Fill",
+      "scope": "CBC (full name not confirmed). Cited 3 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "CBC 1109-39",
+      "title": "Provide a copy of a site-specific geotechnical report",
+      "scope": "CBC (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "CBC 1111-17",
+      "title": "Protection during construction shall be provided for the adja",
+      "scope": "CBC (full name not confirmed). Cited 5 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "CBC 1113-03",
+      "title": "Slopes for excavation/fill shall not exceed a maximum of 3",
+      "scope": "CBC (full name not confirmed). Cited 5 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "CBC 1117-03",
+      "title": "CBC (full name not confirmed)",
+      "scope": "CBC (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "CBC 1117-11",
+      "title": "Show/specify that in each sleeping room, at least one window",
+      "scope": "CBC (full name not confirmed). Cited 4 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "CBC 1117-15",
+      "title": "All required fire doors shall be equipped with approved self-",
+      "scope": "CBC (full name not confirmed). Cited 5 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "CBC 1117-17",
+      "title": "Every bedroom and toilet room shall be provided with a door w",
+      "scope": "CBC (full name not confirmed). Cited 54 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "CBC 1117-19",
+      "title": "The bedroom shall be minimum 70 sf - see bedrooms in unit #1",
+      "scope": "CBC (full name not confirmed). Cited 17 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "CBC 1117-21",
+      "title": "Habitable rooms below grade shall have waterproofing/dampproo",
+      "scope": "CBC (full name not confirmed). Cited 17 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "CBC 1117-23",
+      "title": "Habitable spaces below grade shall be waterproofed",
+      "scope": "CBC (full name not confirmed). Cited 18 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "CBC 1117-35",
+      "title": "Heating Facilities",
+      "scope": "CBC (full name not confirmed). Cited 3 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "CBC 1117-73",
+      "title": "CBC (full name not confirmed)",
+      "scope": "CBC (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "CBC 1121-05",
+      "title": "Limited area sprinklers are permitted when the intended use i",
+      "scope": "CBC (full name not confirmed). Cited 18 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "CBC 1121-07",
+      "title": "CBC (full name not confirmed)",
+      "scope": "CBC (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: ENG CHANGE DENIED."
+    },
+    {
+      "id": "CBC 1121-09",
+      "title": "New dwelling unit entry doors and frames for Dwelling Unit #3",
+      "scope": "CBC (full name not confirmed). Cited 8 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "CBC 1121-11",
+      "title": "CBC (full name not confirmed)",
+      "scope": "CBC (full name not confirmed). Cited 6 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "CBC 1127-03",
+      "title": "CBC (full name not confirmed)",
+      "scope": "CBC (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "CBC 1127-05",
+      "title": "Fire escape",
+      "scope": "CBC (full name not confirmed). Cited 3 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "CBC 1219-71",
+      "title": "For each sleeping room below the fourth story, at least one w",
+      "scope": "CBC (full name not confirmed). Cited 4 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "CBC 1433-15",
+      "title": "CBC (full name not confirmed)",
+      "scope": "CBC (full name not confirmed). Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "ICC 117",
+      "title": "Accessible Design",
+      "scope": "ICC (full name not confirmed). Cited 4 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "ICC 300",
+      "title": "ICC (full name not confirmed)",
+      "scope": "ICC (full name not confirmed). Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "ICC A117",
+      "title": "Proposed toilet room does not comply with accessibility requi",
+      "scope": "ICC (full name not confirmed). Cited 423 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "ICC A1171",
+      "title": "ICC (full name not confirmed)",
+      "scope": "ICC (full name not confirmed). Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 302-309",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 4 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 421-01",
+      "title": "Accessory Residential Structures states that the Maximum Numb",
+      "scope": "LOCAL (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1101-17",
+      "title": "Submit a separate Building Permit application for each new re",
+      "scope": "LOCAL (full name not confirmed). Cited 35 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1101-19",
+      "title": "Indicate a soil disposal site on the building permit applicat",
+      "scope": "LOCAL (full name not confirmed). Cited 182 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1101-21",
+      "title": "Plans to be Adequate",
+      "scope": "LOCAL (full name not confirmed). Cited 73 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1101-23",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1101-87",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 5 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1109-2",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1109-3",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 6 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1109-11",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 9 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1113-03",
+      "title": "Because the excavation and fill work exceeds 1000 cubic yards",
+      "scope": "LOCAL (full name not confirmed). Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1117-01",
+      "title": "Specify on the drawings that separate permits will be obtaine",
+      "scope": "LOCAL (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1117-03",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1117-11",
+      "title": "Emergency Escape",
+      "scope": "LOCAL (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1117-19",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1121-05",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1121-11",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1127-05",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1132-1136",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1400-23",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 7 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1400-27",
+      "title": "H(a), building height is measured from the established grade",
+      "scope": "LOCAL (full name not confirmed). Cited 23 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1401-01",
+      "title": "C5, technical and trade schools beyond high school level are",
+      "scope": "LOCAL (full name not confirmed). Cited 25 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1401-03",
+      "title": "L7, that do not comply with the minimum lot widths specified",
+      "scope": "LOCAL (full name not confirmed). Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1403-03",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1403-04",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1403-05",
+      "title": "Land Use Regulations, a new school use requires Conditional U",
+      "scope": "LOCAL (full name not confirmed). Cited 26 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1403-07",
+      "title": "Development Regulations, A side yard setback variance of 4' i",
+      "scope": "LOCAL (full name not confirmed). Cited 83 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1405-04",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 3 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1405-05",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 11 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1405-07",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 20 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1407-07",
+      "title": "Development Regulations requires that the front yard set back",
+      "scope": "LOCAL (full name not confirmed). Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1409-04",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 3 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1409-07",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 18 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1409-09",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1409-11",
+      "title": "Driveway Restrictions - In pedestrian and mixed zones, vehicu",
+      "scope": "LOCAL (full name not confirmed). Cited 6 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1409-13",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1409-17",
+      "title": "Building Placement Requirements, CN-P and CC-P Districts",
+      "scope": "LOCAL (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1409-23",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 17 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1410-07",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1411-05",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1411-13",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1411-17",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1411-39",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 3 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1413-04",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1413-05",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 5 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1413-07",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 8 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1415-05",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1415-09",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 4 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1415-11",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1415-19",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1419-05",
+      "title": "Animal Service Facilities",
+      "scope": "LOCAL (full name not confirmed). Cited 5 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1419-11",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1419-12",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1419-13",
+      "title": "Drive-In and Drive-Through Service Facilities (b) At least on",
+      "scope": "LOCAL (full name not confirmed). Cited 5 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1419-15",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1419-21",
+      "title": "Limited or Full Service Restaurants and Drinking Establishmen",
+      "scope": "LOCAL (full name not confirmed). Cited 55 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1419-23",
+      "title": "Loft Dwelling Units",
+      "scope": "LOCAL (full name not confirmed). Cited 3 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1419-27",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1421-01",
+      "title": "Locational Variances to allow accessory structures, including",
+      "scope": "LOCAL (full name not confirmed). Cited 60 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1421-03",
+      "title": "Accessory Nonresidential Structures, other than fences and wa",
+      "scope": "LOCAL (full name not confirmed). Cited 9 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1421-05",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 5 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1421-06",
+      "title": "Accessory Dwelling Units",
+      "scope": "LOCAL (full name not confirmed). Cited 9 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1421-07",
+      "title": "Maximum Projections Allowed Into Yards (Feet), the projecting",
+      "scope": "LOCAL (full name not confirmed). Cited 33 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1421-09",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 3 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1421-19",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1421-21",
+      "title": "Front Yard Modifications",
+      "scope": "LOCAL (full name not confirmed). Cited 94 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1421-23",
+      "title": "Side Yard Modifications",
+      "scope": "LOCAL (full name not confirmed). Cited 25 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1421-25",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 7 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1421-33",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 27 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1421-35",
+      "title": "Refuse Storage Areas",
+      "scope": "LOCAL (full name not confirmed). Cited 32 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1421-39",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 32 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1422-05",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1423-03",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1423-13",
+      "title": "A, a buffer yard that is 25' wide is required along the bound",
+      "scope": "LOCAL (full name not confirmed). Cited 8 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1425-03",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1425-09",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1425-15",
+      "title": "Special Exception - Special Exception from the requirement in",
+      "scope": "LOCAL (full name not confirmed). Cited 54 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments; BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "LOCAL 1425-19",
+      "title": "High School",
+      "scope": "LOCAL (full name not confirmed). Cited 43 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1425-23",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1425-25",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 8 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1425-27",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 13 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1425-29",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 20 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1425-31",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1425-35",
+      "title": "Access Drive and Maneuvering Aisles, (a) Parking Access",
+      "scope": "LOCAL (full name not confirmed). Cited 37 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1425-37",
+      "title": "Variance - Variance of 3",
+      "scope": "LOCAL (full name not confirmed). Cited 61 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1425-359",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1427-13",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1427-37",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 9 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1427-39",
+      "title": "Sign Standards for the M, RF-R, RF-C and RF-M Districts allow",
+      "scope": "LOCAL (full name not confirmed). Cited 3 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1433-11",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 76 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1433-011",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1433-13",
+      "title": "Applications Subject to Review, the Zoning Administrator has",
+      "scope": "LOCAL (full name not confirmed). Cited 6 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1433-14",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1433-15",
+      "title": "Application Requirements",
+      "scope": "LOCAL (full name not confirmed). Cited 95 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments; BPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1433-17",
+      "title": "Determination of Maximum Building Envelope",
+      "scope": "LOCAL (full name not confirmed). Cited 114 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1433-19",
+      "title": "Hillside Review - Relief from Base Development Requirements o",
+      "scope": "LOCAL (full name not confirmed). Cited 212 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1433-23",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1435-09",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1437-07",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1437-09",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 18 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1437-11",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1437-39",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1441-09",
+      "title": "Building Permits requires the following",
+      "scope": "LOCAL (full name not confirmed). Cited 4 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1443-09",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1445-16",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1447-05",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 6 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1447-09",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1447-23",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1525-19",
+      "title": "A as per the SF 4 requirements",
+      "scope": "LOCAL (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1703-2",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 78 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1703-3",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 12 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1703-4",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 19 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1703-5",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 29 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "LOCAL 1906-1970",
+      "title": "LOCAL (full name not confirmed)",
+      "scope": "LOCAL (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: ZPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 011",
+      "title": "OBC (full name not confirmed)",
+      "scope": "OBC (full name not confirmed). Cited 4 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 101",
+      "title": "The administrative and enforcement provisions of OBC 101",
+      "scope": "OBC (full name not confirmed). Cited 154 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "OBC 102",
+      "title": "Specify the temporary structure start (erection) & end (disma",
+      "scope": "OBC (full name not confirmed). Cited 22 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 103",
+      "title": "OBC (full name not confirmed)",
+      "scope": "OBC (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 104",
+      "title": "OBC (full name not confirmed)",
+      "scope": "OBC (full name not confirmed). Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "OBC 105",
+      "title": "Phased approval",
+      "scope": "OBC (full name not confirmed). Cited 293 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "OBC 106",
+      "title": "Information on construction documents",
+      "scope": "OBC (full name not confirmed). Cited 6058 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "OBC 107",
+      "title": "The Engineering Change is not approved",
+      "scope": "OBC (full name not confirmed). Cited 55 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "OBC 108",
+      "title": "Special Inspections",
+      "scope": "OBC (full name not confirmed). Cited 46 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "OBC 109",
+      "title": "OBC (full name not confirmed)",
+      "scope": "OBC (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 110",
+      "title": "OBC (full name not confirmed)",
+      "scope": "OBC (full name not confirmed). Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "OBC 111",
+      "title": "Specify that the ice rink is a time-limited occupancy install",
+      "scope": "OBC (full name not confirmed). Cited 17 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 113",
+      "title": "Document/provide the Industrialized unit insignia number",
+      "scope": "OBC (full name not confirmed). Cited 3 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 114",
+      "title": "OBC (full name not confirmed)",
+      "scope": "OBC (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 123",
+      "title": "OBC (full name not confirmed)",
+      "scope": "OBC (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 202",
+      "title": "Per definition of \"Story Above Grade\" - please clarify if bas",
+      "scope": "OBC (full name not confirmed). Cited 11 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 204",
+      "title": "OBC (full name not confirmed)",
+      "scope": "OBC (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 207",
+      "title": "OBC (full name not confirmed)",
+      "scope": "OBC (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: ENG CHANGE DENIED."
+    },
+    {
+      "id": "OBC 302",
+      "title": "Walls separating townhouses shall extend to the underside of",
+      "scope": "OBC (full name not confirmed). Cited 36 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 303",
+      "title": "Verify use/occupancy of tenant space",
+      "scope": "OBC (full name not confirmed). Cited 16 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 304",
+      "title": "Describe the tenant operations and how it is a B Use Group",
+      "scope": "OBC (full name not confirmed). Cited 8 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "OBC 305",
+      "title": "The care of children under the age of 30 months shall be loca",
+      "scope": "OBC (full name not confirmed). Cited 38 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 306",
+      "title": "Alterations to building entrances",
+      "scope": "OBC (full name not confirmed). Cited 18 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 307",
+      "title": "Please provide MSDS sheet(s) for all hazardous materials used",
+      "scope": "OBC (full name not confirmed). Cited 21 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 308",
+      "title": "OBC (full name not confirmed)",
+      "scope": "OBC (full name not confirmed). Cited 5 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 309",
+      "title": "Building permit application, Part B, Primary use of the Main",
+      "scope": "OBC (full name not confirmed). Cited 8 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 310",
+      "title": "Building permit application",
+      "scope": "OBC (full name not confirmed). Cited 160 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 311",
+      "title": "Landing required at bottom of exterior stairs at basement doo",
+      "scope": "OBC (full name not confirmed). Cited 47 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "OBC 312",
+      "title": "OBC (full name not confirmed)",
+      "scope": "OBC (full name not confirmed). Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 314",
+      "title": "OBC (full name not confirmed)",
+      "scope": "OBC (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 322",
+      "title": "OBC (full name not confirmed)",
+      "scope": "OBC (full name not confirmed). Cited 11 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 402",
+      "title": "Single-or multiple-station smoke alarms are required, per thi",
+      "scope": "OBC (full name not confirmed). Cited 7 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 403",
+      "title": "Specify the minimum depth of footers for protection against f",
+      "scope": "OBC (full name not confirmed). Cited 26 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "OBC 404",
+      "title": "Provide a better key plan of the lobby level that illustrates",
+      "scope": "OBC (full name not confirmed). Cited 10 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 406",
+      "title": "Show how this building (repair garage) will comply with code",
+      "scope": "OBC (full name not confirmed). Cited 28 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 407",
+      "title": "Plans appear to show a downgrade of existing walls from Smoke",
+      "scope": "OBC (full name not confirmed). Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 408",
+      "title": "OBC (full name not confirmed)",
+      "scope": "OBC (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 410",
+      "title": "Because common path of travel exceeds 100', a 2nd means of eg",
+      "scope": "OBC (full name not confirmed). Cited 6 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "OBC 412",
+      "title": "East exterior wall is located <30'0\" from the east property l",
+      "scope": "OBC (full name not confirmed). Cited 6 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 413",
+      "title": "OBC (full name not confirmed)",
+      "scope": "OBC (full name not confirmed). Cited 8 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 414",
+      "title": "Specify the use group associated with the paint storage and p",
+      "scope": "OBC (full name not confirmed). Cited 6 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 415",
+      "title": "If any of hazardous materials exceed the allowable amounts, p",
+      "scope": "OBC (full name not confirmed). Cited 3 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 416",
+      "title": "Fire Protection",
+      "scope": "OBC (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 419",
+      "title": "OBC (full name not confirmed)",
+      "scope": "OBC (full name not confirmed). Cited 4 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 420",
+      "title": "Separation walls & horizontal separation of dwelling units sh",
+      "scope": "OBC (full name not confirmed). Cited 100 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "OBC 422",
+      "title": "Clarify if this any portion of this facility qualifies as an",
+      "scope": "OBC (full name not confirmed). Cited 3 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 427",
+      "title": "Any storage or use of medical gas shall comply with Sections",
+      "scope": "OBC (full name not confirmed). Cited 3 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 501",
+      "title": "OBC (full name not confirmed)",
+      "scope": "OBC (full name not confirmed). Cited 5 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 503",
+      "title": "Occupied exterior areas under roof projections, shall be incl",
+      "scope": "OBC (full name not confirmed). Cited 27 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 504",
+      "title": "Area of the roof deck is capable of having an occupant load >",
+      "scope": "OBC (full name not confirmed). Cited 60 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 505",
+      "title": "Show that mezzanines qualify as a mezzanine and not a store",
+      "scope": "OBC (full name not confirmed). Cited 10 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 506",
+      "title": "Code summary show that this building exceeds the allowable bu",
+      "scope": "OBC (full name not confirmed). Cited 6 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 507",
+      "title": "Exterior decks",
+      "scope": "OBC (full name not confirmed). Cited 3 time(s) in City of Cincinnati, Ohio review comments, by: ENG CHANGE DENIED; BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 508",
+      "title": "Separated/ Nonseparated",
+      "scope": "OBC (full name not confirmed). Cited 108 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 509",
+      "title": "OBC (full name not confirmed)",
+      "scope": "OBC (full name not confirmed). Cited 6 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 510",
+      "title": "The building sections on sheet G401 show a \"3 hour rated floo",
+      "scope": "OBC (full name not confirmed). Cited 10 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 601",
+      "title": "Building is of type IIIA construction, where building structu",
+      "scope": "OBC (full name not confirmed). Cited 63 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 602",
+      "title": "Table 602",
+      "scope": "OBC (full name not confirmed). Cited 91 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "OBC 603",
+      "title": "Combustible Material in Types I and II Construction",
+      "scope": "OBC (full name not confirmed). Cited 33 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "OBC 606",
+      "title": "Show/describe smoke detectors on the HVAC plans per this sect",
+      "scope": "OBC (full name not confirmed). Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 607",
+      "title": "Show/describe smoke/fire dampers on the HVAC plans per this s",
+      "scope": "OBC (full name not confirmed). Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 700",
+      "title": "Provide a loft plan showing the fire rated walls enclosing th",
+      "scope": "OBC (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 703",
+      "title": "Floor type \"A\" is identified as a 1 HR rated assembly",
+      "scope": "OBC (full name not confirmed). Cited 128 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "OBC 704",
+      "title": "Beams within the garage roof/ceiling assembly supporting the",
+      "scope": "OBC (full name not confirmed). Cited 22 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 705",
+      "title": "Show/dimension the Imaginary property lines between the build",
+      "scope": "OBC (full name not confirmed). Cited 145 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 706",
+      "title": "Show/document how the altered firewall complies with this sec",
+      "scope": "OBC (full name not confirmed). Cited 44 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "OBC 707",
+      "title": "Fire barriers for exit enclosures",
+      "scope": "OBC (full name not confirmed). Cited 89 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "OBC 708",
+      "title": "Fire partitions separating dwelling units or sleeping units i",
+      "scope": "OBC (full name not confirmed). Cited 50 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "OBC 709",
+      "title": "Ducts penetrating the smoke barriers enclosing the corridors",
+      "scope": "OBC (full name not confirmed). Cited 3 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 710",
+      "title": "HVAC plans shall show locations of smoke barriers and smoke p",
+      "scope": "OBC (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 711",
+      "title": "Horizontal assemblies",
+      "scope": "OBC (full name not confirmed). Cited 29 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "OBC 712",
+      "title": "Vertical openings",
+      "scope": "OBC (full name not confirmed). Cited 4 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 713",
+      "title": "Document/show if/that the kitchen hood duct enclosure is requ",
+      "scope": "OBC (full name not confirmed). Cited 56 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "OBC 714",
+      "title": "Penetrations of PVC piping through non-fire resistance-rated",
+      "scope": "OBC (full name not confirmed). Cited 26 time(s) in City of Cincinnati, Ohio review comments, by: ENG CHANGE DENIED; BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 716",
+      "title": "Opening protectives",
+      "scope": "OBC (full name not confirmed). Cited 132 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 717",
+      "title": "Clarify the location of ducts in relation to fire rated floor",
+      "scope": "OBC (full name not confirmed). Cited 34 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "OBC 718",
+      "title": "Show/document how the dwelling units are separated at the flo",
+      "scope": "OBC (full name not confirmed). Cited 18 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "OBC 720",
+      "title": "Specify/clarify that the blown cellulose and/or sound attenua",
+      "scope": "OBC (full name not confirmed). Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: ENG CHANGE DENIED; BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 721",
+      "title": "Identify the listing of the fire rated wall construction or i",
+      "scope": "OBC (full name not confirmed). Cited 11 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 722",
+      "title": "OBC (full name not confirmed)",
+      "scope": "OBC (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 801",
+      "title": "OBC (full name not confirmed)",
+      "scope": "OBC (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 803",
+      "title": "Provide the flame spread/smoke development classifications fo",
+      "scope": "OBC (full name not confirmed). Cited 53 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 804",
+      "title": "OBC (full name not confirmed)",
+      "scope": "OBC (full name not confirmed). Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 806",
+      "title": "The tree art installation is considered decorative materials",
+      "scope": "OBC (full name not confirmed). Cited 6 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "OBC 902",
+      "title": "Fire suppression shall be provided throughout the building",
+      "scope": "OBC (full name not confirmed). Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 903",
+      "title": "An automatic sprinkler system installed in accordance with Se",
+      "scope": "OBC (full name not confirmed). Cited 140 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "OBC 904",
+      "title": "HVAC units and make-up air unit shall be interlocked/intercon",
+      "scope": "OBC (full name not confirmed). Cited 3 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 905",
+      "title": "Show all standpipe locations on the floor plans, per this sec",
+      "scope": "OBC (full name not confirmed). Cited 21 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 906",
+      "title": "OBC (full name not confirmed)",
+      "scope": "OBC (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 907",
+      "title": "Fire alarm and detection per compliance with this section",
+      "scope": "OBC (full name not confirmed). Cited 99 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "OBC 909",
+      "title": "Provide a rational analysis for the elevator hoist way pressu",
+      "scope": "OBC (full name not confirmed). Cited 8 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 911",
+      "title": "Verify location of the Fire Command Center with CFD",
+      "scope": "OBC (full name not confirmed). Cited 10 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 913",
+      "title": "Show/document how the Pump Room complies with this section",
+      "scope": "OBC (full name not confirmed). Cited 12 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 915",
+      "title": "Carbon Monoxide Detection",
+      "scope": "OBC (full name not confirmed). Cited 24 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 918",
+      "title": "OBC (full name not confirmed)",
+      "scope": "OBC (full name not confirmed). Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 1001",
+      "title": "Identify/locate the required exits and show the exit access t",
+      "scope": "OBC (full name not confirmed). Cited 3 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 1003",
+      "title": "The roof terrace & egress walkway shall be slip resistant and",
+      "scope": "OBC (full name not confirmed). Cited 28 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "OBC 1004",
+      "title": "Occupant load",
+      "scope": "OBC (full name not confirmed). Cited 382 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "OBC 1005",
+      "title": "Specify the width of all existing egress components and verif",
+      "scope": "OBC (full name not confirmed). Cited 89 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "OBC 1006",
+      "title": "Show/specify how door D29 complies with this section",
+      "scope": "OBC (full name not confirmed). Cited 244 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "OBC 1007",
+      "title": "Verify that rooms or spaces that require 2 means of egress, h",
+      "scope": "OBC (full name not confirmed). Cited 40 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 1008",
+      "title": "Show provisions for emergency egress illumination",
+      "scope": "OBC (full name not confirmed). Cited 161 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 1009",
+      "title": "Specify in the code summary that the areas of refuge will hav",
+      "scope": "OBC (full name not confirmed). Cited 13 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 1010",
+      "title": "Egress doors shall be readily openable from the egress side w",
+      "scope": "OBC (full name not confirmed). Cited 606 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "OBC 1011",
+      "title": "Stairways",
+      "scope": "OBC (full name not confirmed). Cited 105 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "OBC 1012",
+      "title": "Ramps",
+      "scope": "OBC (full name not confirmed). Cited 33 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "OBC 1013",
+      "title": "Exit signs",
+      "scope": "OBC (full name not confirmed). Cited 156 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "OBC 1014",
+      "title": "Handrail",
+      "scope": "OBC (full name not confirmed). Cited 40 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 1015",
+      "title": "Guard",
+      "scope": "OBC (full name not confirmed). Cited 74 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "OBC 1016",
+      "title": "General public shall not egress thru a space of greater hazar",
+      "scope": "OBC (full name not confirmed). Cited 73 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "OBC 1017",
+      "title": "The maximum travel distance shall be measured in a rectilinea",
+      "scope": "OBC (full name not confirmed). Cited 76 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 1018",
+      "title": "Show/dimension the unobstructed width of egress through the r",
+      "scope": "OBC (full name not confirmed). Cited 38 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 1019",
+      "title": "Exit access stairways shall connect no more than 2 stories -",
+      "scope": "OBC (full name not confirmed). Cited 4 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 1020",
+      "title": "In a non-sprinkled building, corridors serving an occupant lo",
+      "scope": "OBC (full name not confirmed). Cited 49 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 1021",
+      "title": "OBC (full name not confirmed)",
+      "scope": "OBC (full name not confirmed). Cited 7 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 1022",
+      "title": "First floor corridor shall extent thru lobby space to the exi",
+      "scope": "OBC (full name not confirmed). Cited 11 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 1023",
+      "title": "Non-rated/unprotected windows in exterior walls within 10'0\"",
+      "scope": "OBC (full name not confirmed). Cited 186 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "OBC 1024",
+      "title": "An exit passageway shall not be used for any purpose other th",
+      "scope": "OBC (full name not confirmed). Cited 17 time(s) in City of Cincinnati, Ohio review comments, by: ENG CHANGE DENIED; BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 1026",
+      "title": "Provide a copy of the exit easement agreement for the horizon",
+      "scope": "OBC (full name not confirmed). Cited 14 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 1027",
+      "title": "The exit access fire escape/bridge/stairway shall be separate",
+      "scope": "OBC (full name not confirmed). Cited 41 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 1028",
+      "title": "Access to a public way",
+      "scope": "OBC (full name not confirmed). Cited 108 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "OBC 1029",
+      "title": "Add notes for emergency egress windows for all bedrooms",
+      "scope": "OBC (full name not confirmed). Cited 39 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 1030",
+      "title": "Sleeping rooms below the fourth story above grade plane shall",
+      "scope": "OBC (full name not confirmed). Cited 38 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "OBC 1031",
+      "title": "Specify/label the required emergency escape & rescue openings",
+      "scope": "OBC (full name not confirmed). Cited 19 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 1061",
+      "title": "Submittal Documents",
+      "scope": "OBC (full name not confirmed). Cited 4 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 1101",
+      "title": "Accessibility",
+      "scope": "OBC (full name not confirmed). Cited 173 time(s) in City of Cincinnati, Ohio review comments, by: ENG CHANGE DENIED; BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 1102",
+      "title": "Show how the proposed building complies with accessibility st",
+      "scope": "OBC (full name not confirmed). Cited 5 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 1103",
+      "title": "The addition is required to be accessible per this section",
+      "scope": "OBC (full name not confirmed). Cited 7 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 1104",
+      "title": "Show/clarify the accessible route from the garage to the resi",
+      "scope": "OBC (full name not confirmed). Cited 22 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "OBC 1105",
+      "title": "Identify/label all accessible entries on a site plan & the gr",
+      "scope": "OBC (full name not confirmed). Cited 24 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 1106",
+      "title": "A minimum of one accessible parking space is required for whi",
+      "scope": "OBC (full name not confirmed). Cited 38 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 1107",
+      "title": "Group R",
+      "scope": "OBC (full name not confirmed). Cited 15 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 1108",
+      "title": "Show how Type \"A\" accessible units comply with 2009 ICC ANSI",
+      "scope": "OBC (full name not confirmed). Cited 5 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 1109",
+      "title": "Clarify and/or provide the following",
+      "scope": "OBC (full name not confirmed). Cited 25 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "OBC 1110",
+      "title": "Toilet and Bathing Facilities - Revise code summary to indica",
+      "scope": "OBC (full name not confirmed). Cited 13 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 1111",
+      "title": "Plans and sections shall show that the sauna is located on an",
+      "scope": "OBC (full name not confirmed). Cited 7 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 1112",
+      "title": "Show that the require vertical accessibility signage will be",
+      "scope": "OBC (full name not confirmed). Cited 3 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 1201",
+      "title": "Interior environment",
+      "scope": "OBC (full name not confirmed). Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 1202",
+      "title": "Minimum 50% of required roof ventilation shall be supplied in",
+      "scope": "OBC (full name not confirmed). Cited 7 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 1203",
+      "title": "Specify that the spaces are either naturally or mechanically",
+      "scope": "OBC (full name not confirmed). Cited 27 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 1204",
+      "title": "Specify/describe how the dwelling units are to be heated/vent",
+      "scope": "OBC (full name not confirmed). Cited 5 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 1206",
+      "title": "Document that the sound transmission between dwelling units c",
+      "scope": "OBC (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 1208",
+      "title": "Habitable spaces, other than a kitchen, shall be not less tha",
+      "scope": "OBC (full name not confirmed). Cited 33 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 1209",
+      "title": "Access to the attic shall be by a minimum 20\"x30\" fire resist",
+      "scope": "OBC (full name not confirmed). Cited 24 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 1210",
+      "title": "OBC (full name not confirmed)",
+      "scope": "OBC (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 1301",
+      "title": "Document the Energy Code compliance for the building envelope",
+      "scope": "OBC (full name not confirmed). Cited 111 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 1402",
+      "title": "OBC (full name not confirmed)",
+      "scope": "OBC (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 1403",
+      "title": "Groupings of townhouse units into buildings (#1-25) shall be",
+      "scope": "OBC (full name not confirmed). Cited 6 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 1404",
+      "title": "OBC (full name not confirmed)",
+      "scope": "OBC (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 1406",
+      "title": "OBC (full name not confirmed)",
+      "scope": "OBC (full name not confirmed). Cited 4 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "OBC 1407",
+      "title": "OBC (full name not confirmed)",
+      "scope": "OBC (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 1502",
+      "title": "Secondary roof drainage required",
+      "scope": "OBC (full name not confirmed). Cited 3 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 1503",
+      "title": "Show/identify the primary & secondary roof deck drainage",
+      "scope": "OBC (full name not confirmed). Cited 16 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 1505",
+      "title": "Specify the fire classification of the replacement roofing",
+      "scope": "OBC (full name not confirmed). Cited 4 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 1507",
+      "title": "This comment is in response to revisions to Drawing Sheet A-1",
+      "scope": "OBC (full name not confirmed). Cited 3 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 1510",
+      "title": "Vestibules serving the rooftop deck do not fall into the use",
+      "scope": "OBC (full name not confirmed). Cited 4 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 1601",
+      "title": "All design loads shall be specified",
+      "scope": "OBC (full name not confirmed). Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 1603",
+      "title": "Plans shall identify all design loads that apply [assumed soi",
+      "scope": "OBC (full name not confirmed). Cited 74 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 1604",
+      "title": "Provide the structural design analysis for the added load to",
+      "scope": "OBC (full name not confirmed). Cited 20 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 1607",
+      "title": "Specify your design loads",
+      "scope": "OBC (full name not confirmed). Cited 57 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 1608",
+      "title": "Roof of greenhouse is not a flat roof, the snow load for roof",
+      "scope": "OBC (full name not confirmed). Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 1609",
+      "title": "The Structural General Notes specify the wind loads on the co",
+      "scope": "OBC (full name not confirmed). Cited 20 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 1610",
+      "title": "OBC (full name not confirmed)",
+      "scope": "OBC (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 1612",
+      "title": "OBC (full name not confirmed)",
+      "scope": "OBC (full name not confirmed). Cited 13 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 1701",
+      "title": "OBC (full name not confirmed)",
+      "scope": "OBC (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 1703",
+      "title": "Special inspections",
+      "scope": "OBC (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 1704",
+      "title": "Provide a Statement of Special Inspection (SSI), identifying",
+      "scope": "OBC (full name not confirmed). Cited 759 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "OBC 1705",
+      "title": "Special inspections",
+      "scope": "OBC (full name not confirmed). Cited 333 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "OBC 1803",
+      "title": "Provide a copy of the geotechnical report specified in the St",
+      "scope": "OBC (full name not confirmed). Cited 83 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 1804",
+      "title": "Specify the manner in which fill material will be placed and",
+      "scope": "OBC (full name not confirmed). Cited 3 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 1805",
+      "title": "Specify/show how the basement interior spaces comply with thi",
+      "scope": "OBC (full name not confirmed). Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 1806",
+      "title": "Proposed soil bearing pressure exceeds the presumptive pressu",
+      "scope": "OBC (full name not confirmed). Cited 22 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 1807",
+      "title": "Verify that the proposed retaining wall design has been desig",
+      "scope": "OBC (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 1809",
+      "title": "Details of post footing",
+      "scope": "OBC (full name not confirmed). Cited 34 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 1901",
+      "title": "Specify the required concrete mix and any reinforcing require",
+      "scope": "OBC (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 1907",
+      "title": "Section 1/A3",
+      "scope": "OBC (full name not confirmed). Cited 4 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 2103",
+      "title": "Specify the materials and construction of the proposed masonr",
+      "scope": "OBC (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 2107",
+      "title": "OBC (full name not confirmed)",
+      "scope": "OBC (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 2203",
+      "title": "Verify whether any structural framing will be in contact with",
+      "scope": "OBC (full name not confirmed). Cited 3 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 2204",
+      "title": "OBC (full name not confirmed)",
+      "scope": "OBC (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 2303",
+      "title": "OBC (full name not confirmed)",
+      "scope": "OBC (full name not confirmed). Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 2308",
+      "title": "With floor framing changing in direction, show how existing e",
+      "scope": "OBC (full name not confirmed). Cited 3 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 2401",
+      "title": "Document that the proposed window glass unit replacements com",
+      "scope": "OBC (full name not confirmed). Cited 3 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 2404",
+      "title": "OBC (full name not confirmed)",
+      "scope": "OBC (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 2405",
+      "title": "Specify how the metal framed skylight systems comply with thi",
+      "scope": "OBC (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 2406",
+      "title": "Provide safety glazing at windows in hazardous locations",
+      "scope": "OBC (full name not confirmed). Cited 106 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "OBC 2603",
+      "title": "Provide the specification & manufacturer's installation instr",
+      "scope": "OBC (full name not confirmed). Cited 77 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 2604",
+      "title": "Submit technical data for the proposed walk-in cooler and fre",
+      "scope": "OBC (full name not confirmed). Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 2901",
+      "title": "Provide a plumbing fixture count summary for the floor which",
+      "scope": "OBC (full name not confirmed). Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 2902",
+      "title": "Where plumbing fixtures are required, separate facilities sha",
+      "scope": "OBC (full name not confirmed). Cited 169 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "OBC 2904",
+      "title": "Document/show the plumbing fixture count per this section",
+      "scope": "OBC (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 3001",
+      "title": "Describe the state of the elevator and describe the type of c",
+      "scope": "OBC (full name not confirmed). Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 3002",
+      "title": "Show/specify the elevators are sized to accommodate ambulance",
+      "scope": "OBC (full name not confirmed). Cited 25 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "OBC 3004",
+      "title": "OBC (full name not confirmed)",
+      "scope": "OBC (full name not confirmed). Cited 4 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 3005",
+      "title": "Locate/describe the elevator control space and specify how it",
+      "scope": "OBC (full name not confirmed). Cited 6 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 3006",
+      "title": "Show that elevator hoistway doors shall be protected per OBC",
+      "scope": "OBC (full name not confirmed). Cited 8 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 3007",
+      "title": "Plans shall show that the Fire Service Access Elevator hoistw",
+      "scope": "OBC (full name not confirmed). Cited 14 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 3008",
+      "title": "Provide a copy of the required fire safety and evacuation pla",
+      "scope": "OBC (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 3101",
+      "title": "Special construction",
+      "scope": "OBC (full name not confirmed). Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 3102",
+      "title": "OBC (full name not confirmed)",
+      "scope": "OBC (full name not confirmed). Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 3103",
+      "title": "OBC (full name not confirmed)",
+      "scope": "OBC (full name not confirmed). Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 3104",
+      "title": "Show/document that the exterior walls connecting the pedestri",
+      "scope": "OBC (full name not confirmed). Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 3105",
+      "title": "For the fabric awning, show compliance with NFPA 701, ASTM E8",
+      "scope": "OBC (full name not confirmed). Cited 18 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 3107",
+      "title": "OBC (full name not confirmed)",
+      "scope": "OBC (full name not confirmed). Cited 4 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 3108",
+      "title": "OBC (full name not confirmed)",
+      "scope": "OBC (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 3109",
+      "title": "Clarify that gates G2, G3, G4 & G5 comply with this section",
+      "scope": "OBC (full name not confirmed). Cited 8 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 3110",
+      "title": "OBC (full name not confirmed)",
+      "scope": "OBC (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 3111",
+      "title": "The basic wind speed in Cincinnati, Ohio is 115 mph - please",
+      "scope": "OBC (full name not confirmed). Cited 7 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 3115",
+      "title": "If building is a conversion of a shipping container, plans sh",
+      "scope": "OBC (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 3202",
+      "title": "Doors that swing into or over the property line into the publ",
+      "scope": "OBC (full name not confirmed). Cited 20 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 3203",
+      "title": "Gates swinging over the property line into the public right-o",
+      "scope": "OBC (full name not confirmed). Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 3212",
+      "title": "Document that the elevator/hoistway opening is included in th",
+      "scope": "OBC (full name not confirmed). Cited 3 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 3301",
+      "title": "Plans shall include a \"Safety Plan\" that will be coordinated",
+      "scope": "OBC (full name not confirmed). Cited 3 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 3302",
+      "title": "Safeguards during construction",
+      "scope": "OBC (full name not confirmed). Cited 23 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 3303",
+      "title": "OBC (full name not confirmed)",
+      "scope": "OBC (full name not confirmed). Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 3306",
+      "title": "Show describe all pedestrian protection for the site - railin",
+      "scope": "OBC (full name not confirmed). Cited 7 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 3307",
+      "title": "Identify/specify the necessary precautions proposed to safegu",
+      "scope": "OBC (full name not confirmed). Cited 3 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 3309",
+      "title": "Show provisions/location for portable fire extinguishers",
+      "scope": "OBC (full name not confirmed). Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 3310",
+      "title": "The building exceeds 50 feet in height, no fewer than one tem",
+      "scope": "OBC (full name not confirmed). Cited 9 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 3311",
+      "title": "Specify that the standpipes will remain in working condition",
+      "scope": "OBC (full name not confirmed). Cited 12 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 3313",
+      "title": "Water supply for fire protection and the amount of combustibl",
+      "scope": "OBC (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 3366",
+      "title": "OBC (full name not confirmed)",
+      "scope": "OBC (full name not confirmed). Cited 3 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 3401",
+      "title": "Entry door to first floor tenant space shall be accessible",
+      "scope": "OBC (full name not confirmed). Cited 26 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 3403",
+      "title": "The proposed addition potentially changes the occupancy class",
+      "scope": "OBC (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 3404",
+      "title": "Clarify or provide the following",
+      "scope": "OBC (full name not confirmed). Cited 226 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "OBC 3405",
+      "title": "OBC (full name not confirmed)",
+      "scope": "OBC (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 3406",
+      "title": "Know that a fire escape inspection/remedial work is required",
+      "scope": "OBC (full name not confirmed). Cited 97 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "OBC 3407",
+      "title": "OBC (full name not confirmed)",
+      "scope": "OBC (full name not confirmed). Cited 4 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 3408",
+      "title": "With the proposed change in occupancy and change from the RCO",
+      "scope": "OBC (full name not confirmed). Cited 31 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 3409",
+      "title": "OBC (full name not confirmed)",
+      "scope": "OBC (full name not confirmed). Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 3410",
+      "title": "Structures moved shall be safe and sanitary and any repair, a",
+      "scope": "OBC (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 3411",
+      "title": "With a complete change in occupancy of this building, plans s",
+      "scope": "OBC (full name not confirmed). Cited 265 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "OBC 3412",
+      "title": "Additional information is needed to evaluate your 3412 analys",
+      "scope": "OBC (full name not confirmed). Cited 129 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "OBC 3501",
+      "title": "Plans for the metal building shall reference the proper Stand",
+      "scope": "OBC (full name not confirmed). Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 7143",
+      "title": "Keynote # A92, on floor plans, shall indicate that all penetr",
+      "scope": "OBC (full name not confirmed). Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: ENG CHANGE DENIED; BPE Review Letter Comments."
+    },
+    {
+      "id": "OBC 9032",
+      "title": "Building fits the description of a stories without openings a",
+      "scope": "OBC (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OEBC 101",
+      "title": "Administrative and enforcement",
+      "scope": "OEBC (full name not confirmed). Cited 764 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "OEBC 104",
+      "title": "OEBC (full name not confirmed)",
+      "scope": "OEBC (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OEBC 106",
+      "title": "Additional information",
+      "scope": "OEBC (full name not confirmed). Cited 8 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OEBC 202",
+      "title": "OEBC (full name not confirmed)",
+      "scope": "OEBC (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OEBC 301",
+      "title": "Specify the OEBC compliance method and code path used for the",
+      "scope": "OEBC (full name not confirmed). Cited 461 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "OEBC 302",
+      "title": "On plans, identify all existing fire resistance rated constru",
+      "scope": "OEBC (full name not confirmed). Cited 20 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OEBC 303",
+      "title": "OEBC (full name not confirmed)",
+      "scope": "OEBC (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OEBC 304",
+      "title": "Verify that the existing structure is capable of supporting t",
+      "scope": "OEBC (full name not confirmed). Cited 3 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OEBC 306",
+      "title": "Accessibility for Existing Buildings",
+      "scope": "OEBC (full name not confirmed). Cited 231 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OEBC 307",
+      "title": "Smoke Alarms",
+      "scope": "OEBC (full name not confirmed). Cited 24 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OEBC 308",
+      "title": "Carbon Monoxide Detection",
+      "scope": "OEBC (full name not confirmed). Cited 27 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OEBC 401",
+      "title": "Repairs",
+      "scope": "OEBC (full name not confirmed). Cited 8 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OEBC 405",
+      "title": "OEBC (full name not confirmed)",
+      "scope": "OEBC (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OEBC 501",
+      "title": "Prescriptive Method is noted as the compliance Method",
+      "scope": "OEBC (full name not confirmed). Cited 4 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OEBC 502",
+      "title": "Verify that existing roof structure is capable of supporting",
+      "scope": "OEBC (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OEBC 503",
+      "title": "Alterations",
+      "scope": "OEBC (full name not confirmed). Cited 48 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OEBC 504",
+      "title": "The replacement windows along the fire escape shall be ¾ hour",
+      "scope": "OEBC (full name not confirmed). Cited 25 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OEBC 505",
+      "title": "Identify/describe the required emergency escape & rescue open",
+      "scope": "OEBC (full name not confirmed). Cited 24 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OEBC 506",
+      "title": "Change of Occupancy",
+      "scope": "OEBC (full name not confirmed). Cited 12 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OEBC 601",
+      "title": "Specify the classification of work per this section in the co",
+      "scope": "OEBC (full name not confirmed). Cited 15 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OEBC 602",
+      "title": "Work Area Method",
+      "scope": "OEBC (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OEBC 603",
+      "title": "Level 2) in the OEBC code summary & specify that Chapters 7 &",
+      "scope": "OEBC (full name not confirmed). Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OEBC 604",
+      "title": "Work Area Method",
+      "scope": "OEBC (full name not confirmed). Cited 3 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OEBC 605",
+      "title": "Change of Occupancy",
+      "scope": "OEBC (full name not confirmed). Cited 10 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OEBC 606",
+      "title": "OEBC (full name not confirmed)",
+      "scope": "OEBC (full name not confirmed). Cited 0 time(s) in City of Cincinnati, Ohio review comments."
+    },
+    {
+      "id": "OEBC 702",
+      "title": "Show/specify that the PVC piping replacement (Phase 1) is com",
+      "scope": "OEBC (full name not confirmed). Cited 9 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OEBC 704",
+      "title": "Show/label/dimension the maximum common path of egress travel",
+      "scope": "OEBC (full name not confirmed). Cited 4 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OEBC 705",
+      "title": "Complete the Roofing Data sheet for the new roof covering - s",
+      "scope": "OEBC (full name not confirmed). Cited 3 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OEBC 706",
+      "title": "Design professional shall identify the design loads that appl",
+      "scope": "OEBC (full name not confirmed). Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OEBC 801",
+      "title": "Alterations- Level 2",
+      "scope": "OEBC (full name not confirmed). Cited 9 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OEBC 802",
+      "title": "Specify how duct penetrations of the fire rated floor/ceiling",
+      "scope": "OEBC (full name not confirmed). Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OEBC 803",
+      "title": "Specify how/that the existing R-2 work areas comply with the",
+      "scope": "OEBC (full name not confirmed). Cited 8 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OEBC 804",
+      "title": "Means of egress",
+      "scope": "OEBC (full name not confirmed). Cited 36 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OEBC 805",
+      "title": "Plans shall include details for the installation of",
+      "scope": "OEBC (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OEBC 807",
+      "title": "Show/describe the existing/proposed HVAC systems in the dwell",
+      "scope": "OEBC (full name not confirmed). Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OEBC 901",
+      "title": "OEBC (full name not confirmed)",
+      "scope": "OEBC (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OEBC 1001",
+      "title": "Specify in the code summary that this is a change of occupanc",
+      "scope": "OEBC (full name not confirmed). Cited 17 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OEBC 1002",
+      "title": "Special Use & Occupancy",
+      "scope": "OEBC (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OEBC 1004",
+      "title": "The basement level is below the level of exit discharge with",
+      "scope": "OEBC (full name not confirmed). Cited 5 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OEBC 1009",
+      "title": "Increased Demand",
+      "scope": "OEBC (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OEBC 1011",
+      "title": "Show windows that qualify for emergency escape and rescue to",
+      "scope": "OEBC (full name not confirmed). Cited 21 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "OEBC 1013",
+      "title": "Illuminated exit signs shall be provided to identify the exit",
+      "scope": "OEBC (full name not confirmed). Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OEBC 1101",
+      "title": "Additions",
+      "scope": "OEBC (full name not confirmed). Cited 8 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OEBC 1102",
+      "title": "Show that the proposed addition does not increase the buildin",
+      "scope": "OEBC (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OEBC 1104",
+      "title": "Show/document how the proposed addition complies with the Ene",
+      "scope": "OEBC (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OEBC 1301",
+      "title": "Means of egress",
+      "scope": "OEBC (full name not confirmed). Cited 137 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OEBC 1307",
+      "title": "OEBC (full name not confirmed)",
+      "scope": "OEBC (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OEBC 1501",
+      "title": "Construction safeguards",
+      "scope": "OEBC (full name not confirmed). Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OEBC 1505",
+      "title": "Plans show that NW stairs from basement to an intermediate la",
+      "scope": "OEBC (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OMC 101",
+      "title": "OMC (full name not confirmed)",
+      "scope": "OMC (full name not confirmed). Cited 27 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "OMC 103",
+      "title": "OMC (full name not confirmed)",
+      "scope": "OMC (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OMC 105",
+      "title": "The tile blocks specify \"HVAC Renovation Phase 3\" - please cl",
+      "scope": "OMC (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OMC 106",
+      "title": "Additional information",
+      "scope": "OMC (full name not confirmed). Cited 109 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "OMC 108",
+      "title": "OMC (full name not confirmed)",
+      "scope": "OMC (full name not confirmed). Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OMC 301",
+      "title": "OMC (full name not confirmed)",
+      "scope": "OMC (full name not confirmed). Cited 3 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OMC 303",
+      "title": "Fuel-fire alliance appliances (AHUs, WHs, dryers) shall not b",
+      "scope": "OMC (full name not confirmed). Cited 6 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OMC 304",
+      "title": "Equipment located in non-occupied closet off the garage shall",
+      "scope": "OMC (full name not confirmed). Cited 28 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "OMC 305",
+      "title": "OMC (full name not confirmed)",
+      "scope": "OMC (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OMC 306",
+      "title": "Know that the roof-top equipment shall be accessed per this s",
+      "scope": "OMC (full name not confirmed). Cited 28 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "OMC 307",
+      "title": "OMC (full name not confirmed)",
+      "scope": "OMC (full name not confirmed). Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OMC 309",
+      "title": "Interior occupied spaces shall be capable of maintaining a te",
+      "scope": "OMC (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: ENG CHANGE DENIED."
+    },
+    {
+      "id": "OMC 312",
+      "title": "Heating and Cooling Load Calcs",
+      "scope": "OMC (full name not confirmed). Cited 9 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OMC 401",
+      "title": "MAU intake on roof is within 10 feet of the property line",
+      "scope": "OMC (full name not confirmed). Cited 19 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "OMC 402",
+      "title": "Show/size the required natural ventilation on the architectur",
+      "scope": "OMC (full name not confirmed). Cited 15 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OMC 403",
+      "title": "Mechanical Ventilation",
+      "scope": "OMC (full name not confirmed). Cited 140 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "OMC 404",
+      "title": "Enclosed parking garage shall show minimum required ventilati",
+      "scope": "OMC (full name not confirmed). Cited 5 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OMC 405",
+      "title": "Remark 1 in the HVAC Equipment Schedule specifies manual fres",
+      "scope": "OMC (full name not confirmed). Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OMC 406",
+      "title": "Basement shall be provided with a minimum of 0",
+      "scope": "OMC (full name not confirmed). Cited 22 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OMC 501",
+      "title": "Two exhaust termina",
+      "scope": "OMC (full name not confirmed). Cited 39 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "OMC 502",
+      "title": "OMC (full name not confirmed)",
+      "scope": "OMC (full name not confirmed). Cited 3 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "OMC 504",
+      "title": "Show routing and discharge of the dryer exhaust ducts",
+      "scope": "OMC (full name not confirmed). Cited 42 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OMC 505",
+      "title": "Clarify whether kitchen exhaust is provided and show its rout",
+      "scope": "OMC (full name not confirmed). Cited 7 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OMC 506",
+      "title": "Show/locate the proposed exhaust termination on a building el",
+      "scope": "OMC (full name not confirmed). Cited 60 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "OMC 507",
+      "title": "Document that the walls & ceilings at the kitchen hood comply",
+      "scope": "OMC (full name not confirmed). Cited 78 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "OMC 508",
+      "title": "Show/describe the make-up air required for the kitchen exhaus",
+      "scope": "OMC (full name not confirmed). Cited 23 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OMC 509",
+      "title": "Fire suppression beneath kitchen hood shall be updated for re",
+      "scope": "OMC (full name not confirmed). Cited 4 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OMC 513",
+      "title": "OMC (full name not confirmed)",
+      "scope": "OMC (full name not confirmed). Cited 3 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OMC 601",
+      "title": "Issue resolve 1/27/22",
+      "scope": "OMC (full name not confirmed). Cited 12 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OMC 602",
+      "title": "Pipe and duct insulation within plenums",
+      "scope": "OMC (full name not confirmed). Cited 7 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "OMC 603",
+      "title": "Specify/clarify the duct/flexible duct type(s), classificatio",
+      "scope": "OMC (full name not confirmed). Cited 4 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "OMC 606",
+      "title": "Show that ventilation will be provide to the toilet room",
+      "scope": "OMC (full name not confirmed). Cited 28 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OMC 607",
+      "title": "Show routing of ductwork through any fire-rated assemblies; s",
+      "scope": "OMC (full name not confirmed). Cited 15 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OMC 701",
+      "title": "Show provisions for combustion air for appliances/equipment i",
+      "scope": "OMC (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OMC 717",
+      "title": "Third and forth floor mechanical plans shall identify the loc",
+      "scope": "OMC (full name not confirmed). Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: ENG CHANGE DENIED; BPE Review Letter Comments."
+    },
+    {
+      "id": "OMC 901",
+      "title": "OMC (full name not confirmed)",
+      "scope": "OMC (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OMC 904",
+      "title": "OMC (full name not confirmed)",
+      "scope": "OMC (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OMC 917",
+      "title": "OMC (full name not confirmed)",
+      "scope": "OMC (full name not confirmed). Cited 3 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OMC 1101",
+      "title": "Provide the specifications and manufacturer's installation in",
+      "scope": "OMC (full name not confirmed). Cited 3 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OMC 1102",
+      "title": "OMC (full name not confirmed)",
+      "scope": "OMC (full name not confirmed). Cited 8 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OMC 1103",
+      "title": "Provide a small room summary documenting that the proposed R-",
+      "scope": "OMC (full name not confirmed). Cited 5 time(s) in City of Cincinnati, Ohio review comments, by: ENG CHANGE DENIED; BPE Review Letter Comments."
+    },
+    {
+      "id": "OMC 1104",
+      "title": "Thru volume calculations for the refrigeration system show th",
+      "scope": "OMC (full name not confirmed). Cited 7 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OMC 1105",
+      "title": "OMC (full name not confirmed)",
+      "scope": "OMC (full name not confirmed). Cited 6 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OMC 1109",
+      "title": "Refrigerant Pipe Shafts a) Refrigerant piping that penetrates",
+      "scope": "OMC (full name not confirmed). Cited 7 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "OMC 1202",
+      "title": "Identify hydronic piping material",
+      "scope": "OMC (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "OMC M507",
+      "title": "Clarify why exhaust hoods are not specified for the proposed",
+      "scope": "OMC (full name not confirmed). Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 101",
+      "title": "Building permit application",
+      "scope": "Residential Code of Ohio. Cited 70 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 102",
+      "title": "Residential Code of Ohio",
+      "scope": "Residential Code of Ohio. Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 103",
+      "title": "Specify/clarify if/that the emergency escape & rescue opening",
+      "scope": "Residential Code of Ohio. Cited 4 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 105",
+      "title": "Phased approval",
+      "scope": "Residential Code of Ohio. Cited 95 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "RCO 106",
+      "title": "Provide construction documents with the following",
+      "scope": "Residential Code of Ohio. Cited 4708 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "RCO 107",
+      "title": "The building permit application form indicates 300 C",
+      "scope": "Residential Code of Ohio. Cited 35 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 108",
+      "title": "Other inspections",
+      "scope": "Residential Code of Ohio. Cited 491 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "RCO 109",
+      "title": "Clarify and/or provide the following",
+      "scope": "Residential Code of Ohio. Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 111",
+      "title": "Show all elements needed to prepare a new Certificate of Occu",
+      "scope": "Residential Code of Ohio. Cited 12 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 113",
+      "title": "Document that the bedroom in the basement was legally establi",
+      "scope": "Residential Code of Ohio. Cited 8 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 114",
+      "title": "First page of the Statement of Special Inspection (SSI) shall",
+      "scope": "Residential Code of Ohio. Cited 18 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 202",
+      "title": "Definitions",
+      "scope": "Residential Code of Ohio. Cited 6 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 209",
+      "title": "Residential Code of Ohio",
+      "scope": "Residential Code of Ohio. Cited 3 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 214",
+      "title": "Residential Code of Ohio",
+      "scope": "Residential Code of Ohio. Cited 3 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 301",
+      "title": "Engineered design",
+      "scope": "Residential Code of Ohio. Cited 470 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "RCO 302",
+      "title": "Exterior walls",
+      "scope": "Residential Code of Ohio. Cited 872 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "RCO 303",
+      "title": "Show how minimum required ventilation is provided to bathroom",
+      "scope": "Residential Code of Ohio. Cited 248 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "RCO 304",
+      "title": "Minimum Area",
+      "scope": "Residential Code of Ohio. Cited 31 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 305",
+      "title": "Identify the ceiling height(s) for third floor",
+      "scope": "Residential Code of Ohio. Cited 109 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "RCO 306",
+      "title": "Show/identify 5/8 typ X gyp bd",
+      "scope": "Residential Code of Ohio. Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 307",
+      "title": "For the proposed Toilet Room, show dimensions on the floor pl",
+      "scope": "Residential Code of Ohio. Cited 125 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "RCO 308",
+      "title": "Identify/label all safety glazing on the window legend per th",
+      "scope": "Residential Code of Ohio. Cited 176 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "RCO 309",
+      "title": "Show/describe how the garage floor is sloped to facilitate th",
+      "scope": "Residential Code of Ohio. Cited 19 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 310",
+      "title": "Identify windows in bedrooms/sleeping rooms that meet the siz",
+      "scope": "Residential Code of Ohio. Cited 313 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "RCO 311",
+      "title": "Provide dimensions for riser height and tread depth that comp",
+      "scope": "Residential Code of Ohio. Cited 399 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "RCO 312",
+      "title": "Please provide revised drawings to indicate compliance with t",
+      "scope": "Residential Code of Ohio. Cited 136 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 314",
+      "title": "Provide a smoke detector at Lower Level #1, Bedroom and Lower",
+      "scope": "Residential Code of Ohio. Cited 333 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "RCO 315",
+      "title": "Locate the required carbon monoxide alarms on the floor plans",
+      "scope": "Residential Code of Ohio. Cited 154 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "RCO 316",
+      "title": "Perimeter foam plastic insulation of crawl space shall be pro",
+      "scope": "Residential Code of Ohio. Cited 8 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 317",
+      "title": "Protection of wood against decay",
+      "scope": "Residential Code of Ohio. Cited 29 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 318",
+      "title": "Residential Code of Ohio",
+      "scope": "Residential Code of Ohio. Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 319",
+      "title": "Residential Code of Ohio",
+      "scope": "Residential Code of Ohio. Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 320",
+      "title": "Nonrequired accessibility components installed inside the dwe",
+      "scope": "Residential Code of Ohio. Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 321",
+      "title": "The elevator door on the 2nd floor shall comply with the 2016",
+      "scope": "Residential Code of Ohio. Cited 8 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "RCO 322",
+      "title": "Flood Resistant Construction",
+      "scope": "Residential Code of Ohio. Cited 20 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 324",
+      "title": "Pathways",
+      "scope": "Residential Code of Ohio. Cited 38 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "RCO 328",
+      "title": "Post Frame Accessory Structure shall meet all of the followin",
+      "scope": "Residential Code of Ohio. Cited 5 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 401",
+      "title": "For New Construction in area of previous foundations",
+      "scope": "Residential Code of Ohio. Cited 202 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 402",
+      "title": "Residential Code of Ohio",
+      "scope": "Residential Code of Ohio. Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 403",
+      "title": "Foundation for new post to extend down to frost depth",
+      "scope": "Residential Code of Ohio. Cited 165 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 404",
+      "title": "Foundation & retaining walls",
+      "scope": "Residential Code of Ohio. Cited 48 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 405",
+      "title": "Please identify your method for providing drainage to your fo",
+      "scope": "Residential Code of Ohio. Cited 3 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 406",
+      "title": "Show/document that the foundation surrounding the proposed fi",
+      "scope": "Residential Code of Ohio. Cited 30 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 407",
+      "title": "Specify that the steel columns are required to be schedule 40",
+      "scope": "Residential Code of Ohio. Cited 8 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 408",
+      "title": "Document how the unfinished sub-basement is heated/ventilated",
+      "scope": "Residential Code of Ohio. Cited 27 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 409",
+      "title": "Residential Code of Ohio",
+      "scope": "Residential Code of Ohio. Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 501",
+      "title": "Provide specifications for the LVL's and TJI's showing span a",
+      "scope": "Residential Code of Ohio. Cited 6 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 502",
+      "title": "Ledger Board details",
+      "scope": "Residential Code of Ohio. Cited 70 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "RCO 503",
+      "title": "Residential Code of Ohio",
+      "scope": "Residential Code of Ohio. Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 505",
+      "title": "Residential Code of Ohio",
+      "scope": "Residential Code of Ohio. Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 506",
+      "title": "Locate/describe the required vapor retarder under the concret",
+      "scope": "Residential Code of Ohio. Cited 41 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 507",
+      "title": "Show/describe the required flashing at the exterior wall/cant",
+      "scope": "Residential Code of Ohio. Cited 161 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "RCO 509",
+      "title": "Residential Code of Ohio",
+      "scope": "Residential Code of Ohio. Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 554",
+      "title": "Residential Code of Ohio",
+      "scope": "Residential Code of Ohio. Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 601",
+      "title": "Specify the wind bracing method in the General Notes or speci",
+      "scope": "Residential Code of Ohio. Cited 21 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 602",
+      "title": "Indicate which of the 16 bracing methods in RCO Table 602",
+      "scope": "Residential Code of Ohio. Cited 192 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 603",
+      "title": "Residential Code of Ohio",
+      "scope": "Residential Code of Ohio. Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 606",
+      "title": "Residential Code of Ohio",
+      "scope": "Residential Code of Ohio. Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 607",
+      "title": "Provide a min (2) 2x6 header at the proposed patio door per t",
+      "scope": "Residential Code of Ohio. Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 609",
+      "title": "Specify the windows & door and provide performance compliance",
+      "scope": "Residential Code of Ohio. Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 620",
+      "title": "Specify the wall bracing method used in the General Notes",
+      "scope": "Residential Code of Ohio. Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 702",
+      "title": "Moisture resistant gypsum shall be provided in bathroom",
+      "scope": "Residential Code of Ohio. Cited 28 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "RCO 703",
+      "title": "Describe the exterior wall coverings, per this section",
+      "scope": "Residential Code of Ohio. Cited 6 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 801",
+      "title": "Show/describe the gutters, downspouts and stormwater system c",
+      "scope": "Residential Code of Ohio. Cited 16 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 802",
+      "title": "Uplift resistance needed at porch roof structure",
+      "scope": "Residential Code of Ohio. Cited 77 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 803",
+      "title": "Show/specify that the proposed roof is connected to the exist",
+      "scope": "Residential Code of Ohio. Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 804",
+      "title": "Show/describe roof tie-downs per this section",
+      "scope": "Residential Code of Ohio. Cited 6 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 805",
+      "title": "Residential Code of Ohio",
+      "scope": "Residential Code of Ohio. Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 806",
+      "title": "Show provisions for providing roof ventilation",
+      "scope": "Residential Code of Ohio. Cited 89 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 807",
+      "title": "Locate & describe the attic access on the floor plans",
+      "scope": "Residential Code of Ohio. Cited 60 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 860",
+      "title": "Document the required attic space ventilation, per this secti",
+      "scope": "Residential Code of Ohio. Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 903",
+      "title": "Show how the proposed roof deck complies with this section",
+      "scope": "Residential Code of Ohio. Cited 11 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 904",
+      "title": "Residential Code of Ohio",
+      "scope": "Residential Code of Ohio. Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 905",
+      "title": "Show/specify the provisions of ice barrier used at eaves and",
+      "scope": "Residential Code of Ohio. Cited 63 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 1001",
+      "title": "Item F, a minimum distance of 8\" is required from the top of",
+      "scope": "Residential Code of Ohio. Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 1003",
+      "title": "Document that the fireplace opening, flue size & flue height",
+      "scope": "Residential Code of Ohio. Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 1004",
+      "title": "Residential Code of Ohio",
+      "scope": "Residential Code of Ohio. Cited 14 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 1006",
+      "title": "Information on construction documents",
+      "scope": "Residential Code of Ohio. Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 1013",
+      "title": "Residential Code of Ohio",
+      "scope": "Residential Code of Ohio. Cited 0 time(s) in City of Cincinnati, Ohio review comments."
+    },
+    {
+      "id": "RCO 1101",
+      "title": "Plans and sections shall show how the house will meet the min",
+      "scope": "Residential Code of Ohio. Cited 107 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 1102",
+      "title": "Basement/foundation wall insulation shall be full height",
+      "scope": "Residential Code of Ohio. Cited 102 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 1103",
+      "title": "Residential Code of Ohio",
+      "scope": "Residential Code of Ohio. Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 1105",
+      "title": "Provide a copy of the Simulated Performance Alternative speci",
+      "scope": "Residential Code of Ohio. Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 1107",
+      "title": "Specify on the building sections the insulation values for in",
+      "scope": "Residential Code of Ohio. Cited 17 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 1108",
+      "title": "Residential Code of Ohio",
+      "scope": "Residential Code of Ohio. Cited 11 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 1109",
+      "title": "Building envelope",
+      "scope": "Residential Code of Ohio. Cited 17 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 1111",
+      "title": "Show/document how the change of occupancy of the building com",
+      "scope": "Residential Code of Ohio. Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 1112",
+      "title": "Residential Code of Ohio",
+      "scope": "Residential Code of Ohio. Cited 23 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 1301",
+      "title": "The energy efficiency compliance chart shows R-13 Poly Faced",
+      "scope": "Residential Code of Ohio. Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 1305",
+      "title": "Verify that crawlspace access is adequately sized for the ser",
+      "scope": "Residential Code of Ohio. Cited 4 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 1307",
+      "title": "Show specify that the furnace in room 004 complies with this",
+      "scope": "Residential Code of Ohio. Cited 5 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 1401",
+      "title": "Provide HVAC ducting plans, complete the back side of the HVA",
+      "scope": "Residential Code of Ohio. Cited 10 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 1501",
+      "title": "Residential Code of Ohio",
+      "scope": "Residential Code of Ohio. Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 1502",
+      "title": "Show/specify the duct/route to termination for the dryer, per",
+      "scope": "Residential Code of Ohio. Cited 33 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 1503",
+      "title": "Domestic cooking equipment",
+      "scope": "Residential Code of Ohio. Cited 4 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 1504",
+      "title": "Locate dryer, kitchen hood, bath exhaust & HVAC intake/exhaus",
+      "scope": "Residential Code of Ohio. Cited 12 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 1505",
+      "title": "Show compliance for natural or mechanical ventilation for any",
+      "scope": "Residential Code of Ohio. Cited 115 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "RCO 1507",
+      "title": "Show compliance with this section for natural or mechanical v",
+      "scope": "Residential Code of Ohio. Cited 12 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments; ENG CHANGE DENIED."
+    },
+    {
+      "id": "RCO 1601",
+      "title": "Residential Code of Ohio",
+      "scope": "Residential Code of Ohio. Cited 3 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 1602",
+      "title": "Show ducting for Unit #1 Furnace",
+      "scope": "Residential Code of Ohio. Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 1804",
+      "title": "Show/dimension that the chimney termination is a minimum of 1",
+      "scope": "Residential Code of Ohio. Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 2019",
+      "title": "Residential Code of Ohio",
+      "scope": "Residential Code of Ohio. Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 2406",
+      "title": "Gas appliances shall not be located in sleeping rooms, bathro",
+      "scope": "Residential Code of Ohio. Cited 5 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 2407",
+      "title": "Specify the fuel type for the proposed furnace and water heat",
+      "scope": "Residential Code of Ohio. Cited 27 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 2408",
+      "title": "Note on plans that any potential ignition source produced by",
+      "scope": "Residential Code of Ohio. Cited 24 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 2420",
+      "title": "Residential Code of Ohio",
+      "scope": "Residential Code of Ohio. Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 2434",
+      "title": "Residential Code of Ohio",
+      "scope": "Residential Code of Ohio. Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 2801",
+      "title": "Residential Code of Ohio",
+      "scope": "Residential Code of Ohio. Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 2904",
+      "title": "Clarify how plumbing supply and waste lines of the first floo",
+      "scope": "Residential Code of Ohio. Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 3037",
+      "title": "Residential Code of Ohio",
+      "scope": "Residential Code of Ohio. Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 3214",
+      "title": "Indicate existing-to-remain or proposed smoke alarms and carb",
+      "scope": "Residential Code of Ohio. Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO 6475",
+      "title": "Residential Code of Ohio",
+      "scope": "Residential Code of Ohio. Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO M1703",
+      "title": "Show required venting for the furnace and water heater and th",
+      "scope": "Residential Code of Ohio. Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO R301",
+      "title": "Residential Code of Ohio",
+      "scope": "Residential Code of Ohio. Cited 3 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO R311",
+      "title": "Residential Code of Ohio",
+      "scope": "Residential Code of Ohio. Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO R402",
+      "title": "Residential Code of Ohio",
+      "scope": "Residential Code of Ohio. Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO R403",
+      "title": "Residential Code of Ohio",
+      "scope": "Residential Code of Ohio. Cited 4 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO R406",
+      "title": "Please state/show 6 mil vapor barrier or alternative for foun",
+      "scope": "Residential Code of Ohio. Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO R507",
+      "title": "Residential Code of Ohio",
+      "scope": "Residential Code of Ohio. Cited 3 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO R602",
+      "title": "Residential Code of Ohio",
+      "scope": "Residential Code of Ohio. Cited 1 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RCO R905",
+      "title": "Residential Code of Ohio",
+      "scope": "Residential Code of Ohio. Cited 2 time(s) in City of Cincinnati, Ohio review comments, by: BPE Review Letter Comments."
+    },
+    {
+      "id": "RESPONSE-PROCESS-NOT-RESEARCHED",
+      "title": "How to respond to review comments (not researched)",
+      "scope": "Not a code section. How City of Cincinnati, Ohio wants a resubmittal returned hasn't been read yet. Answer each comment on its own, assume no particular form, marks or wording, and leave the format for the licensed professional to confirm."
+    }
+  ]
+}

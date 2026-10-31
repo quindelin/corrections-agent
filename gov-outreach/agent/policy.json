@@ -1,0 +1,30 @@
+{
+  "_note": "Human-owned. The learning step cannot edit this file. README.md explains each number. These are my judgment calls, not legal limits.",
+  "limits": {
+    "max_open_per_target": 1,
+    "max_requests_per_target_per_180_days": 2,
+    "max_sample_first_request": 15
+  },
+  "tracking": {
+    "due_soon_days": 5,
+    "overdue_grace_business_days": 1,
+    "checkin_no_fixed_deadline_business_days": 10,
+    "maturity_calendar_days": 120
+  },
+  "learning": {
+    "min_closed_per_arm": 12,
+    "min_agencies": 4,
+    "min_states": 3,
+    "max_counted_per_agency_per_arm": 3,
+    "alpha": 0.05,
+    "min_places_for_general_hypothesis": 2,
+    "min_states_for_general_hypothesis": 2,
+    "features": {
+      "small_sample": { "label": "asks for 5 records or fewer", "learned_text_true": "Ask for 5 records or fewer in a first request.", "learned_text_false": "A first request doesn't need to stay at 5 records or fewer." },
+      "named_items": { "label": "names specific permits or records", "learned_text_true": "Name specific permits or records in a first request.", "learned_text_false": "Describe a first request by criteria rather than naming specific permits or records." },
+      "formal_route": { "label": "is a formal records request rather than a permission ask", "learned_text_true": "Prefer a formal records request as the first contact.", "learned_text_false": "Prefer a plain permission or export ask as the first contact." }
+    }
+  },
+  "spotcheck": { "per_run": 5, "seed": 20261031 },
+  "budget": { "max_usd_per_command": 0.5, "max_usd_total": 3 }
+}

@@ -1,0 +1,696 @@
+{
+  "_note": "Human-owned. The learning step cannot edit this file. Contacts come from a public source URL, with how it was read. evidence: read_directly = I read the page; search_excerpt = seen only in a search result, so confirm it; unknown = not found. Unknown stays null. Nothing here has been sent. Checked 2026-10-31.",
+  "purpose": "{{entity}} builds software that helps architects and permit expediters respond to plan review correction comments, and intends to charge for it. The records would be used to test and improve that software on real comments.",
+  "targets": [
+    {
+      "id": "chicago-dob",
+      "place": "chicago",
+      "state": "IL",
+      "law_id": "us-il",
+      "agency": "City of Chicago Department of Buildings",
+      "office": "FOIA Officer",
+      "salutation": "Dear FOIA Officer,",
+      "holds": "Correction comments in the Dynamic Portal (Hansen) and ProjectDox, and any Notification of Corrections Reports. No comment text is public.",
+      "why": "Emris is Chicago-only, and Redline has no real Chicago letters. This is the most valuable target and the least certain.",
+      "status": "draft_ready",
+      "contact": {
+        "channel": "mail",
+        "value": "Department of Buildings FOIA Officer, 121 N. LaSalle, City Hall Room 900, Chicago, IL 60602",
+        "evidence": "search_excerpt",
+        "source_url": "https://chicago.gov/city/en/depts/bldgs/supp_info/bldgs_foia.html",
+        "checked": "2026-10-31",
+        "note": "www.chicago.gov returned 403 again. The same excerpt mentions an online form whose address I didn't see."
+      },
+      "other_contacts": [
+        {
+          "channel": "email",
+          "value": "DOBfoia@cityofchicago.org",
+          "evidence": "search_excerpt",
+          "source_url": "https://headlineclub.org/foia/chicago/",
+          "checked": "2026-10-31",
+          "note": "From a third-party list that says it's still being updated. Today's search of the City's page didn't show an email. Don't use it until the City's page confirms it."
+        }
+      ],
+      "access": [
+        {
+          "host": "webapps1.chicago.gov/buildingpermit",
+          "finding": "Terms gate. The help page says the site is designed for applicants and their representatives.",
+          "rule": "no_automated_access",
+          "source_url": "https://webapps1.chicago.gov/buildingpermit/help",
+          "checked": "2026-10-31"
+        }
+      ],
+      "asks": [
+        {
+          "key": "chicago-dob-5-permits",
+          "kind": "records_request",
+          "subject": "FOIA request: plan review correction comments on 5 building permits",
+          "summary": "copies of the plan review correction comments the Department of Buildings issued to applicants on the 5 building permits listed below. All 5 are Standard Plan Review permits whose descriptions in the City's Building Permits dataset (ydr8-5enu) mention certified corrections.",
+          "records": [
+            "Each Notification of Corrections Report, or equivalent notice of corrections, sent to the applicant, for every review cycle.",
+            "The text of the corrections and comments recorded for the application: the open and completed corrections in the Dynamic Portal (Hansen), and the review comments, checklist item comments and changemark comments in ProjectDox.",
+            "For each correction or comment, the review discipline, the date issued and the date resolved."
+          ],
+          "format_note": "A report or export from those systems, as PDF or CSV, is ideal. These comments are not in the Building Permits dataset, so a link to the data portal would not answer this request.",
+          "exclude": "architectural or engineering drawings, calculations, sealed documents, the applicant's resubmissions, Form 420, or certified correction sheets. If a comment exists only as a mark on a drawing, please provide its text and sheet number without the drawing. If that can't be done, please leave that comment out and tell me.",
+          "sample_size": 5,
+          "items_label": "Permits (permit number, address)",
+          "items": [
+            "101081137, 950 W Willow St",
+            "101073799, 1612 N Mobile Ave",
+            "101080842, 6027 N Kenmore Ave",
+            "101077251, 1889 N Milwaukee Ave",
+            "101075489, 3455 N Elston Ave"
+          ],
+          "narrowing": "please contact me before denying any part of this request as burdensome. I would gladly start with the first review cycle on the first two permits.",
+          "must_keep": [
+            "Notification of Corrections",
+            "ProjectDox",
+            "Dynamic Portal"
+          ],
+          "follow_on": "If this works, ask for the other 10 permits in docs/chicago-foia-request.md as a separate batch."
+        }
+      ],
+      "pre_send": [
+        "Open the Buildings FOIA page and confirm the address, email and online form. Then record it with confirm-contact.",
+        "Decide the commercial purpose paragraph with a lawyer. Declaring it means 21 working days, lower priority, possible search fees and almost no Public Access Counselor review.",
+        "Paste the whole request into the body of any email or form. The Act doesn't require a public body to open attachments or links.",
+        "Watch for a reply asking you to confirm you're a person. The clock stops, and it can deny after 30 days.",
+        "A search excerpt of the City's FOIA FAQ says requesters' names and request details are posted online. Assume a rival could see this."
+      ],
+      "lawyer": [
+        "Is a reviewer's comment an 'other construction related technical document' under section 7(1)(k)? I found no ruling (see docs/chicago-real-data-plan.md).",
+        "Does testing a paid product count as a commercial purpose, and if we declare it, is any Public Access Counselor review left?"
+      ],
+      "holds_source": "docs/chicago-real-data-plan.md (researched 2026-10-31)",
+      "status_history": [
+        {
+          "status": "not_sent",
+          "at": "2026-10-31"
+        }
+      ]
+    },
+    {
+      "id": "tucson-pdsd",
+      "place": "tucson",
+      "state": "AZ",
+      "law_id": "us-az",
+      "agency": "City of Tucson Planning and Development Services",
+      "office": "Records staff, through the City Clerk",
+      "salutation": "Hello,",
+      "holds": "Reviewer comments by discipline, status, version and code citation, shown in Property Research Online from 2006 to 2026.",
+      "why": "It is the closest public match to a real correction letter, and possibly the largest. It has no API or export that I found.",
+      "status": "draft_ready",
+      "contact": {
+        "channel": "email",
+        "value": "cot-prr@tucsonaz.gov",
+        "evidence": "search_excerpt",
+        "source_url": "https://www.tucsonaz.gov/Departments/Clerks/Public-Records",
+        "checked": "2026-10-31",
+        "note": "www.tucsonaz.gov robots.txt returned 403, so I didn't fetch the page. The excerpt says to attach the Clerk's form, tick commercial or non-commercial, and that commercial use needs a separate fee form."
+      },
+      "other_contacts": [
+        {
+          "channel": "portal",
+          "value": "Tucson Development Center (TDC) Online, 'Request Historic Records', for building permit records not on PRO",
+          "evidence": "search_excerpt",
+          "source_url": "https://www.tucsonaz.gov/Departments/Planning-Development-Services/PDSD-News/How-To-Submit-a-Records-Request",
+          "checked": "2026-10-31",
+          "note": "The excerpt says requests typically finish within four weeks. It may be the right route for permit records."
+        },
+        {
+          "channel": "email",
+          "value": "building_official@tucsonaz.gov",
+          "evidence": "search_excerpt",
+          "source_url": "https://www.tucsonaz.gov/Departments/Planning-Development-Services/PDSD-News/How-To-Submit-a-Records-Request",
+          "checked": "2026-10-31",
+          "note": "For permission on restricted files only."
+        }
+      ],
+      "access": [
+        {
+          "host": "pro.tucsonaz.gov",
+          "finding": "No robots rules and no gate. The disclaimer describes the data as for personal use. You haven't decided on bulk use, so no crawling.",
+          "rule": "no_bulk_until_user_decides",
+          "source_url": "https://pro.tucsonaz.gov/disclaimer/",
+          "checked": "2026-10-31"
+        }
+      ],
+      "asks": [
+        {
+          "key": "tucson-permission",
+          "kind": "permission_ask",
+          "subject": "Question about bulk access to plan review comments on Property Research Online",
+          "site": "Property Research Online (pro.tucsonaz.gov)",
+          "summary": "public plan review comments on Property Research Online",
+          "access_so_far": "So far we have read about five review records and a few related pages, one at a time, to see what the site holds. We haven't crawled it. Your disclaimer page describes the data as for personal use and doesn't address automated access or a company's use, so I'm asking before doing anything more.",
+          "questions": [
+            "Is there a bulk export or data extract of review comments for commercial and residential building permits?",
+            "If not, would the City accept slow automated retrieval from the site, at a rate and hours you set? We would not do this without a yes.",
+            "What conditions apply to using the comments, such as attribution or no redistribution?"
+          ],
+          "sample_size": 0,
+          "fallback": "If the answer to these is no, I'd make a small public records request instead."
+        },
+        {
+          "key": "tucson-10-permits",
+          "kind": "records_request",
+          "subject": "Public records request: plan review comments on 10 building permits",
+          "summary": "the plan review comments on 10 recent commercial building permits, as a report or export.",
+          "records": [
+            "For 10 commercial building permits (TC-COM numbers) that received a Requires Resubmit status on a review completed between January 1 and March 31, 2026, chosen by whatever is easiest for your staff: the review comments for each discipline and each review version.",
+            "For each comment: the review type, the status, the version number and the review date."
+          ],
+          "format_note": "A report or export, as PDF or CSV, is ideal. If the fastest answer is 10 permit numbers whose comments I can read myself on Property Research Online, that's fine too.",
+          "exclude": "plans, drawings, calculations or sealed documents.",
+          "sample_size": 10,
+          "items_label": null,
+          "items": [],
+          "narrowing": "please tell me, and I'd gladly take 3 permits first.",
+          "must_keep": [
+            "TC-COM",
+            "Requires Resubmit"
+          ],
+          "follow_on": null
+        }
+      ],
+      "sequence": "Send the permission ask first. Send the records request only if the answer is no or no reply comes in about 15 business days, so the City gets one question at a time.",
+      "pre_send": [
+        "Open the Clerk's Public Records page. Confirm the email and whether the City requires its form. If so, copy this text into it.",
+        "Tick commercial on the form and complete the commercial fee form. Ask for the amount first, because Arizona allows a charge for commercial value.",
+        "Read the PRO disclaimer yourself before sending the permission ask.",
+        "Decide whether the records request goes to the Clerk or to TDC Online.",
+        "The permission ask promises to remove names and not to republish without asking. Send it only if you'll keep that."
+      ],
+      "lawyer": [
+        "Check the wording of the commercial purpose statement, and how the fee rule in A.R.S. 39-121.03 would apply.",
+        "Does 'for personal use' on the PRO disclaimer limit a company's testing use?"
+      ],
+      "holds_source": "docs/real-correction-sources.md, section 2 (surveyed 2026-10-31; read 5 records directly)",
+      "status_history": [
+        {
+          "status": "not_sent",
+          "at": "2026-10-31"
+        }
+      ]
+    },
+    {
+      "id": "santa-cruz-county-cdi",
+      "place": "santa-cruz-county",
+      "state": "CA",
+      "law_id": "us-ca",
+      "agency": "County of Santa Cruz, Community Development and Infrastructure (Planning)",
+      "office": "Records staff, through General Services",
+      "salutation": "Hello,",
+      "holds": "Building application review comments by agency, reviewer, round and determination, on the Application Status pages.",
+      "why": "It has full text, review rounds and citations under California's building code. It would test a state Redline hasn't seen.",
+      "status": "draft_ready",
+      "contact": {
+        "channel": "portal",
+        "value": "https://santacruzcounty-ca.nextrequest.com/",
+        "evidence": "read_directly",
+        "source_url": "https://www.santacruzcountyca.gov/Default.aspx?TabID=94",
+        "checked": "2026-10-31",
+        "note": "General Services, 701 Ocean Street, Room 330, Santa Cruz, CA 95060-4073. GSD_InfoDesk@santacruzcountyca.gov, (831) 454-2210. The page doesn't say whether Planning records use this portal, though it's the County's general route."
+      },
+      "other_contacts": [
+        {
+          "channel": "phone",
+          "value": "Planning switchboard, (831) 454-2580, 701 Ocean Street, 4th Floor",
+          "evidence": "search_excerpt",
+          "source_url": "https://www.cdi.santacruzcountyca.gov/UPC/UPCIndex.aspx",
+          "checked": "2026-10-31",
+          "note": "Use it to confirm the route."
+        }
+      ],
+      "access": [
+        {
+          "host": "www2.santacruzcountyca.gov/PlanningApplicationStatus",
+          "finding": "No robots rules and no gate. You haven't decided on bulk use, so no crawling.",
+          "rule": "no_bulk_until_user_decides",
+          "source_url": "https://www2.santacruzcountyca.gov/PlanningApplicationStatus/Bldg?n=B-211935",
+          "checked": "2026-10-31"
+        }
+      ],
+      "asks": [
+        {
+          "key": "santa-cruz-permission",
+          "kind": "permission_ask",
+          "subject": "Question about bulk access to building review comments on Application Status",
+          "site": "the Planning Application Status pages",
+          "summary": "public building review comments on the Planning Application Status pages",
+          "access_so_far": "So far we have read two comment pages and a few related pages, one at a time, to see what the site holds. We haven't crawled it, and I'm asking before doing anything more.",
+          "questions": [
+            "Is there a bulk export or data extract of building review comments?",
+            "If not, would the County accept slow automated retrieval from those pages, at a rate and hours you set? We would not do this without a yes.",
+            "What conditions apply to using the comments, such as attribution or no redistribution?"
+          ],
+          "sample_size": 0,
+          "fallback": "If the answer to these is no, I'd make a small public records request instead."
+        },
+        {
+          "key": "santa-cruz-10-permits",
+          "kind": "records_request",
+          "subject": "Public records request: building review comments on 10 permits",
+          "summary": "the building plan review comments on 10 building permits, as a report or export.",
+          "records": [
+            "For 10 building permits with at least one review marked Correction between January 1 and December 31, 2024, chosen by whatever is easiest for your staff: the comments from each reviewing agency, for each review round.",
+            "For each comment: the agency, the review round, the determination and the date."
+          ],
+          "format_note": "A report or export, as PDF or CSV, is ideal. If the fastest answer is 10 permit numbers whose comments I can read on the Application Status pages, that's fine too. Search clue: these appear in the building application review records behind Application Status.",
+          "exclude": "plans, drawings, calculations or sealed documents.",
+          "sample_size": 10,
+          "items_label": null,
+          "items": [],
+          "narrowing": "please tell me, and I'd gladly take 3 permits first.",
+          "must_keep": [
+            "Correction",
+            "review round"
+          ],
+          "follow_on": null
+        }
+      ],
+      "sequence": "Send the permission ask first. Send the records request only if the answer is no or no reply comes in about 15 business days.",
+      "pre_send": [
+        "Using the portal may mean accepting its terms. That's your decision, so read them first.",
+        "Use the County's designated method. Under AB 1821 as read, other routes may not start the deadline from January 1, 2027.",
+        "Requests received in 2026 use 10 calendar days. From 2027, 10 business days as read. Check the chaptered text.",
+        "The permission ask promises to remove names and not to republish without asking. Send it only if you'll keep that."
+      ],
+      "lawyer": [
+        "Read the chaptered text of AB 1821 for what it changes, and whether commercial use affects fees."
+      ],
+      "holds_source": "docs/real-correction-sources.md, section 3 (surveyed 2026-10-31; read 2 comment pages directly)",
+      "status_history": [
+        {
+          "status": "not_sent",
+          "at": "2026-10-31"
+        }
+      ]
+    },
+    {
+      "id": "seattle-open-data",
+      "place": "seattle",
+      "state": "WA",
+      "law_id": "us-wa",
+      "agency": "City of Seattle Open Data Program",
+      "office": "Open data team",
+      "salutation": "Hello,",
+      "holds": "The Plan Comments dataset (e285-aq8h), published from SDCI, last updated October 2025 by its metadata. It links to correction letter documents under web.seattle.gov/dpd/edms/.",
+      "why": "Redline's real test set comes from this dataset. Rows stop in September 2025, and robots.txt disallows the letter path, so the team can say whether it's still updating and whether a bulk export of the letters exists.",
+      "status": "draft_ready",
+      "contact": {
+        "channel": "email",
+        "value": "open.data@seattle.gov",
+        "evidence": "read_directly",
+        "source_url": "https://www.seattle.gov/tech/reports-and-data/open-data",
+        "checked": "2026-10-31",
+        "note": "The dataset's metadata lists the same address."
+      },
+      "other_contacts": [],
+      "access": [
+        {
+          "host": "web.seattle.gov/dpd/edms/",
+          "finding": "robots.txt disallows this path, so we don't fetch from it.",
+          "rule": "do_not_fetch",
+          "source_url": "https://web.seattle.gov/robots.txt",
+          "checked": "2026-10-31"
+        }
+      ],
+      "asks": [
+        {
+          "key": "seattle-open-data-permission",
+          "kind": "permission_ask",
+          "subject": "Question about the Plan Comments dataset and bulk access to correction letters",
+          "site": "the Plan Comments dataset and the correction letter documents it links to",
+          "summary": "the Plan Comments dataset (e285-aq8h) and the correction letters it links to",
+          "access_so_far": "We use the Plan Comments dataset through the open data portal. The letter documents it links to sit under web.seattle.gov/dpd/edms/, which your robots.txt disallows, so we don't fetch them.",
+          "questions": [
+            "The dataset's rows appear to stop at the end of September 2025, and its metadata shows a last update in October 2025. Is it still being updated, or has it moved?",
+            "Is there a bulk export of the correction letter documents, or another route you would prefer we use?",
+            "What conditions apply to using them, beyond the public domain license on the dataset?"
+          ],
+          "sample_size": 0,
+          "fallback": "If a bulk export isn't possible, I'd ask SDCI for a small sample through a public records request instead."
+        }
+      ],
+      "pre_send": [
+        "Open the dataset page and check that the last update date hasn't changed.",
+        "The permission ask promises to remove names and not to republish without asking. Send it only if you'll keep that."
+      ],
+      "lawyer": [
+        "Do the public domain terms on the dataset cover the linked letter documents? Letters can name people."
+      ],
+      "holds_source": "https://data.seattle.gov/api/views/e285-aq8h.json (metadata read directly 2026-10-31); docs/locale-research.md",
+      "status_history": [
+        {
+          "status": "not_sent",
+          "at": "2026-10-31"
+        }
+      ]
+    },
+    {
+      "id": "seattle-sdci",
+      "place": "seattle",
+      "state": "WA",
+      "law_id": "us-wa",
+      "agency": "Seattle Department of Construction and Inspections",
+      "office": "Public Disclosure Officer",
+      "salutation": "Dear Public Disclosure Officer,",
+      "holds": "Correction letters and plan comments, including those after the open dataset stops in September 2025.",
+      "why": "It would update the Seattle test set with newer comments, which may cite newer code.",
+      "status": "hold",
+      "hold_reason": "Wait for the open data team's answer so the City doesn't get two overlapping asks.",
+      "contact": {
+        "channel": "portal",
+        "value": "https://city-seattle.mycusthelp.com/webapp/_rs/supporthome.aspx",
+        "evidence": "read_directly",
+        "source_url": "https://www.seattle.gov/public-records",
+        "checked": "2026-10-31",
+        "note": "The City strongly encourages using the portal. Department email SCI_PDR@seattle.gov is in the Public Disclosure Officer Directory, read directly: https://www.seattle.gov/public-records/public-disclosure-officer-directory"
+      },
+      "other_contacts": [
+        {
+          "channel": "email",
+          "value": "SCI_PDR@seattle.gov",
+          "evidence": "read_directly",
+          "source_url": "https://www.seattle.gov/public-records/public-disclosure-officer-directory",
+          "checked": "2026-10-31"
+        }
+      ],
+      "access": [
+        {
+          "host": "web.seattle.gov/dpd/edms/",
+          "finding": "robots.txt disallows this path, so we don't fetch from it.",
+          "rule": "do_not_fetch",
+          "source_url": "https://web.seattle.gov/robots.txt",
+          "checked": "2026-10-31"
+        }
+      ],
+      "asks": [
+        {
+          "key": "seattle-sdci-10-letters",
+          "kind": "records_request",
+          "subject": "Public records request: 10 correction letters issued in early 2026",
+          "summary": "10 plan review correction letters that SDCI issued between January 1 and March 31, 2026, chosen by whatever is easiest for your staff, on building permits.",
+          "records": [
+            "The correction letter or list of corrections sent to the applicant, as issued, for each of the 10 permits.",
+            "For each: the permit number, the review type and the date issued."
+          ],
+          "format_note": "PDF or a CSV export is ideal. If the open data portal or a link answers this, please send the link.",
+          "exclude": "plans, drawings, calculations or sealed documents.",
+          "sample_size": 10,
+          "items_label": null,
+          "items": [],
+          "narrowing": "please tell me, and I'd gladly take 3 letters first.",
+          "must_keep": [
+            "correction letter"
+          ],
+          "follow_on": null
+        }
+      ],
+      "pre_send": [
+        "Send only after the open data team answers, and only if their answer doesn't already give you these."
+      ],
+      "lawyer": [
+        "Do any conditions apply to using these commercially?"
+      ],
+      "holds_source": "https://seattle.gov/construction-and-inspections/about-us/who-we-are/public-disclosure (read directly 2026-10-31)",
+      "status_history": [
+        {
+          "status": "not_sent",
+          "at": "2026-10-31"
+        }
+      ]
+    },
+    {
+      "id": "puyallup-clerk",
+      "place": "puyallup",
+      "state": "WA",
+      "law_id": "us-wa",
+      "agency": "City of Puyallup",
+      "office": "Public Records Officer, City Clerk's office",
+      "salutation": "Dear Public Records Officer,",
+      "holds": "Search results showed real correction letters on the permit portal. I haven't read them.",
+      "why": "A second Washington city would show how far Seattle's patterns travel.",
+      "status": "draft_ready",
+      "contact": {
+        "channel": "mail",
+        "value": "Public Records Officer, City Clerk's Office, 330 Third St. NW, Puyallup, WA 98371, (253) 841-5480",
+        "evidence": "search_excerpt",
+        "source_url": "https://codepublishing.com/WA/Puyallup/html/Puyallup01/Puyallup0114.html",
+        "checked": "2026-10-31",
+        "note": "From a city code chapter that may date to 2006. Call to confirm the current route. I didn't fetch the City's site."
+      },
+      "other_contacts": [],
+      "access": [
+        {
+          "host": "permits.puyallupwa.gov",
+          "finding": "Cloudflare bot check on robots.txt. Don't fetch.",
+          "rule": "do_not_fetch",
+          "source_url": "docs/real-correction-sources.md",
+          "checked": "2026-10-31"
+        },
+        {
+          "host": "www.puyallupwa.gov",
+          "finding": "robots.txt has default disallow rules and names ClaudeBot and Claude-SearchBot. I didn't fetch the site.",
+          "rule": "do_not_fetch",
+          "source_url": "https://www.puyallupwa.gov/robots.txt",
+          "checked": "2026-10-31"
+        }
+      ],
+      "asks": [
+        {
+          "key": "puyallup-5-letters",
+          "kind": "records_request",
+          "subject": "Public records request: 5 building plan review correction letters",
+          "summary": "5 building plan review correction letters the City issued between January 1 and June 30, 2026, chosen by whatever is easiest for your staff.",
+          "records": [
+            "The correction letter or list of corrections sent to the applicant, as issued, for each of the 5 permits.",
+            "For each: the permit number and the date issued."
+          ],
+          "format_note": "PDF is ideal. If the letters can be read on your permit site, a list of the 5 permit numbers isn't enough for us, because your site uses a bot check and we don't automate access. Copies would be best.",
+          "exclude": "plans, drawings, calculations or sealed documents.",
+          "sample_size": 5,
+          "items_label": null,
+          "items": [],
+          "narrowing": "please tell me, and I'd gladly take 2 letters first.",
+          "must_keep": [
+            "correction letter"
+          ],
+          "follow_on": null
+        }
+      ],
+      "pre_send": [
+        "Call the Clerk's Office to confirm how to submit, then record it with confirm-contact."
+      ],
+      "lawyer": [
+        "Do any conditions apply to using these commercially?"
+      ],
+      "holds_source": "docs/real-correction-sources.md, Blocked (search excerpts only)",
+      "status_history": [
+        {
+          "status": "not_sent",
+          "at": "2026-10-31"
+        }
+      ]
+    },
+    {
+      "id": "everett-clerk",
+      "place": "everett",
+      "state": "WA",
+      "law_id": "us-wa",
+      "agency": "City of Everett",
+      "office": "City Clerk's Office, public records",
+      "salutation": "Hello,",
+      "holds": "Search results showed real correction letters in the City's document portal. I haven't read them.",
+      "why": "A third Washington agency, with a different portal setup.",
+      "status": "draft_ready",
+      "contact": {
+        "channel": "portal",
+        "value": "everettwa.gov/publicrecords (GovQA portal). City Clerk's Office, 2930 Wetmore Ave, Suite 1-A, Everett, WA 98201",
+        "evidence": "search_excerpt",
+        "source_url": "https://everettwa.gov/1439",
+        "checked": "2026-10-31",
+        "note": "www.everettwa.gov robots.txt returned 403, so I didn't fetch it."
+      },
+      "other_contacts": [],
+      "access": [
+        {
+          "host": "lfportal.everettwa.gov",
+          "finding": "robots.txt returned 403, so the rule can't be read. Don't fetch.",
+          "rule": "do_not_fetch",
+          "source_url": "docs/real-correction-sources.md",
+          "checked": "2026-10-31"
+        }
+      ],
+      "asks": [
+        {
+          "key": "everett-5-letters",
+          "kind": "records_request",
+          "subject": "Public records request: 5 building plan review correction letters",
+          "summary": "5 building plan review correction letters the City issued between January 1 and June 30, 2026, chosen by whatever is easiest for your staff.",
+          "records": [
+            "The correction letter or list of corrections sent to the applicant, as issued, for each of the 5 permits.",
+            "For each: the permit number and the date issued."
+          ],
+          "format_note": "PDF is ideal.",
+          "exclude": "plans, drawings, calculations or sealed documents.",
+          "sample_size": 5,
+          "items_label": null,
+          "items": [],
+          "narrowing": "please tell me, and I'd gladly take 2 letters first.",
+          "must_keep": [
+            "correction letter"
+          ],
+          "follow_on": null
+        }
+      ],
+      "pre_send": [
+        "Open the Public Records page, confirm the portal, then record it with confirm-contact. Read the portal's terms first.",
+        "File with the general portal, not the separate police portal."
+      ],
+      "lawyer": [
+        "Do any conditions apply to using these commercially?"
+      ],
+      "holds_source": "docs/real-correction-sources.md, Blocked (search excerpts only)",
+      "status_history": [
+        {
+          "status": "not_sent",
+          "at": "2026-10-31"
+        }
+      ]
+    },
+    {
+      "id": "salem-or",
+      "place": "salem",
+      "state": "OR",
+      "law_id": "us-or",
+      "agency": "City of Salem, Oregon",
+      "office": "Public records (office not confirmed)",
+      "salutation": "Hello,",
+      "holds": "Search results showed process comment tables on building reviews in the permit portal. I haven't read them.",
+      "why": "It adds Oregon, a third legal regime for the general-rule test, and a state code Redline hasn't seen.",
+      "status": "draft_ready",
+      "contact": {
+        "channel": "portal",
+        "value": null,
+        "evidence": "unknown",
+        "source_url": "https://www.cityofsalem.net/government/public-records-request",
+        "checked": "2026-10-31",
+        "note": "A search excerpt says this page links to a Public Records Request Portal. www.cityofsalem.net robots.txt returned 403, so I didn't fetch it and don't have the portal address."
+      },
+      "other_contacts": [],
+      "access": [
+        {
+          "host": "egov.cityofsalem.net/PACPortal",
+          "finding": "robots.txt disallows / for ClaudeBot, anthropic-ai and Claude-Web, and signals ai-train=no. Don't fetch.",
+          "rule": "do_not_fetch",
+          "source_url": "docs/real-correction-sources.md",
+          "checked": "2026-10-31"
+        }
+      ],
+      "asks": [
+        {
+          "key": "salem-5-comment-sets",
+          "kind": "records_request",
+          "subject": "Public records request: plan review comments on 5 building permits",
+          "summary": "the plan review comments on 5 commercial building permits with at least one review requiring corrections between January 1 and June 30, 2026, chosen by whatever is easiest for your staff.",
+          "records": [
+            "For each of the 5 permits: the review comments or process comments for each reviewing discipline, as sent to the applicant.",
+            "For each comment: the discipline, the review cycle if recorded, and the date."
+          ],
+          "format_note": "PDF or a CSV export is ideal.",
+          "exclude": "plans, drawings, calculations or sealed documents.",
+          "sample_size": 5,
+          "items_label": null,
+          "items": [],
+          "narrowing": "please tell me, and I'd gladly take 2 permits first.",
+          "must_keep": [
+            "review comments"
+          ],
+          "follow_on": null
+        }
+      ],
+      "extra_ask": "Your permit portal's robots.txt doesn't allow our tools, so we haven't retrieved these from it.",
+      "pre_send": [
+        "Open the City's public records page and find the portal address, then record it with confirm-contact."
+      ],
+      "lawyer": [
+        "Salem's robots.txt signals no AI training. Would using these records to test and improve software conflict with any condition the City states? Ask if the City gives any."
+      ],
+      "holds_source": "docs/real-correction-sources.md, Blocked (search excerpts only)",
+      "status_history": [
+        {
+          "status": "not_sent",
+          "at": "2026-10-31"
+        }
+      ]
+    },
+    {
+      "id": "louisville-co-clerk",
+      "place": "louisville-co",
+      "state": "CO",
+      "law_id": "us-co",
+      "agency": "City of Louisville, Colorado",
+      "office": "City Clerk",
+      "salutation": "Hello,",
+      "holds": "A document portal blocked to Claude's crawlers. Search results suggested review records may exist, but I haven't confirmed that it holds correction letters.",
+      "why": "It adds Colorado, a fourth legal regime. Lower priority, because I can't confirm the records exist.",
+      "status": "draft_ready",
+      "contact": {
+        "channel": "form",
+        "value": "forms.louisvilleco.gov/City-Clerk/Records-request",
+        "evidence": "read_directly",
+        "source_url": "https://www.louisvilleco.gov/departments/city-clerks-office/request-a-public-record/",
+        "checked": "2026-10-31",
+        "note": "The page says a person must complete the form and submit it to the City Clerk. Fee questions: clerksoffice@louisvilleco.gov, (303) 335-4574, 749 Main St, Louisville, CO 80027. Research time beyond two hours is $41 per hour; a deposit may apply to large requests."
+      },
+      "other_contacts": [],
+      "access": [
+        {
+          "host": "laserfiche.louisvilleco.gov",
+          "finding": "robots.txt disallows ClaudeBot, anthropic-ai and Claude-Web. Don't fetch.",
+          "rule": "do_not_fetch",
+          "source_url": "docs/real-correction-sources.md",
+          "checked": "2026-10-31"
+        }
+      ],
+      "asks": [
+        {
+          "key": "louisville-3-letters",
+          "kind": "records_request",
+          "subject": "Open records request: 3 building plan review comment letters",
+          "summary": "3 building plan review comment or correction letters the City issued between January 1 and June 30, 2026, chosen by whatever is easiest for your staff.",
+          "records": [
+            "The comment letter or list of corrections sent to the applicant, as issued, for each of the 3 permits.",
+            "For each: the permit number and the date issued."
+          ],
+          "format_note": "PDF is ideal. If you don't issue comments in this form, please tell me how plan review comments are recorded.",
+          "exclude": "plans, drawings, calculations or sealed documents.",
+          "sample_size": 3,
+          "items_label": null,
+          "items": [],
+          "narrowing": "please tell me, and I'd gladly take 1 letter first.",
+          "must_keep": [
+            "comment letter"
+          ],
+          "follow_on": null
+        }
+      ],
+      "pre_send": [
+        "The form may have its own fields and terms. Copy the text in by hand and read them first."
+      ],
+      "lawyer": [
+        "Confirm CORA's current text against the official statute."
+      ],
+      "holds_source": "docs/real-correction-sources.md, Blocked (search excerpts only)",
+      "status_history": [
+        {
+          "status": "not_sent",
+          "at": "2026-10-31"
+        }
+      ]
+    }
+  ]
+}

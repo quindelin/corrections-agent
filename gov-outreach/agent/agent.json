@@ -1,0 +1,8 @@
+{
+  "name": "redline-gov-records",
+  "description": "Drafts public records and data-access requests for a person to review, and proposes playbook changes from outcomes. It has no tools and cannot send, submit or file anything.",
+  "model": {
+    "name": "truefoundry/claude-haiku-4-5",
+    "params": { "temperature": 0 }
+  }
+}

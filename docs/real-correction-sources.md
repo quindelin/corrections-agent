@@ -178,7 +178,7 @@ Excluded by column name only, not sampled:
 
 ## Process notes
 
-- **Copies saved to disk:** you asked for no saved documents, but WebFetch stores a copy of each PDF it fetches. Two are in `/Users/quin_pc/.claude/projects/-Users-quin-pc-Desktop-corrections-agent/8fed1566-ce5b-479c-a1c7-06d9d9326f12/tool-results/`: `webfetch-1793479817261-mdljzs.pdf` (Steamboat Springs) and `webfetch-1793480588134-76hvds.pdf` (Pikes Peak Regional Building). I left them for you to decide on. Other `webfetch-*.pdf` files there are not from my run.
+- **Copies saved to disk:** you asked for no saved documents, but WebFetch stored a copy of each PDF it fetched. Two were saved, from Steamboat Springs and Pikes Peak Regional Building. They've since been removed.
 - **My mistake on the second PDF:** after learning about this behavior I fetched the Pikes Peak handout anyway, with a placeholder prompt and before checking `robots.txt`. It told me nothing useful. The rule, checked afterward, is `Disallow: /Search/`, which does not cover that path.
 - **PDFs are unverified:** WebFetch returned only raw binary for both, so I stopped fetching PDFs. To verify rank 5 and the search-only table, someone needs to approve a different way of reading them.
 - **Robots timing:** on Tucson and Santa Cruz the robots check ran in the same step as the first page fetch, not before it. Both showed no rules. Cabarrus's `robots.txt` was 404 through WebFetch and its host did not resolve from this machine.

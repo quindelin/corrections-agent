@@ -1,0 +1,29 @@
+{
+  "id": "cincinnati",
+  "name": "City of Cincinnati, Ohio",
+  "authority": "City of Cincinnati",
+  "code_basis": "Reviewers in the sampled comments cite: RCO, OBC, CBC, OEBC, ICC, ASTM, LOCAL, OMC. Editions vary by application date and aren't resolved here.",
+  "hints": [
+    "cincinnati"
+  ],
+  "correction_process": {
+    "name": "Not researched",
+    "entry_id": "RESPONSE-PROCESS-NOT-RESEARCHED"
+  },
+  "data_source": "https://data.cincinnati-oh.gov/d/thvx-5mem",
+  "status": "evaluating",
+  "evaluation_status": {
+    "kind": "city_comments",
+    "letters": 40,
+    "holdouts": 10,
+    "reviewed_by_licensed_professional": false,
+    "label_mapping_reviewed_by_person": false,
+    "holdout_score": 70.6,
+    "citation_chapter_or_better_pct": 77.8,
+    "unsafe_routes": 0,
+    "verdict": "inconclusive",
+    "ready_for_design_partner": false,
+    "evaluated_at": "2026-10-31"
+  },
+  "license": "Public Domain"
+}

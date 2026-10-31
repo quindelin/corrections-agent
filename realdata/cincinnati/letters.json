@@ -1,0 +1,3111 @@
+{
+  "note": "Real comments from City of Cincinnati, Ohio's public dataset (data.cincinnati-oh.gov/thvx-5mem). Reviewers' citations are hidden in the text and kept as labels. Contact details and reviewer names removed.",
+  "letters": [
+    {
+      "id": "01-bpe-review-letter-comments-2024P01930",
+      "holdout": false,
+      "review_type": "BPE Review Letter Comments",
+      "source": {
+        "letter": "https://data.cincinnati-oh.gov/d/thvx-5mem",
+        "permit": "2024P01930",
+        "document_date": "2024-03-25"
+      },
+      "project": {
+        "jurisdiction": "cincinnati",
+        "address": "Not given",
+        "description": "INTERIOR RENOVATION OF EXISTING DENTAL CLINIC AND CONVERSION TO CHILD DAYCARE Permit class: Alter Commercial. Zoning: unknown.",
+        "reviewer": "City of Cincinnati, BPE Review Letter Comments"
+      },
+      "outcome": {
+        "review_cycles": null,
+        "days_out_for_corrections": null,
+        "days_city_review": null
+      },
+      "comments": [
+        {
+          "id": "C1",
+          "text": "2017 Ohio Building Code (OBC) [code reference removed] - Separate (deferred) associated approvals will be required for HVAC, electric, plumbing & exterior signage.",
+          "labels": {
+            "discipline": null,
+            "citations": [
+              "OBC 106"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C2",
+          "text": "[code reference removed] - Information on construction documents: a) Indicate that the Cincinnati Building Code is a governing code used in design. b) Provide a program statement on organization letterhead & signed by an officer for the daycare center specifying the hours of operation, number & ages of students, number of staff, meal program(s) & any special services rendered.",
+          "labels": {
+            "discipline": null,
+            "citations": [
+              "OBC 106"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C3",
+          "text": "[code reference removed] - Show the limits (foot print) of the storage cubby/furniture dividers on the floor plan and adjust floor areas/occupant loads accordingly.",
+          "labels": {
+            "discipline": null,
+            "citations": [
+              "OBC 106"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C4",
+          "text": "[code reference removed] - Accessibility: a) Identify the accessible entry(s) b) Complete the Accessibility Analysis Disproportionality Worksheet- see attached. #2024P01930 by [email removed] [phone removed]",
+          "labels": {
+            "discipline": "accessibility",
+            "citations": [
+              "OBC 1101"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "02-bpe-review-letter-comments-2025P08701",
+      "holdout": false,
+      "review_type": "BPE Review Letter Comments",
+      "source": {
+        "letter": "https://data.cincinnati-oh.gov/d/thvx-5mem",
+        "permit": "2025P08701",
+        "document_date": "2025-10-24"
+      },
+      "project": {
+        "jurisdiction": "cincinnati",
+        "address": "Not given",
+        "description": "ALTERATION ON EXISTING RESIDENTIAL STRUCTURE TO PROVIDE ADDITIONAL DWELLIN UNIT ON UPPER LEVEL Permit class: Alter Residential. Zoning: unknown.",
+        "reviewer": "City of Cincinnati, BPE Review Letter Comments"
+      },
+      "outcome": {
+        "review_cycles": null,
+        "days_out_for_corrections": null,
+        "days_city_review": null
+      },
+      "comments": [
+        {
+          "id": "C1",
+          "text": "This plan review is based on the 2019 Residential Code of Ohio (RCO) and the Cincinnati Building Code (CBC).",
+          "labels": {
+            "discipline": null,
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C2",
+          "text": "[code reference removed] Information on Construction Documents. Provide a site plan showing the dimensions from the new exterior exit stairway to side and rear property lines. 1.1 See [code reference removed] Exterior Walls for guidance on minimum fire-resistance rating and minimum fire separation distance associated with 'projections' as an exterior wall element. The stairway is considered a projection from the building.",
+          "labels": {
+            "discipline": "fire",
+            "citations": [
+              "RCO 106",
+              "RCO 302"
+            ],
+            "route": "licensed_review",
+            "sheets": []
+          }
+        },
+        {
+          "id": "C3",
+          "text": "[code reference removed] Residential Structures with more than Two Dwelling Units. Each grouping of two dwelling units shall be separated from an adjacent dwelling unit by a common wall assembly and/or a floor ceiling assembly having a fire resistance rating of two hours. When assemblies are required to be fire-resistance-rated, the supporting construction of such assemblies shall have an equal or greater fire-resistive rating. 2.1 Identify which grouping of two units will be separated from the third unit. 2.2 Provide cross-sections, details, framing plans, etc. to show compliance with the required rating of supporting construction. 2.3 The 2-hr rating per this section applies to wall assemblies (ie.: stairway separation) and floor/ceiling assembly. Note: Within the grouping of two dwelling units, the individual dwelling units shall be separated from each other, vertically and horizontally, by wall and/or floor assemblies having a fire resistance rating of not less than one hour.",
+          "labels": {
+            "discipline": "fire",
+            "citations": [
+              "RCO 302"
+            ],
+            "route": "licensed_review",
+            "sheets": []
+          }
+        },
+        {
+          "id": "C4",
+          "text": "[code reference removed] Exterior Exit Stairway Protection. Exterior exit stairways shall be separated from the interior of the building as required in [code reference removed] 3.1 [code reference removed] Openings within exterior walls shall be protected by opening protectives having a fire protection rating of not less than 3/4 hour.",
+          "labels": {
+            "discipline": "egress",
+            "citations": [
+              "OBC 1027",
+              "OBC 1023"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C5",
+          "text": "[code reference removed] & [code reference removed] Additions and Alterations & Replacement of Systems, Components and Materials. 4.1 [code reference removed] Alterations to residential buildings shall conform with the requirements of the code for new construction. Portions of the structure not altered and not affected by the alteration are not required to comply with the code requirements for a new structure. 4.2 [code reference removed] The existing systems (egress, fire protection, mechanical, etc.), materials, or components shall not be required to comply with all of the requirements of this code for new construction except to the extent that they are affected by the alteration. Replacement of existing systems, materials, or components shall not cause them to become unsafe, hazardous, overloaded, or become less effective than when originally installed, constructed, and/or approved. Note: These sections allow the current stairway configuration to the third floor unit to remain, due to prior occupancy of the third floor as part of the 2nd floor dwelling unit.",
+          "labels": {
+            "discipline": null,
+            "citations": [
+              "RCO 113"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "03-bpe-review-letter-comments-2026P02959",
+      "holdout": false,
+      "review_type": "BPE Review Letter Comments",
+      "source": {
+        "letter": "https://data.cincinnati-oh.gov/d/thvx-5mem",
+        "permit": "2026P02959",
+        "document_date": "2026-04-06"
+      },
+      "project": {
+        "jurisdiction": "cincinnati",
+        "address": "Not given",
+        "description": "NEW COVERED DECK ON REAR OF HOUSE. HVAC INCLUDED FOR FIREPLACE AND GRILL EXHAUST Permit class: Alter Residential. Zoning: unknown.",
+        "reviewer": "City of Cincinnati, BPE Review Letter Comments"
+      },
+      "outcome": {
+        "review_cycles": null,
+        "days_out_for_corrections": null,
+        "days_city_review": null
+      },
+      "comments": [
+        {
+          "id": "C1",
+          "text": "[code reference removed]: Stairs: Provide details of stone steppers at the bottom of the stairs. Provide dimensions for riser height and tread depth that comply with this section.",
+          "labels": {
+            "discipline": "egress",
+            "citations": [
+              "RCO 311"
+            ],
+            "route": "licensed_review",
+            "sheets": []
+          }
+        },
+        {
+          "id": "C2",
+          "text": "[code reference removed] Guards: Provide dimensions for guard height and opening limitations ([code reference removed]: 4\" sphere cannot pass through guard. Exception 2: 4-3/8\" cannot pass through guard at stair).",
+          "labels": {
+            "discipline": "egress",
+            "citations": [
+              "RCO 312"
+            ],
+            "route": "licensed_review",
+            "sheets": []
+          }
+        },
+        {
+          "id": "C3",
+          "text": "[code reference removed] Factory-Built Fireplace: Show compliance with all applicable paragraphs of this section for new fireplace. Provide a copy of manufacturer's installation and instructions with model number. Provide plan dimensions for distance to combustible materials.",
+          "labels": {
+            "discipline": null,
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C4",
+          "text": "HVAC permit needed for fireplace. Installation of the pre-manufactured fireplace shall be included under both the building permit and HVAC permit applications.",
+          "labels": {
+            "discipline": null,
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "04-bpe-review-letter-comments-2025P00377",
+      "holdout": true,
+      "review_type": "BPE Review Letter Comments",
+      "source": {
+        "letter": "https://data.cincinnati-oh.gov/d/thvx-5mem",
+        "permit": "2025P00377",
+        "document_date": "2025-01-28"
+      },
+      "project": {
+        "jurisdiction": "cincinnati",
+        "address": "Not given",
+        "description": "Interior Renovation for a satellite office/Kitchen for Daycare Catering Tenant. Interior renovation will include new offices, prep, and kitchen for warming/preparing food for distribution. INCLUDES HVAC. Permit class: Alter Commercial. Zoning: unknown.",
+        "reviewer": "City of Cincinnati, BPE Review Letter Comments"
+      },
+      "outcome": {
+        "review_cycles": null,
+        "days_out_for_corrections": null,
+        "days_city_review": null
+      },
+      "comments": [
+        {
+          "id": "C1",
+          "text": "Separate permits are required for Lot 2.",
+          "labels": {
+            "discipline": null,
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C2",
+          "text": "Separate (deferred) associated approvals will be required for wrecking, plumbing, electric, kitchen hoods/hood suppression, walk-in freezer/coolers, parking lot, exterior signage, Dept. of Transportation & Engineering (curb cut) & gas piping (gas piping can be applied for separately or can be included in either the Building or HVAC applications, but not on a plumbing application - specify in the scope of work on an application that the gas piping is to be included and show/size piping on a drawing), as applicable.",
+          "labels": {
+            "discipline": null,
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C3",
+          "text": "Specify the existing design floor loads for the Italianate & warehouse in the code summary building.",
+          "labels": {
+            "discipline": null,
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C4",
+          "text": "Provide the weights of the new & existing roof-top mechanical equipment and document (letter from a structural engineer) that the existing roof structure has the capacity for the added loads.",
+          "labels": {
+            "discipline": null,
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C5",
+          "text": "Provide the weights of the new walk-in coolers/freezers and document (letter from a structural engineer) that the existing floor structures have the capacity for the added loads.",
+          "labels": {
+            "discipline": null,
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C6",
+          "text": "[code reference removed] - Alterations: a) Label/dimension the maximum common path of egress on the egress plan. b) Show/describe required guards/handrails on the existing exterior stairs at the loading dock.",
+          "labels": {
+            "discipline": null,
+            "citations": [
+              "OEBC 503"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C7",
+          "text": "[code reference removed]/[code reference removed] - The Total Market Value of the property per the Hamilton County Auditor is $308,260, the proposed Fair Market Value of Labor & Material is specified at $500,000 - the project is considered a substantial improvement is required to comply with flood design requirements for new construction. #2025P00377 review by [email removed] [phone removed]",
+          "labels": {
+            "discipline": null,
+            "citations": [
+              "OEBC 503",
+              "CBC 1109-3"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "05-bpe-review-letter-comments-2022P04511",
+      "holdout": false,
+      "review_type": "BPE Review Letter Comments",
+      "source": {
+        "letter": "https://data.cincinnati-oh.gov/d/thvx-5mem",
+        "permit": "2022P04511",
+        "document_date": "2024-11-19"
+      },
+      "project": {
+        "jurisdiction": "cincinnati",
+        "address": "Not given",
+        "description": "BUILD A NEW SINGLE FAMILY DWELLING Permit class: New Residential. Zoning: unknown.",
+        "reviewer": "City of Cincinnati, BPE Review Letter Comments"
+      },
+      "outcome": {
+        "review_cycles": null,
+        "days_out_for_corrections": null,
+        "days_city_review": null
+      },
+      "comments": [
+        {
+          "id": "C1",
+          "text": "2019 Residential Code of Ohio [code reference removed] - The separate survey plat for each address shall be updated for all revised info - floor & garage elevations, corner spot elevations & grade/topo lines.",
+          "labels": {
+            "discipline": null,
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C2",
+          "text": "[code reference removed] - The separate floor plans for each address shall be updated for stair runs interior & exterior.",
+          "labels": {
+            "discipline": null,
+            "citations": [
+              "RCO 106"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C3",
+          "text": "[code reference removed] - The separate exterior building elevations for each address shall be updated to reflect the raising/lowering of the buildings. #2024P04505,11,12 by [email removed] [phone removed]",
+          "labels": {
+            "discipline": null,
+            "citations": [
+              "RCO 106"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "06-zpe-review-letter-comments-2023P05498",
+      "holdout": false,
+      "review_type": "ZPE Review Letter Comments",
+      "source": {
+        "letter": "https://data.cincinnati-oh.gov/d/thvx-5mem",
+        "permit": "2023P05498",
+        "document_date": "2023-07-24"
+      },
+      "project": {
+        "jurisdiction": "cincinnati",
+        "address": "Not given",
+        "description": "THIS PROJECT CONSISTS RENOVATIONS TO AN EXISTING BASEMENT APARTMENT UNIT AND REMOVAL OF AN EXISTING HOTTUB. Permit class: Alter Commercial. Zoning: unknown.",
+        "reviewer": "City of Cincinnati, ZPE Review Letter Comments"
+      },
+      "outcome": {
+        "review_cycles": null,
+        "days_out_for_corrections": null,
+        "days_city_review": null
+      },
+      "comments": [
+        {
+          "id": "C1",
+          "text": "Building permit history shows that the property is approved for 5 dwelling units.",
+          "labels": {
+            "discipline": "zoning",
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C2",
+          "text": "You have indicated on the permit application that the existing number of units is 10 and the proposed number of units is 10. Correct the application.",
+          "labels": {
+            "discipline": "zoning",
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C3",
+          "text": "If you are seeking a change to 6 dwelling units, the building permit materials must show the floor layouts for all floors.",
+          "labels": {
+            "discipline": "zoning",
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C4",
+          "text": "Provide a dimensioned Site Plan showing 6 compliant parking spaces or garage bays.",
+          "labels": {
+            "discipline": "zoning",
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "07-bpe-review-letter-comments-2025P11143",
+      "holdout": false,
+      "review_type": "BPE Review Letter Comments",
+      "source": {
+        "letter": "https://data.cincinnati-oh.gov/d/thvx-5mem",
+        "permit": "2025P11143",
+        "document_date": "2025-12-30"
+      },
+      "project": {
+        "jurisdiction": "cincinnati",
+        "address": "Not given",
+        "description": "New construction of a 5-story LIHTC residential building with 55 dwelling units, and support / amenity spaces. Proposed work includes ground improvement and landscaping / hardscape . Permit class: New Commercial. Zoning: unknown.",
+        "reviewer": "City of Cincinnati, BPE Review Letter Comments"
+      },
+      "outcome": {
+        "review_cycles": null,
+        "days_out_for_corrections": null,
+        "days_city_review": null
+      },
+      "comments": [
+        {
+          "id": "C1",
+          "text": "2024 [code reference removed] Documents: a) Indicate the disposal and borrow sites for the transport of soil on the building permit application. b) Please complete a city issued Statement of Special Inspections, see attached. c) Provide a geotechnical report, project is within a moderately high landslide susceptible zone.",
+          "labels": {
+            "discipline": null,
+            "citations": [
+              "OBC 106"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C2",
+          "text": "2024 [code reference removed] on construction documents: a) Please supply cut sheets or listing information for rated penetrations. b) [code reference removed] the capacity of the elevator and/or show it is gurney compatible. c) [code reference removed]-Classify refrigerant d) Winter design temperature is 6 degrees in Cincinnati, OH sheet AM601.",
+          "labels": {
+            "discipline": null,
+            "citations": [
+              "OBC 106"
+            ],
+            "route": null,
+            "sheets": [
+              "AM601."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "08-bpe-review-letter-comments-2026P07210",
+      "holdout": true,
+      "review_type": "BPE Review Letter Comments",
+      "source": {
+        "letter": "https://data.cincinnati-oh.gov/d/thvx-5mem",
+        "permit": "2026P07210",
+        "document_date": "2026-09-02"
+      },
+      "project": {
+        "jurisdiction": "cincinnati",
+        "address": "Not given",
+        "description": "DECK FRONT 30 X 6 / BACK 30 X 10 / SIDE 30 X 4 Permit class: Alter Residential. Zoning: unknown.",
+        "reviewer": "City of Cincinnati, BPE Review Letter Comments"
+      },
+      "outcome": {
+        "review_cycles": null,
+        "days_out_for_corrections": null,
+        "days_city_review": null
+      },
+      "comments": [
+        {
+          "id": "C1",
+          "text": "[code reference removed]: Building Permit Application form: Part C: Please revise to specify all work to be done on scope of work. If deck roof cover (porch) is also in scope, please include on the application form.",
+          "labels": {
+            "discipline": null,
+            "citations": [
+              "CBC 1101-19"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C2",
+          "text": "Drawings showing construction of roof for porch have been included. Please provide a roof framing plan that shows the spacing of the trusses and materials and method used for fastening to structure.",
+          "labels": {
+            "discipline": null,
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C3",
+          "text": "Provide cross section showing compliant construction of porch cover.",
+          "labels": {
+            "discipline": null,
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C4",
+          "text": "[code reference removed]: The City's 5-page \"Residential Deck Drawings\" have been submitted but are incomplete. Please complete the forms. There may be additional review comments once complete drawings are submitted. The following are the items from the forms that need to be addressed. a. Indicate beam to post connections. b. Indicate ledge board details on the deck drawings. None have been selected. c. Indicate beam size and type of connection of beam to post. d. Two different sized floor joists are selected on the side porch Residential Deck Drawings. e. [code reference removed] Floors and Landings at Exterior Doors: provide information about the door from the house to the deck including whether it is existing or proposed. For proposed door, show size and materials and lintel notes. For existing or proposed, show the height of the step down from threshold to the deck. f. Sheet 3 of 5 Stairs: Provide a 12\" pier at the bottom of each stringer for stairs with 4 risers or more.",
+          "labels": {
+            "discipline": "structural",
+            "citations": [
+              "RCO 507",
+              "RCO 311"
+            ],
+            "route": "licensed_review",
+            "sheets": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "09-bpe-review-letter-comments-2023P00510",
+      "holdout": false,
+      "review_type": "BPE Review Letter Comments",
+      "source": {
+        "letter": "https://data.cincinnati-oh.gov/d/thvx-5mem",
+        "permit": "2023P00510",
+        "document_date": "2023-02-01"
+      },
+      "project": {
+        "jurisdiction": "cincinnati",
+        "address": "Not given",
+        "description": "NEW SINGLE FAMILY Permit class: New Residential. Zoning: unknown.",
+        "reviewer": "City of Cincinnati, BPE Review Letter Comments"
+      },
+      "outcome": {
+        "review_cycles": null,
+        "days_out_for_corrections": null,
+        "days_city_review": null
+      },
+      "comments": [
+        {
+          "id": "C1",
+          "text": "Plans reviewed under the 2019 Residential Code of Ohio (RCO) and the current Cincinnati Building Code (CBC) for the construction of a new (3) story, single family dwelling with an attached garage.",
+          "labels": {
+            "discipline": null,
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C2",
+          "text": "[code reference removed] - Clarify and/or provide the following: a. Plans require coordination and are incomplete. i. Coordinate section tags with details and sheet numbers. ii. Detail 2/A-003 is missing. iii. Details 3 & 7/A-003 are incomplete. iv. All details on sheet A-301 are incomplete. b. The association of the garage to the main house in not well presented and maybe mis-understood. Clarify if plans are in the proper orientation or if they are a mirror image. c. Civil plans identify the FFE = [code reference removed]'. Clarify if this is the elevation for the basement or first floor. d. Specify where downspouts discharge ([code reference removed]",
+          "labels": {
+            "discipline": null,
+            "citations": [
+              "RCO 106",
+              "CBC 1105-03"
+            ],
+            "route": null,
+            "sheets": [
+              "A-301"
+            ]
+          }
+        },
+        {
+          "id": "C3",
+          "text": "[code reference removed] - Clarify the following discrepancies: a. Design loads specified on sheet A-003 do not match those on sheet A-101.",
+          "labels": {
+            "discipline": null,
+            "citations": [
+              "RCO 301"
+            ],
+            "route": null,
+            "sheets": [
+              "A-003",
+              "A-101."
+            ]
+          }
+        },
+        {
+          "id": "C4",
+          "text": "[code reference removed] - Window adjacent to stairs at first and second floors requires safety glazing.",
+          "labels": {
+            "discipline": null,
+            "citations": [
+              "RCO 308"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C5",
+          "text": "[code reference removed] - Smoke detectors shall be located on the portion of ceiling with the higher elevation (NFPA 72).",
+          "labels": {
+            "discipline": "fire",
+            "citations": [
+              "RCO 314"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C6",
+          "text": "[code reference removed] - Grade shall slope away from the foundation wall a minimum of 6\" in first 10'.",
+          "labels": {
+            "discipline": "structural",
+            "citations": [
+              "RCO 403"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C7",
+          "text": "[code reference removed] - Show location of the HVAC equipment and specify the fuel type for the proposed furnace and water heater. Show provisions for intake of combustion air. In addition, show location of the flue discharge. HIGHLIGHT and/or CLOUD all revisions on plans.",
+          "labels": {
+            "discipline": null,
+            "citations": [
+              "RCO 2407"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "10-bpe-review-letter-comments-2022P09357",
+      "holdout": false,
+      "review_type": "BPE Review Letter Comments",
+      "source": {
+        "letter": "https://data.cincinnati-oh.gov/d/thvx-5mem",
+        "permit": "2022P09357",
+        "document_date": "2022-12-19"
+      },
+      "project": {
+        "jurisdiction": "cincinnati",
+        "address": "Not given",
+        "description": "Unit A9: REMOVE AND REPLACE 5 WINDOWS LIKE FOR LIKE Permit class: Commercial Repair Residntl. Zoning: unknown.",
+        "reviewer": "City of Cincinnati, BPE Review Letter Comments"
+      },
+      "outcome": {
+        "review_cycles": null,
+        "days_out_for_corrections": null,
+        "days_city_review": null
+      },
+      "comments": [
+        {
+          "id": "C1",
+          "text": "The application indicates that there are 2 dwelling units in this building. There are many more than 2 dwelling units in this building. Revise.",
+          "labels": {
+            "discipline": null,
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C2",
+          "text": "Provide drawings including floor plans drawn to scale with the scale indicated to show the windows being replaced. Show the context of this dwelling unit within the entire floor plan. Show all fire escape locations. Provide names on the rooms. Provide cut sheets from manufacturer showing cross section and construction of window frame assembly. Drawings need to show the fastening of all materials and compliance with design loads including wind and snow.",
+          "labels": {
+            "discipline": null,
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C3",
+          "text": "[code reference removed]: Drawings need to be stamped, dated, and signed by a design professional registered in Ohio.",
+          "labels": {
+            "discipline": null,
+            "citations": [
+              "OBC 106"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C4",
+          "text": "[code reference removed] Windows along any fire escape shall be protected with a labeled ¾-Hour rated window assemblies.",
+          "labels": {
+            "discipline": null,
+            "citations": [
+              "OBC 3406"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C5",
+          "text": "[code reference removed] Indicate that replacement windows in sleeping rooms shall be the same size and type as the existing window and shall not reduce the clear opening width and height.",
+          "labels": {
+            "discipline": "egress",
+            "citations": [
+              "OBC 1030"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C6",
+          "text": "[code reference removed] Safety Glazing according to [code reference removed] shall be provided at all hazardous locations. Indicate safety glazing where required by this section. Show locations of bathtubs and showers in the bathrooms. Add notes to the drawings showing compliance with this section for glazing in the windows adjacent to showers and bathtubs with sills below 60” AFF.",
+          "labels": {
+            "discipline": null,
+            "citations": [
+              "OBC 2406"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "11-bpe-review-letter-comments-2022P09544",
+      "holdout": false,
+      "review_type": "BPE Review Letter Comments",
+      "source": {
+        "letter": "https://data.cincinnati-oh.gov/d/thvx-5mem",
+        "permit": "2022P09544",
+        "document_date": "2024-03-13"
+      },
+      "project": {
+        "jurisdiction": "cincinnati",
+        "address": "Not given",
+        "description": "REHAB BUILDING. OFFICE FLOORS WILL BE CONVERTED TO MULTIFAMILY APARTMENTS. Permit class: Alter Commercial. Zoning: unknown.",
+        "reviewer": "City of Cincinnati, BPE Review Letter Comments"
+      },
+      "outcome": {
+        "review_cycles": null,
+        "days_out_for_corrections": null,
+        "days_city_review": null
+      },
+      "comments": [
+        {
+          "id": "C1",
+          "text": "2017 Ohio Building Code ([code reference removed] - Provide substantiating data (UL/GA cut sheets) for the proposed fire-resistance rated ceiling assembly. *Information not found - please clarify",
+          "labels": {
+            "discipline": null,
+            "citations": [
+              "OBC 106"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C2",
+          "text": "[code reference removed] - Fire partitions shall extend from the top of the foundation or floor/ceiling assembly below to the underside of the floor or roof sheathing, slab or deck above or to the fire-resistance-rated floor/ceiling or roof/ceiling assembly above - document the proposed ceiling assembly. * See #1",
+          "labels": {
+            "discipline": "fire",
+            "citations": [
+              "OBC 708"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "12-bpe-review-letter-comments-2025P07150",
+      "holdout": true,
+      "review_type": "BPE Review Letter Comments",
+      "source": {
+        "letter": "https://data.cincinnati-oh.gov/d/thvx-5mem",
+        "permit": "2025P07150",
+        "document_date": "2025-08-29"
+      },
+      "project": {
+        "jurisdiction": "cincinnati",
+        "address": "Not given",
+        "description": "NEW 3 STORY APARTMENT BUILDING WITH ATTACHED GARAGES -HVAC INCLUDED Permit class: New Commercial. Zoning: unknown.",
+        "reviewer": "City of Cincinnati, BPE Review Letter Comments"
+      },
+      "outcome": {
+        "review_cycles": null,
+        "days_out_for_corrections": null,
+        "days_city_review": null
+      },
+      "comments": [
+        {
+          "id": "C1",
+          "text": "2024 [code reference removed] Statement of Special Inspections. On the submitted city of Cincinnati Statement of Special Inspections in addition to the areas indicated as requiring special inspections add Fire-resistance penetrations and joints to it and resubmit.",
+          "labels": {
+            "discipline": "structural",
+            "citations": [
+              "OBC 1704"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C2",
+          "text": "2024 [code reference removed] Evidence of Responsibility. After reviewing the submitted drawings I've noticed that all of the Mechanical, Electrical and Plumbing drawings are missing the required seal from a design professional. Revise supplying the required information and resubmit.",
+          "labels": {
+            "discipline": null,
+            "citations": [
+              "OBC 106"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C3",
+          "text": "2024 [code reference removed] Information on Construction Documents. On the submitted mechanical application the number of units is incorrect. There are ten units in this building. On the application there is 95 listed. Revise placing the correct number of units on the application submitted and resubmit.",
+          "labels": {
+            "discipline": null,
+            "citations": [
+              "OBC 106"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "13-bpe-review-letter-comments-2024P09554",
+      "holdout": false,
+      "review_type": "BPE Review Letter Comments",
+      "source": {
+        "letter": "https://data.cincinnati-oh.gov/d/thvx-5mem",
+        "permit": "2024P09554",
+        "document_date": "2024-12-05"
+      },
+      "project": {
+        "jurisdiction": "cincinnati",
+        "address": "Not given",
+        "description": "INTERIOR ALTERATION OF AN EXISTING PARTIALLY VACANT FLOOR Permit class: Alter Commercial. Zoning: unknown.",
+        "reviewer": "City of Cincinnati, BPE Review Letter Comments"
+      },
+      "outcome": {
+        "review_cycles": null,
+        "days_out_for_corrections": null,
+        "days_city_review": null
+      },
+      "comments": [
+        {
+          "id": "C1",
+          "text": "Plans reviewed under 2024 Ohio Building Code ([code reference removed] Ohio Existing Building Code, 2024 Ohio Mechanical Code (OMC) and the current Cincinnati Building Code (CBC), for a tenant fit-out on the 37th floor of a highrise building. Entire floor will be occupied by a single tenant. HVAC plans provided for review but no HVAC application has been submitted.",
+          "labels": {
+            "discipline": null,
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C2",
+          "text": "[code reference removed] - Specify in the code summary that the 2024 OEBC is the governing code used for design.",
+          "labels": {
+            "discipline": null,
+            "citations": [
+              "OEBC 101"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C3",
+          "text": "[code reference removed] and [code reference removed] - Specify the code compliance method that applies to this alteration. a. Prescriptive Compliance Method b. Work Area Compliance Method c. Performance Compliance Method",
+          "labels": {
+            "discipline": null,
+            "citations": [
+              "OEBC 301"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C4",
+          "text": "[code reference removed] - The administrative provisions chapter 1 of the OBC applies to the OEBC.",
+          "labels": {
+            "discipline": null,
+            "citations": [
+              "OEBC 101"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C5",
+          "text": "[code reference removed] - Clarify or provide the following: a. Provide an HVAC permit application to accompany the mechanical plans submitted or indicate that the HVAC plans are for reference only and the at a separate permit application will be submitted with plans. b. Provide a description for the operation of the HVAC system. c. Ducting of supply air is illustrated, clarify what is the method for accommodating return and/or exhaust air. d. HVAC plans shall show that there will be a relative balance of air between, supply, return, exhaust and make-up air ([code reference removed] e. HVAC plans shall show that the minimum required outdoor air is supplied to all spaces ([code reference removed]",
+          "labels": {
+            "discipline": null,
+            "citations": [
+              "OBC 106",
+              "OMC 403"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C6",
+          "text": "[code reference removed], [code reference removed] and [code reference removed]- Specify the occupant load for Boardroom #3711. Spaces with an occupant load of 50 or greater shall have 2 means of egress and door swinging in the direction of egress travel. (765 SF / 15 SF per person = 51)",
+          "labels": {
+            "discipline": "egress",
+            "citations": [
+              "OBC 1004"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C7",
+          "text": "[code reference removed] - Egress doors shall be readily openable from the egress side without the use of a key or special knowledge or effort. Sheet A701, Door Schedule, Hardware Set #10 shall reference the proper Sheet G002 not G137, for the Past Building Appeal regarding the operations of access controlled door hardware. HIGHLIGHT and/or CLOUD all revisions on plans.",
+          "labels": {
+            "discipline": "egress",
+            "citations": [
+              "OBC 1010"
+            ],
+            "route": null,
+            "sheets": [
+              "A701",
+              "G002"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "14-zpe-review-letter-comments-2026P05660",
+      "holdout": false,
+      "review_type": "ZPE Review Letter Comments",
+      "source": {
+        "letter": "https://data.cincinnati-oh.gov/d/thvx-5mem",
+        "permit": "2026P05660",
+        "document_date": "2026-06-29"
+      },
+      "project": {
+        "jurisdiction": "cincinnati",
+        "address": "Not given",
+        "description": "INSTALL NEW DRIVEWAY AND APRON Permit class: Alter Residential. Zoning: unknown.",
+        "reviewer": "City of Cincinnati, ZPE Review Letter Comments"
+      },
+      "outcome": {
+        "review_cycles": null,
+        "days_out_for_corrections": null,
+        "days_city_review": null
+      },
+      "comments": [
+        {
+          "id": "C1",
+          "text": "This is a request for more information.",
+          "labels": {
+            "discipline": "zoning",
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C2",
+          "text": "Please provide an updated site plan, drawn to scale, showing the proposed driveway location in relation to the house and property lines. Please be advised that the maximum permitted driveway width is 20ft, per Zoning Code [code reference removed]",
+          "labels": {
+            "discipline": "zoning",
+            "citations": [
+              "LOCAL 1425-35"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "15-bpe-review-letter-comments-2025P08937",
+      "holdout": false,
+      "review_type": "BPE Review Letter Comments",
+      "source": {
+        "letter": "https://data.cincinnati-oh.gov/d/thvx-5mem",
+        "permit": "2025P08937",
+        "document_date": "2026-02-21"
+      },
+      "project": {
+        "jurisdiction": "cincinnati",
+        "address": "Not given",
+        "description": "THIS IS FOR AN ALTERATION TO AN EXISTING A-2 RESTAURANT W/AN 875 SF PREP-KITCHEN ADDITION WHICH INCLUDES A NEW RAMP FOR ACCESSIBILITY. MEPs PERMITTED BY OTHERS. Permit class: Add Commercial. Zoning: unknown.",
+        "reviewer": "City of Cincinnati, BPE Review Letter Comments"
+      },
+      "outcome": {
+        "review_cycles": null,
+        "days_out_for_corrections": null,
+        "days_city_review": null
+      },
+      "comments": [
+        {
+          "id": "C1",
+          "text": "Plans reviewed under 2024 Ohio Building Code (OBC), the 2024 Ohio Existing Building Code (OEBC) and the current Cincinnati Building Code (CBC) for alterations to an existing 2 story mixed-use A-2/B, restaurant with conference and office space above. Also, proposed plans show a 680+/- SF single story addition housing a prep kitchen, additional storage and support facilities. The construction type of the building is declared to be VB. The existing building is not fire suppressed nor is fire suppression proposed.",
+          "labels": {
+            "discipline": null,
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C2",
+          "text": "[code reference removed] - Clarify and/or provide the following: a. Remove inconsistent information from revised plans. Inconsistencies include: i. Code information states building will and will not be fire suppressed. ii. Building height/area (existing, proposed and allowable) is not clearly represented. In addition, the areas and occupant load are inconsistent and do not add up b. Provide framing details for the installation of proposed skylights. c. Existing/Demo plans shall show the entire building plan (bsmt/1st/2nd floors) and identify the existing use of all spaces prior to any alterations. d. e. f. Plans shall identify walls (existing and proposed) that are fire rated or assumed to be fire rated. In addition, identify their hour rating required. 2a. OBC Tables [code reference removed] and [code reference removed] - Fire rating of east and south exterior walls shall extend up to the top of the parapet. 2b. [code reference removed] - Parapets shall be provided at exterior walls. 2e. [code reference removed] - Data for walk-in cooler/freezer shall specify the construction of the panels and their burning characteristics, identifying the flame-spread and smoke development indexes of the foam).",
+          "labels": {
+            "discipline": "fire",
+            "citations": [
+              "OBC 106",
+              "OBC 705",
+              "OBC 2603"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C3",
+          "text": "[code reference removed], [code reference removed] and [code reference removed] - The existing building is a non-conforming A-2 restaurant. The proposed addition has increased the occupant load where fire suppression is required. HIGHLIGHT and/or CLOUD all revisions on plans.",
+          "labels": {
+            "discipline": "fire",
+            "citations": [
+              "OEBC 606",
+              "OBC 903"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "16-eng-change-denied-2022P02324",
+      "holdout": true,
+      "review_type": "ENG CHANGE DENIED",
+      "source": {
+        "letter": "https://data.cincinnati-oh.gov/d/thvx-5mem",
+        "permit": "2022P02324",
+        "document_date": "2024-12-31"
+      },
+      "project": {
+        "jurisdiction": "cincinnati",
+        "address": "Not given",
+        "description": "INTERIOR RENOVATION OF AN EXISTING BUILDING/INCLUDES HVAC Permit class: Alter Commercial. Zoning: unknown.",
+        "reviewer": "City of Cincinnati, ENG CHANGE DENIED"
+      },
+      "outcome": {
+        "review_cycles": null,
+        "days_out_for_corrections": null,
+        "days_city_review": null
+      },
+      "comments": [
+        {
+          "id": "C1",
+          "text": "2017 Ohio Building Code [code reference removed] - Per [code reference removed], footnote a - \"Except as otherwise provided in [code reference removed], buildings classified as Group R-2 equipped throughout with an automatic sprinkler system in accordance with [code reference removed] or [code reference removed] and provided with emergency escape and rescue openings in accordance with [code reference removed]\" - please specify/show how the sleeping rooms comply with this section, on the life safety plans.",
+          "labels": {
+            "discipline": "egress",
+            "citations": [
+              "OBC 1006"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C2",
+          "text": "[code reference removed] - Show/document that the required EEROs comply with this section. #2022P02324 review by: [email removed] [phone removed]",
+          "labels": {
+            "discipline": "egress",
+            "citations": [
+              "OBC 1030"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "17-zpe-review-letter-comments-2026P01028",
+      "holdout": false,
+      "review_type": "ZPE Review Letter Comments",
+      "source": {
+        "letter": "https://data.cincinnati-oh.gov/d/thvx-5mem",
+        "permit": "2026P01028",
+        "document_date": "2026-02-19"
+      },
+      "project": {
+        "jurisdiction": "cincinnati",
+        "address": "Not given",
+        "description": "NEW CONSTRUCTION OF 3 CONNECTED TOWNHOMES. EACH TOWNHOME 3,119 SQFT, 3+BEADS, 3+BATHROOMS, 2 CAR ATTACHED GARAGE Permit class: Alter Commercial. Zoning: unknown.",
+        "reviewer": "City of Cincinnati, ZPE Review Letter Comments"
+      },
+      "outcome": {
+        "review_cycles": null,
+        "days_out_for_corrections": null,
+        "days_city_review": null
+      },
+      "comments": [
+        {
+          "id": "C1",
+          "text": "This is a request for additional information.",
+          "labels": {
+            "discipline": "zoning",
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C2",
+          "text": "The application indicates this is the construction of new townhomes, but drawings seem to indicate it is the rehabilitation of the existing property at 1916 Freeman Ave. Please clarify and remove any unrelated documents from the drawing set.",
+          "labels": {
+            "discipline": "zoning",
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C3",
+          "text": "The subject property is located in the Dayton Street Historic District which means exterior changes/alterations require review by the Urban Conservator staff or the Historic Conservation Board, per [code reference removed], Historic Preservation.",
+          "labels": {
+            "discipline": "zoning",
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C4",
+          "text": "Please provide existing and proposed elevation drawings for 1916 Freeman Ave.",
+          "labels": {
+            "discipline": "zoning",
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C5",
+          "text": "It appears that replacement windows and infilling of window openings are proposed. Please provide additional details about the windows and the infill. What is the reason behind infilling so many windows? Please note infill of windows requires that brick be inset at least 1\" in the opening - infill should not be flush with the wall",
+          "labels": {
+            "discipline": "zoning",
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C6",
+          "text": "Please note that replacement windows should be a material compatible with the historic district, generally, wood, aluminum-clad wood or fiberglass. Please provide details, including drawings/cut sheets of proposed replacement windows.",
+          "labels": {
+            "discipline": "zoning",
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C7",
+          "text": "Per the Dayton Street Historic District Guidelines,",
+          "labels": {
+            "discipline": "zoning",
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C8",
+          "text": "\"Door and Window Sash: Repair original doors and window sashes rather than replace whenever possible. If replacement is necessary, the new door or window sash should match the original in material, size and style as closely as possible. Synthetic replacement windows are discouraged. Consult with the Historic Conservation Office about acceptable replacement doors and windows.\"",
+          "labels": {
+            "discipline": "zoning",
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C9",
+          "text": "Please note that any HVAC/mechanical equipment should be placed where it is not visible from the street, including any louvers or vents. Please provide details about this and indicate locations of any equipment or louvers on drawings.",
+          "labels": {
+            "discipline": "zoning",
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "18-zpe-review-letter-comments-2024P04348",
+      "holdout": false,
+      "review_type": "ZPE Review Letter Comments",
+      "source": {
+        "letter": "https://data.cincinnati-oh.gov/d/thvx-5mem",
+        "permit": "2024P04348",
+        "document_date": "2024-06-11"
+      },
+      "project": {
+        "jurisdiction": "cincinnati",
+        "address": "Not given",
+        "description": "ADD BATH Permit class: Alter Residential. Zoning: unknown.",
+        "reviewer": "City of Cincinnati, ZPE Review Letter Comments"
+      },
+      "outcome": {
+        "review_cycles": null,
+        "days_out_for_corrections": null,
+        "days_city_review": null
+      },
+      "comments": [
+        {
+          "id": "C1",
+          "text": "This is not an adjudication letter. This is a request for more information.",
+          "labels": {
+            "discipline": "zoning",
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C2",
+          "text": "Please provide floor plans showing both the \"existing\" and \"proposed\" layouts.",
+          "labels": {
+            "discipline": "zoning",
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C3",
+          "text": "Revisions can be submitted to the Buildings & Inspections department in the same format as the original permit submittal.",
+          "labels": {
+            "discipline": "zoning",
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "19-bpe-review-letter-comments-2023P08118",
+      "holdout": false,
+      "review_type": "BPE Review Letter Comments",
+      "source": {
+        "letter": "https://data.cincinnati-oh.gov/d/thvx-5mem",
+        "permit": "2023P08118",
+        "document_date": "2023-10-30"
+      },
+      "project": {
+        "jurisdiction": "cincinnati",
+        "address": "Not given",
+        "description": "Install (2) Volta L2 Media stations and all related electrical and civil activities, painting and marking of EV Charging parking spaces and installation of necessary parking signs. Permit class: Alter Commercial. Zoning: unknown.",
+        "reviewer": "City of Cincinnati, BPE Review Letter Comments"
+      },
+      "outcome": {
+        "review_cycles": null,
+        "days_out_for_corrections": null,
+        "days_city_review": null
+      },
+      "comments": [
+        {
+          "id": "C1",
+          "text": "NOTE: This plan review is based on the 2017 OHIO BUILDING CODE and the CBC CINCINNATI BUILDING CODE. Separate permits must be obtained for other work including but not limited to electrical, and fire protection, etc.",
+          "labels": {
+            "discipline": null,
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C2",
+          "text": "[code reference removed] Please indicate the governing codes used for design on the plans. The 2017 OBC and the CINCINNATI BUILDING CODE CBC are currently being enforced.",
+          "labels": {
+            "discipline": null,
+            "citations": [
+              "OBC 101"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C3",
+          "text": "[code reference removed] A separate Parking Lot Permit application must be filed for work in the parking lot. The two applications are permitted to share the same plan sets. The submitted building permit application will cover the restoration of finishes in the building after the installation of the new electrical conduit routed through the building’s interior.",
+          "labels": {
+            "discipline": null,
+            "citations": [
+              "OBC 105"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C4",
+          "text": "[code reference removed] Required Construction Document plans submitted electronically as PDFs must be formatted to be clear and legible at 100% scale. The submitted plans are too small to be legible.",
+          "labels": {
+            "discipline": null,
+            "citations": [
+              "CBC 1101-21"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C5",
+          "text": "[code reference removed] The design professional in responsible charge is required to complete the City of Cincinnati's Statement of Special Inspections form (SSI Form) for the installation of the EV Charging Stations.",
+          "labels": {
+            "discipline": "structural",
+            "citations": [
+              "OBC 1705"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C6",
+          "text": "[code reference removed] The proposed electric vehicle charging station facility must be accessible to individuals with disabilities. At least one of the two electric vehicle charging stations must be accessible.",
+          "labels": {
+            "discipline": "accessibility",
+            "citations": [
+              "OBC 1103"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C7",
+          "text": "[code reference removed]#2 Indicate the locations of new excavation on the site plan for installing the underground electrical conduits. Provide a typical section view of the trench for the conduit installation including the width & depth of the trench. This information is required for review by outside agencies regulating underground utilities.",
+          "labels": {
+            "discipline": null,
+            "citations": [
+              "OBC 106"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C8",
+          "text": "[code reference removed]#2 The enlarged site plan must identify the existing elements to verify the locations of the EV charging stations. For example, identify the existing parking spaces, lighting pole, and the existing landscaping island. Provide dimensions for the size and locations of the charging stations and charging station foundations. Provide dimensions for the size of the charging station parking spaces.",
+          "labels": {
+            "discipline": null,
+            "citations": [
+              "OBC 106"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C9",
+          "text": "NOTE: Provide revision clouds for changes made to the plans.",
+          "labels": {
+            "discipline": null,
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "20-bpe-review-letter-comments-2023P08617",
+      "holdout": true,
+      "review_type": "BPE Review Letter Comments",
+      "source": {
+        "letter": "https://data.cincinnati-oh.gov/d/thvx-5mem",
+        "permit": "2023P08617",
+        "document_date": "2023-10-12"
+      },
+      "project": {
+        "jurisdiction": "cincinnati",
+        "address": "Not given",
+        "description": "3.51 KW PV ARRAY Permit class: Alter Residential. Zoning: unknown.",
+        "reviewer": "City of Cincinnati, BPE Review Letter Comments"
+      },
+      "outcome": {
+        "review_cycles": null,
+        "days_out_for_corrections": null,
+        "days_city_review": null
+      },
+      "comments": [
+        {
+          "id": "C1",
+          "text": "Plans reviewed under 2019 Residential Code of Ohio (RCO) for the installation of a solar array of (9) panels on an existing roof.",
+          "labels": {
+            "discipline": null,
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C2",
+          "text": "[code reference removed] - Provide an engineer's structural evaluation of the existing roof to verify that the existing roofing system is capable of supporting the additional new loads.",
+          "labels": {
+            "discipline": null,
+            "citations": [
+              "RCO 324"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C3",
+          "text": "[code reference removed] - Engineer shall include all associated design loads.",
+          "labels": {
+            "discipline": null,
+            "citations": [
+              "RCO 301"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C4",
+          "text": "[code reference removed] - Engineer's evaluation shall reference the current plans submitted and be properly signed, stamped and dated.",
+          "labels": {
+            "discipline": null,
+            "citations": [
+              "RCO 106"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C5",
+          "text": "HIGHLIGHT and/or CLOUD all revisions on plans.",
+          "labels": {
+            "discipline": null,
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "21-zpe-review-letter-comments-2024P03963",
+      "holdout": false,
+      "review_type": "ZPE Review Letter Comments",
+      "source": {
+        "letter": "https://data.cincinnati-oh.gov/d/thvx-5mem",
+        "permit": "2024P03963",
+        "document_date": "2024-05-31"
+      },
+      "project": {
+        "jurisdiction": "cincinnati",
+        "address": "Not given",
+        "description": "CONSTRUCT TIRE STORE / REPAIR GARAGE Permit class: New Commercial. Zoning: unknown.",
+        "reviewer": "City of Cincinnati, ZPE Review Letter Comments"
+      },
+      "outcome": {
+        "review_cycles": null,
+        "days_out_for_corrections": null,
+        "days_city_review": null
+      },
+      "comments": [
+        {
+          "id": "C1",
+          "text": "An aerial view of the property shows that it is covered in ground cover, and not asphalt. As such, redevelopment of the property must follow the current zoning code.",
+          "labels": {
+            "discipline": "zoning",
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C2",
+          "text": "Per [code reference removed] - Parking Lot Landscaping: One tree, two inches or more in caliper, must be planted for every ten parking spaces. The proposed landscape plan shows 3 trees that are 1 1/2\" in caliper being planted, which does not meet code.",
+          "labels": {
+            "discipline": "zoning",
+            "citations": [
+              "LOCAL 1425-29"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C3",
+          "text": "Per [code reference removed] Perimeter Landscaping - Parking lots must provide a perimeter landscape of at least three feet in width. No landscape perimeter is shown at the north or east end of the site.",
+          "labels": {
+            "discipline": "zoning",
+            "citations": [
+              "LOCAL 1425-29"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "22-bpe-review-letter-comments-2025P04081",
+      "holdout": false,
+      "review_type": "BPE Review Letter Comments",
+      "source": {
+        "letter": "https://data.cincinnati-oh.gov/d/thvx-5mem",
+        "permit": "2025P04081",
+        "document_date": "2025-06-02"
+      },
+      "project": {
+        "jurisdiction": "cincinnati",
+        "address": "Not given",
+        "description": "Improvement to the unit interiors, building systems, and common areas. The unit interiors will benefit from energy efficient lighting and plumbing fixtures, new appliances, fresh paint, and new flooring. The UFAS units will benefit from improvements and reconfigurations that allow for proper turning radius clearances and vertical height compliance, as well as hearing and visual upgrades. The rehab Permit class: Alter Commercial. Zoning: unknown.",
+        "reviewer": "City of Cincinnati, BPE Review Letter Comments"
+      },
+      "outcome": {
+        "review_cycles": null,
+        "days_out_for_corrections": null,
+        "days_city_review": null
+      },
+      "comments": [
+        {
+          "id": "C1",
+          "text": "Separate building & HVAC permit applications are required for Building #1 (400 W. 9th St.), or remove/strike out all Building #1 info.",
+          "labels": {
+            "discipline": null,
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C2",
+          "text": "Permit applications for Buildings #1 & #2 may share the same construction document set, but separate permit applications are required.",
+          "labels": {
+            "discipline": null,
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C3",
+          "text": "Separate (deferred) associated approvals will be required (for each building) for plumbing, electric, sprinklers, fire alarm, parking, exterior signage, Dept of Transportation & Engineering (work in the right-way/scaffolding) and gas piping (gas piping can be applied for separately or can be included in either the Building or HVAC applications, but not on a plumbing application - specify in the scope of work on an application that the gas piping is to be included and show/size piping on a drawing), as applicable.",
+          "labels": {
+            "discipline": null,
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C4",
+          "text": "Drawings included in the drawing set without a corresponding permit application shall be either; 1) labeled as\" FOR REFERENCE ONLY\", or 2) labeled as reference only in the drawing index, or 3) removed from the drawing set - see the E, P & FP sheets.",
+          "labels": {
+            "discipline": null,
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C5",
+          "text": "Provide a summary by building, floor, use group area & occupant load of the altered areas - this information is required for the certificate of occupancy.",
+          "labels": {
+            "discipline": null,
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C6",
+          "text": "Final construction documents are required for approval - the balcony window replacement Alternate shall either be removed or specific construction documents shall be included. c) [code reference removed] - Show all property lines on the survey or provide a copy of the lot consolidation, sealed by the Hamilton County Recorder.",
+          "labels": {
+            "discipline": null,
+            "citations": [
+              "OBC 106"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C7",
+          "text": "[code reference removed] - Document the existing & proposed/added weights of the roof-top equipment and provide documentation (structural engineer letter) that the roof structure has the capacity for the added load, as applicable.",
+          "labels": {
+            "discipline": null,
+            "citations": [
+              "OEBC 304"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C8",
+          "text": "[code reference removed] - Label the accessible entry(s) on the floor plan.",
+          "labels": {
+            "discipline": null,
+            "citations": [
+              "OEBC 306"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C9",
+          "text": "[code reference removed] - Show/specify the fire alarm & detection systems in the work areas, per this section.",
+          "labels": {
+            "discipline": null,
+            "citations": [
+              "OEBC 803"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C10",
+          "text": "[code reference removed] - Show/specify how the required outdoor & ventilation air complies with this section. #2025P04081 review by [email removed] [phone removed]",
+          "labels": {
+            "discipline": null,
+            "citations": [
+              "OEBC 807"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "23-zpe-review-letter-comments-2025P02386",
+      "holdout": false,
+      "review_type": "ZPE Review Letter Comments",
+      "source": {
+        "letter": "https://data.cincinnati-oh.gov/d/thvx-5mem",
+        "permit": "2025P02386",
+        "document_date": "2025-10-31"
+      },
+      "project": {
+        "jurisdiction": "cincinnati",
+        "address": "Not given",
+        "description": "REBUILD DECK, ADD PORCH ROOF OVER MAJORITY OF DECK. NOTE: DECK AND ROOF CONSTRUCTED PRIOR TO OBTAINING A BUILDING PERMIT. Permit class: Alter Residential. Zoning: unknown.",
+        "reviewer": "City of Cincinnati, ZPE Review Letter Comments"
+      },
+      "outcome": {
+        "review_cycles": null,
+        "days_out_for_corrections": null,
+        "days_city_review": null
+      },
+      "comments": [
+        {
+          "id": "C1",
+          "text": "This is not a denial letter, this is a request for more information.",
+          "labels": {
+            "discipline": "zoning",
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C2",
+          "text": "Please submit a survey to confirm the distance from the deck to the property lines. The submitted survey lacks this detail. Please submit a detailed survey showing the setbacks from the deck and roof structure to property lines.",
+          "labels": {
+            "discipline": "zoning",
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C3",
+          "text": "Revisions can be submitted to the Buildings & Inspections Department in the same format as the original permit submittal.",
+          "labels": {
+            "discipline": "zoning",
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "24-bpe-review-letter-comments-2024P03302",
+      "holdout": true,
+      "review_type": "BPE Review Letter Comments",
+      "source": {
+        "letter": "https://data.cincinnati-oh.gov/d/thvx-5mem",
+        "permit": "2024P03302",
+        "document_date": "2024-05-17"
+      },
+      "project": {
+        "jurisdiction": "cincinnati",
+        "address": "Not given",
+        "description": "INTERIOR OFFICE RENOVATION Permit class: Alter Commercial. Zoning: unknown.",
+        "reviewer": "City of Cincinnati, BPE Review Letter Comments"
+      },
+      "outcome": {
+        "review_cycles": null,
+        "days_out_for_corrections": null,
+        "days_city_review": null
+      },
+      "comments": [
+        {
+          "id": "C1",
+          "text": "2024 Ohio Building Code ([code reference removed] (deferred) associated approvals will be required for electric, plumbing, and HVAC, as applicable.",
+          "labels": {
+            "discipline": null,
+            "citations": [
+              "OBC 106"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C2",
+          "text": "[code reference removed] - Information on construction documents: a) Please provide a typical wall section for new partitions",
+          "labels": {
+            "discipline": null,
+            "citations": [
+              "OBC 106"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "25-bpe-review-letter-comments-2025P04889",
+      "holdout": false,
+      "review_type": "BPE Review Letter Comments",
+      "source": {
+        "letter": "https://data.cincinnati-oh.gov/d/thvx-5mem",
+        "permit": "2025P04889",
+        "document_date": "2025-07-10"
+      },
+      "project": {
+        "jurisdiction": "cincinnati",
+        "address": "Not given",
+        "description": "The work for this phase of the project includes constructing the digester gas (GAS) treatment system at the Little Miami WWTP. GAS is located in the AE Flood Zone. Units are mounted atop a concrete pad on grade at el. 503.50' BFE = 500.1' per FEMA map #39061C0356G dated 6.7.2023 Permit class: New Commercial. Zoning: unknown.",
+        "reviewer": "City of Cincinnati, BPE Review Letter Comments"
+      },
+      "outcome": {
+        "review_cycles": null,
+        "days_out_for_corrections": null,
+        "days_city_review": null
+      },
+      "comments": [
+        {
+          "id": "C1",
+          "text": "Plans reviewed under the 2024 Ohio Building Code (OBC) and the current Cincinnati Building Code (CBC) for construction/installation of (3) new concrete pad on grade for the support/ installation of process equipment associated with the Digester Gas Treatment System (GAS) for MSD. The proposed elevation for the top of slab is set for [code reference removed]'. The structure is located the AE Flood Hazard Zone. The Base Flood Elevation (BFE) at this location is approximately [code reference removed]'.",
+          "labels": {
+            "discipline": null,
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C2",
+          "text": "[code reference removed] - Clarify and/or provide the following: a. Provide a surveyed site plan submitted under the signature and seal of a licensed surveyor, showing/dimensioning the location of the proposed structures in relation to property lines, other structures and existing/finish grade elevations ([code reference removed] Surveyed Site plan shall identify the Base Flood Elevation (BFE) for this site. b. Plans shall identify the current building codes and standards that apply for this design. c. Provide a code summary for this building/structure that identifies its use/occupancy per chapter 3, construction type per chapter 6, how it meets height and area requirements per chapter 5 and any exemptions of the code or permitting per [code reference removed] and/or [code reference removed] d. Plan set submitted is structured for multiple phases of work for multiple structures. The scope of work shown on plans submitted for this application appears to extend beyond the permit application description. On the permit application and plans, provide a more detailed description of work to be completed under this permit submittal. Information that applies to other phases of work shall be identified as being under a separate permit or future",
+          "labels": {
+            "discipline": null,
+            "citations": [
+              "OBC 106",
+              "CBC 1101-19",
+              "OBC 101"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C3",
+          "text": "[code reference removed], 1612 and [code reference removed] - In addition to the referenced design loads provided on plans, engineer shall include all flood loads. Flood loads include those necessary to resist hydrostatic and hydrodynamic loads and the effects of buoyancy, flotation, lateral movement or any potential impact loads.",
+          "labels": {
+            "discipline": "structural",
+            "citations": [
+              "OBC 1603"
+            ],
+            "route": "licensed_review",
+            "sheets": []
+          }
+        },
+        {
+          "id": "C4",
+          "text": "[code reference removed] - Plans shall declare your method for providing floodproofing to this/these structures (wet or dry). New construction which includes electrical and plumbing equipment shall show how they will prevent water from entering or accumulating within the components during flood conditions.",
+          "labels": {
+            "discipline": null,
+            "citations": [
+              "CBC 1109-3"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C5",
+          "text": "[code reference removed] - In addition to the Special Inspections schedule submitted on plans, provide a copy of the city's Statement of Special Inspection (SSI) form, identifying the necessary inspection services that will be performed by a recognized third party inspecting agency. Download and complete the city's SSI form [ https://www.cincinnati-oh.gov/buildings/application-forms/all-forms-handouts-checklists-alphabetical-list/special-inspections/ ] Cover sheet of the SSI shall be signed, dated and sealed by the design professional. Page 4 shall identify the name(s) and contact information of the special inspector(s) or the inspecting agency. Pages 2-4 shall identify the inspector and the inspections that will be performed and indicate the frequency of the inspections (continuous/periodic) in the \"scope\" column. Please include item #22b in your selection of required inspections, Flood Certificate.",
+          "labels": {
+            "discipline": "structural",
+            "citations": [
+              "OBC 1704"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "26-eng-change-denied-2022P09918",
+      "holdout": false,
+      "review_type": "ENG CHANGE DENIED",
+      "source": {
+        "letter": "https://data.cincinnati-oh.gov/d/thvx-5mem",
+        "permit": "2022P09918",
+        "document_date": "2023-01-23"
+      },
+      "project": {
+        "jurisdiction": "cincinnati",
+        "address": "Not given",
+        "description": "NEW SINGLE FAMILY RESIDENCE Permit class: New Residential. Zoning: unknown.",
+        "reviewer": "City of Cincinnati, ENG CHANGE DENIED"
+      },
+      "outcome": {
+        "review_cycles": null,
+        "days_out_for_corrections": null,
+        "days_city_review": null
+      },
+      "comments": [
+        {
+          "id": "C1",
+          "text": "2019 Residential Code of Ohio ([code reference removed] - The address change is required to be changed with the Information Change form - see attached.",
+          "labels": {
+            "discipline": null,
+            "citations": [
+              "RCO 106"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C2",
+          "text": "[code reference removed] - The plat survey shows the West side yard at 6.42', whereas the foundation plan shows the West side yard dimension at 7'-5\" - please clarify/reconcile all property line dimensions.",
+          "labels": {
+            "discipline": null,
+            "citations": [
+              "RCO 106"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C3",
+          "text": "[code reference removed] - Per [code reference removed], projections closer than 2' to a property line are not allowed (N/A) - clarify the overhang(s) on the East side of the proposed house.",
+          "labels": {
+            "discipline": "fire",
+            "citations": [
+              "RCO 302"
+            ],
+            "route": "licensed_review",
+            "sheets": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "27-bpe-review-letter-comments-2026P09840",
+      "holdout": false,
+      "review_type": "BPE Review Letter Comments",
+      "source": {
+        "letter": "https://data.cincinnati-oh.gov/d/thvx-5mem",
+        "permit": "2026P09840",
+        "document_date": "2026-10-22"
+      },
+      "project": {
+        "jurisdiction": "cincinnati",
+        "address": "Not given",
+        "description": "NEW INSULATION/ DRYWALL/ INTERIOR RENOVATION/ C OF O Permit class: Alter Residential. Zoning: unknown.",
+        "reviewer": "City of Cincinnati, BPE Review Letter Comments"
+      },
+      "outcome": {
+        "review_cycles": null,
+        "days_out_for_corrections": null,
+        "days_city_review": null
+      },
+      "comments": [
+        {
+          "id": "C1",
+          "text": "This plan review is based on the 2019 Residential Code of Ohio (RCO) and the Cincinnati Building Code (CBC).",
+          "labels": {
+            "discipline": null,
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C2",
+          "text": "[code reference removed] Information on Construction Documents. 1.1 Sheet A-101. Please show the basement stairway location/configuration on the first-floor plan. It isn't clear where the basement is accessed from the first floor. 1.2 Sheet A-101. Provide additional information and/or cross-section for the pass-thru on the first floor between the living room/kitchen to the bathroom (ceiling height, etc.). 1.3 General Information - [code reference removed] Label minimum (1) Emergency Escape and Rescue Opening in each bedroom. 1.4 General Information - [code reference removed] Clothes Dryer Exhaust. Show/provide notation of independent means of exhaust w/duct termination in accordance with this section and [code reference removed]",
+          "labels": {
+            "discipline": "egress",
+            "citations": [
+              "RCO 106",
+              "RCO 310",
+              "RCO 1502",
+              "RCO 1504"
+            ],
+            "route": "licensed_review",
+            "sheets": [
+              "A-101."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "28-bpe-review-letter-comments-2026P05497",
+      "holdout": true,
+      "review_type": "BPE Review Letter Comments",
+      "source": {
+        "letter": "https://data.cincinnati-oh.gov/d/thvx-5mem",
+        "permit": "2026P05497",
+        "document_date": "2026-06-24"
+      },
+      "project": {
+        "jurisdiction": "cincinnati",
+        "address": "Not given",
+        "description": "ROOFTOP DECK ADDITION Permit class: Alter Residential. Zoning: unknown.",
+        "reviewer": "City of Cincinnati, BPE Review Letter Comments"
+      },
+      "outcome": {
+        "review_cycles": null,
+        "days_out_for_corrections": null,
+        "days_city_review": null
+      },
+      "comments": [
+        {
+          "id": "C1",
+          "text": "Site Plan: Please provide more information on the location of the deck adjacent to the house. Provide information about the door from the house to the deck. Provide the height of the step down from threshold to the deck. Show house, any door from house, stairs and dimensions from edge of deck or bottom of stairs to property lines.",
+          "labels": {
+            "discipline": null,
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C2",
+          "text": "Dimensions on plan drawing seem incorrect. Only three 7' spans are noted for the 32' long east perimeter of deck. Please revise.",
+          "labels": {
+            "discipline": null,
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C3",
+          "text": "Engineer's letter describes deck construction but does not provide details about the proposed 'doghouse' rooftop deck access construction. This construction needs to be included either with this permit application or another. If the 'doghouse' deck access construction is included in the scope of work for this building permit application, please provide the appropriate construction documents for the proposed 'doghouse' rooftop construction.",
+          "labels": {
+            "discipline": null,
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C4",
+          "text": "[code reference removed] Exterior stairway illumination: Provide a note that there will be a light source at the top landing of the stairway.",
+          "labels": {
+            "discipline": null,
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C5",
+          "text": "[code reference removed] Guards: Please provide more information to indicate compliance with the requirement for guards. Provide information on guards on northeast and south perimeter of deck. Provide dimensions for guard height on all sides of deck perimeter and guard opening limitations.",
+          "labels": {
+            "discipline": "egress",
+            "citations": [
+              "RCO 312"
+            ],
+            "route": "licensed_review",
+            "sheets": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "29-bpe-review-letter-comments-2023P09426",
+      "holdout": false,
+      "review_type": "BPE Review Letter Comments",
+      "source": {
+        "letter": "https://data.cincinnati-oh.gov/d/thvx-5mem",
+        "permit": "2023P09426",
+        "document_date": "2024-02-12"
+      },
+      "project": {
+        "jurisdiction": "cincinnati",
+        "address": "Not given",
+        "description": "CONVERSION OF AN EXISTING MECHANICAL ROOM/FLOOR INTO 1100 SQ FT TENANT CLUB ROOM WITH ACCESS TO A 2350 SQ FT ROOF TERRACE / CLUB ROOM AND DECK ARE FOR RESIDENTS ONLY Permit class: Alter Commercial. Zoning: unknown.",
+        "reviewer": "City of Cincinnati, BPE Review Letter Comments"
+      },
+      "outcome": {
+        "review_cycles": null,
+        "days_out_for_corrections": null,
+        "days_city_review": null
+      },
+      "comments": [
+        {
+          "id": "C1",
+          "text": "Plans reviewed under 2017 Ohio Building Code (OBC) and the current Cincinnati Building Code (CBC) for alterations and change in occupancy of the 14th floor/Roof of the existing (13) story Formica high-rise building. Proposed alterations includes the change in use of a 1460 SF penthouse mechanical room to a Club House along with a 2350 SF Roof-top Terrace for the assembly for new residence below. One existing elevator shall be extended to the roof. A second means of egress for the new roof assembly spaces shall be provided by a fire escape on the adjacent Mercantile Building. This building is of type IA construction and is fully suppressed.",
+          "labels": {
+            "discipline": null,
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C2",
+          "text": "[code reference removed] and [code reference removed] - Clarify or provide the following: b. Covenants/Easements have been submitted and provided for review by the city solicitor for verification.",
+          "labels": {
+            "discipline": null,
+            "citations": [
+              "OBC 3404",
+              "OBC 106"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C3",
+          "text": "[code reference removed], [code reference removed] and [code reference removed] - With the change in occupancy, the 14th story shall be served by a minimum of (2) fire service access elevators (FSAE). A 3412 \"Compliance Alternatives\" evaluation was submitted to show the building meets the mandatory fire safety scores. Please explain how the use of the 3412 evaluation eliminates the need for a second FSAE.",
+          "labels": {
+            "discipline": null,
+            "citations": [
+              "OBC 3404"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C4",
+          "text": "[code reference removed] - The 3412 evaluation submitted shows multiple compliance paths for the building, one as a partial change in occupancy and the other for the entire building. Both are submitted on a single form with little description. This is very difficult to follow. Please separate these out into individual evaluations.",
+          "labels": {
+            "discipline": null,
+            "citations": [
+              "OBC 3412"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C5",
+          "text": "[code reference removed] - Specify the fire rating for the existing roof and/or roof/ceiling assemblies. A minimum of 2 HR is required for compartmentation. Table 601 indicates that IA construction only requires 1.5 HR.",
+          "labels": {
+            "discipline": null,
+            "citations": [
+              "OBC 3412"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C6",
+          "text": "[code reference removed] - Identify the assemblies used when taking the credits in this category. The charging statement indicates that the assemblies used under this section may not be used for credits in sections [code reference removed] or [code reference removed]",
+          "labels": {
+            "discipline": null,
+            "citations": [
+              "OBC 3412"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C7",
+          "text": "[code reference removed] - Identify the assemblies used when taking the credits in this category. The charging statement indicates that the assemblies used under this section may not be used for credits in sections [code reference removed] or [code reference removed] HIGHLIGHT and/or CLOUD all changes to plans ([code reference removed]",
+          "labels": {
+            "discipline": null,
+            "citations": [
+              "OBC 3412",
+              "OBC 107"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "30-bpe-review-letter-comments-2026P05795",
+      "holdout": false,
+      "review_type": "BPE Review Letter Comments",
+      "source": {
+        "letter": "https://data.cincinnati-oh.gov/d/thvx-5mem",
+        "permit": "2026P05795",
+        "document_date": "2026-07-08"
+      },
+      "project": {
+        "jurisdiction": "cincinnati",
+        "address": "Not given",
+        "description": "Reconfigure an existing bar with new millwork, bar equipment & finishes. ***New lights and outlets & minor plumbing work on separate permits*** No HVAC Permit class: Alter Commercial. Zoning: unknown.",
+        "reviewer": "City of Cincinnati, BPE Review Letter Comments"
+      },
+      "outcome": {
+        "review_cycles": null,
+        "days_out_for_corrections": null,
+        "days_city_review": null
+      },
+      "comments": [
+        {
+          "id": "C1",
+          "text": "[code reference removed]: Provide dimensions of interior aisle in bar area between island.",
+          "labels": {
+            "discipline": null,
+            "citations": [
+              "OEBC 306"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C2",
+          "text": "[code reference removed]: Provide Life Safety Plan: Show how the means of egress will still be code compliant after the alteration is completed.",
+          "labels": {
+            "discipline": "fire",
+            "citations": [
+              "OEBC 704"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "31-bpe-review-letter-comments-2026P02188",
+      "holdout": false,
+      "review_type": "BPE Review Letter Comments",
+      "source": {
+        "letter": "https://data.cincinnati-oh.gov/d/thvx-5mem",
+        "permit": "2026P02188",
+        "document_date": "2026-03-10"
+      },
+      "project": {
+        "jurisdiction": "cincinnati",
+        "address": "Not given",
+        "description": "REPLACE EXISTING DECK WITH COMPOSITE DECK; ADD 12' X 16' ROOF STRUCTURE Permit class: Alter Residential. Zoning: unknown.",
+        "reviewer": "City of Cincinnati, BPE Review Letter Comments"
+      },
+      "outcome": {
+        "review_cycles": null,
+        "days_out_for_corrections": null,
+        "days_city_review": null
+      },
+      "comments": [
+        {
+          "id": "C1",
+          "text": "This plan review is based on the 2019 Residential Code of Ohio (RCO) and the Cincinnati Building Code (CBC).",
+          "labels": {
+            "discipline": null,
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C2",
+          "text": "[code reference removed] Construction Documents, Required Evidence of Responsibility. Required construction documents, when submitted for examination as required under [code reference removed] CBC, shall bear the identification and contact information of the person primarily responsible for their preparation and for the provisions therein (ie: complete title block information). 1.1 Please provide this information in the title block of each drawing/sheet. Include street address, sheet number, general description of proposed work, identification & contact information of person who prepared the plans. 1.2 Please provide span tables or manufacturer specifications for TJI joists and LVL beams.",
+          "labels": {
+            "discipline": null,
+            "citations": [
+              "CBC 1101-23",
+              "LOCAL 1101-19"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C3",
+          "text": "[code reference removed] Information on Construction Documents. 2.1 Please provide plan view to help distinguish new construction from existing construction. This will be especially helpful for placement of new full-height 6 x 6 posts. Also note existing or proposed guards (as applicable).",
+          "labels": {
+            "discipline": null,
+            "citations": [
+              "RCO 106"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C4",
+          "text": "[code reference removed] Deck Beam Bearing. Please clarify or better label the Simpson tie plate at LVL beam bearing condition onto 6 x 6 posts in accordance with this section.",
+          "labels": {
+            "discipline": "structural",
+            "citations": [
+              "RCO 507"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C5",
+          "text": "[code reference removed] Vertical Supports (ledger details). Please provide the ledger size @ rafter bearing similar to as required by this section.",
+          "labels": {
+            "discipline": "structural",
+            "citations": [
+              "RCO 507"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C6",
+          "text": "[code reference removed] Roof Covering Application. Please provide roof covering material (mineral-surfaced, modified bitumen, or other) and include the proposed roof slope.",
+          "labels": {
+            "discipline": "structural",
+            "citations": [
+              "RCO 905"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "32-bpe-review-letter-comments-2025P00497",
+      "holdout": true,
+      "review_type": "BPE Review Letter Comments",
+      "source": {
+        "letter": "https://data.cincinnati-oh.gov/d/thvx-5mem",
+        "permit": "2025P00497",
+        "document_date": "2025-01-17"
+      },
+      "project": {
+        "jurisdiction": "cincinnati",
+        "address": "Not given",
+        "description": "SHOP RENOVATION. ADDING 3 COMPARTMENT SINK AND HOOD INSTALLATION Permit class: Alter Commercial. Zoning: unknown.",
+        "reviewer": "City of Cincinnati, BPE Review Letter Comments"
+      },
+      "outcome": {
+        "review_cycles": null,
+        "days_out_for_corrections": null,
+        "days_city_review": null
+      },
+      "comments": [
+        {
+          "id": "C1",
+          "text": "25-0497 2304 Baltimore Ave CALT INSUFFICIENT FOR REVIEW: This address is for a commercial building. Please show compliance with the 2024 Ohio Existing Building Code.",
+          "labels": {
+            "discipline": null,
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C2",
+          "text": "2024 Ohio Existing Building Code ([code reference removed] - Specify in the code summary that the 2024 OEBC is the governing code used for design.",
+          "labels": {
+            "discipline": null,
+            "citations": [
+              "OEBC 101"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C3",
+          "text": "[code reference removed] - Administrative and enforcement: a. 2024 Ohio Building Code ([code reference removed] - Separate (deferred) associated approvals will be required for HVAC, electric, plumbing, sprinkler, fire alarm & exterior signs. The submitted plans are insufficient for complete plan review. b. [code reference removed] - Information on construction documents. The plans lack the required information for plans examination including, but not limited to the following. i. Provide an accurate and complete code analysis indicating the area and height of the building, type of construction, existing and proposed use groups, types of occupancy, separated or non-separated mixed uses, occupant load for each level, fire alarm information, sprinkler information, mechanical, electrical, and plumbing information, and Accessibility, etc. ii. Provide a site plan. iii. clearly indicates the scope of work. iv. provide existing, demo, and proposed floor plans. v. provide completed dimensions for floor plans including the clear width of all hallways and corridors. vi. provide a door schedule. vii. show all new and existing exit signs and emergency lights. viii. indicate the level(s) of exit discharge for the building. ix. label all",
+          "labels": {
+            "discipline": null,
+            "citations": [
+              "OEBC 101",
+              "OBC 106"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C4",
+          "text": "[code reference removed] - Specify the compliance method used in the code summary.",
+          "labels": {
+            "discipline": null,
+            "citations": [
+              "OEBC 301"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C5",
+          "text": "[code reference removed] - Accessibility for existing buildings: a. Identify the accessible entry(s) b. Show the turning & clear floor areas on the toilet room plans.",
+          "labels": {
+            "discipline": null,
+            "citations": [
+              "OEBC 306"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C6",
+          "text": "[code reference removed] - Specify the classification of work per this section in the code summary and specify how the alterations comply with the appropriate chapter provisions.",
+          "labels": {
+            "discipline": null,
+            "citations": [
+              "OEBC 601"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C7",
+          "text": "2024 OMC - Provide the required information per this code, include but not limited to the following. a. an outdoor air schedule for the spaces. b. Load calculations for the additional people load. c. Single line duct layout. d. Make up air and exhaust information.",
+          "labels": {
+            "discipline": null,
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "33-zpe-review-letter-comments-2026P04145",
+      "holdout": false,
+      "review_type": "ZPE Review Letter Comments",
+      "source": {
+        "letter": "https://data.cincinnati-oh.gov/d/thvx-5mem",
+        "permit": "2026P04145",
+        "document_date": "2026-05-15"
+      },
+      "project": {
+        "jurisdiction": "cincinnati",
+        "address": "Not given",
+        "description": "CERTIFICATE OF OCCUPANCY FOR SFD PROVIDING CARE Permit class: Alter Residential. Zoning: unknown.",
+        "reviewer": "City of Cincinnati, ZPE Review Letter Comments"
+      },
+      "outcome": {
+        "review_cycles": null,
+        "days_out_for_corrections": null,
+        "days_city_review": null
+      },
+      "comments": [
+        {
+          "id": "C1",
+          "text": "The proposed use is not a permitted use in an SF-6 zoning district, so we cannot approve a Certificate of Occupancy at this location. Based on the information provided in the Program Statement and per answers to the quesions asked below, this use is considered Transitional Housing, Program 4, which is not permitted in a Single-family zoning district per the City of Cincinnati's Zoning Code, [code reference removed], Single Family - Land Use Regulations.",
+          "labels": {
+            "discipline": "zoning",
+            "citations": [
+              "LOCAL 1403-05"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C2",
+          "text": "Will the space be organized as one dwelling unit (one kitchen, shared living space etc.)? Will it be individual dwelling units (if so how many)? If individual dwelling units is there any shared kitchen or eating facility for residents?",
+          "labels": {
+            "discipline": "zoning",
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C3",
+          "text": "How many unrelated individuals will be residing there?",
+          "labels": {
+            "discipline": "zoning",
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C4",
+          "text": "Is licensing by the state or a federal government required? If so, what agency is the licensing through and what type of license are you applying for (i.e. Ohio Department of Job and Family Services Children’s Crisis Care Facility or Ohio Department of Mental Health and Addiction Services Class 3 Residential Facility)?",
+          "labels": {
+            "discipline": "zoning",
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C5",
+          "text": "Is the facility licensed by the Ohio Department of Developmental Disabilities?",
+          "labels": {
+            "discipline": "zoning",
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C6",
+          "text": "Is program/supportive service attendance required to maintain residency or optional?",
+          "labels": {
+            "discipline": "zoning",
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C7",
+          "text": "Are there restrictions on movement? Can tenants come and go as they please? Any curfews? Mandatory check-ins? Etc.?",
+          "labels": {
+            "discipline": "zoning",
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C8",
+          "text": "Is any drug or alcohol treatment provided?",
+          "labels": {
+            "discipline": "zoning",
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C9",
+          "text": "Are any residents under criminal justice supervision (work release or probationary programs)?",
+          "labels": {
+            "discipline": "zoning",
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C10",
+          "text": "How are residents referred to the housing?",
+          "labels": {
+            "discipline": "zoning",
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "34-bpe-review-letter-comments-2022P07800",
+      "holdout": false,
+      "review_type": "BPE Review Letter Comments",
+      "source": {
+        "letter": "https://data.cincinnati-oh.gov/d/thvx-5mem",
+        "permit": "2022P07800",
+        "document_date": "2022-09-22"
+      },
+      "project": {
+        "jurisdiction": "cincinnati",
+        "address": "Not given",
+        "description": "SINGLE STORY GARAGE WITH ROOF PATIO Permit class: Res Garage/Shed<800. Zoning: unknown.",
+        "reviewer": "City of Cincinnati, BPE Review Letter Comments"
+      },
+      "outcome": {
+        "review_cycles": null,
+        "days_out_for_corrections": null,
+        "days_city_review": null
+      },
+      "comments": [
+        {
+          "id": "C1",
+          "text": "2019 Residential Code of Ohio [code reference removed] - Separate associated (deferred) approvals will be required for electric & plumbing (storm water).",
+          "labels": {
+            "discipline": null,
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C2",
+          "text": "[code reference removed] - Information on construction documents: a) Identify that the Cincinnati Building Code is also a governing code used for design. b) Provide the quantities of excavation & fill and the locations of disposal & borrow sites on retaining wall permit application.",
+          "labels": {
+            "discipline": null,
+            "citations": [
+              "RCO 106"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C3",
+          "text": "[code reference removed] - Show/describe the storm water collection and piping system on the site plan.",
+          "labels": {
+            "discipline": null,
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C4",
+          "text": "[code reference removed] - Show/dimension the 1'-0\" off set between the house and the garage on all plans, sections & elevations as applicable.",
+          "labels": {
+            "discipline": null,
+            "citations": [
+              "RCO 106"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C5",
+          "text": "[code reference removed] - Additional information: a) Show/describe how the underside of the stairs are waterproofed b) Provide the specifications & manufacturer's installation instructions for the walkable roof membrane. c) Provide the specifications & manufacturer's installation instructions for the self-adhering waterproof membrane at the top of the West wall.",
+          "labels": {
+            "discipline": null,
+            "citations": [
+              "RCO 106"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C6",
+          "text": "[code reference removed] - Exterior stairways shall be provided with an artificial light source located at the top landing of the stairway.",
+          "labels": {
+            "discipline": null,
+            "citations": [
+              "RCO 303"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C7",
+          "text": "[code reference removed] - The area of floor used for parking of automobiles or other vehicles shall be sloped to facilitate the movement of liquids to a drain or toward the main vehicle entry doorway.",
+          "labels": {
+            "discipline": null,
+            "citations": [
+              "RCO 309"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C8",
+          "text": "[code reference removed] - Show/describe/dimension the handrail on [code reference removed]/A-201.",
+          "labels": {
+            "discipline": "egress",
+            "citations": [
+              "RCO 311"
+            ],
+            "route": "licensed_review",
+            "sheets": []
+          }
+        },
+        {
+          "id": "C9",
+          "text": "[code reference removed] - Show how the trench drain & roof deck water is trapped, collected & connected to the storm sewer system. #2022P07800 review by [email removed] [phone removed]",
+          "labels": {
+            "discipline": null,
+            "citations": [
+              "CBC 1105-03"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "35-zpe-review-letter-comments-2024P10549",
+      "holdout": false,
+      "review_type": "ZPE Review Letter Comments",
+      "source": {
+        "letter": "https://data.cincinnati-oh.gov/d/thvx-5mem",
+        "permit": "2024P10549",
+        "document_date": "2024-12-18"
+      },
+      "project": {
+        "jurisdiction": "cincinnati",
+        "address": "Not given",
+        "description": "RENOVATE EXISITING STRUCTURE PER PLANS. NO STRUCTURAL CHANGES. ALL MOVED WALL ARE NON STRUCTURAL. NEW KITCHEN. Permit class: Alter Residential. Zoning: unknown.",
+        "reviewer": "City of Cincinnati, ZPE Review Letter Comments"
+      },
+      "outcome": {
+        "review_cycles": null,
+        "days_out_for_corrections": null,
+        "days_city_review": null
+      },
+      "comments": [
+        {
+          "id": "C1",
+          "text": "This is a request for additional information.",
+          "labels": {
+            "discipline": "zoning",
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C2",
+          "text": "Please provide the dimensions of the side and rear yard setbacks on your site plan. The subject property is located in an RMX zone, which requires side yard setbacks of 0/5' and a rear yard setback of 20'. The deck is considered to be an extension of the house, so the rear yard setback should be measured from the edge of the deck to the rear property line.",
+          "labels": {
+            "discipline": "zoning",
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "36-bpe-review-letter-comments-2025P00610",
+      "holdout": true,
+      "review_type": "BPE Review Letter Comments",
+      "source": {
+        "letter": "https://data.cincinnati-oh.gov/d/thvx-5mem",
+        "permit": "2025P00610",
+        "document_date": "2025-01-28"
+      },
+      "project": {
+        "jurisdiction": "cincinnati",
+        "address": "Not given",
+        "description": "DEMO OF EXISTING 1 STORY 18X28 GARAGE/ REMAINING MASONARY EXTERIOR WALLS ONLY Permit class: Alter Residential. Zoning: unknown.",
+        "reviewer": "City of Cincinnati, BPE Review Letter Comments"
+      },
+      "outcome": {
+        "review_cycles": null,
+        "days_out_for_corrections": null,
+        "days_city_review": null
+      },
+      "comments": [
+        {
+          "id": "C1",
+          "text": "2019 Residential Code of Ohio ([code reference removed] - Specify that the Cincinnati Building Code & 2019 Residential Code of Ohio are the governing codes used in design.",
+          "labels": {
+            "discipline": null,
+            "citations": [
+              "RCO 106"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C2",
+          "text": "[code reference removed] - Site plan: a) Provide a site/location plan showing the location of the garage on the property. b) Show/describe the floor elevation of the remaining slab & the elevations of adjacent grades.",
+          "labels": {
+            "discipline": null,
+            "citations": [
+              "RCO 106"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C3",
+          "text": "[code reference removed] - Specify/show that any portions of the structure not altered and not affected by the alteration comply with the code requirements for a new structure. #2025P00610 review by [email removed] [phone removed]",
+          "labels": {
+            "discipline": null,
+            "citations": [
+              "RCO 1013"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "37-zpe-review-letter-comments-2022P03682",
+      "holdout": false,
+      "review_type": "ZPE Review Letter Comments",
+      "source": {
+        "letter": "https://data.cincinnati-oh.gov/d/thvx-5mem",
+        "permit": "2022P03682",
+        "document_date": "2022-05-19"
+      },
+      "project": {
+        "jurisdiction": "cincinnati",
+        "address": "Not given",
+        "description": "EXCAVATION/ 3 STORY ADDITION INCLUDING 2 CAR GARAGE, OPEN AND UNCOVERED DECK AREA AND MASTER SUITE Permit class: Add Residential. Zoning: unknown.",
+        "reviewer": "City of Cincinnati, ZPE Review Letter Comments"
+      },
+      "outcome": {
+        "review_cycles": null,
+        "days_out_for_corrections": null,
+        "days_city_review": null
+      },
+      "comments": [
+        {
+          "id": "C1",
+          "text": "On the Site Plan, provide a total depth dimension for the existing dwelling and addition from the base of the front porch to the rear (east) end of the proposed deck steps.",
+          "labels": {
+            "discipline": "zoning",
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C2",
+          "text": "The side setback dimensions should be shown as measured from side property line to the foundation, not the roof envelope, because there is an allowed projection of up to 2.5 feet for eaves, soffit, gutters, etc.",
+          "labels": {
+            "discipline": "zoning",
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C3",
+          "text": "Per [code reference removed], Increased Side Yards. In addition to the side yard requirements set forth for the SF, RM and O Districts and after adjusted by other provisions of this section, the required side yard is increased by one foot for each ten feet or fraction thereof by which the depth of the building exceeds 60 feet.",
+          "labels": {
+            "discipline": "zoning",
+            "citations": [
+              "LOCAL 1421-23"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C4",
+          "text": "The side setback dimensions should be shown as measured for the foundation, not the roof envelope, because there is an allowed projection of up to 2.5 feet for eaves, soffit, gutters, etc.",
+          "labels": {
+            "discipline": "zoning",
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C5",
+          "text": "As to the rear, you may consider reconfiguring the stairs as they are significantly increasing the total depth of the dwelling.",
+          "labels": {
+            "discipline": "zoning",
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "38-bpe-review-letter-comments-2020P09070",
+      "holdout": false,
+      "review_type": "BPE Review Letter Comments",
+      "source": {
+        "letter": "https://data.cincinnati-oh.gov/d/thvx-5mem",
+        "permit": "2020P09070",
+        "document_date": "2022-11-08"
+      },
+      "project": {
+        "jurisdiction": "cincinnati",
+        "address": "Not given",
+        "description": "UNITS ARE GETTING A FULL RENOVATION INCLUDING FINISH UPGRADE/EXTERIORS ARE BEING RENOVATED TO EXTENTS SHOWN ON PLAN BLDG #17 Permit class: Alter Residential. Zoning: unknown.",
+        "reviewer": "City of Cincinnati, BPE Review Letter Comments"
+      },
+      "outcome": {
+        "review_cycles": null,
+        "days_out_for_corrections": null,
+        "days_city_review": null
+      },
+      "comments": [
+        {
+          "id": "C1",
+          "text": "Eng. Chg. dated 5/31/22 for change to first floor entry facade.",
+          "labels": {
+            "discipline": null,
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C2",
+          "text": "[code reference removed] - Pland submitted require the signature and seal of the design professional.",
+          "labels": {
+            "discipline": null,
+            "citations": [
+              "OBC 106"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C3",
+          "text": "[code reference removed] - Clarify or provide the following: a. Provide construction detail for the proposed concrete ramp. Identify the elevation of the landing adjacent to the new entry door. Specify any slope to the landing for shedding water ([code reference removed] b. Specify the height and spacing of rails providing edge protection ([code reference removed] and 2009 ANSI [code reference removed]) c. Coordinate proposed façade arrangement with the HVAC. The HVAC design shows a large air intake vent where the new entry door is placed.",
+          "labels": {
+            "discipline": "egress",
+            "citations": [
+              "OBC 106",
+              "OBC 1012"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "39-bpe-review-letter-comments-2022P01731",
+      "holdout": false,
+      "review_type": "BPE Review Letter Comments",
+      "source": {
+        "letter": "https://data.cincinnati-oh.gov/d/thvx-5mem",
+        "permit": "2022P01731",
+        "document_date": "2022-03-15"
+      },
+      "project": {
+        "jurisdiction": "cincinnati",
+        "address": "Not given",
+        "description": "FRAME IN AND INSTALL FIRE DOOR ENCLOSING STAIRS FROM BSMT AND THIRD FLR. 3RD FLR UNIT ENTRY DOOR RELOCATED. INSTALL EXT. REAR STAIRS FOR SEPARATE ACCESS TO 1ST FLR. INT. REAR STAIR UPGRADE GYP BD FOR 2 HR RATING. REMODEL KITCHEN & BATH - SAME SIZE & LOCATION AT 3RD FLR. Permit class: Alter Commercl-Res unit insp. Zoning: unknown.",
+        "reviewer": "City of Cincinnati, BPE Review Letter Comments"
+      },
+      "outcome": {
+        "review_cycles": null,
+        "days_out_for_corrections": null,
+        "days_city_review": null
+      },
+      "comments": [
+        {
+          "id": "C1",
+          "text": "Plans reviewed under the 2017 Ohio Building Code (OBC) for a alterations of an existing 3 family dwelling. Dwellings are stacked with one dwelling per floor. First and second floor dwellings have separate/independent entries. Third floor dwelling is access thru a stair that is shared with all dwellings and access to a common basement.",
+          "labels": {
+            "discipline": null,
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C2",
+          "text": "[code reference removed] and [code reference removed] - Clarify or provide the following: a. Building permit and the building plans shall reference the same code. Plans reference the OBC and application reference the RCO. b. Building code information shall specify which \"R\" occupancy building is classified. c. Plans submitted for review shall be construction documents, any alterations or repairs shall provide adequate/detailed information that identifies the materials, construction and support of all added or altered components. d. Clarify the use of the basement and who has access to it. e. Plans shall identify all \"assumed\" fire rated assemblies that provide dwelling separation. f. Plans shall identify all fire rated construction and whether there is any fire separation between the basement and the first floor dwelling or the basement and the common rated stair enclosure. g. Clarify whether stairs are required outside rear stairs to access grade.",
+          "labels": {
+            "discipline": null,
+            "citations": [
+              "OBC 3404"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C3",
+          "text": "[code reference removed], [code reference removed] and [code reference removed] - All dwelling unit separations shall be maintained. Referenced Note #1 (sheet A-100 and A-103) is ambiguous and insufficient in information.",
+          "labels": {
+            "discipline": null,
+            "citations": [
+              "OBC 420"
+            ],
+            "route": null,
+            "sheets": [
+              "A-100"
+            ]
+          }
+        },
+        {
+          "id": "C4",
+          "text": "[code reference removed] - Alterations to the stair enclosure(s) shall show that continuity of the required fire rating will be maintained. Clarify its application.",
+          "labels": {
+            "discipline": "egress",
+            "citations": [
+              "OBC 1023"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C5",
+          "text": "[code reference removed], [code reference removed] and [code reference removed] - Openings/doors in the stair enclosure shall be protected for 1.5 HR, self-closing and latching.",
+          "labels": {
+            "discipline": "egress",
+            "citations": [
+              "OBC 1023"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C6",
+          "text": "[code reference removed] and [code reference removed] - Plans shall show the location of all handrail and guardrails (existing and proposed).",
+          "labels": {
+            "discipline": "egress",
+            "citations": [
+              "OBC 1011"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C7",
+          "text": "[code reference removed] and chapter 11 - New exterior stairs shall have a landing at the top of the stairs. Specify the elevation height of the stair landing in relation to the first floor and door threshold. Dimension the minimum width of the proposed new stairs. Show the framing of the proposed stairs and its landing. Detail its attachment to the house and its overall support, footers, etc. Openings in stair risers shall not allow a 4\" sphere to pass. Coordinate the number of stair risers and tread that are required. Currently stair elevation shows one thing but specifies another.",
+          "labels": {
+            "discipline": "egress",
+            "citations": [
+              "OBC 1010"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C8",
+          "text": "[code reference removed] - Specify the door hardware for all new doors",
+          "labels": {
+            "discipline": "egress",
+            "citations": [
+              "OBC 1010"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C9",
+          "text": "[code reference removed] - Specify your design loads. HIGHLIGHT and/or CLOUD all revisions on plans",
+          "labels": {
+            "discipline": "structural",
+            "citations": [
+              "OBC 1607"
+            ],
+            "route": "licensed_review",
+            "sheets": []
+          }
+        }
+      ]
+    },
+    {
+      "id": "40-bpe-review-letter-comments-2024P10050",
+      "holdout": true,
+      "review_type": "BPE Review Letter Comments",
+      "source": {
+        "letter": "https://data.cincinnati-oh.gov/d/thvx-5mem",
+        "permit": "2024P10050",
+        "document_date": "2024-12-17"
+      },
+      "project": {
+        "jurisdiction": "cincinnati",
+        "address": "Not given",
+        "description": "NEW SINGLE FAMILY DETACHED RESIDENCE. 2 STORIES WOOD CONSTRUCTION OVER CONCRETE BASEMENT Permit class: New Residential. Zoning: unknown.",
+        "reviewer": "City of Cincinnati, BPE Review Letter Comments"
+      },
+      "outcome": {
+        "review_cycles": null,
+        "days_out_for_corrections": null,
+        "days_city_review": null
+      },
+      "comments": [
+        {
+          "id": "C1",
+          "text": "Plans reviewed under 2019 Residential Code of Ohio (RCO) and the current edition of the Cincinnati Building Code (CBC) for the construction of a new 2 story single family dwelling w/a full basement on a vacant lot which was previously developed. Proposed house is situated 5'4\" from its west property line.",
+          "labels": {
+            "discipline": null,
+            "citations": [],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C2",
+          "text": "[code reference removed] - Clarify or provide the following: a. Provide a Surveyed Site Plan that will show/dimension the location of the proposed structure in relation to all property lines, metes and bounds, grade and finish floor elevations. The Survey Plat shall be signed and stamped by a licensed surveyor ([code reference removed] b. Site/civil plan shall dimension the location of the proposed retaining wall from the property line(s). All construction for the proposed walls shall not project beyond the limits of the site (this includes underground footings). To construct a wall adjacent to the property line may require a construction easement or written agreement from the neighboring lots. Identify the grade elevation to each side of wall at its beginnings, ends and at any change in elevation or direction.",
+          "labels": {
+            "discipline": null,
+            "citations": [
+              "RCO 106",
+              "CBC 1101-19"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C3",
+          "text": "[code reference removed] (5) - Clarify that foundation waterproofing will occur at all exterior walls below grade, not just at the planter.",
+          "labels": {
+            "discipline": null,
+            "citations": [
+              "CBC 1117-23"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C4",
+          "text": "[code reference removed] - Include your excavation and fill information on the \"Building Permit Application\". Specify the quantity of clean fill/granular backfill. Information shall include the borrow and disposal sites. The excavation and fill for the retaining wall and the house maybe included on the building permit application.",
+          "labels": {
+            "discipline": null,
+            "citations": [
+              "CBC 1101-19"
+            ],
+            "route": null,
+            "sheets": []
+          }
+        },
+        {
+          "id": "C5",
+          "text": "[code reference removed] - Clarify if basement windows are to comply with the opening requirements for an emergency escape and rescue window. If so, additional dimensions and information is required to show that the window opens and the window wells will comply.",
+          "labels": {
+            "discipline": "egress",
+            "citations": [
+              "RCO 310"
+            ],
+            "route": "licensed_review",
+            "sheets": []
+          }
+        }
+      ]
+    }
+  ]
+}

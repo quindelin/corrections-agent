@@ -4,6 +4,11 @@
 
 Prepared 2026-10-31. The sources and the reasoning are in [chicago-real-data-plan.md](chicago-real-data-plan.md).
 
+**Updated 2026-10-31, after reading the Act on ilga.gov:**
+
+- **Start with the smaller draft.** [gov-outreach/drafts/chicago-dob-5-permits.md](../gov-outreach/drafts/chicago-dob-5-permits.md) asks for 5 of these 15 permits first, and the other 10 can follow. The 15-permit draft below stays as the source of that sample.
+- **Correction: a commercial requester mostly can't use the Public Access Counselor.** See the corrected "If denied" line below. This raises the cost of declaring a commercial purpose, so take it to a lawyer. It isn't a reason to delete the paragraph.
+
 ## Part 1: FOIA request to the Department of Buildings
 
 ### Before you send
@@ -120,7 +125,7 @@ Why the marker matters: 575 of 3,061 Standard Plan Review permits issued so far 
 | "See the website" | A search excerpt says the Buildings FOIA page refers address-based requests to the City's online data sites. | Ask which site shows the corrections for these issued permits. The [status site's help page](https://webapps1.chicago.gov/buildingpermit/help) says issued permits may not appear. If the City points you there, keep that reply: it would help settle whether you may use the site (see the plan, route 1). |
 | No records | Unknown retention | Ask whether the comments were purged and under which retention schedule. |
 
-**Timing:** a commercial request gets a response within 21 working days, which may be an estimate rather than the records, and non-commercial requests get priority (section 3.1). Otherwise the deadline is 5 business days, extendable by 5 more (sections 3(d) and (e)). **Fees:** for a commercial request, up to $10 per hour for search and redaction review, with the first 8 search hours free (section 6(f), as quoted in Opinion 23-008). **If denied:** a person whose request is made for a commercial purpose may not ask the Public Access Counselor for review. If the City itself treated the request as commercial, review is open only on whether it was right to. A non-commercial request can ask for review within 60 days of the final denial ([section 9.5(a) and (b)](https://ilga.gov/Documents/legislation/ilcs/documents/000501400K9.5.htm), read 2026-10-31). You can also sue (section 11). A denial must give a detailed factual basis (section 9(a)). **[lawyer]** This raises the cost of declaring a commercial purpose, but it isn't a reason to delete that paragraph. Only section 9.5 was checked on the official site, so check the other sections against the current Act.
+**Timing:** a commercial request gets a response within 21 working days, which may be an estimate rather than the records, and non-commercial requests get priority ([section 3.1](https://ilga.gov/Documents/legislation/ilcs/documents/000501400K3.1.htm)). Otherwise the deadline is 5 business days, extendable by 5 more ([sections 3(d) and (e)](https://ilga.gov/Documents/legislation/ilcs/documents/000501400K3.htm)). **Fees:** for a commercial request, up to $10 per hour for search and redaction review, with the first 8 search hours free ([section 6(f)](https://ilga.gov/Documents/legislation/ilcs/documents/000501400K6.htm)). **If denied:** a person whose request is made for a commercial purpose may not ask the Public Access Counselor for review. If the public body itself treated the request as commercial, review is open only on whether it was right to, within 60 days of the final denial ([section 9.5(a) and (b)](https://ilga.gov/Documents/legislation/ilcs/documents/000501400K9.5.htm), read 2026-10-31). Suit under [section 11](https://ilga.gov/Documents/legislation/ilcs/documents/000501400K11.htm) stays open, and that section as read states no filing deadline. A denial must give a detailed factual basis ([section 9](https://ilga.gov/Documents/legislation/ilcs/documents/000501400K9.htm)). **[lawyer]**
 
 ## Part 2: Request to an architect or expediter
 

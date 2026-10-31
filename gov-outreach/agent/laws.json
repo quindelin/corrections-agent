@@ -1,0 +1,285 @@
+{
+  "_note": "Human-owned. The learning step cannot edit this file. This is research, not legal advice. `verification` says how each law was checked on 2026-10-31: primary_read = official text read; official_summary_read = official site, read through a fetch tool that summarizes; mirror_read = an unofficial copy of the statute; excerpt_only = search excerpt; unconfirmed = not checked. Anything not found stays null. Days are counted from the day after receipt.",
+  "laws": [
+    {
+      "id": "us-il",
+      "name": "Illinois Freedom of Information Act",
+      "request_name": "Illinois Freedom of Information Act",
+      "citation": "5 ILCS 140",
+      "verification": "primary_read",
+      "verification_note": "Read on ilga.gov on 2026-10-31. Source notes show P.A. 104-438, effective 2026-01-01, on sections 2, 3 and 9.5.",
+      "default_class": "commercial",
+      "commercial": {
+        "disclosure": "required_if_asked",
+        "basis": "Section 3(c) lets a public body ask whether records are for a commercial purpose. Section 3.1(c) makes it a violation to knowingly obtain a record for a commercial purpose without disclosing that, if asked. Section 2(c-10) defines the term as use for sale, resale, or solicitation or advertisement for sales or services.",
+        "paragraph": "**Commercial purpose:** This request is for a commercial purpose. {{purpose}}",
+        "lawyer": "Whether testing a paid product is a 'commercial purpose' under section 2(c-10) is unsettled. Declaring it changes the clock, the fees and the appeal route, including losing most Public Access Counselor review under section 9.5(b). Don't remove the paragraph just to avoid that."
+      },
+      "submission_rules": [
+        "Electronic requests must appear entirely in the body of the submission, and a public body need not open attachments or links (section 3(c)).",
+        "A public body that reasonably believes a request didn't come from a person can require verification. Its clock stops, and it may deny the request after 30 days without a reply (section 3(j))."
+      ],
+      "rules": [
+        {
+          "id": "il-commercial",
+          "classes": ["commercial"],
+          "applies_from": "2026-01-01",
+          "applies_until": null,
+          "first_response": { "count": 21, "unit": "business", "label": "21 working days: an estimate of time and fees, a denial, a burdensome notice, or the records", "cite": "5 ILCS 140/3.1(a)" },
+          "extension": null,
+          "completion_note": "After the first response, the records come within a reasonable period, and non-commercial requests get priority (section 3.1(b)).",
+          "silence": "unclear",
+          "silence_note": "Section 3(d) treats silence as denial, but section 3(i) says section 3's periods don't apply to commercial requests. Ask a lawyer how silence is treated.",
+          "fees": "Up to $10 per hour for search, retrieval and redaction review, with no charge for the first 8 hours of search or retrieval. The body must give an accounting (section 6(f)). Payment may be required before copying (section 3.1(a)).",
+          "appeals": [
+            { "forum": "Public Access Counselor, only on whether the agency properly treated the request as commercial", "window_days": 60, "window_unit": "calendar", "from": "final_denial", "requires": "agency_classified_commercial", "cite": "5 ILCS 140/9.5(a), (b)", "note": "A person whose request is made for a commercial purpose may not otherwise ask for review. If you declared the purpose yourself, whether even this limited review is open is a question for a lawyer." },
+            { "forum": "Circuit court suit", "window_days": null, "window_unit": null, "from": "denial", "requires": null, "cite": "5 ILCS 140/11(a), (c)", "note": "Section 11 as read states no filing deadline. A general limitations period may apply, so ask a lawyer." }
+          ],
+          "sources": ["il-3.1", "il-3", "il-2", "il-6", "il-9.5", "il-11"]
+        },
+        {
+          "id": "il-noncommercial",
+          "classes": ["noncommercial"],
+          "applies_from": "2026-01-01",
+          "applies_until": null,
+          "first_response": { "count": 5, "unit": "business", "label": "5 business days to comply, deny or extend", "cite": "5 ILCS 140/3(d)" },
+          "extension": { "count": 5, "unit": "business", "from": "original_due", "cite": "5 ILCS 140/3(e), (f)", "note": "Notice with reasons and a date is due within the first 5 business days. Both sides may agree in writing to longer." },
+          "silence": "denial",
+          "silence_note": "Failure to comply, extend or deny in time counts as a denial (section 3(d)).",
+          "fees": "Copy costs only under section 6. This applies only if the City doesn't treat the request as commercial.",
+          "appeals": [
+            { "forum": "Public Access Counselor request for review", "window_days": 60, "window_unit": "calendar", "from": "final_denial", "requires": null, "cite": "5 ILCS 140/9.5(a)", "note": "Must be written and signed, with the request and any responses." },
+            { "forum": "Circuit court suit", "window_days": null, "window_unit": null, "from": "denial", "requires": null, "cite": "5 ILCS 140/11(a), (c)", "note": "Section 11 as read states no filing deadline. Ask a lawyer." }
+          ],
+          "sources": ["il-3", "il-9.5", "il-11"]
+        }
+      ],
+      "denial_content": "A denial must be in writing and give a detailed factual basis and the exemption claimed (section 9).",
+      "sources": ["il-3", "il-3.1", "il-2", "il-6", "il-9", "il-9.5", "il-11"]
+    },
+    {
+      "id": "us-az",
+      "name": "Arizona Public Records Law",
+      "request_name": "Arizona Public Records Law",
+      "citation": "A.R.S. § 39-121 et seq.",
+      "verification": "official_summary_read",
+      "verification_note": "Read on azleg.gov on 2026-10-31 through a fetch tool that summarizes, with quoted fragments. Check the exact wording before quoting it.",
+      "default_class": "commercial",
+      "commercial": {
+        "disclosure": "required_at_request",
+        "basis": "At the time of the request a person must affirm the record isn't for a commercial purpose, or give a statement of the commercial purpose (A.R.S. 39-121.01(D)(1), 39-121.03(A)). The definition includes any purpose in which the person can reasonably anticipate monetary gain (39-121.03(D)).",
+        "paragraph": "**Statement of commercial purpose (A.R.S. § 39-121.03(A)):** These records are for a commercial purpose. {{purpose}}",
+        "lawyer": "Have a lawyer check the statement's wording. A commercial requester may pay a share of the cost of obtaining the record, the labor cost of reproducing it, and its commercial value as determined by the public body (39-121.03(A)). Misusing a record or misstating the purpose can bring damages of three times the fee (39-121.03(C)). Also ask whether a City form must be used for the statement."
+      },
+      "submission_rules": [],
+      "rules": [
+        {
+          "id": "az-all",
+          "classes": ["commercial", "noncommercial"],
+          "applies_from": "2026-01-01",
+          "applies_until": null,
+          "first_response": { "count": null, "unit": null, "label": "No fixed number of days. The custodian must promptly furnish records", "cite": "A.R.S. 39-121.01(D)(1)" },
+          "extension": null,
+          "silence": "denial",
+          "silence_note": "Access is deemed denied if the custodian fails to respond promptly (39-121.01(E)). The statute doesn't define 'promptly' in days.",
+          "fees": "See the commercial fee formula in 39-121.03(A). Ask for the amount before copying.",
+          "appeals": [
+            { "forum": "Superior court special action", "window_days": null, "window_unit": null, "from": "denial", "requires": null, "cite": "A.R.S. 39-121.02(A)", "note": "The section states no time limit. Special action rules may set one, so ask a lawyer. Fees may be awarded if the requester substantially prevails (39-121.02(B))." }
+          ],
+          "sources": ["az-121.01", "az-121.03", "az-121.02"]
+        }
+      ],
+      "denial_content": "The custodian must give an index of withheld records if asked (39-121.01(D)(2)).",
+      "sources": ["az-121.01", "az-121.03", "az-121.02"]
+    },
+    {
+      "id": "us-wa",
+      "name": "Washington Public Records Act",
+      "request_name": "Washington Public Records Act",
+      "citation": "chapter 42.56 RCW",
+      "verification": "primary_read",
+      "verification_note": "Read from the Legislature's lawfilesext.leg.wa.gov copies, marked certified 7/15/2026. app.leg.wa.gov disallows all crawlers, so I didn't fetch it.",
+      "default_class": "any",
+      "commercial": {
+        "disclosure": "not_required",
+        "basis": "Agencies may not require the purpose except to check whether a request would violate a disclosure bar, including the bar on lists of individuals requested for commercial purposes (RCW 42.56.080(2), 42.56.070(8)).",
+        "paragraph": "**Who's asking and why:** {{purpose}} This isn't a request for a list of individuals, and I'd rather have names removed.",
+        "lawyer": "Ask a lawyer whether comment records that name people could be treated as a list of individuals. We state the purpose anyway, because hiding it is not worth the risk and the agency may ask."
+      },
+      "submission_rules": [
+        "Requests must be for identifiable records (RCW 42.56.080(1)). Name the record type and the date range.",
+        "An agency may deny a request it reasonably believes a program or script generated, if it is one of several from the requester within 24 hours and they cause excessive interference (RCW 42.56.080(3)). A person sends these, one per agency."
+      ],
+      "rules": [
+        {
+          "id": "wa-all",
+          "classes": ["any", "commercial", "noncommercial"],
+          "applies_from": "2026-01-01",
+          "applies_until": null,
+          "first_response": { "count": 5, "unit": "business", "label": "5 business days: the records, a link, an acknowledgment with an estimate, a request to clarify, or a denial", "cite": "RCW 42.56.520(1)" },
+          "extension": null,
+          "agency_estimate": true,
+          "completion_note": "After acknowledging, the agency sets its own reasonable estimate. Log it, and the tracker will watch that date.",
+          "silence": "unclear",
+          "silence_note": "RCW 42.56.520 requires a response within 5 business days, but the text doesn't say silence counts as a denial. Ask a lawyer.",
+          "fees": "No charge for locating records. Reasonable copy charges, and possibly a customized service charge for data compilations, which needs notice first (RCW 42.56.120).",
+          "appeals": [
+            { "forum": "Agency internal review", "window_days": null, "window_unit": null, "from": "denial", "requires": null, "cite": "RCW 42.56.520(4)", "note": "Agencies must have a prompt review procedure. Review is deemed complete at the end of the second business day after the denial, and that is final agency action for court review. Ask the agency how to use it." },
+            { "forum": "Superior court action", "window_days": 365, "window_unit": "calendar", "from": "claim_of_exemption_or_last_production", "requires": null, "cite": "RCW 42.56.550(6)", "note": "Within one year of the claim of exemption or the last production of a record on a partial or installment basis." }
+          ],
+          "sources": ["wa-520", "wa-070", "wa-080", "wa-120", "wa-550"]
+        }
+      ],
+      "denial_content": "A denial needs a written statement of the specific reasons (RCW 42.56.520(4)).",
+      "sources": ["wa-520", "wa-070", "wa-080", "wa-120", "wa-550"]
+    },
+    {
+      "id": "us-or",
+      "name": "Oregon Public Records Law",
+      "request_name": "Oregon Public Records Law",
+      "citation": "ORS 192.311 to 192.478",
+      "verification": "official_summary_read",
+      "verification_note": "Read the 2025 edition on oregonlegislature.gov on 2026-10-31 through a fetch tool that summarizes, with quoted fragments. The page warns that 2026 session changes may apply. I read the first 200,000 of 362,787 characters of the chapter.",
+      "default_class": "any",
+      "commercial": {
+        "disclosure": "not_required",
+        "basis": "I found no commercial-purpose rule in the sections read.",
+        "paragraph": "**Who's asking and why:** {{purpose}}",
+        "lawyer": "Confirm that Oregon has no commercial-purpose disclosure or fee rule relevant here."
+      },
+      "submission_rules": ["The request must be written (ORS 192.324(1))."],
+      "rules": [
+        {
+          "id": "or-all",
+          "classes": ["any", "commercial", "noncommercial"],
+          "applies_from": "2026-01-01",
+          "applies_until": null,
+          "first_response": { "count": 5, "unit": "business", "label": "5 business days to acknowledge receipt", "cite": "ORS 192.324(2)" },
+          "second_response": { "count": 10, "unit": "business", "from": "first_due", "label": "10 business days after the acknowledgment deadline: complete the response, or say it's still processing and give an estimated date", "cite": "ORS 192.329(5)" },
+          "extension": null,
+          "silence": "denial",
+          "silence_note": "A failure to respond on time is treated as a denial (ORS 192.407).",
+          "fees": "Fees reasonably calculated to cover actual cost. A fee above $25 needs notice first (ORS 192.324(4)).",
+          "appeals": [
+            { "forum": "Petition to the district attorney for a city record", "window_days": null, "window_unit": null, "from": "denial", "requires": null, "cite": "ORS 192.415, 192.411", "note": "The reviewer rules within 7 days. The sections read state no deadline for petitioning." },
+            { "forum": "Circuit court", "window_days": null, "window_unit": null, "from": "denial", "requires": null, "cite": "ORS 192.415, 192.431", "note": "The sections read state no deadline. Ask a lawyer." }
+          ],
+          "sources": ["or-192"]
+        }
+      ],
+      "denial_content": null,
+      "sources": ["or-192"]
+    },
+    {
+      "id": "us-co",
+      "name": "Colorado Open Records Act",
+      "request_name": "Colorado Open Records Act",
+      "citation": "C.R.S. § 24-72-200.1 et seq.",
+      "verification": "mirror_read",
+      "verification_note": "Read on colorado.public.law, an unofficial copy labeled current through Fall 2025. The official PDF URL I tried returned 404. Confirm against the official statute.",
+      "default_class": "any",
+      "commercial": {
+        "disclosure": "not_required",
+        "basis": "The sections read open records to any person and have no commercial-purpose wording.",
+        "paragraph": "**Who's asking and why:** {{purpose}}",
+        "lawyer": "Confirm against the official statute, including any change after Fall 2025."
+      },
+      "submission_rules": [],
+      "rules": [
+        {
+          "id": "co-all",
+          "classes": ["any", "commercial", "noncommercial"],
+          "applies_from": "2026-01-01",
+          "applies_until": null,
+          "first_response": { "count": 3, "unit": "business", "label": "3 working days is the presumed reasonable time", "cite": "C.R.S. 24-72-203(3)(b)" },
+          "extension": { "count": 7, "unit": "business", "from": "original_due", "cite": "C.R.S. 24-72-203(3)(b)", "note": "Only for extenuating circumstances, with a written finding inside the first 3 days. The text says the extension can't exceed seven working days. This tracker reads that as 7 more days. Ask a lawyer." },
+          "silence": "unclear",
+          "silence_note": "I didn't find a deemed-denial rule in the sections read.",
+          "fees": "First hour of research and retrieval free. After that, only under a published policy, up to a capped hourly rate (C.R.S. 24-72-205(6)). The text says $30, adjusted for inflation; search excerpts give $41.37 from July 2024, unconfirmed. Louisville's own page says $41 per hour beyond two hours.",
+          "appeals": [
+            { "forum": "District court order to show cause", "window_days": null, "window_unit": null, "from": "denial", "requires": null, "cite": "C.R.S. 24-72-204(5)(a)", "note": "Written notice of intent is required at least 14 days before filing, and the custodian must meet or call you in that time. The section states no filing deadline." }
+          ],
+          "sources": ["co-203", "co-204", "co-205", "co-fee-excerpt"]
+        }
+      ],
+      "denial_content": "You may request a written statement of the grounds, citing the law (C.R.S. 24-72-204(4)).",
+      "sources": ["co-203", "co-204", "co-205"]
+    },
+    {
+      "id": "us-ca",
+      "name": "California Public Records Act",
+      "request_name": "California Public Records Act",
+      "citation": "Gov. Code § 7920.000 et seq.",
+      "verification": "mirror_read",
+      "verification_note": "leginfo.legislature.ca.gov returned 403 on robots.txt, so I didn't fetch it. Current text read on california.public.law. AB 1821 read only on CalMatters Digital Democracy, where several versions are interleaved, so the chaptered wording and fee scheme aren't confirmed. Its January 1, 2027 start is inferred: I found no urgency clause, but nothing stated the date.",
+      "default_class": "any",
+      "commercial": {
+        "disclosure": "not_required",
+        "basis": "I didn't verify a commercial-purpose rule. AB 1821 versions differed on commercial fees, and the final version appears to use search-time thresholds instead.",
+        "paragraph": "**Who's asking and why:** {{purpose}}",
+        "lawyer": "Read the chaptered text of AB 1821 (Chapter 899, Statutes of 2026) on fees, submission methods and its start date. Ask whether it changes how a commercial request is treated."
+      },
+      "submission_rules": [
+        "Under AB 1821 as read, a request counts as properly made only through a method the agency designates. Use the listed method so the deadline applies. Unconfirmed against the chaptered text."
+      ],
+      "rules": [
+        {
+          "id": "ca-before-ab1821",
+          "classes": ["any", "commercial", "noncommercial"],
+          "applies_from": "2026-01-01",
+          "applies_until": "2026-12-31",
+          "first_response": { "count": 10, "unit": "calendar", "label": "10 days to determine whether disclosable records exist. This is a decision, not delivery", "cite": "Gov. Code 7922.535(a)" },
+          "extension": { "count": 14, "unit": "calendar", "from": "original_due", "cite": "Gov. Code 7922.535(b)", "note": "Written notice, unusual circumstances only." },
+          "silence": "unclear",
+          "silence_note": "I didn't read a deemed-denial rule.",
+          "fees": "Direct duplication costs. Santa Cruz County says it doesn't charge for search time.",
+          "appeals": [
+            { "forum": "Superior court", "window_days": null, "window_unit": null, "from": "denial", "requires": null, "cite": "unconfirmed (search for Gov. Code 7923.000)", "note": "No administrative appeal found. I didn't read the enforcement sections, so ask a lawyer." }
+          ],
+          "sources": ["ca-7922.535"]
+        },
+        {
+          "id": "ca-after-ab1821",
+          "classes": ["any", "commercial", "noncommercial"],
+          "applies_from": "2027-01-01",
+          "applies_until": null,
+          "first_response": { "count": 10, "unit": "business", "label": "10 business days to determine whether disclosable records exist", "cite": "Gov. Code 7922.535(a), as amended by AB 1821 (unconfirmed)" },
+          "extension": { "count": 14, "unit": "business", "from": "original_due", "cite": "Gov. Code 7922.535(b), as amended by AB 1821 (unconfirmed)", "note": "Written notice, unusual circumstances only." },
+          "silence": "unclear",
+          "silence_note": "I didn't read a deemed-denial rule.",
+          "fees": "Unconfirmed. AB 1821 appears to let agencies charge when search time passes 2 hours on one request or 10 hours in a month, with exemptions that don't cover us. Keep requests small.",
+          "appeals": [
+            { "forum": "Superior court", "window_days": null, "window_unit": null, "from": "denial", "requires": null, "cite": "unconfirmed (search for Gov. Code 7923.000)", "note": "AB 1821 versions also added agency petitions over malicious requests. Ask a lawyer." }
+          ],
+          "sources": ["ca-ab1821"]
+        }
+      ],
+      "denial_content": null,
+      "sources": ["ca-7922.535", "ca-ab1821"]
+    }
+  ],
+  "sources": {
+    "il-2": { "url": "https://ilga.gov/Documents/legislation/ilcs/documents/000501400K2.htm", "read": "direct", "checked": "2026-10-31" },
+    "il-3": { "url": "https://ilga.gov/Documents/legislation/ilcs/documents/000501400K3.htm", "read": "direct", "checked": "2026-10-31" },
+    "il-3.1": { "url": "https://ilga.gov/Documents/legislation/ilcs/documents/000501400K3.1.htm", "read": "direct", "checked": "2026-10-31" },
+    "il-6": { "url": "https://ilga.gov/Documents/legislation/ilcs/documents/000501400K6.htm", "read": "direct", "checked": "2026-10-31" },
+    "il-9": { "url": "https://ilga.gov/Documents/legislation/ilcs/documents/000501400K9.htm", "read": "direct", "checked": "2026-10-31" },
+    "il-9.5": { "url": "https://ilga.gov/Documents/legislation/ilcs/documents/000501400K9.5.htm", "read": "direct", "checked": "2026-10-31" },
+    "il-11": { "url": "https://ilga.gov/Documents/legislation/ilcs/documents/000501400K11.htm", "read": "direct", "checked": "2026-10-31" },
+    "az-121.01": { "url": "https://www.azleg.gov/ars/39/00121-01.htm", "read": "direct_summarized", "checked": "2026-10-31" },
+    "az-121.02": { "url": "https://www.azleg.gov/ars/39/00121-02.htm", "read": "direct_summarized", "checked": "2026-10-31" },
+    "az-121.03": { "url": "https://www.azleg.gov/ars/39/00121-03.htm", "read": "direct_summarized", "checked": "2026-10-31" },
+    "wa-070": { "url": "https://lawfilesext.leg.wa.gov/law/RCWPDF/RCW%20%2042%20%20TITLE/RCW%20%2042%20.%2056%20%20CHAPTER/RCW%20%2042%20.%2056%20.070.pdf", "read": "direct", "checked": "2026-10-31" },
+    "wa-080": { "url": "https://lawfilesext.leg.wa.gov/law/RCWPDF/RCW%20%2042%20%20TITLE/RCW%20%2042%20.%2056%20%20CHAPTER/RCW%20%2042%20.%2056%20.080.pdf", "read": "direct", "checked": "2026-10-31" },
+    "wa-120": { "url": "https://lawfilesext.leg.wa.gov/law/RCWPDF/RCW%20%2042%20%20TITLE/RCW%20%2042%20.%2056%20%20CHAPTER/RCW%20%2042%20.%2056%20.120.pdf", "read": "direct", "checked": "2026-10-31" },
+    "wa-520": { "url": "https://lawfilesext.leg.wa.gov/law/RCWPDF/RCW%20%2042%20%20TITLE/RCW%20%2042%20.%2056%20%20CHAPTER/RCW%20%2042%20.%2056%20.520.pdf", "read": "direct", "checked": "2026-10-31" },
+    "wa-550": { "url": "https://lawfilesext.leg.wa.gov/law/RCWPDF/RCW%20%2042%20%20TITLE/RCW%20%2042%20.%2056%20%20CHAPTER/RCW%20%2042%20.%2056%20.550.pdf", "read": "direct", "checked": "2026-10-31" },
+    "or-192": { "url": "https://www.oregonlegislature.gov/bills_laws/ors/ors192.html", "read": "direct_summarized", "checked": "2026-10-31" },
+    "co-203": { "url": "https://colorado.public.law/statutes/crs_24-72-203", "read": "mirror_summarized", "checked": "2026-10-31" },
+    "co-204": { "url": "https://colorado.public.law/statutes/crs_24-72-204", "read": "mirror_summarized", "checked": "2026-10-31" },
+    "co-205": { "url": "https://colorado.public.law/statutes/crs_24-72-205", "read": "mirror_summarized", "checked": "2026-10-31" },
+    "co-fee-excerpt": { "url": "https://longmontcolorado.gov/wp-content/uploads/2024/07/2025_Open_Record_Cost_Policy_FINAL.pdf", "read": "search_excerpt", "checked": "2026-10-31" },
+    "ca-7922.535": { "url": "https://california.public.law/codes/government_code_section_7922.535", "read": "mirror_summarized", "checked": "2026-10-31" },
+    "ca-ab1821": { "url": "https://calmatters.digitaldemocracy.org/bills/ca_202520260ab1821", "read": "secondary_summarized", "checked": "2026-10-31" }
+  }
+}

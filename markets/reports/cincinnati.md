@@ -1,6 +1,6 @@
 # Market cycle: City of Cincinnati, Ohio
 
-**Verdict: inconclusive.** It doesn't pass the design-partner bar yet. Branch `market/cincinnati` holds the work. Nothing has been pushed or merged, and the pack stays marked `evaluating`, so customers aren't offered it.
+**Verdict: inconclusive.** It doesn't pass the design-partner bar yet, and the pack stays marked as evaluating. The letters, pack and scores are in this repo. The rules below aren't: they stayed on the local branch `market/cincinnati`, because the citation rule omits OBC and the shared playbook change doubled Chicago's missing revision marks, from 4 to 8.
 
 | Holdout, 43 comments | Before | After |
 |---|---|---|

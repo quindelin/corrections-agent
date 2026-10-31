@@ -48,6 +48,10 @@ The agent sorts what it learns by where it holds:
 
 `npm run real:build` rebuilds real letters from Seattle's public records, and `npm run real:run` runs the agent on them, hiding reviewers' citations so they can be checked. Results are in `runs-real/`. See `docs/emris-integration.md` for how this connects to Emris.
 
+**Scores:** on 40 real Seattle letters, the agent went from 71 with no history to 77.7 with the city's past comments, then 80.6 with a process lookup we added by hand. Those three runs could see the review that labels each comment, which inflated them. Rerun with it hidden, the 80.6 agent scores 78, and later runs should be compared with that one.
+
+**This branch doesn't reproduce those scores.** `agent/` on `main` stays exactly as submitted for the challenge. The agent behind the Seattle runs, with its hand-written process lookup, is on the [`real-data`](https://github.com/quindelin/corrections-agent/tree/real-data) branch until judging ends.
+
 ## Built for many places
 
 Everything specific to a place lives in a jurisdiction pack. The tools, scorer and playbook are shared.
@@ -75,6 +79,15 @@ In `inline` skill mode every local skill is pasted into the instructions, which 
 ## Finding new places
 
 `npm run markets -- run` looks for places whose permit data shows corrections, then builds, scores and improves the agent for the best new one on its own branch, and stops for you to review. See [markets/README.md](markets/README.md).
+
+**Cincinnati** was the first: holdout 66.2 to 70.6, with a likely range that crosses zero, so the verdict is inconclusive. Its letters, pack and scores are here, in `realdata/cincinnati/`, `jurisdictions/cincinnati/` and `runs-real/cincinnati/`. The rules the agent wrote for it aren't, because one citation rule is wrong and its playbook change made Chicago worse. See `markets/reports/cincinnati.md`.
+
+## Supporting agents
+
+The goal is a company whose agents improve from real outcomes. That's where this is heading, not what it does today. None of these agents can send anything, no message or request has been sent, and neither is part of the challenge proof.
+
+- **Customer outreach** (`outreach/`) finds firms, drafts messages and learns from replies. It's only been tested on fictional outcomes.
+- **Government records** (`gov-outreach/`) drafts and tracks records requests for real plan review comments. It's only been tested on fictional agencies. Its drafts in `gov-outreach/drafts/` haven't been reviewed by a lawyer, and you'd send them yourself.
 
 ## How it uses TrueForge
 
@@ -191,6 +204,10 @@ evals/            tasks/*.json (07 and 08 are holdouts), score.ts
 jurisdictions/    one pack per place
 mcp/server.ts     the research tools
 markets/          the agent that finds new places and makes Redline work there
+outreach/         the customer outreach agent
+gov-outreach/     the government records agent
+realdata/         real letters and the eval against the city's own labels
+runs-real/        results on real letters, separate from runs/
 demo/             the review queue
 feedback/         architect decisions from the demo (created on first use)
 scripts/          setup, run-evals, improve, export-session

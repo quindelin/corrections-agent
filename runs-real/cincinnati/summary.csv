@@ -1,0 +1,4 @@
+run,arm,session_id,agent_commit,letters,score,holdout_score,discipline_pct,citation_section_pct,citation_chapter_or_better_pct,route_pct,unsafe_routes,compliance_claims,foreign_process_drafts,tokens,tool_calls,cost_usd,duration_s
+1,history,01m69vex5247q9fpv09ncn11w8,3bc21f4edf02febc155441c5545037b67c7e1bec,40,64.2,66.2,65.8,53.4,69.8,83.3,0,29,0,3014920,686,3.385,1093
+2,history,01m69wtsevn5r7a72tny9958jq,f332c6484762f3928ed3f3a2b2960e2f38681cd2,40,56.6,51.2,60.8,49.1,60.3,91.7,0,15,0,3718697,626,4.263,1460
+3,history,01m69yrsx0ynjx0rq8qv8t5d9p,40b6282795d2540b86ef1474a8e6b8c031d4e0ce,10,70.6,70.6,66.7,66.7,77.8,66.7,0,8,0,750163,148,0.905,427

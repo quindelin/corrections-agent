@@ -1,0 +1,9 @@
+{
+  "full_name": "[Your full name]",
+  "entity": "[Your real legal entity, or your own name if there is none]",
+  "mailing_address": "[Mailing address]",
+  "email": "[Email]",
+  "phone": "[Phone, optional]",
+  "fee_notice_usd": 25,
+  "no_republish_promise": false
+}
