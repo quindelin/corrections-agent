@@ -27,11 +27,15 @@ const files = [
   ...skills.map((s) => ({ path: `${s.path}/SKILL.md`, text: readFileSync(join(ROOT, s.path, "SKILL.md"), "utf8") })),
 ];
 
-// The mistakes, worst comments first, capped so the prompt stays affordable.
-const mistakes = train
+// The mistakes the agent sees, capped so the prompt stays affordable: the lowest scores, plus draft problems,
+// which leave a comment's score untouched and would otherwise never make the cut.
+const allMistakes = train
   .flatMap((r) => r.comments.filter((c) => c.problems.length).map((c) => ({ c, letter: letters.get(r.letter_id)! })))
-  .sort((a, b) => (a.c.score ?? 1) - (b.c.score ?? 1))
-  .slice(0, 45)
+  .sort((a, b) => (a.c.score ?? 1) - (b.c.score ?? 1));
+const isDraftProblem = (c: { compliance_claim: boolean; foreign_process: boolean }) => c.compliance_claim || c.foreign_process;
+const worst = allMistakes.slice(0, 30);
+const draftOnly = allMistakes.filter((m) => !worst.includes(m) && isDraftProblem(m.c)).slice(0, 15);
+const mistakes = [...worst, ...draftOnly]
   .map(({ c, letter }) => {
     const text = letter.comments.find((x) => x.id === c.comment)?.text ?? "";
     return `- Project: ${letter.project.description.slice(0, 120)}\n  Comment: ${text.slice(0, 400)}\n  Your answer: discipline ${c.got.discipline}, citation ${c.got.citation}, route ${c.got.route}\n  ${c.problems.join("\n  ")}`;
@@ -74,35 +78,49 @@ const tf = client();
 const { data: session } = await tf.sessions.create({ agent: { name: agent.name }, metadata: { purpose: "real-improve", learned_from: name } });
 await tf.sessions.update(session.id, { title: `improve from real letters ${name}` });
 console.log(`Asking "${agent.name}" to learn from real letters in ${name} (session ${session.id})…`);
-const turn = await runTurn(tf, session.id, prompt, false);
-if (turn.status !== "done") die(`The turn ended with status ${turn.status}${turn.error ? `: ${turn.error}` : ""}`);
+type Proposed = { path: string; text: string };
 
-const proposed = [...turn.text.matchAll(/<<<FILE ([^\n]+)\n([\s\S]*?)\n>>>/g)].map((m) => ({ path: normalize(m[1].trim()), text: m[2].trimEnd() + "\n" }));
-const learned = turn.text.match(/<<<LEARNED\n([\s\S]*?)\n>>>/)?.[1].trim() ?? "";
-if (!proposed.length) die(`The agent proposed no files. Its reply:\n\n${turn.text.slice(0, 2000)}`);
-
-const allowed = /^agent\/(instructions\.md|skills\/[a-z0-9][a-z0-9-]*\/SKILL\.md)$/;
-const problems: string[] = [];
-for (const f of proposed) {
-  if (!allowed.test(f.path)) problems.push(`it tried to write ${f.path}`);
-  if (f.path.endsWith("/SKILL.md") && !/^---\n[\s\S]*?\bname:[\s\S]*?\bdescription:[\s\S]*?\n---\n/.test(f.text)) problems.push(`${f.path} lost its frontmatter`);
-  if (f.path === "agent/instructions.md" && !f.text.includes('"items"')) problems.push("instructions.md dropped the output format");
-  // Enforced because the agent ignored this rule when it was only in the prompt.
-  if (f.path.endsWith("correction-playbook/SKILL.md")) {
-    const local = f.text.match(/Chicago|Seattle|SDCI|Department of Buildings|Certified Plan|Zoning Board|\bSMC\b|\bSBC\b|\bSRC\b|\bSEC\b|\b14[A-Z]-|\bbubbl/gi);
-    if (local) problems.push(`the shared playbook names local terms: ${[...new Set(local)].join(", ")}`);
-  }
-  // Overfitting guard: no eight-word run copied from a real letter.
-  for (const l of letters.values()) {
-    for (const c of l.comments) {
-      const words = c.text.split(" ");
-      for (let i = 0; i + 8 <= words.length; i += 4) {
-        if (f.text.includes(words.slice(i, i + 8).join(" "))) problems.push(`${f.path} quotes a letter: "${words.slice(i, i + 8).join(" ")}"`);
+function checkChange(proposed: Proposed[]): string[] {
+  const allowed = /^agent\/(instructions\.md|skills\/[a-z0-9][a-z0-9-]*\/SKILL\.md)$/;
+  const problems: string[] = [];
+  for (const f of proposed) {
+    if (!allowed.test(f.path)) problems.push(`it tried to write ${f.path}`);
+    if (f.path.endsWith("/SKILL.md") && !/^---\n[\s\S]*?\bname:[\s\S]*?\bdescription:[\s\S]*?\n---\n/.test(f.text)) problems.push(`${f.path} lost its frontmatter`);
+    if (f.path === "agent/instructions.md" && !f.text.includes('"items"')) problems.push("instructions.md dropped the output format");
+    // Enforced because the agent ignored this rule when it was only in the prompt.
+    if (f.path.endsWith("correction-playbook/SKILL.md")) {
+      const local = f.text.match(/Chicago|Seattle|SDCI|Department of Buildings|Certified Plan|Zoning Board|\bSMC\b|\bSBC\b|\bSRC\b|\bSEC\b|\b14[A-Z]-|\bbubbl/gi);
+      if (local) problems.push(`the shared playbook names local terms: ${[...new Set(local)].join(", ")}. Move that rule to the file for the place it belongs to`);
+    }
+    // Overfitting guard: no eight-word run copied from a real letter.
+    for (const l of letters.values()) {
+      for (const c of l.comments) {
+        const words = c.text.split(" ");
+        for (let i = 0; i + 8 <= words.length; i += 4) {
+          if (f.text.includes(words.slice(i, i + 8).join(" "))) problems.push(`${f.path} quotes a letter: "${words.slice(i, i + 8).join(" ")}"`);
+        }
       }
     }
   }
+  return [...new Set(problems)];
 }
-if (problems.length) die(`The change didn't pass its checks. Run real:improve again.\n  ${[...new Set(problems)].join("\n  ")}`);
+
+// If the change fails its checks, the agent hears why and tries again in the same session.
+const MAX_ATTEMPTS = 3;
+let proposed: Proposed[] = [];
+let learned = "";
+let message = prompt;
+for (let attempt = 1; ; attempt++) {
+  const turn = await runTurn(tf, session.id, message, false);
+  if (turn.status !== "done") die(`The turn ended with status ${turn.status}${turn.error ? `: ${turn.error}` : ""}`);
+  proposed = [...turn.text.matchAll(/<<<FILE ([^\n]+)\n([\s\S]*?)\n>>>/g)].map((m) => ({ path: normalize(m[1].trim()), text: m[2].trimEnd() + "\n" }));
+  learned = turn.text.match(/<<<LEARNED\n([\s\S]*?)\n>>>/)?.[1].trim() ?? "";
+  const problems = proposed.length ? checkChange(proposed) : ["you proposed no files in the required format"];
+  if (!problems.length) break;
+  if (attempt === MAX_ATTEMPTS) die(`The change didn't pass its checks after ${MAX_ATTEMPTS} attempts.\n  ${problems.join("\n  ")}`);
+  console.log(`  Attempt ${attempt} rejected: ${problems.join("; ")}`);
+  message = `Your change was rejected, and nothing was saved:\n- ${problems.join("\n- ")}\n\nFix this and reply again with each changed file in full, in the same format.`;
+}
 
 for (const f of proposed) {
   mkdirSync(dirname(join(ROOT, f.path)), { recursive: true });
@@ -114,11 +132,11 @@ if (isClean("agent")) {
   process.exit(0);
 }
 console.log(git("diff", "--stat", "--", "agent"));
-const message = `agent: learn from real letters ${name}\n\n${learned || "(no summary given)"}\n\nAgent-Session: ${session.id}`;
+const commitMessage = `agent: learn from real letters ${name}\n\n${learned || "(no summary given)"}\n\nAgent-Session: ${session.id}`;
 if (flag("no-commit")) {
-  console.log(`\nFiles written, not committed.\n${message}`);
+  console.log(`\nFiles written, not committed.\n${commitMessage}`);
 } else {
   git("add", "agent", join(REAL_RUNS, name, "improve-session.json"));
-  git("commit", "-q", "-m", message);
+  git("commit", "-q", "-m", commitMessage);
   console.log(`\n✓ Committed the agent's change (Agent-Session: ${session.id}).`);
 }
