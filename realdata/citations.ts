@@ -60,3 +60,24 @@ export function scrub(text: string): string {
     .replace(/\s+/g, " ")
     .trim();
 }
+
+const NAME_TOKEN = "[name removed]";
+const WORD = "[A-Z][a-z]+(?:[A-Z][a-z]+)?(?:-[A-Z][a-z]+)?";
+const FULL_NAME = `${WORD} ${WORD}`;
+// Where the letters put staff names: in place of a section heading, as a markup author, as a contact, or in a signature.
+const NAME_PATTERNS = [
+  new RegExp(`(?<![A-Za-z])()(${FULL_NAME}|[A-Z]{2}[a-z]{3,})(?= \\(\\d+\\))`, "g"),
+  new RegExp(`\\b(Author: )(${FULL_NAME})(?= Layer:)`, "g"),
+  new RegExp(`\\b(Contact(?: \\(FYI Item\\):)? )(${FULL_NAME})(?![A-Za-z])`, "g"),
+  new RegExp(`(?<![A-Za-z])()(${FULL_NAME})(?= *(?:\\[|- )? *Building Plans Examiner)`, "g"),
+];
+
+/**
+ * Removes staff names, for the same reason as scrub. A word the city never uses in a subject line or review type counts
+ * as part of a name, so "Neighborhood Residential (2)" stays and no list of names has to live in this public repo.
+ */
+export function nameStripper(cityWords: Set<string>): (text: string) => string {
+  // Text runs together in these letters, so "PlanAddressing" and "BZoning" have to be read as separate words.
+  const isName = (s: string) => s.replace(/([a-z])([A-Z])/g, "$1 $2").replace(/\b([A-Z])([A-Z][a-z])/g, "$1 $2").split(/[\s-]+/).some((w) => w.length > 1 && !cityWords.has(w.toLowerCase()));
+  return (text) => NAME_PATTERNS.reduce((t, re) => t.replace(re, (m, label: string, name: string) => (isName(name) ? label + NAME_TOKEN : m)), text);
+}

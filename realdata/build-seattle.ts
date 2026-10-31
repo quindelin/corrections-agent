@@ -16,7 +16,7 @@ import { createHash } from "node:crypto";
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { findCitations, maskCitations, scrub } from "./citations.ts";
+import { findCitations, maskCitations, nameStripper, scrub } from "./citations.ts";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const CACHE = join(ROOT, ".cache", "seattle");
@@ -66,6 +66,7 @@ const permits = await cached<RawPermit[]>("permits.json", async () => {
 const permitBy = new Map(permits.map((p) => [p.permitnum, p]));
 console.log(`${comments.length} comments, ${permitNums.length} permits in comments, ${permits.length} permit records`);
 
+const stripNames = nameStripper(new Set(comments.flatMap((c) => `${c.commentsubject ?? ""} ${c.reviewtype ?? ""}`.toLowerCase().match(/[a-z]+/g) ?? [])));
 const hash = (s: string) => createHash("sha1").update(s).digest("hex");
 const median = (xs: number[]) => {
   const s = [...xs].sort((a, b) => a - b);
@@ -138,7 +139,7 @@ for (const [url, list] of [...byLetter].sort((a, b) => hash(a[0]).localeCompare(
   const permit = permitBy.get(first.permitnum);
   if (!permit?.description) continue;
   const built: EvalComment[] = list.map((c, i) => {
-    const clean = scrub(c.comment!).slice(0, 1200);
+    const clean = stripNames(scrub(c.comment!)).slice(0, 1200);
     return {
       id: `C${i + 1}`,
       text: maskCitations(clean),
@@ -163,20 +164,21 @@ for (const [url, list] of [...byLetter].sort((a, b) => hash(a[0]).localeCompare(
       jurisdiction: "seattle",
       address: permit.originaladdress1,
       description: `${scrub(permit.description).slice(0, 400)} Permit class: ${permit.permitclass ?? "unknown"}. Zoning: ${permit.zoning ?? "unknown"}.`,
-      reviewer: `Seattle SDCI, ${first.documenttitle ?? "correction letter"}`,
+      // Some document titles end in the reviewer's username: "... Summary + username".
+      reviewer: `Seattle SDCI, ${(first.documenttitle ?? "correction letter").replace(/\s*\+\s*\w+$/, "")}`,
     },
     outcome: { review_cycles: Number(permit.numberreviewcycles ?? 0) || null, days_out_for_corrections: Number(permit.daysoutcorrections ?? 0) || null, days_city_review: Number(permit.daysplanreviewcity ?? 0) || null },
     comments: built,
   });
 }
 mkdirSync(OUT, { recursive: true });
-writeFileSync(join(OUT, "letters.json"), JSON.stringify({ note: "Real letters from Seattle's public Plan Comments dataset. Reviewers' code citations are hidden in the text and kept as labels. Contact details removed.", letters }, null, 1) + "\n");
+writeFileSync(join(OUT, "letters.json"), JSON.stringify({ note: "Real letters from Seattle's public Plan Comments dataset. Reviewers' code citations are hidden in the text and kept as labels. Contact details and staff names removed.", letters }, null, 1) + "\n");
 
 // ---------- past comments the agent can search: never the eval permits ----------
 
 const corpus = comments
   .filter((c) => c.comment?.trim() && !usedPermits.has(c.permitnum))
-  .map((c) => ({ review_type: c.reviewtype ?? null, subject: c.commentsubject ?? null, cycle: Number(c.reviewcycle) || null, text: scrub(c.comment!).slice(0, 700), citations: findCitations(c.comment!) }));
+  .map((c) => ({ review_type: c.reviewtype ?? null, subject: c.commentsubject ?? null, cycle: Number(c.reviewcycle) || null, text: stripNames(scrub(c.comment!)).slice(0, 700), citations: findCitations(c.comment!) }));
 mkdirSync(PACK, { recursive: true });
 writeFileSync(join(PACK, "comments.jsonl"), corpus.map((c) => JSON.stringify(c)).join("\n") + "\n");
 

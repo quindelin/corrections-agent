@@ -1,5 +1,5 @@
 {
- "note": "Real letters from Seattle's public Plan Comments dataset. Reviewers' code citations are hidden in the text and kept as labels. Contact details removed.",
+ "note": "Real letters from Seattle's public Plan Comments dataset. Reviewers' code citations are hidden in the text and kept as labels. Contact details and staff names removed.",
  "letters": [
   {
    "id": "01-drainage-7034014-CN",
@@ -24,7 +24,7 @@
    "comments": [
     {
      "id": "C1",
-     "text": "It appears that the project to the north at 2536 30th Ave W may be closely related to this project. As the project plans have not been submitted, it is not clear whether these two projects are closely related or not. The preliminary Site Plan for the project to the north shows shared access through a vehicle maneuvering using the lot to the south. Provide information to confirm if this project is closely related to any other projects that are being submitted. If the project is closely related, the thresholds must be considered using the total of all closely related projects. If this includes 5,000 SF or more of new plus replaced hard surface, the approved point of discharge will the Public Storm Main which will need to be extended from W Smith St. If the projects are not closely related, provide clear information including submitting a plan for the adjacent lot that there are no shared elements including access, utilities or other physical elements such as walls.Eric Dripps (4)",
+     "text": "It appears that the project to the north at 2536 30th Ave W may be closely related to this project. As the project plans have not been submitted, it is not clear whether these two projects are closely related or not. The preliminary Site Plan for the project to the north shows shared access through a vehicle maneuvering using the lot to the south. Provide information to confirm if this project is closely related to any other projects that are being submitted. If the project is closely related, the thresholds must be considered using the total of all closely related projects. If this includes 5,000 SF or more of new plus replaced hard surface, the approved point of discharge will the Public Storm Main which will need to be extended from W Smith St. If the projects are not closely related, provide clear information including submitting a plan for the adjacent lot that there are no shared elements including access, utilities or other physical elements such as walls.[name removed] (4)",
      "labels": {
       "discipline": "drainage",
       "citations": [],
@@ -123,7 +123,7 @@
     },
     {
      "id": "C4",
-     "text": "[code reference removed] (Improvement Requirements for Existing Streets in Residential and Commercial Zones): Pedestrian Updates in Urban Village: [Repeat Correction] This project is located in an urban village. Per [code reference removed], the sidewalks, curbs, curb ramps, and accessible crossings may need to be brought into compliance in order to meet standards in the Right-of-Way Improvements Manual. Please provide proof of correspondence with SDOT confirming or negating the need for pedestrian circulation updates. Contact Jackson Keenan-Koch ([email removed]).Zoning - [code reference removed] - Streets, Alleys, and Easements (1)",
+     "text": "[code reference removed] (Improvement Requirements for Existing Streets in Residential and Commercial Zones): Pedestrian Updates in Urban Village: [Repeat Correction] This project is located in an urban village. Per [code reference removed], the sidewalks, curbs, curb ramps, and accessible crossings may need to be brought into compliance in order to meet standards in the Right-of-Way Improvements Manual. Please provide proof of correspondence with SDOT confirming or negating the need for pedestrian circulation updates. Contact [name removed] ([email removed]).Zoning - [code reference removed] - Streets, Alleys, and Easements (1)",
      "labels": {
       "discipline": "zoning",
       "citations": [
@@ -943,7 +943,7 @@
     "jurisdiction": "seattle",
     "address": "4448 CALIFORNIA AVE SW",
     "description": "Construct new mixed-use building occupy per plan. Permit class: Multifamily. Zoning: NC2.",
-    "reviewer": "Seattle SDCI, 6823941-CN Plan Set_Cycle2_CJ_Summary + yazdidk"
+    "reviewer": "Seattle SDCI, 6823941-CN Plan Set_Cycle2_CJ_Summary"
    },
    "outcome": {
     "review_cycles": 11,
@@ -1168,7 +1168,7 @@
    "comments": [
     {
      "id": "C1",
-     "text": "Please show Tree 3, listed on the arborist report on the site plan if it is still present.Deborah McGarry (4)",
+     "text": "Please show Tree 3, listed on the arborist report on the site plan if it is still present.[name removed] (4)",
      "labels": {
       "discipline": "tree",
       "citations": [],
@@ -1632,7 +1632,7 @@
    "comments": [
     {
      "id": "C1",
-     "text": "Repeated and Revised See design data on sheet G1. It appears at rest earth pressures do not match the geotechnical report for this site (see report by geotech consultants, inc. dated June 6, 2024). Revise to match.JBronner (3)",
+     "text": "Repeated and Revised See design data on sheet G1. It appears at rest earth pressures do not match the geotechnical report for this site (see report by geotech consultants, inc. dated June 6, 2024). Revise to match.[name removed] (3)",
      "labels": {
       "discipline": "structural",
       "citations": [],
@@ -1951,7 +1951,7 @@
    "comments": [
     {
      "id": "C1",
-     "text": "Please include the tree information within the plan set. The arborist report Site plan includes all the required information that needs to be part of the approved plans. The following two corrections are for the site replacement trees and should be added to the tree site plan:Paul Humphries (4)",
+     "text": "Please include the tree information within the plan set. The arborist report Site plan includes all the required information that needs to be part of the approved plans. The following two corrections are for the site replacement trees and should be added to the tree site plan:[name removed] (4)",
      "labels": {
       "discipline": "tree",
       "citations": [],
@@ -2471,7 +2471,7 @@
     "jurisdiction": "seattle",
     "address": "4531 CORLISS AVE N",
     "description": "Construct east one family dwelling per plan. (Construct (3) one-family dwelling per plan. Review and process for 3 records under 7065717-CN) Permit class: Single Family/Duplex. Zoning: unknown.",
-    "reviewer": "Seattle SDCI, 7065717-CN OS_Cycle1_Summary + SancheM"
+    "reviewer": "Seattle SDCI, 7065717-CN OS_Cycle1_Summary"
    },
    "outcome": {
     "review_cycles": 5,
