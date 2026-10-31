@@ -2,12 +2,13 @@
 // Setup steps are in docs/stripe-setup.md. Nothing here has been run against Stripe itself: the tests build their own
 // events with a made-up secret.
 //
-// A ledger of payments, one file per PaymentIntent, is what makes this safe to receive twice. Stripe can repeat an event,
-// send the same change as two events with different ids, and deliver events in any order, so a log of event ids wouldn't
-// be enough. Each handler reads the ledger and the report, and moves them to the state the event implies.
-//
-// A refund is the one fact that can't be undone by a later message. A Checkout Session still says payment_status "paid"
-// after a refund, so both the redirect and the webhook check the ledger before unlocking.
+// Stripe can repeat an event, send the same change as two events with different ids, and deliver events in any order,
+// to any instance. So an event doesn't change a report directly. It adds a fact to the payment ledger in the Store, and
+// then the report is brought in line with the ledger (settleReport). That gives three properties:
+// - Safe to receive twice: merging a fact again changes nothing, and neither does settling a report that's already right.
+// - Any order: facts merge to the same result in any order, and the report follows the ledger, not the latest event.
+// - A refund can't be undone by a later message: nothing clears refunded_at. A Checkout Session still says
+//   payment_status "paid" after a refund, so the redirect and the webhook both go through the ledger before unlocking.
 //
 // Refund policy: a full refund re-locks the report, and a partial refund doesn't.
 // - Access follows payment. The price is what unlocks the drafts, and with a 14-day no-questions refund, keeping access
@@ -20,10 +21,9 @@
 // - Design partner reports were never paid for, so no refund can lock them.
 
 import { createHmac, timingSafeEqual } from "node:crypto";
-import { existsSync, mkdirSync, readdirSync, readFileSync, renameSync, writeFileSync } from "node:fs";
 import type { IncomingMessage, ServerResponse } from "node:http";
-import { join } from "node:path";
-import { dataDir, listReports, loadReport, type Report, saveReport } from "./reports.ts";
+import type { Report } from "./reports.ts";
+import { getStore, PAYMENT_ID_PATTERN, type Store } from "./store.ts";
 
 export const WEBHOOK_PATH = "/api/stripe/webhook";
 /** The same five minutes Stripe's own libraries default to. */
@@ -94,46 +94,6 @@ export function verifySignature(rawBody: Buffer, header: string | undefined, sec
   return { ok: true };
 }
 
-// ---------- the payment ledger ----------
-
-export interface PaymentRecord {
-  /** The PaymentIntent id, which is the only thing a charge and a Checkout Session have in common. */
-  id: string;
-  status: "paid" | "refunded";
-  session_id: string | null;
-  report_id: string | null;
-  amount_total: number | null;
-  amount_refunded: number;
-  currency: string | null;
-  livemode: boolean | null;
-  paid_at: string | null;
-  refunded_at: string | null;
-}
-
-const paymentsDir = () => join(dataDir(), "payments");
-const SAFE_ID = /^[\w-]{1,255}$/;
-
-export function readPayment(id: string): PaymentRecord | null {
-  if (!SAFE_ID.test(id)) return null;
-  const file = join(paymentsDir(), `${id}.json`);
-  return existsSync(file) ? (JSON.parse(readFileSync(file, "utf8")) as PaymentRecord) : null;
-}
-
-function writePayment(record: PaymentRecord): void {
-  mkdirSync(paymentsDir(), { recursive: true });
-  const file = join(paymentsDir(), `${record.id}.json`);
-  // Written whole or not at all, because a torn file here would make the ledger unreadable.
-  writeFileSync(`${file}.tmp`, JSON.stringify(record));
-  renameSync(`${file}.tmp`, file);
-}
-
-function listPayments(): PaymentRecord[] {
-  if (!existsSync(paymentsDir())) return [];
-  return readdirSync(paymentsDir())
-    .filter((f) => f.endsWith(".json"))
-    .map((f) => JSON.parse(readFileSync(join(paymentsDir(), f), "utf8")) as PaymentRecord);
-}
-
 // ---------- what a payment or refund does ----------
 
 export interface CheckoutSession {
@@ -155,108 +115,123 @@ export interface Charge {
 const text = (v: unknown) => (typeof v === "string" ? v : null);
 const count = (v: unknown) => (typeof v === "number" ? v : null);
 const flag = (v: unknown) => (typeof v === "boolean" ? v : null);
+const lock = (r: Report): Report => ({ ...r, unlocked: false, unlocked_by: null });
+
+/** Plenty for real traffic, since each extra pass needs a new ledger change. Failing means a 500, and Stripe retries. */
+const MAX_SETTLE_PASSES = 8;
+
+/** The free rounds on a permit lean on something else opening it. When nothing does any more, they lock too. */
+async function relockFreeRounds(store: Store, permit: string | null): Promise<string[]> {
+  if (!permit) return [];
+  const open = await store.unlockedOnPermit(permit);
+  if (open.some((r) => r.unlocked_by !== "next_round")) return [];
+  const relocked: string[] = [];
+  for (const { id } of open) {
+    let locked = false;
+    await store.updateReport(id, (current) => {
+      locked = current.unlocked && current.unlocked_by === "next_round";
+      return locked ? lock(current) : current;
+    });
+    if (locked) relocked.push(id);
+  }
+  return relocked;
+}
+
+/**
+ * Brings a report in line with the ledger, and runs on every event, so a retry after a crash finishes the job.
+ *
+ * updateReport keeps each change atomic, but the ledger is read before it. So an instance can read "paid", lose the
+ * race to a refund on another instance, and then unlock a report that instance just locked. Reading the ledger again
+ * after writing closes that gap. If the refund came before this second read, this instance sees it and locks. If it
+ * came after, the refunding instance's own lock is what lands last. Either way the report ends up locked.
+ */
+async function settleReport(store: Store, reportId: string): Promise<{ report: Report; opened: boolean; relocked: string[] } | null> {
+  let opened = false;
+  const relocked: string[] = [];
+  for (let pass = 0; pass < MAX_SETTLE_PASSES; pass++) {
+    const paid = await store.reportHasActivePayment(reportId);
+    // updateReport can run this more than once, and the run that was saved is always the last.
+    let openedNow = false;
+    let lockedNow = false;
+    const report = await store.updateReport(reportId, (current) => {
+      openedNow = paid && !current.unlocked;
+      // Only a payment's own unlock can be taken back: a design partner's report never was paid for.
+      lockedNow = !paid && current.unlocked && current.unlocked_by === "stripe";
+      if (openedNow) return { ...current, unlocked: true, unlocked_by: "stripe" };
+      return lockedNow ? lock(current) : current;
+    });
+    if (!report) return null;
+    opened ||= openedNow;
+    if (lockedNow && !relocked.includes(report.id)) relocked.push(report.id);
+    if ((await store.reportHasActivePayment(reportId)) === paid) {
+      // Whichever instance locks last sees every other lock, so the free rounds can't be left open.
+      if (!report.unlocked) relocked.push(...(await relockFreeRounds(store, report.permit_number)));
+      return { report, opened, relocked };
+    }
+  }
+  throw new Error("That report's payments kept changing. Try again.");
+}
 
 export type PaidOutcome = "unlocked" | "already_unlocked" | "refunded" | "not_paid" | "unknown_report" | "invalid";
 
 /** Records a Checkout Session and unlocks its report. Both the webhook and the redirect come through here. */
-export function applyPaidSession(session: CheckoutSession): { outcome: PaidOutcome; report_id: string | null } {
+export async function applyPaidSession(session: CheckoutSession, store?: Store): Promise<{ outcome: PaidOutcome; report_id: string | null }> {
   // A session can complete unpaid with a delayed payment method. checkout.session.async_payment_succeeded follows if it clears.
   if (session.payment_status !== "paid") return { outcome: "not_paid", report_id: null };
   const sessionId = text(session.id);
   const paymentId = text(session.payment_intent) ?? sessionId;
-  if (!paymentId || !SAFE_ID.test(paymentId)) return { outcome: "invalid", report_id: null };
+  if (!paymentId || !PAYMENT_ID_PATTERN.test(paymentId)) return { outcome: "invalid", report_id: null };
 
-  const prior = readPayment(paymentId);
+  const s = store ?? (await getStore());
   const reference = text(session.client_reference_id);
-  const report = reference ? loadReport(reference) : null;
-  writePayment({
+  const known = reference ? await s.getReport(reference) : null;
+  const payment = await s.mergePayment({
     id: paymentId,
-    status: prior?.status ?? "paid",
     session_id: sessionId,
-    report_id: report?.id ?? prior?.report_id ?? null,
+    report_id: known?.id ?? null,
     amount_total: count(session.amount_total),
-    amount_refunded: prior?.amount_refunded ?? 0,
     currency: text(session.currency),
     livemode: flag(session.livemode),
-    paid_at: prior?.paid_at ?? new Date().toISOString(),
-    refunded_at: prior?.refunded_at ?? null,
+    paid: true,
   });
 
-  // Checked first, because the refund may have come before this event, or this may be an old event sent again.
-  if (prior?.status === "refunded") return { outcome: "refunded", report_id: report?.id ?? null };
-  // The customer has paid and there is nothing to give them, so someone has to refund this by hand.
-  if (!report) {
+  const settled = payment.report_id ? await settleReport(s, payment.report_id) : null;
+  if (!settled) {
+    if (payment.refunded_at) return { outcome: "refunded", report_id: null };
+    // The customer has paid and there is nothing to give them, so someone has to refund this by hand.
     console.error(`Stripe: paid session ${sessionId} has no matching report. Refund it or find the report. See docs/stripe-setup.md.`);
     return { outcome: "unknown_report", report_id: null };
   }
-  // A report already open, as a design partner's for instance, keeps the reason it was opened.
-  if (report.unlocked) return { outcome: "already_unlocked", report_id: report.id };
-  saveReport({ ...report, unlocked: true, unlocked_by: "stripe" });
-  return { outcome: "unlocked", report_id: report.id };
-}
-
-const lock = (r: Report) => saveReport({ ...r, unlocked: false, unlocked_by: null });
-
-/** The free rounds on a permit lean on something else opening it. When nothing does any more, they lock too. */
-function relockFreeRounds(permit: string | null): string[] {
-  if (!permit) return [];
-  const onPermit = listReports().filter((r) => r.permit_number === permit && r.unlocked);
-  if (onPermit.some((r) => r.unlocked_by !== "next_round")) return [];
-  onPermit.forEach(lock);
-  return onPermit.map((r) => r.id);
+  // A locked report here means a refund landed while this ran, even if this event read the ledger first.
+  if (payment.refunded_at || !settled.report.unlocked) return { outcome: "refunded", report_id: settled.report.id };
+  return { outcome: settled.opened ? "unlocked" : "already_unlocked", report_id: settled.report.id };
 }
 
 export type RefundOutcome = "refunded" | "partial" | "invalid";
 
 /** Applies a charge.refunded event. See the refund policy at the top of this file. */
-export function applyRefund(charge: Charge): { outcome: RefundOutcome; relocked: string[] } {
+export async function applyRefund(charge: Charge, store?: Store): Promise<{ outcome: RefundOutcome; relocked: string[] }> {
   const paymentId = text(charge.payment_intent);
-  if (!paymentId || !SAFE_ID.test(paymentId)) return { outcome: "invalid", relocked: [] };
-  const prior = readPayment(paymentId);
-  const amountRefunded = count(charge.amount_refunded) ?? 0;
-
+  if (!paymentId || !PAYMENT_ID_PATTERN.test(paymentId)) return { outcome: "invalid", relocked: [] };
+  const s = store ?? (await getStore());
   // charge.refunded also fires for partial refunds. Stripe's `refunded` field is true only once the whole charge is back.
-  if (charge.refunded !== true) {
-    if (prior) writePayment({ ...prior, amount_refunded: Math.max(prior.amount_refunded, amountRefunded) });
-    return { outcome: "partial", relocked: [] };
-  }
-
+  const full = charge.refunded === true;
   // With no prior record the refund overtook the payment event, so this entry stops that event unlocking when it lands.
-  writePayment({
-    id: paymentId,
-    session_id: prior?.session_id ?? null,
-    report_id: prior?.report_id ?? null,
-    amount_total: prior?.amount_total ?? null,
-    currency: prior?.currency ?? null,
-    livemode: prior?.livemode ?? null,
-    paid_at: prior?.paid_at ?? null,
-    status: "refunded",
-    amount_refunded: Math.max(prior?.amount_refunded ?? 0, amountRefunded),
-    refunded_at: prior?.refunded_at ?? new Date().toISOString(),
-  });
-
-  // This runs on every delivery, so a retry after a crash finishes the job. Each step only acts on the current state.
-  const report = prior?.report_id ? loadReport(prior.report_id) : null;
-  if (!report) return { outcome: "refunded", relocked: [] };
-  const relocked: string[] = [];
-  const stillPaid = listPayments().some((p) => p.report_id === report.id && p.status === "paid");
-  if (report.unlocked && report.unlocked_by === "stripe" && !stillPaid) {
-    lock(report);
-    relocked.push(report.id);
-  }
-  relocked.push(...relockFreeRounds(report.permit_number));
-  return { outcome: "refunded", relocked };
+  const payment = await s.mergePayment({ id: paymentId, amount_refunded: count(charge.amount_refunded) ?? 0, refunded: full });
+  if (!full) return { outcome: "partial", relocked: [] };
+  const settled = payment.report_id ? await settleReport(s, payment.report_id) : null;
+  return { outcome: "refunded", relocked: settled?.relocked ?? [] };
 }
 
 // ---------- the redirect ----------
 
 /** Stripe redirects here. The session is checked with Stripe, so the URL alone can't unlock anything. */
-export async function confirmPayment(sessionId: string, fetchImpl: typeof fetch = fetch): Promise<string | null> {
+export async function confirmPayment(sessionId: string, fetchImpl: typeof fetch = fetch, store?: Store): Promise<string | null> {
   const key = stripeKey();
   if (!key || !/^cs_\w+$/.test(sessionId)) return null;
   const res = await fetchImpl(`https://api.stripe.com/v1/checkout/sessions/${sessionId}`, { headers: { authorization: `Bearer ${key}` } });
   if (!res.ok) return null;
-  const { outcome, report_id } = applyPaidSession((await res.json()) as CheckoutSession);
+  const { outcome, report_id } = await applyPaidSession((await res.json()) as CheckoutSession, store);
   return outcome === "unlocked" || outcome === "already_unlocked" ? report_id : null;
 }
 
@@ -268,7 +243,7 @@ export interface WebhookReply {
 }
 
 /** Decides the reply for one delivery. A 2xx tells Stripe to stop, so only a fault worth retrying may answer 5xx. */
-export function processWebhook(rawBody: Buffer, signature: string | undefined, secret: string, nowSeconds = Date.now() / 1000): WebhookReply {
+export async function processWebhook(rawBody: Buffer, signature: string | undefined, secret: string, nowSeconds = Date.now() / 1000, store?: Store): Promise<WebhookReply> {
   // No secret means nothing can be verified. Stripe keeps retrying, so events aren't lost while this gets fixed.
   if (!secret) return { status: 503, body: { error: "Webhook isn't configured." } };
   const check = verifySignature(rawBody, signature, secret, nowSeconds);
@@ -291,8 +266,8 @@ export function processWebhook(rawBody: Buffer, signature: string | undefined, s
   }
 
   // The second type is for delayed payment methods, which Stripe can enable on an account without this code knowing.
-  if (event.type === "checkout.session.completed" || event.type === "checkout.session.async_payment_succeeded") return { status: 200, body: { received: true, ...applyPaidSession(object as CheckoutSession) } };
-  if (event.type === "charge.refunded") return { status: 200, body: { received: true, ...applyRefund(object as Charge) } };
+  if (event.type === "checkout.session.completed" || event.type === "checkout.session.async_payment_succeeded") return { status: 200, body: { received: true, ...(await applyPaidSession(object as CheckoutSession, store)) } };
+  if (event.type === "charge.refunded") return { status: 200, body: { received: true, ...(await applyRefund(object as Charge, store)) } };
   return { status: 200, body: { received: true, outcome: "ignored" } };
 }
 
@@ -314,7 +289,7 @@ export async function handleStripeWebhook(req: IncomingMessage, res: ServerRespo
   let reply: WebhookReply;
   try {
     const raw = await readRawBody(req);
-    reply = raw ? processWebhook(raw, req.headers["stripe-signature"] as string | undefined, webhookSecret()) : { status: 413, body: { error: "Body too large." } };
+    reply = raw ? await processWebhook(raw, req.headers["stripe-signature"] as string | undefined, webhookSecret()) : { status: 413, body: { error: "Body too large." } };
   } catch (e) {
     // This route is public, so the detail goes to the log only. The 500 makes Stripe retry.
     console.error("Stripe webhook failed:", e);

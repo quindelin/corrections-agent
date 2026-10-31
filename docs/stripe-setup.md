@@ -1,6 +1,6 @@
 # Setting up Stripe for Redline
 
-**Nothing here has been tested against Stripe itself.** No real or sandbox Stripe account, key or event has touched this code. `npm run test:payments` builds its own events, signs them with a made-up secret and runs offline, so it shows the code matches Stripe's documented format, not that Stripe agrees. The steps in [Prove it in the sandbox](#prove-it-in-the-sandbox) are that first real test, and they need to pass before going live.
+**Nothing here has been tested against Stripe itself, or on a real Postgres server.** No real or sandbox Stripe account, key or event has touched this code. `npm run test:payments` builds its own events, signs them with a made-up secret and runs offline, on local files and on PGlite, so it shows the code matches Stripe's documented format, not that Stripe agrees. PGlite is the Postgres engine with a single backend process, so its statements interleave but never truly run in parallel. The steps in [Prove it in the sandbox](#prove-it-in-the-sandbox) are that first real test, and they need to pass before going live.
 
 The Dashboard steps were written from Stripe's public docs on 2026-10-31, without opening the Dashboard. Labels may differ slightly. Stripe now calls its test environment a **sandbox**, so that's the word used here.
 
@@ -18,7 +18,11 @@ The customer sees a free preview, clicks unlock and pays on a Stripe Payment Lin
 
 **Which requests are checked.** The webhook is the only `/api/` route that doesn't need `REDLINE_API_KEY`, and only for a `POST` to exactly that path. It must carry a valid `Stripe-Signature`, checked against the raw bytes with a five-minute limit on the timestamp.
 
-**Receiving an event twice is safe.** Stripe can repeat an event, send one change as two events with different IDs, and deliver events out of order. So Redline keeps a ledger with one file per payment, in `.cache/payments/`, and each event moves the payment and report to the right state. A refund can't be undone by a later message, because a Checkout Session still says `paid` after a refund.
+**Receiving an event twice, or out of order, is safe.** Stripe can repeat an event, send one change as two events with different IDs, deliver events out of order, and reach any instance. So an event doesn't change a report directly. It adds a fact to a payment ledger in the store (`redline_payments` on Postgres, `.cache/payments/` on local files), and the report is then brought in line with the ledger.
+
+**A refund can't be undone by a later message.** Nothing ever clears a refund from the ledger. This matters because a Checkout Session still says `paid` after a refund, so an old redirect link or a resent event would otherwise unlock the report again.
+
+**A payment and a refund can arrive together on different instances.** One instance can read "paid", lose the race to the refund, and then unlock a report the other instance just locked. So each instance reads the ledger again after writing, and corrects the report if it changed. Stress tests didn't catch this bug when the re-read was removed, on either backend. Only the tests that force the exact order did, so keep those if this code changes.
 
 ### Does a refund re-lock the report?
 
@@ -30,7 +34,7 @@ The customer sees a free preview, clicks unlock and pays on a Stripe Payment Lin
 - **A partial refund is a goodwill credit** on a sale that still stands.
 - **Design partner reports never re-lock**, because they were never paid for.
 
-Tell customers this in the refund wording. It's a business choice and easy to reverse: `applyRefund` is the only place it lives.
+Tell customers this in the refund wording. It's a business choice and easy to reverse: it lives in `settleReport` and `relockFreeRounds` in `demo/payments.ts`.
 
 ## Set up the sandbox
 
@@ -80,7 +84,7 @@ You'll end up with three values, which go in `.env` (never committed) and always
 
 Pay with test card `4242 4242 4242 4242`, any future expiry such as 12/34 and any three-digit CVC. Run a real letter through `http://localhost:8792/start`, or any letter that gives you a locked report. Sandbox retries are limited to three over a few hours, so watch for failures as you go.
 
-Each report's state is in `.cache/reports/<id>.json`, and each payment's is in `.cache/payments/<pi_id>.json`.
+On local files, each report's state is in `.cache/reports/<id>.json`, and each payment's is in `.cache/payments/<pi_id>.json`. On Postgres, they're in `redline_reports` and `redline_payments`.
 
 | # | Do this | Expect |
 |---|---|---|
@@ -106,8 +110,7 @@ Item 1 also tests something the offline tests can't: that a real Stripe signatur
 **The service needs these first:**
 
 - **A public HTTPS address for the webhook.** Stripe requires one, and the server listens only on localhost unless `REDLINE_HOST` says otherwise. Simplest is to expose just `POST /api/stripe/webhook` and `GET /paid` on the service directly. If it has to go through the Emris proxy, that route must forward the unchanged bytes and the `Stripe-Signature` header. In Next.js that means reading `await req.arrayBuffer()`, never `req.json()`. Parsing and re-encoding breaks the signature. A redirect also counts as a failed delivery.
-- **Storage that survives a redeploy.** Reports and the ledger are local files under `.cache/`. Losing them means paying customers lose their reports, and the service forgets which payments were refunded. Use a persistent volume, or the database planned in [the Emris notes](emris-integration.md).
-- **One running process.** Safety against concurrent deliveries relies on a single Node process. Running several instances needs database transactions first.
+- **Postgres.** Set `DATABASE_URL` and run `npm run store -- migrate` before starting the service. Local files lose reports and the record of refunds if the disk changes, and they're safe for one process only. Without the migration, the webhook answers 500, and Stripe retries for up to three days.
 - **An accurate clock**, kept in sync by NTP, since timestamps more than five minutes off are refused.
 
 **Then, with the Dashboard switched to live mode.** Nothing carries over from the sandbox, so every object is created again:
@@ -116,7 +119,7 @@ Item 1 also tests something the offline tests can't: that a real Stripe signatur
 2. Create the live Payment Link, as in step 3, with the redirect pointing at `https://<your-host>/paid?session_id={CHECKOUT_SESSION_ID}`.
 3. Repeat step 4 for payment methods.
 4. Create a live event destination, as in step 6. Snapshot again, and its secret differs from the sandbox one.
-5. In the production environment, set all three variables together, and start with an empty `.cache/` or a fresh `REDLINE_DATA_DIR`, so no sandbox report or payment comes along. Keep `REDLINE_API_KEY` set.
+5. In the production environment, set all three variables together, and point `DATABASE_URL` at a database that sandbox testing never used, so no sandbox report or payment comes along. Keep `REDLINE_API_KEY` set.
 6. Restart and check that no warning appears.
 7. **Make one real purchase and refund it**, working through items 1, 3, 7 and 8 above. Stripe keeps its fee of about $2 on a refund. Check **Event deliveries** shows 200s.
 
@@ -132,10 +135,11 @@ Item 1 also tests something the offline tests can't: that a real Stripe signatur
 | 400, log says `stale_timestamp` | The server clock is off. Stripe signs each retry afresh, so a real retry isn't stale |
 | 400, "Expected a snapshot event" | The destination uses Thin. Create a Snapshot one |
 | 401 at the webhook | The URL isn't exactly `/api/stripe/webhook` (a trailing slash counts), or a proxy changed the method |
+| 500 at the webhook, log says `redline_payments` doesn't exist | Run `npm run store -- migrate`. Stripe retries, so events aren't lost if you fix it in time |
 | 503 at the webhook | `STRIPE_WEBHOOK_SECRET` isn't set where the service runs. Stripe keeps retrying, so events aren't lost if you fix it in time |
 | 3xx in **Event deliveries** | Point the destination at the final URL. Stripe treats a redirect as a failure |
 | Paid, but `/paid` shows a failure | Key lacks read access to Checkout Sessions, the key is from the other mode, or the payment method was delayed. Check the key's **View request logs** |
-| Log says "paid session ... has no matching report" | The customer paid and there's nothing to unlock: the report was deleted, or the link was opened without a report ID. Find the entries with `"report_id":null` in `.cache/payments/`, and refund it or fix it by hand |
+| Log says "paid session ... has no matching report" | The customer paid and there's nothing to unlock: the report was deleted, or the link was opened without a report ID. Find the rows with no `report_id` in `redline_payments` (or `.cache/payments/` on local files), and refund it or fix it by hand |
 
 Live mode retries for up to three days, and you can **Resend** an event for up to 15 days.
 
@@ -162,5 +166,6 @@ Experiment 3 in the pricing doc offers the pack by link to 10 expediters, keepin
 - **Re-buying doesn't reopen free rounds locked by an earlier refund.** The paid report reopens, but a free round on that permit stays locked until someone unlocks it by hand.
 - **Permit numbers are self-declared.** Anyone who types a paid permit's number into a new letter gets that round free, as `permitAlreadyUnlocked` did before this work. It's worth closing before launch.
 - **The 12-month limit on a permit isn't enforced.**
-- **A rare overwrite.** The review and opt-in routes load a report, wait for the request body, then save. A refund landing in that gap could be overwritten, leaving the report unlocked until the refund event is sent again. A database transaction fixes this when storage moves.
+- **Two narrow races on free rounds, both in the customer's favor or fixable by support.** A new round being created at the moment of a refund can miss the re-lock and stay open. And a refund on one report arriving together with a first payment on another report on the same permit can lock free rounds that the new payment should have kept open.
+- **The ledger is kept as long as reports are.** Each row is purged at the retention limit (90 days by default), counted from when it was first seen, which is always after its report's own limit. Stripe stays the record for accounting. It holds Stripe IDs and amounts, not letter text.
 - **No emails are sent**, so the receipt and magic link in steps 6 and 7 of the flow aren't here. Stripe can send its own receipts.
