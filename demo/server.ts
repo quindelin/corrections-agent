@@ -2,7 +2,8 @@
 // The review workbench: run the agent on a correction letter, sign off each item, assemble the response.
 // A letter can be a real Seattle letter, a pasted letter from any city, or the fictional Chicago sample.
 // /start is the customer flow: drop a letter, see a free preview, unlock it. Payments use a Stripe Payment Link
-// when STRIPE_PAYMENT_LINK and STRIPE_SECRET_KEY are set. Without them, unlocking is a free design-partner offer.
+// when STRIPE_PAYMENT_LINK and STRIPE_SECRET_KEY are set (demo/payments.ts, docs/stripe-setup.md). Without them,
+// unlocking is a free design-partner offer.
 // Each analysis is a TrueForge session. Reject notes go to feedback/reviews.jsonl (not committed, because it can
 // hold client text), and improve learns from them.
 
@@ -13,6 +14,7 @@ import { fileURLToPath } from "node:url";
 import { parseItems } from "../evals/score.ts";
 import { client, exportSession, FEEDBACK_FILE, headSha, readAgent, ROOT, runTurn, SUMMARY_CSV, syncAgent } from "../scripts/lib.ts";
 import { MAX_LETTER_CHARS, parseLetter, type ParsedComment } from "./parse-letter.ts";
+import { checkoutUrl, configWarning, confirmPayment, handleStripeWebhook, paymentsOn, requiresServiceKey } from "./payments.ts";
 import { readPdfText } from "./read-pdf.ts";
 import { exportDoc, loadReport, newReportId, permitAlreadyUnlocked, publicView, saveReport, type Report } from "./reports.ts";
 
@@ -22,11 +24,8 @@ const MAX_BODY_BYTES = 200_000;
 const MAX_UPLOAD_BYTES = 15_000_000; // about 10 MB of file, once base64 encoded
 const FREE_RUNS_PER_HOUR = 6;
 const PRICE = "$59";
-const PAYMENT_LINK = process.env.STRIPE_PAYMENT_LINK || "";
-const STRIPE_KEY = process.env.STRIPE_SECRET_KEY || "";
-const paymentsOn = () => Boolean(PAYMENT_LINK && STRIPE_KEY);
 // When set, /api/ calls need this key, so only the Emris proxy can reach the service. Stripe's /paid redirect is exempt,
-// because it proves itself by checking the session with Stripe.
+// because it proves itself by checking the session with Stripe. So is the webhook, which proves itself by its signature.
 const API_KEY = process.env.REDLINE_API_KEY || "";
 const readJson = (path: string) => JSON.parse(readFileSync(path, "utf8"));
 const readIf = (path: string) => (existsSync(path) ? readJson(path) : null);
@@ -230,18 +229,6 @@ async function runReport(b: Record<string, unknown>, client: string) {
   return { status: 200, value: publicView(report) };
 }
 
-/** Stripe redirects here. The session is checked with Stripe, so the URL alone can't unlock anything. */
-async function confirmPayment(sessionId: string): Promise<string | null> {
-  if (!STRIPE_KEY || !/^cs_[\w]+$/.test(sessionId)) return null;
-  const res = await fetch(`https://api.stripe.com/v1/checkout/sessions/${sessionId}`, { headers: { authorization: `Bearer ${STRIPE_KEY}` } });
-  if (!res.ok) return null;
-  const session = (await res.json()) as { payment_status?: string; client_reference_id?: string };
-  const report = session.client_reference_id ? loadReport(session.client_reference_id) : null;
-  if (session.payment_status !== "paid" || !report) return null;
-  saveReport({ ...report, unlocked: true, unlocked_by: "stripe" });
-  return report.id;
-}
-
 async function handleProduct(req: IncomingMessage, res: ServerResponse): Promise<boolean> {
   const url = new URL(req.url ?? "/", "http://localhost");
   const path = url.pathname;
@@ -288,7 +275,7 @@ async function handleProduct(req: IncomingMessage, res: ServerResponse): Promise
   const action = match[2];
   if (req.method === "GET" && !action) return send(res, 200, publicView(report)), true;
   if (req.method === "POST" && action === "unlock") {
-    if (paymentsOn()) return send(res, 200, { checkout_url: `${PAYMENT_LINK}?client_reference_id=${report.id}` }), true;
+    if (paymentsOn()) return send(res, 200, { checkout_url: checkoutUrl(report.id) }), true;
     const b = await body(req);
     if (b.design_partner !== true) return send(res, 400, { error: "Agree to the design partner terms first." }), true;
     const unlocked: Report = { ...report, unlocked: true, unlocked_by: "design_partner", learning_opt_in: true };
@@ -325,7 +312,8 @@ async function handleProduct(req: IncomingMessage, res: ServerResponse): Promise
 
 createServer(async (req, res) => {
   try {
-    if (API_KEY && req.url?.startsWith("/api/") && req.headers["x-redline-key"] !== API_KEY) return send(res, 401, { error: "Missing or wrong service key." });
+    if (API_KEY && requiresServiceKey(req.method, req.url) && req.headers["x-redline-key"] !== API_KEY) return send(res, 401, { error: "Missing or wrong service key." });
+    if (await handleStripeWebhook(req, res)) return;
     if (await handleProduct(req, res)) return;
     if (req.method === "GET" && req.url === "/") {
       return void res.writeHead(200, { "content-type": "text/html; charset=utf-8" }).end(readFileSync(join(here, "index.html")));
@@ -363,4 +351,8 @@ createServer(async (req, res) => {
   } catch (e) {
     send(res, 500, { error: (e as Error).message });
   }
-}).listen(PORT, process.env.REDLINE_HOST ?? "127.0.0.1", () => console.log(`Redline on http://localhost:${PORT}`));
+}).listen(PORT, process.env.REDLINE_HOST ?? "127.0.0.1", () => {
+  const warning = configWarning();
+  if (warning) console.warn(warning);
+  console.log(`Redline on http://localhost:${PORT}`);
+});

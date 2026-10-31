@@ -9,7 +9,9 @@ import type { Item } from "../evals/score.ts";
 import { ROOT } from "../scripts/lib.ts";
 import type { ParsedComment } from "./parse-letter.ts";
 
-const DIR = join(ROOT, ".cache", "reports");
+/** Where reports and the payment ledger live. REDLINE_DATA_DIR lets tests use a scratch folder, never real reports. */
+export const dataDir = () => process.env.REDLINE_DATA_DIR || join(ROOT, ".cache");
+const reportsDir = () => join(dataDir(), "reports");
 export const FREE_DRAFTS = 3;
 
 export interface Report {
@@ -34,23 +36,25 @@ export function newReportId(): string {
 }
 
 export function saveReport(r: Report): void {
-  mkdirSync(DIR, { recursive: true });
-  writeFileSync(join(DIR, `${r.id}.json`), JSON.stringify(r));
+  mkdirSync(reportsDir(), { recursive: true });
+  writeFileSync(join(reportsDir(), `${r.id}.json`), JSON.stringify(r));
 }
 
 export function loadReport(id: string): Report | null {
   if (!/^[a-f0-9]{32}$/.test(id)) return null;
-  const file = join(DIR, `${id}.json`);
+  const file = join(reportsDir(), `${id}.json`);
   return existsSync(file) ? (JSON.parse(readFileSync(file, "utf8")) as Report) : null;
+}
+
+export function listReports(): Report[] {
+  if (!existsSync(reportsDir())) return [];
+  return readdirSync(reportsDir()).map((f) => JSON.parse(readFileSync(join(reportsDir(), f), "utf8")) as Report);
 }
 
 /** A later round on a permit that's already paid for costs nothing. */
 export function permitAlreadyUnlocked(permit: string | null): boolean {
-  if (!permit || !existsSync(DIR)) return false;
-  return readdirSync(DIR).some((f) => {
-    const r = JSON.parse(readFileSync(join(DIR, f), "utf8")) as Report;
-    return r.unlocked && r.permit_number === permit;
-  });
+  if (!permit) return false;
+  return listReports().some((r) => r.unlocked && r.permit_number === permit);
 }
 
 const ROUTE_ORDER = ["licensed_review", "other_agency", "client_input", "agent_draft", "no_action"];
