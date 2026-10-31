@@ -15,6 +15,15 @@
       "disputed comments"
     ]
   },
+  "process_wording": {
+    "terms": ["Certified Plan*", "Form 420", "Department of Buildings", "bubbl*"],
+    "marking_phrases": ["bubbled, dated and initialed", "bubbled, initialed and dated", "bubbled and dated", "bubbled and initialed", "bubbled"],
+    "protocol_phrases": ["Certified Plan Corrections protocol", "Certified Plan Corrections process", "Certified Plan Corrections"]
+  },
+  "citation_format": {
+    "find": "\\b(?:1[347][A-Z]?-\\d+(?:-\\d+)*(?:\\.\\d+)*|14[A-Z]\\b)",
+    "section": "^(1[347][A-Z]?(?:-\\d+){0,2}|14[A-Z])"
+  },
   "data_source": "https://data.cityofchicago.org/Buildings/Building-Permits/ydr8-5enu",
   "status": "active",
   "code_editions": [

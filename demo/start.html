@@ -57,6 +57,9 @@
   .cite { font-size: 13px; color: var(--ink-2); }
   .cite b { color: var(--ink); }
   .draft { font-size: 15px; margin: 8px 0 0; }
+  .flag { font-size: 13px; color: var(--ink); margin: 8px 0 0; padding-left: 8px; border-left: 2px solid var(--accent); overflow-wrap: anywhere; }
+  .flag.info { color: var(--ink-3); border-left-color: var(--line); }
+  .flag small { display: block; font-size: 12px; color: var(--ink-3); }
   .locked { font-size: 14px; color: var(--ink-3); margin: 8px 0 0; font-style: italic; }
   .note { font-size: 13px; color: var(--ink-3); margin: 10px 0 0; }
   .err { color: var(--bad); }
@@ -223,15 +226,25 @@ function renderCheck() {
   });
 }
 
+function flagNote(f) {
+  const n = el("p", "flag" + (f.level === "review" ? "" : " info"));
+  if (f.level === "review") n.append(el("b", null, "Check: "));
+  n.append(f.message);
+  // The draft shows the current wording, so only a change needs the original beside it.
+  if (f.before && (f.action === "rewritten" || f.action === "removed")) n.append(el("small", null, `Original: ${f.before}`));
+  return n;
+}
+
 function itemCard(i) {
   const held = i.route === "licensed_review";
   const c = el("div", "card" + (held ? " held" : "") + (i.decision ? " " + i.decision : ""));
   const top = el("div"); top.append(el("span", "tag", i.comment), el("span", "tag", i.discipline));
   for (const s of i.sheets) top.append(el("span", "tag", s));
   c.append(top, el("p", "quote", i.text));
-  if (i.locked) { c.append(el("p", "locked", "Draft and citation unlock with this permit.")); return c; }
+  if (i.locked) { c.append(...(i.flags ?? []).map(flagNote), el("p", "locked", "Draft and citation unlock with this permit.")); return c; }
   if (i.citation) { const n = el("span", "cite"); n.append(el("b", null, i.citation)); c.append(n); }
   if (i.draft) c.append(el("p", "draft", i.draft));
+  c.append(...(i.flags ?? []).map(flagNote));
   if (report.unlocked && i.route !== "no_action") {
     const row = el("div", "row");
     if (i.decision) row.append(el("span", i.decision === "approve" ? "ok" : "no", i.decision === "approve" ? "Approved" : "Rejected"));
@@ -262,6 +275,8 @@ function renderReport() {
   const n = r.items.length;
   $("report-title").textContent = r.unlocked ? "Your response package" : `Here's your letter: ${n} comment${n === 1 ? "" : "s"}, sorted`;
   $("report-lede").textContent = `${r.place}${r.permit_number ? `, permit ${r.permit_number}` : ""}. Drafts are for a licensed professional to review; nothing here is a finding that plans meet code.`;
+  const toCheck = r.items.filter((i) => (i.flags ?? []).some((f) => f.level === "review")).length;
+  if (toCheck) $("report-lede").textContent += ` ${toCheck} item${toCheck === 1 ? " has" : "s have"} something to check, marked below.`;
   const s = $("summary"); s.replaceChildren();
   for (const k of Object.keys(ROUTES)) {
     if (!r.counts[k]) continue;

@@ -7,6 +7,13 @@
     "name": "Respond to review comments",
     "entry_id": "SDCI-RESPONSE"
   },
+  "process_wording": {
+    "terms": ["SDCI", "Seattle Department of Construction and Inspections"]
+  },
+  "citation_format": {
+    "find": "\\b(?:SMC|SBC|SRC|SEC|SFC)\\s+(?:(?:Section|Sec\\.?|Table|Chapter|§)\\s*)?[A-Z]?\\d[\\w.()-]*",
+    "section": "^(SMC \\d{1,2}\\.\\d{2}(?:\\.\\d{3})?|(?:SBC|SRC|SEC|SFC) [A-Z]?\\d{3,4})"
+  },
   "data_source": "https://data.seattle.gov/Built-Environment/Plan-Comments/e285-aq8h",
   "status": "active"
 }
