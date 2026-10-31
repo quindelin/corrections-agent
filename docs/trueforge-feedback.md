@@ -1,6 +1,6 @@
 # Feedback for TrueFoundry
 
-We built Redline and three supporting agents on TrueForge in a day, using a local server and a TrueFoundry AI Gateway model.
+We built Redline on TrueForge in a day, using a local server and a TrueFoundry AI Gateway model. We also tried three early supporting agents on the same server. They aren't on this repo's `main` and aren't part of the challenge proof.
 
 ## What worked well
 
@@ -14,9 +14,9 @@ We built Redline and three supporting agents on TrueForge in a day, using a loca
 - **Local MCP servers:** reaching one needs `OUTBOUND_URL_ALLOWED_HOSTS`, which we found through the starter README, not the MCP docs.
 - **Provider status:** a custom provider shows a green "Connected" label before it has an API key. We'd prefer a real test button.
 - **Gateway URLs:** it wasn't clear whether a custom provider's base URL needs `/v1`. Both forms returned the same unauthorized error until we had a key.
-- **Skills on a Mac:** in our test of real skills, the local sandbox started but couldn't run `git`, so the skills never loaded. The run still finished with a score, so a setup problem can look like a weak agent. Failing loudly would help. We suspect a developer-tools path problem on our machine, but haven't confirmed it.
+- **Skills on a Mac:** in our test of real skills, sandbox initialization failed on `git init`, so the agent's attempts to read its skills returned errors and it never saw them. The run still finished with a score (87.16, which we discarded), so a setup problem can look like a weak agent. Failing loudly would help. We suspect a developer-tools path problem on our machine, but haven't confirmed it.
 - **Subagents:** we told the agent to hand citation lookups to subagents, and its session shows it never used one. We'd like clearer guidance on how to make delegation happen.
-- **Session export:** there's no export endpoint, so we paged through sessions, turns and events ourselves. A built-in export would help anyone keeping evidence in a repo.
+- **Session export:** we found no export endpoint, so the starter's code pages through sessions, turns and events. A built-in export would help anyone keeping evidence in a repo.
 - **Model routing:** we wanted a cheap model for sorting and a stronger one for drafting, but the docs say per-task and per-subagent selection isn't available yet.
 - **Going to production:** standalone mode runs with auth disabled and stores the model key as plain text in SQLite. A short hardening guide would help.
 - **Serverless hosts:** TrueForge needs a long-running server, so it can't sit inside a Vercel app. A documented pattern for a separate service and job queue would save time.
