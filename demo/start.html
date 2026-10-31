@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Redline Corrections</title>
+<style>
+  :root {
+    color-scheme: light;
+    --surface: #f6f5f1; --panel: #fcfcfb; --line: #dcdad2;
+    --ink: #1b1a18; --ink-2: #52514e; --ink-3: #75736c;
+    --accent: #b3261e; --accent-ink: #ffffff; --chip: #ece9e0;
+    --good: #0b6e3b; --bad: #a3231b; --focus: #2a78d6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:where(:not([data-theme="light"])) {
+      color-scheme: dark;
+      --surface: #141413; --panel: #1a1a19; --line: #33322e;
+      --ink: #f0efec; --ink-2: #c3c2b7; --ink-3: #9a988e;
+      --accent: #e66767; --accent-ink: #1a1a19; --chip: #2a2926;
+      --good: #6cc99a; --bad: #ef8d86; --focus: #3987e5;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--surface); color: var(--ink); font: 16px/1.5 ui-sans-serif, -apple-system, "Segoe UI", sans-serif; }
+  main { max-width: 760px; margin: 0 auto; padding: 32px 16px 64px; }
+  h1 { font-size: 30px; line-height: 1.2; letter-spacing: -0.015em; margin: 0 0 8px; }
+  h2 { font-size: 18px; margin: 0 0 4px; }
+  h3 { font-size: 14px; margin: 20px 0 8px; display: flex; flex-wrap: wrap; gap: 4px 8px; align-items: baseline; }
+  h3 small { font-weight: 400; color: var(--ink-3); }
+  .logo { font-weight: 700; margin-bottom: 28px; }
+  .logo span { color: var(--accent); }
+  .lede { color: var(--ink-2); margin: 0 0 24px; }
+  .drop { border: 2px dashed var(--line); border-radius: 10px; background: var(--panel); padding: 40px 16px; text-align: center; cursor: pointer; display: block; }
+  .drop:hover, .drop.over { border-color: var(--accent); }
+  .drop b { display: block; font-size: 18px; }
+  .drop span { color: var(--ink-3); font-size: 14px; }
+  input[type=file] { position: absolute; width: 1px; height: 1px; opacity: 0; }
+  .drop:focus-within { outline: 2px solid var(--focus); outline-offset: 2px; }
+  button { font: inherit; font-size: 15px; border-radius: 6px; border: 1px solid var(--line); background: var(--panel); color: var(--ink); padding: 7px 14px; cursor: pointer; }
+  button:hover:not(:disabled) { border-color: var(--ink-3); }
+  button:disabled { opacity: .55; cursor: default; }
+  button.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); font-weight: 600; padding: 11px 20px; }
+  button.link { border: 0; background: none; color: var(--ink-2); text-decoration: underline; padding: 4px; }
+  :focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+  label { display: block; font-size: 14px; color: var(--ink-2); margin: 12px 0 4px; }
+  textarea, select, input[type=text], input[type=email] { width: 100%; font: inherit; font-size: 15px; color: var(--ink); background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 8px 10px; }
+  textarea { resize: vertical; }
+  .panel, .card { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 14px; }
+  .card { margin-bottom: 8px; border-left: 3px solid var(--line); }
+  .card.held { border-left-color: var(--accent); }
+  .card.approve { border-left-color: var(--good); }
+  .card.reject { border-left-color: var(--bad); }
+  .row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-top: 10px; }
+  .tag { display: inline-block; font-size: 12px; background: var(--chip); color: var(--ink-2); border-radius: 4px; padding: 0 6px; margin-right: 4px; }
+  .quote { color: var(--ink-2); font-size: 14px; margin: 6px 0; overflow-wrap: anywhere; }
+  .cite { font-size: 13px; color: var(--ink-2); }
+  .cite b { color: var(--ink); }
+  .draft { font-size: 15px; margin: 8px 0 0; }
+  .locked { font-size: 14px; color: var(--ink-3); margin: 8px 0 0; font-style: italic; }
+  .note { font-size: 13px; color: var(--ink-3); margin: 10px 0 0; }
+  .err { color: var(--bad); }
+  .ok { color: var(--good); font-weight: 600; font-size: 14px; }
+  .no { color: var(--bad); font-weight: 600; font-size: 14px; }
+  .summary { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 8px; margin: 16px 0; }
+  .summary div { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; }
+  .summary b { display: block; font-size: 24px; line-height: 1.2; font-variant-numeric: tabular-nums; }
+  .summary span { font-size: 13px; color: var(--ink-2); }
+  .cta { position: sticky; bottom: 0; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 14px; margin-top: 16px; }
+  @media (max-height: 820px) { .cta { position: static; } }
+  .cta p { margin: 0 0 10px; font-size: 14px; color: var(--ink-2); }
+  .check { display: flex; gap: 8px; align-items: flex-start; font-size: 14px; color: var(--ink-2); margin: 0 0 10px; }
+  .check input { margin-top: 4px; }
+  .spin { display: inline-block; width: 13px; height: 13px; border: 2px solid var(--line); border-top-color: var(--accent); border-radius: 50%; animation: spin .8s linear infinite; vertical-align: -2px; margin-right: 8px; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  @media (prefers-reduced-motion: reduce) { .spin { animation: none; } }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<main>
+  <div class="logo">Red<span>line</span></div>
+
+  <section id="s-drop">
+    <h1>Answer your correction letter in minutes</h1>
+    <p class="lede">Drop in the letter. See every comment sorted, with who needs to act, before you pay anything. No signup.</p>
+    <label class="drop" id="drop" for="file">
+      <b>Drop your correction letter</b>
+      <span>PDF, or choose a file</span>
+      <input type="file" id="file" accept=".pdf,.txt,application/pdf,text/plain">
+    </label>
+    <div class="row"><button class="link" id="show-paste">Or paste the text</button></div>
+    <div id="paste" hidden>
+      <label for="paste-text">Correction letter text</label>
+      <textarea id="paste-text" rows="8"></textarea>
+      <div class="row"><button id="paste-go">Read this letter</button></div>
+    </div>
+    <p class="note">Your letter goes to an AI model to prepare the preview. Redline drafts responses; a licensed professional reviews them before anything is filed. Not legal advice.</p>
+    <p class="err" id="drop-err" role="alert"></p>
+  </section>
+
+  <section id="s-check" hidden>
+    <h1>Check what we read</h1>
+    <p class="lede" id="check-lede"></p>
+    <label for="place">City</label>
+    <select id="place"></select>
+    <div id="edition" hidden>
+      <label class="check" style="margin-top:12px"><input type="checkbox" id="edition-2026"> This application started on or after December 1, 2026, or chose Chicago's 2026 code.</label>
+    </div>
+    <label for="permit">Permit number (optional, so later rounds are free)</label>
+    <input type="text" id="permit">
+    <div id="comment-list"></div>
+    <div class="row">
+      <button class="primary" id="run">See my free preview</button>
+      <button class="link" id="restart">Start over</button>
+    </div>
+    <p class="err" id="check-err" role="alert"></p>
+  </section>
+
+  <section id="s-working" hidden aria-live="polite">
+    <h1>Reading your letter</h1>
+    <p class="lede"><span class="spin"></span>Sorting each comment and looking up the code. This usually takes under a minute.</p>
+  </section>
+
+  <section id="s-stop" hidden>
+    <h1 id="stop-title">We can't do this one yet</h1>
+    <p class="lede" id="stop-msg"></p>
+    <label for="wait-email">Email me when it's covered</label>
+    <input type="email" id="wait-email" autocomplete="email">
+    <div class="row"><button id="wait-go">Notify me</button><button class="link" id="stop-restart">Try another letter</button><span class="ok" id="wait-ok" aria-live="polite"></span></div>
+    <p class="err" id="wait-err" role="alert"></p>
+  </section>
+
+  <section id="s-report" hidden>
+    <h1 id="report-title"></h1>
+    <p class="lede" id="report-lede"></p>
+    <div class="summary" id="summary"></div>
+    <div id="report-tools" class="panel" hidden>
+      <div class="row" style="margin-top:0">
+        <button id="export">Download Word draft</button>
+        <button id="share">Copy link for your architect</button>
+        <span class="ok" id="share-ok" aria-live="polite"></span>
+      </div>
+      <label class="check" style="margin:12px 0 0"><input type="checkbox" id="optin"> Let Redline learn from reject notes on this permit. Off by default.</label>
+    </div>
+    <div id="report-items"></div>
+    <div class="cta" id="cta" hidden>
+      <p id="cta-text"></p>
+      <label class="check" id="partner-wrap" hidden><input type="checkbox" id="partner"> I'll share reviewer notes on this letter, and Redline may learn from them.</label>
+      <button class="primary" id="unlock"></button>
+      <p class="err" id="cta-err" role="alert" style="margin:8px 0 0"></p>
+      <p class="note" id="terms"></p>
+    </div>
+  </section>
+</main>
+<script>
+const ROUTES = {
+  licensed_review: ["Needs your architect or engineer", "Held until a licensed professional signs off"],
+  other_agency: ["Another agency", "The next step is outside this plan review"],
+  client_input: ["Needs the owner or a consultant", "A fact or document only they have"],
+  agent_draft: ["Routine paperwork", "Prepared for your sign-off"],
+  no_action: ["No response needed", ""],
+};
+const $ = (id) => document.getElementById(id);
+const el = (tag, cls, text) => { const n = document.createElement(tag); if (cls) n.className = cls; if (text != null) n.textContent = text; return n; };
+let offer, comments = [], report = null;
+
+function show(id) { for (const s of ["drop", "check", "working", "stop", "report"]) $("s-" + s).hidden = s !== id; window.scrollTo(0, 0); }
+async function api(path, payload) {
+  const r = await fetch(path, payload === undefined ? {} : { method: "POST", body: JSON.stringify(payload) });
+  const body = await r.json();
+  if (!r.ok) throw new Error(body.error || "Something went wrong. Try again.");
+  return body;
+}
+
+function acceptExtract(x) {
+  if (x.error) { $("drop-err").textContent = x.error; $("paste").hidden = false; return; }
+  if (!x.comments.length) { $("drop-err").textContent = "We couldn't find comments in that. Paste the comments instead, one per paragraph."; $("paste").hidden = false; return; }
+  comments = x.comments;
+  $("place").value = x.jurisdiction ?? "other";
+  $("permit").value = x.permit_number ?? "";
+  renderCheck();
+  show("check");
+}
+
+async function readFile(file) {
+  $("drop-err").textContent = "";
+  if (file.size > 10_000_000) { $("drop-err").textContent = "That file is over 10 MB. Paste the comments instead."; return; }
+  try {
+    if (/\.pdf$/i.test(file.name) || file.type === "application/pdf") {
+      const b = new Uint8Array(await file.arrayBuffer());
+      let bin = ""; for (let i = 0; i < b.length; i += 32768) bin += String.fromCharCode(...b.subarray(i, i + 32768));
+      acceptExtract(await api("/api/start/extract", { pdf_base64: btoa(bin) }));
+    } else if (/\.txt$/i.test(file.name) || file.type === "text/plain") {
+      acceptExtract(await api("/api/start/extract", { text: await file.text() }));
+    } else {
+      $("drop-err").textContent = "We read PDF and text files so far. Paste the comments instead."; $("paste").hidden = false;
+    }
+  } catch (e) { $("drop-err").textContent = e.message; }
+}
+
+function renderCheck() {
+  $("check-lede").textContent = `We found ${comments.length} comment${comments.length === 1 ? "" : "s"}. Fix anything we misread, then see your preview.`;
+  $("edition").hidden = $("place").value !== "chicago";
+  const list = $("comment-list"); list.replaceChildren();
+  comments.forEach((c, i) => {
+    const wrap = el("div", "card"); wrap.style.marginTop = "8px";
+    const label = el("label", null, `Comment ${i + 1}${c.heading && c.heading !== "Pasted" ? `: ${c.heading}` : ""}`); label.style.marginTop = "0";
+    const area = el("textarea"); area.value = c.text; area.rows = Math.min(6, 2 + Math.floor(c.text.length / 90)); area.setAttribute("aria-label", `Comment ${i + 1}`);
+    area.addEventListener("input", () => { c.text = area.value; });
+    const rm = el("button", "link", "Remove"); rm.addEventListener("click", () => { comments.splice(i, 1); renderCheck(); });
+    wrap.append(label, area, rm);
+    list.append(wrap);
+  });
+}
+
+function itemCard(i) {
+  const held = i.route === "licensed_review";
+  const c = el("div", "card" + (held ? " held" : "") + (i.decision ? " " + i.decision : ""));
+  const top = el("div"); top.append(el("span", "tag", i.comment), el("span", "tag", i.discipline));
+  for (const s of i.sheets) top.append(el("span", "tag", s));
+  c.append(top, el("p", "quote", i.text));
+  if (i.locked) { c.append(el("p", "locked", "Draft and citation unlock with this permit.")); return c; }
+  if (i.citation) { const n = el("span", "cite"); n.append(el("b", null, i.citation)); c.append(n); }
+  if (i.draft) c.append(el("p", "draft", i.draft));
+  if (report.unlocked && i.route !== "no_action") {
+    const row = el("div", "row");
+    if (i.decision) row.append(el("span", i.decision === "approve" ? "ok" : "no", i.decision === "approve" ? "Approved" : "Rejected"));
+    else {
+      const yes = el("button", null, held ? "Approve as licensed reviewer" : "Approve");
+      const no = el("button", null, "Reject");
+      yes.addEventListener("click", () => decide(i, "approve", ""));
+      no.addEventListener("click", () => {
+        const note = el("input"); note.type = "text"; note.placeholder = "What's wrong with it?"; note.setAttribute("aria-label", "Reject note"); note.style.flex = "1 1 200px";
+        const send = el("button", null, "Send");
+        send.addEventListener("click", () => decide(i, "reject", note.value.trim()));
+        row.replaceChildren(note, send); note.focus();
+      });
+      row.append(yes, no);
+    }
+    c.append(row);
+  }
+  return c;
+}
+
+async function decide(i, decision, note) {
+  try { report = await api(`/api/report/${report.id}/review`, { comment: i.comment, decision, note }); renderReport(); }
+  catch (e) { alert(e.message); }
+}
+
+function renderReport() {
+  const r = report;
+  const n = r.items.length;
+  $("report-title").textContent = r.unlocked ? "Your response package" : `Here's your letter: ${n} comment${n === 1 ? "" : "s"}, sorted`;
+  $("report-lede").textContent = `${r.place}${r.permit_number ? `, permit ${r.permit_number}` : ""}. Drafts are for a licensed professional to review; nothing here is a finding that plans meet code.`;
+  const s = $("summary"); s.replaceChildren();
+  for (const k of Object.keys(ROUTES)) {
+    if (!r.counts[k]) continue;
+    const d = el("div"); d.append(el("b", null, r.counts[k]), el("span", null, ROUTES[k][0])); s.append(d);
+  }
+  const list = $("report-items"); list.replaceChildren();
+  for (const k of Object.keys(ROUTES)) {
+    const items = r.items.filter((i) => i.route === k);
+    if (!items.length) continue;
+    const h = el("h3", null, ROUTES[k][0]); if (ROUTES[k][1]) h.append(el("small", null, ROUTES[k][1]));
+    list.append(h, ...items.map(itemCard));
+  }
+  $("report-tools").hidden = !r.unlocked;
+  $("optin").checked = r.learning_opt_in;
+  $("cta").hidden = r.unlocked;
+  if (!r.unlocked) {
+    const lockedCount = r.items.filter((i) => i.locked).length;
+    $("cta-text").textContent = lockedCount ? `${lockedCount} more draft${lockedCount === 1 ? "" : "s"} and citations are ready.` : "Unlock the Word draft and the reviewer link.";
+    if (offer.payments) {
+      $("unlock").textContent = `Unlock this permit, ${offer.price}`;
+      $("partner-wrap").hidden = true;
+      $("terms").textContent = "Includes every correction letter on this permit for 12 months and a 14-day refund.";
+    } else {
+      $("unlock").textContent = "Unlock free as a design partner";
+      $("partner-wrap").hidden = false;
+      $("terms").textContent = "Redline is free for early partners, in exchange for feedback from a real review.";
+    }
+  }
+}
+
+function openReport(view) {
+  report = view;
+  if (location.pathname !== `/r/${view.id}`) history.pushState(null, "", `/r/${view.id}`);
+  renderReport();
+  show("report");
+}
+
+$("file").addEventListener("change", (e) => { if (e.target.files[0]) readFile(e.target.files[0]); });
+const drop = $("drop");
+for (const ev of ["dragover", "dragenter"]) drop.addEventListener(ev, (e) => { e.preventDefault(); drop.classList.add("over"); });
+for (const ev of ["dragleave", "drop"]) drop.addEventListener(ev, (e) => { e.preventDefault(); drop.classList.remove("over"); });
+drop.addEventListener("drop", (e) => { const f = e.dataTransfer.files[0]; if (f) readFile(f); });
+$("show-paste").addEventListener("click", () => { $("paste").hidden = false; $("paste-text").focus(); });
+$("paste-go").addEventListener("click", async () => {
+  $("drop-err").textContent = "";
+  try { acceptExtract(await api("/api/start/extract", { text: $("paste-text").value })); } catch (e) { $("drop-err").textContent = e.message; }
+});
+$("place").addEventListener("change", () => { $("edition").hidden = $("place").value !== "chicago"; });
+const restart = () => { comments = []; report = null; $("file").value = ""; $("paste-text").value = ""; history.pushState(null, "", "/start"); show("drop"); };
+$("restart").addEventListener("click", restart); $("stop-restart").addEventListener("click", restart);
+
+$("run").addEventListener("click", async () => {
+  $("check-err").textContent = "";
+  const payload = { comments, jurisdiction: $("place").value, permit_number: $("permit").value, chicago_2026: $("edition-2026").checked };
+  show("working");
+  try {
+    const { job_id } = await api("/api/start/run", payload);
+    let job = await api(`/api/job/${job_id}`);
+    while (job.status === "running") {
+      await new Promise((r) => setTimeout(r, 1500));
+      job = await api(`/api/job/${job_id}`);
+    }
+    const v = job.result;
+    if (v.stop) {
+      $("stop-msg").textContent = v.message;
+      $("stop-title").textContent = "We can't do this one yet";
+      $("wait-ok").textContent = ""; $("wait-err").textContent = "";
+      show("stop");
+    } else openReport(v);
+  } catch (e) { show("check"); $("check-err").textContent = e.message; }
+});
+
+$("wait-go").addEventListener("click", async () => {
+  $("wait-err").textContent = "";
+  try {
+    await api("/api/waitlist", { email: $("wait-email").value, place: $("place").value, reason: $("edition-2026").checked ? "edition" : "uncovered" });
+    $("wait-ok").textContent = "Thanks, we'll email you.";
+  } catch (e) { $("wait-err").textContent = e.message; }
+});
+
+$("unlock").addEventListener("click", async () => {
+  $("cta-err").textContent = "";
+  if (!offer.payments && !$("partner").checked) { $("cta-err").textContent = "Tick the box above to continue."; return; }
+  try {
+    const v = await api(`/api/report/${report.id}/unlock`, { design_partner: !offer.payments });
+    if (v.checkout_url) location.href = v.checkout_url;
+    else { report = v; renderReport(); window.scrollTo(0, 0); }
+  } catch (e) { $("cta-err").textContent = e.message; }
+});
+
+$("export").addEventListener("click", () => { location.href = `/api/report/${report.id}/export`; });
+$("share").addEventListener("click", async () => {
+  try { await navigator.clipboard.writeText(location.href); $("share-ok").textContent = "Link copied"; }
+  catch { $("share-ok").textContent = location.href; }
+});
+$("optin").addEventListener("change", async (e) => {
+  try { report = await api(`/api/report/${report.id}/optin`, { opt_in: e.target.checked }); } catch (err) { e.target.checked = !e.target.checked; alert(err.message); }
+});
+
+(async () => {
+  offer = await api("/api/offer");
+  for (const p of offer.places) { const o = el("option", null, p.name); o.value = p.id; $("place").append(o); }
+  const other = el("option", null, "Another city"); other.value = "other"; $("place").append(other);
+  const m = location.pathname.match(/^\/r\/([a-f0-9]{32})$/);
+  if (m) {
+    try { openReport(await api(`/api/report/${m[1]}`)); }
+    catch (e) { $("drop-err").textContent = e.message; show("drop"); }
+  } else if (new URLSearchParams(location.search).get("payment") === "failed") {
+    $("drop-err").textContent = "We couldn't confirm that payment, and your card shouldn't have been charged for it. If it was, email us.";
+  }
+})();
+</script>
+</body>
+</html>

@@ -44,6 +44,10 @@ The agent sorts what it learns by where it holds:
 - `agent/skills/correction-playbook/` holds rules that apply anywhere.
 - `agent/skills/local-chicago/` holds rules about one place.
 
+## Real data
+
+`npm run real:build` rebuilds real letters from Seattle's public records, and `npm run real:run` runs the agent on them, hiding reviewers' citations so they can be checked. Results are in `runs-real/`. See `docs/emris-integration.md` for how this connects to Emris.
+
 ## Built for many places
 
 Everything specific to a place lives in a jurisdiction pack. The tools, scorer and playbook are shared.
@@ -121,13 +125,12 @@ npm run run-evals
 
 Review each change with `git show`. To drop one: `git reset --hard HEAD~1`, then improve again. The rule is that **the agent writes the change**: you can keep it or drop it, but you don't edit it.
 
-**5. Open the review queue:**
+**5. Open the customer flow or the review queue.** `npm run demo` serves the drop-a-letter flow at http://localhost:8792/start and the review queue at http://localhost:8792. As a service behind Emris, set `REDLINE_API_KEY`, and `REDLINE_HOST` if it must listen beyond localhost. Stripe needs `STRIPE_PAYMENT_LINK` and `STRIPE_SECRET_KEY`; without them, unlocking is a free design-partner offer.
 
 ```bash
 npm run demo
 ```
 
-Then go to http://localhost:8792.
 
 ## The scorer
 

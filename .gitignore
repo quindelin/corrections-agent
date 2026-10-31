@@ -6,3 +6,4 @@ node_modules/
 # Built from public data by npm run real:build
 .cache/
 jurisdictions/*/comments.jsonl
+feedback/

@@ -39,6 +39,15 @@
   button:disabled { opacity: .55; cursor: default; }
   button.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); font-weight: 600; padding: 8px 16px; }
   :focus-visible { outline: 2px solid var(--series); outline-offset: 2px; }
+  .tabs { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+  .tabs button[aria-selected="true"] { background: var(--ink); color: var(--panel); border-color: var(--ink); }
+  label { display: block; font-size: 13px; color: var(--ink-2); margin: 8px 0 4px; }
+  select, input { width: 100%; font: inherit; font-size: 14px; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 7px 8px; }
+  #letter-wrap { margin-top: 12px; }
+  .compare { font-size: 13px; margin-top: 4px; color: var(--ink-2); }
+  .compare b { color: var(--ink); font-weight: 600; }
+  .match { color: var(--good); font-weight: 600; } .miss { color: var(--warn); font-weight: 600; }
+  .banner { border: 1px solid var(--line); background: var(--panel); border-radius: 6px; padding: 10px 12px; font-size: 14px; margin-bottom: 12px; }
   .letter li { margin-bottom: 6px; }
   .letter ol { margin: 0; padding-left: 0; list-style: none; }
   .tag { display: inline-block; font-size: 12px; background: var(--chip); color: var(--ink-2); border-radius: 4px; padding: 0 6px; margin-right: 4px; white-space: nowrap; }
@@ -84,9 +93,31 @@
 </header>
 <main>
   <div>
-    <section id="letter-section">
-      <h2>Correction letter (fictional)</h2>
-      <div class="panel letter"><ol id="letter"></ol></div>
+    <section>
+      <h2>Choose a correction letter</h2>
+      <div class="panel">
+        <div class="tabs" role="tablist" aria-label="Letter source">
+          <button role="tab" id="tab-real" aria-selected="true">Real Seattle letter</button>
+          <button role="tab" id="tab-paste" aria-selected="false">Paste your own</button>
+          <button role="tab" id="tab-sample" aria-selected="false">Chicago sample</button>
+        </div>
+        <div id="pane-real">
+          <label for="real-select">Letter from Seattle's public records. The reviewer's citations are hidden so you can compare.</label>
+          <select id="real-select"></select>
+        </div>
+        <div id="pane-paste" hidden>
+          <label for="paste-place">City</label>
+          <select id="paste-place"></select>
+          <label for="paste-project">Project (optional)</label>
+          <input id="paste-project" placeholder="New three-flat, RT-4 zoning">
+          <label for="paste-text">Correction letter text</label>
+          <textarea id="paste-text" rows="8" placeholder="Paste the comments here. Numbered comments split best."></textarea>
+          <p class="note" id="paste-note">Text goes to the AI model through your TrueFoundry gateway. Only paste what you may share that way.</p>
+          <p class="note" id="paste-split" aria-live="polite"></p>
+        </div>
+        <div id="pane-sample" hidden><p class="note">A fictional letter we wrote. Don't treat it as evidence.</p></div>
+        <div class="letter" id="letter-wrap"><ol id="letter"></ol></div>
+      </div>
     </section>
     <section id="status-section" hidden><p id="status" aria-live="polite"></p></section>
     <section id="queue-section" hidden>
@@ -95,7 +126,8 @@
     </section>
     <section id="response-section" hidden>
       <h2>Response letter, from approved items</h2>
-      <div class="panel"><pre id="response"></pre></div>
+      <div class="panel"><pre id="response"></pre>
+        <div class="actions"><button id="copy">Copy</button><span class="state ok" id="copied" aria-live="polite"></span></div></div>
     </section>
   </div>
   <aside>
@@ -107,9 +139,18 @@
       </div>
     </section>
     <section>
-      <h2>Agent eval score by run</h2>
+      <h2>Agent eval score by run, fictional letters</h2>
       <div class="panel"><div id="scores"></div>
-        <p class="note">Same letters and scorer every run. 100 is a perfect re-review. Letters are synthetic.</p></div>
+        <p class="note">Same letters and scorer every run. It measures agreement with our answer key, not what a city would accept.</p></div>
+    </section>
+    <section id="real-runs-section" hidden>
+      <h2>Results on real Seattle letters</h2>
+      <div class="panel"><div id="real-runs"></div>
+        <p class="note">Citation and discipline are checked against the city's own records. Route is our rule on the city's subject lines.</p></div>
+    </section>
+    <section id="recur-section" hidden>
+      <h2>Seattle corrections most likely to come back</h2>
+      <div class="panel"><div id="recur"></div><p class="note" id="recur-note"></p></div>
     </section>
     <section id="trace-section" hidden>
       <h2>Audit trail, from the TrueForge session</h2>
@@ -128,7 +169,9 @@ const ROUTES = [
 ];
 const $ = (id) => document.getElementById(id);
 const el = (tag, cls, text) => { const n = document.createElement(tag); if (cls) n.className = cls; if (text != null) n.textContent = text; return n; };
-let data, result, decisions = {};
+let data, result, decisions = {}, source = "real";
+const currentLetter = () => (result ? result.letter : data.sample);
+const packFor = (id) => data.packs.find((p) => p.profile.id === id);
 
 const tip = $("tip");
 function hover(node, text) {
@@ -137,7 +180,8 @@ function hover(node, text) {
 }
 
 function renderStats() {
-  const rows = data.stats.rows.filter((r) => r.permits >= 500).sort((a, b) => b.avg_days - a.avg_days).slice(0, 6);
+  const pack = packFor("chicago"), stats = pack.stats;
+  const rows = stats.rows.filter((r) => r.permits >= 500).sort((a, b) => b.avg_days - a.avg_days).slice(0, 6);
   const max = Math.max(...rows.map((r) => r.avg_days));
   const nice = (s) => s.charAt(0) + s.slice(1).toLowerCase();
   for (const r of rows) {
@@ -151,8 +195,8 @@ function renderStats() {
     hover(row, `${nice(r.review_type)}: ${r.avg_days} days on average, ${r.permits.toLocaleString()} permits`);
     $("stats").append(row);
   }
-  $("stats-title").textContent = `Average days from application to permit, ${data.profile.name}`;
-  $("stats-note").textContent = `${data.stats.source}, ${data.stats.filter}, retrieved ${data.stats.retrieved}. ${data.stats.measure}`;
+  $("stats-title").textContent = `Average days from application to permit, ${pack.profile.name}`;
+  $("stats-note").textContent = `${stats.source}, ${stats.filter}, retrieved ${stats.retrieved}. ${stats.measure}`;
 }
 
 function renderScores() {
@@ -182,7 +226,8 @@ function renderScores() {
 }
 
 function citationLine(item) {
-  const entry = data.code.find((s) => s.id.toUpperCase() === (item.citation || "").toUpperCase());
+  const code = packFor(currentLetter().project.jurisdiction)?.code ?? [];
+  const entry = code.find((s) => s.id.toUpperCase() === (item.citation || "").toUpperCase());
   if (!item.citation) return el("span", "cite", "No code section cited");
   const n = el("span", "cite" + (entry ? "" : " unverified"));
   n.append(el("b", null, item.citation), document.createTextNode(entry ? ` ${entry.title}` : " is not in the code index. Check before use."));
@@ -191,6 +236,9 @@ function citationLine(item) {
 
 function renderQueue() {
   const q = $("queue"); q.replaceChildren();
+  if (!result.has_pack) q.append(el("div", "banner", "We don't have this city's code yet, so citations are blank. Routing and drafts still apply; check them against local rules."));
+  const outcome = result.letter.real?.outcome;
+  if (outcome) q.append(el("div", "banner", `What really happened on this permit: ${outcome.review_cycles ?? "unknown"} review cycles, ${outcome.days_out_for_corrections ?? "unknown"} days out for corrections, ${outcome.days_city_review ?? "unknown"} days in city review.`));
   for (const [route, title, hint] of ROUTES) {
     const items = result.items.filter((i) => i.route === route);
     if (!items.length) continue;
@@ -205,12 +253,20 @@ function renderQueue() {
 }
 
 function card(item) {
-  const comment = data.letter.comments.find((c) => c.id === item.comment);
+  const comment = currentLetter().comments.find((c) => c.id === item.comment);
   const state = decisions[item.comment];
   const c = el("div", "card" + (item.route === "licensed_review" ? " licensed" : "") + (state === "approve" ? " approved" : state === "reject" ? " rejected" : ""));
   const top = el("div"); top.append(el("span", "tag", item.comment), el("span", "tag", item.discipline));
   for (const s of item.sheets) top.append(el("span", "tag", s));
   c.append(top, el("p", "quote", comment ? comment.text : "(Comment not in the letter)"), citationLine(item));
+  const cited = comment?.labels?.citations ?? [];
+  if (cited.length) {
+    const hit = (item.citation || "").toUpperCase();
+    const ok = cited.some((x) => hit === x.toUpperCase() || hit.startsWith(x.toUpperCase() + "."));
+    const cmp = el("div", "compare");
+    cmp.append(document.createTextNode("Reviewer actually cited "), el("b", null, cited.join(", ")), document.createTextNode(" "), el("span", ok ? "match" : "miss", ok ? "Match" : "Different"));
+    c.append(cmp);
+  }
   if (item.route === "no_action") return c;
   const area = el("textarea"); area.value = item.draft; area.setAttribute("aria-label", `Draft response for ${item.comment}`);
   area.disabled = !!state; area.addEventListener("input", () => { item.draft = area.value; });
@@ -242,7 +298,7 @@ async function decide(item, decision, note) {
 }
 
 function renderResponse() {
-  const { project } = data.letter;
+  const { project } = currentLetter();
   const approved = result.items.filter((i) => decisions[i.comment] === "approve" && i.draft.trim());
   const open = result.items.filter((i) => i.route !== "no_action" && !decisions[i.comment]).length;
   $("response-section").hidden = false;
@@ -264,7 +320,11 @@ $("run").addEventListener("click", async () => {
   $("queue-section").hidden = $("response-section").hidden = $("trace-section").hidden = true;
   setStatus("The agent is reading the letter and looking up citations. This can take a minute.", false, true);
   try {
-    const r = await fetch("/api/analyze", { method: "POST" });
+    const payload = source === "real" ? { source, id: $("real-select").value } : source === "paste"
+      ? { source, text: $("paste-text").value, jurisdiction: $("paste-place").value, description: $("paste-project").value, address: "Not given" }
+      : { source };
+    if (source === "paste" && !$("paste-text").value.trim()) throw new Error("Paste a letter first.");
+    const r = await fetch("/api/analyze", { method: "POST", body: JSON.stringify(payload) });
     const body = await r.json();
     if (!r.ok) throw new Error(body.error);
     result = body;
@@ -281,15 +341,91 @@ $("run").addEventListener("click", async () => {
   }
 });
 
+function showLetter(project, comments) {
+  $("project").textContent = project ? `${project.address} · ${project.reviewer}` : "Answer correction letters, with a licensed professional in charge";
+  const list = $("letter"); list.replaceChildren();
+  for (const c of comments) {
+    const li = el("li"); li.append(el("span", "tag", c.id), document.createTextNode(c.text));
+    list.append(li);
+  }
+}
+
+let realCache = {};
+async function refreshSource() {
+  for (const k of ["real", "paste", "sample"]) {
+    $("pane-" + k).hidden = k !== source;
+    $("tab-" + k).setAttribute("aria-selected", String(k === source));
+  }
+  $("letter-wrap").hidden = source === "paste";
+  if (source === "sample") showLetter(data.sample.project, data.sample.comments);
+  if (source === "real") {
+    const summary = data.real_letters.find((l) => l.id === $("real-select").value);
+    if (summary) showLetter({ address: summary.address, reviewer: `Seattle, ${summary.review_type} review, ${summary.date}` }, await realComments(summary.id));
+  }
+  if (source === "paste") $("project").textContent = "Paste a letter from any city";
+}
+async function realComments(id) {
+  if (!realCache[id]) realCache[id] = data.real_comments?.[id] ?? [];
+  return realCache[id];
+}
+
+function renderRealRuns() {
+  const rows = data.real_runs;
+  if (!rows.length) return;
+  $("real-runs-section").hidden = false;
+  const t = el("table"); t.style.cssText = "width:100%;border-collapse:collapse;font-size:13px";
+  const head = el("tr"); for (const h of ["Run", "Reviewer's section found", "Discipline", "Unsafe"]) { const th = el("th", null, h); th.style.cssText = "text-align:left;color:var(--ink-3);font-weight:500;padding:2px 6px 4px 0"; head.append(th); }
+  t.append(head);
+  for (const r of rows) {
+    const tr = el("tr");
+    for (const v of [`${r.run} ${r.arm}`, `${r.citation_section_pct}%`, `${r.discipline_pct}%`, r.unsafe_routes]) { const td = el("td", null, v); td.style.cssText = "padding:3px 6px 3px 0;font-variant-numeric:tabular-nums"; tr.append(td); }
+    t.append(tr);
+  }
+  $("real-runs").append(t);
+}
+
+function renderRecurrence() {
+  const i = data.insights; if (!i) return;
+  $("recur-section").hidden = false;
+  for (const r of i.recurrence.slice(0, 6)) {
+    const row = el("div", "bar-row");
+    row.append(el("div", "bar-label", r.subject.replace(/^[^:]+: /, "").replace(/^Zoning\s*[-–]\s*/, "")));
+    const track = el("div", "bar-track"); const bar = el("div", "bar");
+    bar.style.width = `calc((100% - 56px) * ${r.recurred_share / i.recurrence[0].recurred_share})`;
+    track.append(bar, el("span", "bar-value", `${r.recurred_share}%`)); row.append(track);
+    hover(row, `${r.recurred} of ${r.first_cycle_comments} first-cycle comments came back, on ${r.permits} permits`);
+    $("recur").append(row);
+  }
+  $("recur-note").textContent = `From ${i.comments.toLocaleString()} real comments on ${i.permits} permits. ${i.note}`;
+}
+
 (async () => {
   data = await (await fetch("/api/bootstrap")).json();
-  const { project, comments } = data.letter;
-  $("project").textContent = `${project.address} · ${data.profile.name} · ${project.reviewer}`;
-  for (const c of comments) {
-    const li = el("li"); li.append(el("span", "tag", c.id), el("span", "tag", c.heading), document.createTextNode(c.text));
-    $("letter").append(li);
+  for (const l of data.real_letters) {
+    const o = el("option", null, `${l.review_type}: ${l.address}, ${l.date} (${l.comments} comments)`); o.value = l.id;
+    $("real-select").append(o);
   }
-  renderStats(); renderScores();
+  for (const p of data.packs) { const o = el("option", null, p.profile.name); o.value = p.profile.id; $("paste-place").append(o); }
+  const other = el("option", null, "Another city (no code index yet)"); other.value = "other"; $("paste-place").append(other);
+  for (const k of ["real", "paste", "sample"]) $("tab-" + k).addEventListener("click", () => {
+    source = k; result = null; decisions = {};
+    $("queue-section").hidden = $("response-section").hidden = $("trace-section").hidden = $("status-section").hidden = true;
+    refreshSource();
+  });
+  $("real-select").addEventListener("change", refreshSource);
+  let timer;
+  $("paste-text").addEventListener("input", () => {
+    clearTimeout(timer);
+    timer = setTimeout(async () => {
+      const r = await (await fetch("/api/parse", { method: "POST", body: JSON.stringify({ text: $("paste-text").value }) })).json();
+      $("paste-split").textContent = `Found ${r.comments.length} comment${r.comments.length === 1 ? "" : "s"}.` + (r.comments[0] ? ` The first starts: "${r.comments[0].text.slice(0, 70)}"` : "");
+    }, 300);
+  });
+  $("copy").addEventListener("click", async () => {
+    try { await navigator.clipboard.writeText($("response").textContent); $("copied").textContent = "Copied"; }
+    catch { $("copied").textContent = "Select the text above to copy it."; }
+  });
+  renderStats(); renderScores(); renderRealRuns(); renderRecurrence(); refreshSource();
 })();
 </script>
 </body>
