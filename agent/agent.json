@@ -5,6 +5,6 @@
     "name": "truefoundry/claude-haiku-4-5",
     "params": { "temperature": 0 }
   },
-  "skill_mode": "inline",
+  "skill_mode": "git",
   "mcp_servers": [{ "name": "permit-research", "url": "http://127.0.0.1:8791/mcp" }]
 }
