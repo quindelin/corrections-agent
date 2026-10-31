@@ -86,8 +86,8 @@
     <p class="lede">Drop in the letter. See every comment sorted, with who needs to act, before you pay anything. No signup.</p>
     <label class="drop" id="drop" for="file">
       <b>Drop your correction letter</b>
-      <span>PDF, or choose a file</span>
-      <input type="file" id="file" accept=".pdf,.txt,application/pdf,text/plain">
+      <span>PDF or Word, or choose a file</span>
+      <input type="file" id="file" accept=".pdf,.docx,.txt,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,text/plain">
     </label>
     <div class="row"><button class="link" id="show-paste">Or paste the text</button></div>
     <div id="paste" hidden>
@@ -163,7 +163,7 @@ const ROUTES = {
 };
 const $ = (id) => document.getElementById(id);
 const el = (tag, cls, text) => { const n = document.createElement(tag); if (cls) n.className = cls; if (text != null) n.textContent = text; return n; };
-let offer, comments = [], report = null;
+let offer, comments = [], report = null, extractWarnings = [];
 
 function show(id) { for (const s of ["drop", "check", "working", "stop", "report"]) $("s-" + s).hidden = s !== id; window.scrollTo(0, 0); }
 async function api(path, payload) {
@@ -177,10 +177,17 @@ function acceptExtract(x) {
   if (x.error) { $("drop-err").textContent = x.error; $("paste").hidden = false; return; }
   if (!x.comments.length) { $("drop-err").textContent = "We couldn't find comments in that. Paste the comments instead, one per paragraph."; $("paste").hidden = false; return; }
   comments = x.comments;
+  extractWarnings = x.warnings ?? [];
   $("place").value = x.jurisdiction ?? "other";
   $("permit").value = x.permit_number ?? "";
   renderCheck();
   show("check");
+}
+
+async function fileBase64(file) {
+  const b = new Uint8Array(await file.arrayBuffer());
+  let bin = ""; for (let i = 0; i < b.length; i += 32768) bin += String.fromCharCode(...b.subarray(i, i + 32768));
+  return btoa(bin);
 }
 
 async function readFile(file) {
@@ -188,19 +195,21 @@ async function readFile(file) {
   if (file.size > 10_000_000) { $("drop-err").textContent = "That file is over 10 MB. Paste the comments instead."; return; }
   try {
     if (/\.pdf$/i.test(file.name) || file.type === "application/pdf") {
-      const b = new Uint8Array(await file.arrayBuffer());
-      let bin = ""; for (let i = 0; i < b.length; i += 32768) bin += String.fromCharCode(...b.subarray(i, i + 32768));
-      acceptExtract(await api("/api/start/extract", { pdf_base64: btoa(bin) }));
+      acceptExtract(await api("/api/start/extract", { pdf_base64: await fileBase64(file) }));
+    } else if (/\.docx$/i.test(file.name) || file.type === "application/vnd.openxmlformats-officedocument.wordprocessingml.document") {
+      acceptExtract(await api("/api/start/extract", { docx_base64: await fileBase64(file) }));
     } else if (/\.txt$/i.test(file.name) || file.type === "text/plain") {
       acceptExtract(await api("/api/start/extract", { text: await file.text() }));
+    } else if (/\.doc$/i.test(file.name)) {
+      $("drop-err").textContent = "This is an older Word file. In Word, use Save As to save it as .docx or PDF, or paste the comments below."; $("paste").hidden = false;
     } else {
-      $("drop-err").textContent = "We read PDF and text files so far. Paste the comments instead."; $("paste").hidden = false;
+      $("drop-err").textContent = "We read PDF, Word (.docx) and text files. Paste the comments instead."; $("paste").hidden = false;
     }
   } catch (e) { $("drop-err").textContent = e.message; }
 }
 
 function renderCheck() {
-  $("check-lede").textContent = `We found ${comments.length} comment${comments.length === 1 ? "" : "s"}. Fix anything we misread, then see your preview.`;
+  $("check-lede").textContent = `We found ${comments.length} comment${comments.length === 1 ? "" : "s"}. Fix anything we misread, then see your preview.${extractWarnings.length ? " " + extractWarnings.join(" ") : ""}`;
   $("edition").hidden = $("place").value !== "chicago";
   const list = $("comment-list"); list.replaceChildren();
   comments.forEach((c, i) => {
@@ -301,7 +310,7 @@ $("paste-go").addEventListener("click", async () => {
   try { acceptExtract(await api("/api/start/extract", { text: $("paste-text").value })); } catch (e) { $("drop-err").textContent = e.message; }
 });
 $("place").addEventListener("change", () => { $("edition").hidden = $("place").value !== "chicago"; });
-const restart = () => { comments = []; report = null; $("file").value = ""; $("paste-text").value = ""; history.pushState(null, "", "/start"); show("drop"); };
+const restart = () => { comments = []; extractWarnings = []; report = null; $("file").value = ""; $("paste-text").value = ""; history.pushState(null, "", "/start"); show("drop"); };
 $("restart").addEventListener("click", restart); $("stop-restart").addEventListener("click", restart);
 
 $("run").addEventListener("click", async () => {

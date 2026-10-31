@@ -19,7 +19,9 @@
     "real:build": "tsx realdata/build-seattle.ts",
     "real:run": "tsx realdata/run.ts",
     "real:improve": "tsx realdata/improve.ts",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test demo/*.test.ts",
+    "intake:measure": "tsx demo/measure-intake.ts"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.32.2",
