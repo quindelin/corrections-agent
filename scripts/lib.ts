@@ -179,7 +179,8 @@ export async function syncAgent(tf: TrueForge, gitRef: string): Promise<TrueForg
   }
   for (const s of agent.mcp_servers ?? []) {
     const health = await fetch(new URL("/health", s.url)).catch(() => null);
-    if (!health?.ok) die(`The ${s.name} MCP server isn't running at ${s.url}. Start it: npm run mcp`);
+    // Throws, not die(): the service calls this too, and one customer's request mustn't exit the process.
+    if (!health?.ok) throw new Error(`The ${s.name} MCP server isn't running at ${s.url}. Start it: npm run mcp`);
     // settings.mcpServers.createOrUpdate: register the connector by name, so the agent can attach it.
     await tf.settings.mcpServers.createOrUpdate({
       manifest: { type: "remote", name: s.name, description: "Local code lookup and permit statistics, by jurisdiction.", url: s.url },

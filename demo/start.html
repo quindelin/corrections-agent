@@ -110,7 +110,7 @@
     <div id="edition" hidden>
       <label class="check" style="margin-top:12px"><input type="checkbox" id="edition-2026"> This application started on or after December 1, 2026, or chose Chicago's 2026 code.</label>
     </div>
-    <label for="permit">Permit number (optional, so later rounds are free)</label>
+    <label for="permit">Permit number (optional, so later rounds on it are free)</label>
     <input type="text" id="permit">
     <div id="comment-list"></div>
     <div class="row">
@@ -142,6 +142,7 @@
       <div class="row" style="margin-top:0">
         <button id="export">Download Word draft</button>
         <button id="share">Copy link for your architect</button>
+        <button id="next-round">Add the next letter on this permit, free</button>
         <span class="ok" id="share-ok" aria-live="polite"></span>
       </div>
       <label class="check" style="margin:12px 0 0"><input type="checkbox" id="optin"> Let Redline learn from reject notes on this permit. Off by default.</label>
@@ -182,7 +183,8 @@ function acceptExtract(x) {
   comments = x.comments;
   extractWarnings = x.warnings ?? [];
   $("place").value = x.jurisdiction ?? "other";
-  $("permit").value = x.permit_number ?? "";
+  $("permit").value = nextRoundFrom?.permit ?? x.permit_number ?? "";
+  if (nextRoundFrom) $("place").value = nextRoundFrom.place;
   renderCheck();
   show("check");
 }
@@ -325,12 +327,20 @@ $("paste-go").addEventListener("click", async () => {
   try { acceptExtract(await api("/api/start/extract", { text: $("paste-text").value })); } catch (e) { $("drop-err").textContent = e.message; }
 });
 $("place").addEventListener("change", () => { $("edition").hidden = $("place").value !== "chicago"; });
-const restart = () => { comments = []; extractWarnings = []; report = null; $("file").value = ""; $("paste-text").value = ""; history.pushState(null, "", "/start"); show("drop"); };
+let nextRoundFrom = null;
+$("next-round").addEventListener("click", () => {
+  nextRoundFrom = { id: report.id, permit: report.permit_number, place: report.jurisdiction };
+  $("drop-err").textContent = "";
+  comments = []; report = null; $("file").value = ""; $("paste-text").value = "";
+  history.pushState(null, "", "/start");
+  show("drop");
+});
+const restart = () => { nextRoundFrom = null; comments = []; extractWarnings = []; report = null; $("file").value = ""; $("paste-text").value = ""; history.pushState(null, "", "/start"); show("drop"); };
 $("restart").addEventListener("click", restart); $("stop-restart").addEventListener("click", restart);
 
 $("run").addEventListener("click", async () => {
   $("check-err").textContent = "";
-  const payload = { comments, jurisdiction: $("place").value, permit_number: $("permit").value, chicago_2026: $("edition-2026").checked };
+  const payload = { comments, from_report: nextRoundFrom?.id, jurisdiction: $("place").value, permit_number: $("permit").value, chicago_2026: $("edition-2026").checked };
   show("working");
   try {
     const { job_id } = await api("/api/start/run", payload);

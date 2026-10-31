@@ -17,7 +17,7 @@ import { MAX_LETTER_CHARS, parseLetter, type ParsedComment } from "./parse-lette
 import { readUpload } from "./read-upload.ts";
 import { stripPersonal } from "./strip-personal.ts";
 import { jobResponse, startJob, type JobOutcome } from "./jobs.ts";
-import { createReport, exportDoc, loadReport, newReportId, permitAlreadyUnlocked, publicView, updateReport, type Report } from "./reports.ts";
+import { createReport, earnsFreeRound, exportDoc, loadReport, newReportId, publicView, updateReport, type Report } from "./reports.ts";
 import { allowFreeRun, getStore, startMaintenance } from "./store.ts";
 
 const here = dirname(fileURLToPath(import.meta.url));
@@ -117,9 +117,19 @@ function letterFrom(b: Record<string, unknown>): Letter {
   throw new Error("Unknown letter source.");
 }
 
+// The agent's files don't change while the service runs, so it syncs once. A failed sync is retried on the next letter.
+let agentSynced: Promise<unknown> | null = null;
+function ensureAgent(tf: ReturnType<typeof client>) {
+  agentSynced ??= syncAgent(tf, headSha()).catch((e) => {
+    agentSynced = null;
+    throw e;
+  });
+  return agentSynced;
+}
+
 async function analyze(letter: Letter) {
   const tf = client();
-  await syncAgent(tf, headSha());
+  await ensureAgent(tf);
   const { data: session } = await tf.sessions.create({ agent: { name: readAgent().agent.name }, metadata: { purpose: "demo" } });
   await tf.sessions.update(session.id, { title: `review: ${letter.project.address}` });
   const turn = await runTurn(tf, session.id, promptFor(letter), false);
@@ -170,6 +180,12 @@ async function extract(b: Record<string, unknown>) {
   };
 }
 
+/** A customer sees that it failed and that nothing was charged. The cause, which can name internal addresses, goes to the log. */
+function failedRun(e: Error): JobOutcome {
+  console.error(`A letter failed to run: ${e.message}`);
+  return { status: 503, value: { error: "Redline couldn't read this letter just now, and you haven't been charged. Try again in a few minutes." } };
+}
+
 async function runReport(b: Record<string, unknown>, client: string): Promise<JobOutcome> {
   const jurisdiction = String(b.jurisdiction ?? "");
   const place = placeName(jurisdiction);
@@ -190,7 +206,8 @@ async function runReport(b: Record<string, unknown>, client: string): Promise<Jo
   const project = stripPersonal(String(b.project ?? "").slice(0, 600));
   const letter: Letter = { project: { jurisdiction, address: "Not given", description: project || "Not given.", reviewer: place }, sheets: [], comments };
   const run = await analyze(letter);
-  const nextRound = await permitAlreadyUnlocked(permit);
+  const from = typeof b.from_report === "string" ? await loadReport(b.from_report) : null;
+  const nextRound = earnsFreeRound(from, permit);
   const report: Report = {
     id: newReportId(),
     created_at: new Date().toISOString(),
@@ -244,7 +261,7 @@ async function handleProduct(req: IncomingMessage, res: ServerResponse): Promise
     // Behind the keyed proxy, the socket is always the proxy, so it passes the visitor's address along.
     const forwarded = API_KEY ? String(req.headers["x-redline-client"] ?? "") : "";
     const client = forwarded || (req.socket.remoteAddress ?? "local");
-    return send(res, 202, { job_id: await startJob(() => runReport(b, client)) }), true;
+    return send(res, 202, { job_id: await startJob(() => runReport(b, client).catch(failedRun)) }), true;
   }
   const job = path.match(/^\/api\/job\/([a-f0-9]{32})$/);
   if (req.method === "GET" && job) {

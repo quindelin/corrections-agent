@@ -10,6 +10,7 @@ import { dirname, join } from "node:path";
 import { setTimeout as sleep } from "node:timers/promises";
 import { after, before, describe, it } from "node:test";
 import { fileURLToPath } from "node:url";
+import { earnsFreeRound } from "./reports.ts";
 import { createLocalStore } from "./store-local.ts";
 import { createPostgresStore } from "./store-postgres.ts";
 import type { Store } from "./store.ts";
@@ -142,7 +143,7 @@ describe("server on local files, as npm run demo runs it", () => {
     };
     const codes = await Promise.all(ids.map(final));
     assert.equal(codes.filter((c) => c === 429).length, 1, codes.join());
-    assert.equal(codes.filter((c) => c === 500).length, 6, codes.join());
+    assert.equal(codes.filter((c) => c === 503).length, 6, codes.join());
     const held = readFileSync(join(dir, "rate-limits.json"), "utf8");
     assert.ok(!held.includes("127.0.0.1"), "no address on disk");
   });
@@ -208,7 +209,7 @@ describe("two server instances on Postgres, with a service key", () => {
       throw new Error("The job never finished.");
     }));
     assert.equal(codes.filter((c) => c === 429).length, 2, codes.join());
-    assert.equal(codes.filter((c) => c === 500).length, 6, codes.join());
+    assert.equal(codes.filter((c) => c === 503).length, 6, codes.join());
     const { rows } = await standIn.admin.query("SELECT * FROM redline_rate_limits");
     assert.ok(rows.length >= 1);
     assert.ok(!JSON.stringify(rows).includes(address));
@@ -263,5 +264,29 @@ describe("npm run store", () => {
     assert.match((await run("purge")).out, /reports: 1/);
     await store.close();
     assert.equal((await run("nonsense")).code, 1);
+  });
+});
+
+describe("free later rounds", () => {
+  const paid = () => fixtureReport({ permit_number: "PAID-9", unlocked: true, unlocked_by: "stripe" });
+
+  it("need an unlocked report on the same permit", () => {
+    assert.equal(earnsFreeRound(paid(), "PAID-9"), true);
+  });
+
+  it("aren't earned by typing a permit number with no report", () => {
+    assert.equal(earnsFreeRound(null, "PAID-9"), false);
+  });
+
+  it("aren't earned from a locked report", () => {
+    assert.equal(earnsFreeRound(fixtureReport({ permit_number: "PAID-9", unlocked: false }), "PAID-9"), false);
+  });
+
+  it("don't carry over to another permit", () => {
+    assert.equal(earnsFreeRound(paid(), "OTHER-1"), false);
+  });
+
+  it("need a permit number", () => {
+    assert.equal(earnsFreeRound(fixtureReport({ permit_number: null, unlocked: true }), null), false);
   });
 });

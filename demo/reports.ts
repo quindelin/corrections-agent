@@ -50,7 +50,15 @@ export async function deleteReport(id: string): Promise<boolean> {
   return (await getStore()).deleteReport(id);
 }
 
-/** A later round on a permit that's already paid for costs nothing. */
+/**
+ * A later round is free only with proof: the id of an unlocked report on the same permit, which only someone with that
+ * report's link has. A typed permit number alone proves nothing, because permit numbers are public records.
+ */
+export function earnsFreeRound(prior: Report | null, permit: string | null): boolean {
+  return Boolean(permit && prior?.unlocked && prior.permit_number === permit);
+}
+
+/** Whether a permit has any unlocked report. Used to re-lock free rounds after a refund, not to grant them. */
 export async function permitAlreadyUnlocked(permit: string | null): Promise<boolean> {
   return permit ? (await getStore()).permitUnlocked(permit) : false;
 }
