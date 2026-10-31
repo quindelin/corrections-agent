@@ -14,7 +14,9 @@ import { parseItems } from "../evals/score.ts";
 import { client, exportSession, FEEDBACK_FILE, headSha, readAgent, ROOT, runTurn, SUMMARY_CSV, syncAgent } from "../scripts/lib.ts";
 import { MAX_LETTER_CHARS, parseLetter, type ParsedComment } from "./parse-letter.ts";
 import { readPdfText } from "./read-pdf.ts";
-import { exportDoc, loadReport, newReportId, permitAlreadyUnlocked, publicView, saveReport, type Report } from "./reports.ts";
+import { jobResponse, startJob, type JobOutcome } from "./jobs.ts";
+import { createReport, exportDoc, loadReport, newReportId, permitAlreadyUnlocked, publicView, updateReport, type Report } from "./reports.ts";
+import { allowFreeRun, getStore, startMaintenance } from "./store.ts";
 
 const here = dirname(fileURLToPath(import.meta.url));
 const PORT = Number(process.env.DEMO_PORT ?? 8792);
@@ -167,30 +169,7 @@ async function extract(b: Record<string, unknown>) {
   };
 }
 
-// Agent runs can outlast a proxied request, so a run returns a job id right away and the client polls.
-type Job = { status: "running" } | { status: "done"; code: number; value: unknown };
-const jobs = new Map<string, Job>();
-function startJob(work: () => Promise<{ status: number; value: unknown }>): string {
-  const id = newReportId();
-  jobs.set(id, { status: "running" });
-  work()
-    .then(({ status, value }) => jobs.set(id, { status: "done", code: status, value }))
-    .catch((e: Error) => jobs.set(id, { status: "done", code: 500, value: { error: e.message } }));
-  // Finished or not, a job is forgotten after an hour. Its report is saved separately.
-  setTimeout(() => jobs.delete(id), 3_600_000).unref();
-  return id;
-}
-
-const runsByClient = new Map<string, number[]>();
-function allowFreeRun(client: string): boolean {
-  const cutoff = Date.now() - 3_600_000;
-  const recent = (runsByClient.get(client) ?? []).filter((t) => t > cutoff);
-  if (recent.length >= FREE_RUNS_PER_HOUR) return false;
-  runsByClient.set(client, [...recent, Date.now()]);
-  return true;
-}
-
-async function runReport(b: Record<string, unknown>, client: string) {
+async function runReport(b: Record<string, unknown>, client: string): Promise<JobOutcome> {
   const jurisdiction = String(b.jurisdiction ?? "");
   const place = placeName(jurisdiction);
   // Nothing runs and nothing is charged for a place or code edition we can't support.
@@ -203,13 +182,13 @@ async function runReport(b: Record<string, unknown>, client: string) {
     .filter((c) => c.text)
     .slice(0, 40);
   if (!comments.length) return { status: 400, value: { error: "No comments to review." } };
-  if (!allowFreeRun(client)) return { status: 429, value: { error: "That's the limit of free previews for now. Try again in an hour." } };
+  if (!(await allowFreeRun(client, FREE_RUNS_PER_HOUR))) return { status: 429, value: { error: "That's the limit of free previews for now. Try again in an hour." } };
 
   const permit = String(b.permit_number ?? "").trim().slice(0, 40) || null;
   const project = String(b.project ?? "").slice(0, 600);
   const letter: Letter = { project: { jurisdiction, address: "Not given", description: project || "Not given.", reviewer: place }, sheets: [], comments };
   const run = await analyze(letter);
-  const nextRound = permitAlreadyUnlocked(permit);
+  const nextRound = await permitAlreadyUnlocked(permit);
   const report: Report = {
     id: newReportId(),
     created_at: new Date().toISOString(),
@@ -226,8 +205,8 @@ async function runReport(b: Record<string, unknown>, client: string) {
     learning_opt_in: false,
     decisions: {},
   };
-  saveReport(report);
-  return { status: 200, value: publicView(report) };
+  await createReport(report);
+  return { status: 200, value: { report_id: report.id } };
 }
 
 /** Stripe redirects here. The session is checked with Stripe, so the URL alone can't unlock anything. */
@@ -236,10 +215,9 @@ async function confirmPayment(sessionId: string): Promise<string | null> {
   const res = await fetch(`https://api.stripe.com/v1/checkout/sessions/${sessionId}`, { headers: { authorization: `Bearer ${STRIPE_KEY}` } });
   if (!res.ok) return null;
   const session = (await res.json()) as { payment_status?: string; client_reference_id?: string };
-  const report = session.client_reference_id ? loadReport(session.client_reference_id) : null;
-  if (session.payment_status !== "paid" || !report) return null;
-  saveReport({ ...report, unlocked: true, unlocked_by: "stripe" });
-  return report.id;
+  if (session.payment_status !== "paid" || !session.client_reference_id) return null;
+  const report = await updateReport(session.client_reference_id, (r) => ({ ...r, unlocked: true, unlocked_by: "stripe" }));
+  return report?.id ?? null;
 }
 
 async function handleProduct(req: IncomingMessage, res: ServerResponse): Promise<boolean> {
@@ -264,26 +242,23 @@ async function handleProduct(req: IncomingMessage, res: ServerResponse): Promise
     // Behind the keyed proxy, the socket is always the proxy, so it passes the visitor's address along.
     const forwarded = API_KEY ? String(req.headers["x-redline-client"] ?? "") : "";
     const client = forwarded || (req.socket.remoteAddress ?? "local");
-    return send(res, 202, { job_id: startJob(() => runReport(b, client)) }), true;
+    return send(res, 202, { job_id: await startJob(() => runReport(b, client)) }), true;
   }
   const job = path.match(/^\/api\/job\/([a-f0-9]{32})$/);
   if (req.method === "GET" && job) {
-    const state = jobs.get(job[1]);
-    if (!state) return send(res, 404, { error: "Job not found. Try running the letter again." }), true;
-    if (state.status === "running") return send(res, 200, { status: "running" }), true;
-    return send(res, state.code, state.code === 200 ? { status: "done", result: state.value } : state.value), true;
+    const { status, body: result } = await jobResponse(job[1]);
+    return send(res, status, result), true;
   }
   if (req.method === "POST" && path === "/api/waitlist") {
     const b = await body(req);
     const email = String(b.email ?? "").trim().slice(0, 200);
     if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) return send(res, 400, { error: "Enter a valid email." }), true;
-    mkdirSync(join(ROOT, ".cache"), { recursive: true });
-    appendFileSync(join(ROOT, ".cache", "waitlist.jsonl"), JSON.stringify({ at: new Date().toISOString(), email, place: String(b.place ?? "").slice(0, 100), reason: String(b.reason ?? "").slice(0, 30) }) + "\n");
+    await (await getStore()).addWaitlist({ at: new Date().toISOString(), email, place: String(b.place ?? "").slice(0, 100), reason: String(b.reason ?? "").slice(0, 30) });
     return send(res, 200, { ok: true }), true;
   }
   const match = path.match(/^\/api\/report\/([a-f0-9]{32})(?:\/(unlock|review|optin|export))?$/);
   if (!match) return false;
-  const report = loadReport(match[1]);
+  const report = await loadReport(match[1]);
   if (!report) return send(res, 404, { error: "Report not found." }), true;
   const action = match[2];
   if (req.method === "GET" && !action) return send(res, 200, publicView(report)), true;
@@ -291,15 +266,14 @@ async function handleProduct(req: IncomingMessage, res: ServerResponse): Promise
     if (paymentsOn()) return send(res, 200, { checkout_url: `${PAYMENT_LINK}?client_reference_id=${report.id}` }), true;
     const b = await body(req);
     if (b.design_partner !== true) return send(res, 400, { error: "Agree to the design partner terms first." }), true;
-    const unlocked: Report = { ...report, unlocked: true, unlocked_by: "design_partner", learning_opt_in: true };
-    saveReport(unlocked);
-    return send(res, 200, publicView(unlocked)), true;
+    const unlocked = await updateReport(report.id, (r) => ({ ...r, unlocked: true, unlocked_by: "design_partner", learning_opt_in: true }));
+    return unlocked ? send(res, 200, publicView(unlocked)) : send(res, 404, { error: "Report not found." }), true;
   }
   if (!report.unlocked) return send(res, 402, { error: "Unlock this permit first." }), true;
   if (req.method === "POST" && action === "optin") {
-    const updated = { ...report, learning_opt_in: (await body(req)).opt_in === true };
-    saveReport(updated);
-    return send(res, 200, publicView(updated)), true;
+    const optIn = (await body(req)).opt_in === true;
+    const updated = await updateReport(report.id, (r) => ({ ...r, learning_opt_in: optIn }));
+    return updated ? send(res, 200, publicView(updated)) : send(res, 404, { error: "Report not found." }), true;
   }
   if (req.method === "POST" && action === "review") {
     const b = await body(req);
@@ -307,8 +281,9 @@ async function handleProduct(req: IncomingMessage, res: ServerResponse): Promise
     const item = report.items.find((i) => i.comment === b.comment);
     if (!comment || !item || (b.decision !== "approve" && b.decision !== "reject")) return send(res, 400, { error: "Unknown comment or decision." }), true;
     const note = String(b.note ?? "").slice(0, 1000);
-    const updated: Report = { ...report, decisions: { ...report.decisions, [comment.id]: { decision: b.decision, note, at: new Date().toISOString() } } };
-    saveReport(updated);
+    const entry = { decision: b.decision as "approve" | "reject", note, at: new Date().toISOString() };
+    const updated = await updateReport(report.id, (r) => ({ ...r, decisions: { ...r.decisions, [comment.id]: entry } }));
+    if (!updated) return send(res, 404, { error: "Report not found." }), true;
     // Only customers who opted in teach the agent. Others' text stays in their own report.
     if (updated.learning_opt_in) {
       mkdirSync(dirname(FEEDBACK_FILE), { recursive: true });
@@ -363,4 +338,8 @@ createServer(async (req, res) => {
   } catch (e) {
     send(res, 500, { error: (e as Error).message });
   }
-}).listen(PORT, process.env.REDLINE_HOST ?? "127.0.0.1", () => console.log(`Redline on http://localhost:${PORT}`));
+}).listen(PORT, process.env.REDLINE_HOST ?? "127.0.0.1", () => {
+  console.log(`Redline on http://localhost:${PORT}`);
+  if (API_KEY && !process.env.DATABASE_URL) console.warn("Storage: local files, which are safe for one instance only. Set DATABASE_URL to run several.");
+  startMaintenance();
+});

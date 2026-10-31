@@ -1,15 +1,12 @@
 // Saved analyses and what each viewer may see. A report is run before payment, so the server is what keeps
 // locked drafts locked: publicView never sends them until the report is unlocked.
-// Stored under .cache/, which isn't committed, because a report can hold a client's letter.
+// A report can hold a client's letter, so it's kept only for the retention limit. See store.ts for where it's kept.
 
 import { randomBytes } from "node:crypto";
-import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
-import { join } from "node:path";
 import type { Item } from "../evals/score.ts";
-import { ROOT } from "../scripts/lib.ts";
 import type { ParsedComment } from "./parse-letter.ts";
+import { getStore } from "./store.ts";
 
-const DIR = join(ROOT, ".cache", "reports");
 export const FREE_DRAFTS = 3;
 
 export interface Report {
@@ -33,24 +30,27 @@ export function newReportId(): string {
   return randomBytes(16).toString("hex");
 }
 
-export function saveReport(r: Report): void {
-  mkdirSync(DIR, { recursive: true });
-  writeFileSync(join(DIR, `${r.id}.json`), JSON.stringify(r));
+export async function createReport(r: Report): Promise<void> {
+  await (await getStore()).createReport(r);
 }
 
-export function loadReport(id: string): Report | null {
-  if (!/^[a-f0-9]{32}$/.test(id)) return null;
-  const file = join(DIR, `${id}.json`);
-  return existsSync(file) ? (JSON.parse(readFileSync(file, "utf8")) as Report) : null;
+export async function loadReport(id: string): Promise<Report | null> {
+  return (await getStore()).getReport(id);
+}
+
+/** Changes go through here so they apply to the latest version. Null if the report is gone. Change can run more than once. */
+export async function updateReport(id: string, change: (current: Report) => Report): Promise<Report | null> {
+  return (await getStore()).updateReport(id, change);
+}
+
+/** Deletes a report now, ahead of the retention limit. True if there was one. */
+export async function deleteReport(id: string): Promise<boolean> {
+  return (await getStore()).deleteReport(id);
 }
 
 /** A later round on a permit that's already paid for costs nothing. */
-export function permitAlreadyUnlocked(permit: string | null): boolean {
-  if (!permit || !existsSync(DIR)) return false;
-  return readdirSync(DIR).some((f) => {
-    const r = JSON.parse(readFileSync(join(DIR, f), "utf8")) as Report;
-    return r.unlocked && r.permit_number === permit;
-  });
+export async function permitAlreadyUnlocked(permit: string | null): Promise<boolean> {
+  return permit ? (await getStore()).permitUnlocked(permit) : false;
 }
 
 const ROUTE_ORDER = ["licensed_review", "other_agency", "client_input", "agent_draft", "no_action"];
