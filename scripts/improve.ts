@@ -102,6 +102,7 @@ Rewrite your files so that next time you avoid the kinds of mistakes shown here.
 Rules:
 - Write general rules that would help on letters you have never seen. Never mention these projects, addresses, comment ids, or quote the comments.
 - Sort what you learn by where it holds. A rule that would hold in any city goes in agent/skills/correction-playbook/SKILL.md. A rule about one city's process, code numbering or agencies goes in that city's file, such as agent/skills/local-chicago/SKILL.md. A wrong placement breaks the agent in the next city.
+- Apply each rule only to the kinds of comment it fits. A response letter must be true: don't add required wording to items it doesn't apply to just to be safe. Before adding a rule about a process, look it up with get_section or search_code and honor what it excludes.
 - Keep what works. Change only what the failures show is wrong or missing. Keep the Output section of instructions.md exactly as it is: the scorer depends on it.
 - Short beats long: a checklist item is one line, with what to look for.
 - You may edit agent/instructions.md and any agent/skills/<name>/SKILL.md (keep the frontmatter). Leave out files you don't change.
