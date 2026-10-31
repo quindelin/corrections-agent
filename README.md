@@ -21,6 +21,8 @@ run the letters ──► the re-review scores them ──► the agent rewrites
 - **What the agent learned:** state the required revision marks, leave design values and compliance conclusions to the licensed professional, and list only sheets that are actually revised.
 - **What still fails:** it overapplies the revision-mark wording to 4 of 15 items where it doesn't belong, which the frozen scorer doesn't penalize, and one code-classification item still skips the architect. We dropped its first rewrite for the same overapplication and tightened the improve prompt; the kept rewrite still has the flaw.
 
+These runs used the tools as submitted. This branch has since added more, including past-comment search, so a rerun here isn't the same test: one scored 97.5 with about twice the tokens. To rerun under the submitted conditions, check out the `challenge-submission` tag.
+
 ## What the agent does
 
 For each comment in a letter, the agent returns:
