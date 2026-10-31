@@ -11,7 +11,7 @@ import { publicView, type Report } from "./reports.ts";
 import { createLocalStore } from "./store-local.ts";
 import { applyMigrations, cleanText, createPostgresStore, toJsonb } from "./store-postgres.ts";
 import { allowFreeRun, DEFAULT_RETENTION_DAYS, hashClient, isExpired, JOB_TTL_MS, retentionDays, type Store, type StoreOptions } from "./store.ts";
-import { fixtureReport, LOCKED_SECRETS, newId, startPostgresStandIn } from "./test-support.ts";
+import { fixtureReport, freePorts, LOCKED_SECRETS, newId, startPostgresStandIn } from "./test-support.ts";
 
 const DAY = 86_400_000;
 const HOUR = 3_600_000;
@@ -38,7 +38,7 @@ function localBackend(): Backend {
     open: (options) => createLocalStore(dir, options),
     dump: async () => {
       const out: string[] = [];
-      for (const sub of ["", "jobs", "reports"]) {
+      for (const sub of ["", "jobs", "reports", "payments"]) {
         const folder = join(dir, sub);
         if (!existsSync(folder)) continue;
         for (const f of readdirSync(folder)) if (statSync(join(folder, f)).isFile()) out.push(readFileSync(join(folder, f), "utf8"));
@@ -54,15 +54,15 @@ function postgresBackend(): Backend {
   return {
     name: "postgres",
     setup: async () => {
-      standIn = await startPostgresStandIn(8865);
+      standIn = await startPostgresStandIn((await freePorts(1))[0]);
     },
     reset: async () => {
-      await standIn.admin.query("TRUNCATE redline_reports, redline_jobs, redline_rate_limits, redline_waitlist");
+      await standIn.admin.query("TRUNCATE redline_reports, redline_jobs, redline_rate_limits, redline_waitlist, redline_payments");
     },
     open: (options) => createPostgresStore(standIn.url, options),
     dump: async () => {
       const out: string[] = [];
-      for (const table of ["redline_reports", "redline_jobs", "redline_rate_limits", "redline_waitlist"]) {
+      for (const table of ["redline_reports", "redline_jobs", "redline_rate_limits", "redline_waitlist", "redline_payments"]) {
         out.push(JSON.stringify((await standIn.admin.query(`SELECT * FROM ${table}`)).rows));
       }
       return out.join("\n");
@@ -428,14 +428,14 @@ describe("local files only", () => {
 describe("postgres only", () => {
   let standIn: Awaited<ReturnType<typeof startPostgresStandIn>>;
   before(async () => {
-    standIn = await startPostgresStandIn(8866);
+    standIn = await startPostgresStandIn((await freePorts(1))[0]);
   });
   after(() => standIn.stop());
 
   it("has applied the migration once, and applying again changes nothing", async () => {
     assert.deepEqual(await applyMigrations(standIn.admin), []);
-    const { rows } = await standIn.admin.query("SELECT name FROM redline_migrations");
-    assert.deepEqual(rows, [{ name: "001_init.sql" }]);
+    const { rows } = await standIn.admin.query("SELECT name FROM redline_migrations ORDER BY name");
+    assert.deepEqual(rows, [{ name: "001_init.sql" }, { name: "002_payments.sql" }]);
   });
 
   it("saves letters holding characters that Postgres would reject in JSON", async () => {

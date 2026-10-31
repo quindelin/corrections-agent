@@ -14,16 +14,17 @@ import { earnsFreeRound } from "./reports.ts";
 import { createLocalStore } from "./store-local.ts";
 import { createPostgresStore } from "./store-postgres.ts";
 import type { Store } from "./store.ts";
-import { fixtureReport, LOCKED_SECRETS, newId, startPostgresStandIn } from "./test-support.ts";
+import { fixtureReport, freePorts, LOCKED_SECRETS, newId, startPostgresStandIn } from "./test-support.ts";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
-const DEAD_TRUEFORGE = "http://127.0.0.1:8869";
+const [LOCAL_PORT, INSTANCE_A, INSTANCE_B, DB_PORT, CLI_DB_PORT, DEAD_PORT] = await freePorts(6);
+const DEAD_TRUEFORGE = `http://127.0.0.1:${DEAD_PORT}`;
 
 async function startServer(port: number, env: Record<string, string>): Promise<ChildProcess> {
   const child = spawn(process.execPath, ["--import", "tsx", "--import", "./demo/test-no-network.ts", "demo/server.ts"], {
     cwd: ROOT,
     // Empty values also win over a developer's .env, so a test can't reach a real database or payment account.
-    env: { PATH: process.env.PATH, HOME: process.env.HOME, DEMO_PORT: String(port), TRUEFORGE_BASE_URL: DEAD_TRUEFORGE, TRUEFORGE_TOKEN: "", DATABASE_URL: "", STRIPE_PAYMENT_LINK: "", STRIPE_SECRET_KEY: "", REDLINE_API_KEY: "", ...env },
+    env: { PATH: process.env.PATH, HOME: process.env.HOME, DEMO_PORT: String(port), TRUEFORGE_BASE_URL: DEAD_TRUEFORGE, TRUEFORGE_TOKEN: "", DATABASE_URL: "", STRIPE_PAYMENT_LINK: "", STRIPE_SECRET_KEY: "", STRIPE_WEBHOOK_SECRET: "", REDLINE_API_KEY: "", ...env },
     stdio: "ignore",
   });
   for (let i = 0; i < 100; i++) {
@@ -87,7 +88,7 @@ describe("server on local files, as npm run demo runs it", () => {
   let dir = "";
   let server: ChildProcess;
   let store: Store;
-  const http = client(8864);
+  const http = client(LOCAL_PORT);
   const oldReport = fixtureReport({ created_at: new Date(Date.now() - 91 * 86_400_000).toISOString(), project: "OLD-LETTER" });
   const existing = fixtureReport();
 
@@ -96,7 +97,7 @@ describe("server on local files, as npm run demo runs it", () => {
     mkdirSync(join(dir, "reports"));
     // Written the way the previous version wrote them.
     for (const r of [oldReport, existing]) writeFileSync(join(dir, "reports", `${r.id}.json`), JSON.stringify(r));
-    server = await startServer(8864, { REDLINE_DATA_DIR: dir });
+    server = await startServer(LOCAL_PORT, { REDLINE_DATA_DIR: dir });
     store = createLocalStore(dir);
   });
   after(() => {
@@ -116,7 +117,7 @@ describe("server on local files, as npm run demo runs it", () => {
     assert.equal(existsSync(join(dir, "reports", `${oldReport.id}.json`)), false);
   });
 
-  it("holds the paywall", () => checkPaywall(store, http, http, 8864));
+  it("holds the paywall", () => checkPaywall(store, http, http, LOCAL_PORT));
 
   it("adds to the waitlist file", async () => {
     assert.equal((await http.post("/api/waitlist", { email: "not an email" })).status, 400);
@@ -154,17 +155,17 @@ describe("two server instances on Postgres, with a service key", () => {
   let servers: ChildProcess[] = [];
   let store: Store;
   const KEY = "test-service-key";
-  const a = client(8861, KEY);
-  const b = client(8862, KEY);
+  const a = client(INSTANCE_A, KEY);
+  const b = client(INSTANCE_B, KEY);
   const scratch = mkdtempSync(join(tmpdir(), "redline-pg-server-"));
   const expiredAtStart = fixtureReport({ created_at: new Date(Date.now() - 91 * 86_400_000).toISOString(), project: "OLD-LETTER" });
 
   before(async () => {
-    standIn = await startPostgresStandIn(8863);
+    standIn = await startPostgresStandIn(DB_PORT);
     store = createPostgresStore(standIn.url);
     await store.createReport(expiredAtStart);
     const env = { DATABASE_URL: standIn.url, REDLINE_API_KEY: KEY, REDLINE_DATA_DIR: scratch };
-    servers = [await startServer(8861, env), await startServer(8862, env)];
+    servers = [await startServer(INSTANCE_A, env), await startServer(INSTANCE_B, env)];
   });
   after(async () => {
     servers.forEach((s) => s.kill());
@@ -174,10 +175,10 @@ describe("two server instances on Postgres, with a service key", () => {
   });
 
   it("requires the key", async () => {
-    assert.equal((await client(8861).get("/api/offer")).status, 401);
+    assert.equal((await client(INSTANCE_A).get("/api/offer")).status, 401);
   });
 
-  it("holds the paywall when one instance writes and the other reads", () => checkPaywall(store, a, b, 8862));
+  it("holds the paywall when one instance writes and the other reads", () => checkPaywall(store, a, b, INSTANCE_B));
 
   it("hides and purges an expired report", async () => {
     const { rows } = await standIn.admin.query("SELECT id FROM redline_reports WHERE id = $1", [expiredAtStart.id]);
@@ -221,13 +222,13 @@ describe("two server instances on Postgres, with a service key", () => {
     assert.equal((await a.post(`/api/report/${report.id}/unlock`, { design_partner: true })).status, 200);
     servers.forEach((s) => s.kill());
     const env = { DATABASE_URL: standIn.url, REDLINE_API_KEY: KEY, REDLINE_DATA_DIR: scratch };
-    servers = [await startServer(8861, env)];
+    servers = [await startServer(INSTANCE_A, env)];
     const view = (await (await a.get(`/api/report/${report.id}`)).json()) as { unlocked: boolean };
     assert.equal(view.unlocked, true);
   });
 
   it("writes nothing to local files", () => {
-    for (const file of ["reports", "jobs", "rate-limits.json", "waitlist.jsonl"]) assert.equal(existsSync(join(scratch, file)), false, file);
+    for (const file of ["reports", "jobs", "payments", "rate-limits.json", "waitlist.jsonl"]) assert.equal(existsSync(join(scratch, file)), false, file);
   });
 });
 
@@ -243,7 +244,7 @@ describe("npm run store", () => {
     });
 
   before(async () => {
-    standIn = await startPostgresStandIn(8867, false);
+    standIn = await startPostgresStandIn(CLI_DB_PORT, false);
   });
   after(() => standIn.stop());
 

@@ -8,7 +8,7 @@ import { setTimeout as sleep } from "node:timers/promises";
 import { fileURLToPath } from "node:url";
 import pg from "pg";
 import type { Report } from "./reports.ts";
-import { ID_PATTERN, JOB_TTL_MS, keepIdentity, retentionDays, type JobRecord, type Store, type StoreOptions, type WaitlistEntry } from "./store.ts";
+import { ID_PATTERN, JOB_TTL_MS, keepIdentity, PAYMENT_ID_PATTERN, retentionDays, type JobRecord, type PaymentRecord, type Store, type StoreOptions, type WaitlistEntry } from "./store.ts";
 
 const MIGRATIONS_DIR = join(dirname(fileURLToPath(import.meta.url)), "migrations");
 const MAX_ATTEMPTS = 12;
@@ -25,6 +25,15 @@ export const toJsonb = (value: unknown) => JSON.stringify(value, (_key, v) => (t
 
 const iso = (value: Date | string) => new Date(value).toISOString();
 const pause = (attempt: number) => sleep(Math.random() * 5 * (attempt + 1));
+const cleanOrNull = (text: string | null | undefined) => (text ? cleanText(text) : null);
+
+type PaymentRow = Omit<PaymentRecord, "paid_at" | "refunded_at" | "created_at"> & { paid_at: Date | null; refunded_at: Date | null; created_at: Date };
+const toPayment = (row: PaymentRow): PaymentRecord => ({
+  ...row,
+  paid_at: row.paid_at && iso(row.paid_at),
+  refunded_at: row.refunded_at && iso(row.refunded_at),
+  created_at: iso(row.created_at),
+});
 
 export function createPostgresStore(connectionString: string, options: StoreOptions = {}): Store {
   const pool = new pg.Pool({ connectionString, max: 5 });
@@ -81,11 +90,49 @@ export function createPostgresStore(connectionString: string, options: StoreOpti
       const { rows } = await pool.query("SELECT 1 FROM redline_reports WHERE unlocked AND permit_number = $1 AND created_at > $2 LIMIT 1", [cleanText(permit), cutoff()]);
       return rows.length > 0;
     },
+    async unlockedOnPermit(permit) {
+      const { rows } = await pool.query<{ id: string; unlocked_by: Report["unlocked_by"] }>("SELECT id, doc->>'unlocked_by' AS unlocked_by FROM redline_reports WHERE unlocked AND permit_number = $1 AND created_at > $2", [cleanText(permit), cutoff()]);
+      return rows;
+    },
+
+    // One statement holding the row's lock, so two instances can't lose each other's facts. This is mergePaymentFact in SQL.
+    async mergePayment(fact) {
+      if (!PAYMENT_ID_PATTERN.test(fact.id)) throw new Error("Bad payment id.");
+      const at = nowIso();
+      const { rows } = await pool.query<PaymentRow>(
+        `INSERT INTO redline_payments (id, session_id, report_id, amount_total, amount_refunded, currency, livemode, paid_at, refunded_at, created_at)
+         VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
+         ON CONFLICT (id) DO UPDATE SET
+           session_id = COALESCE(redline_payments.session_id, EXCLUDED.session_id),
+           report_id = COALESCE(redline_payments.report_id, EXCLUDED.report_id),
+           amount_total = COALESCE(redline_payments.amount_total, EXCLUDED.amount_total),
+           amount_refunded = GREATEST(redline_payments.amount_refunded, EXCLUDED.amount_refunded),
+           currency = COALESCE(redline_payments.currency, EXCLUDED.currency),
+           livemode = COALESCE(redline_payments.livemode, EXCLUDED.livemode),
+           paid_at = COALESCE(redline_payments.paid_at, EXCLUDED.paid_at),
+           refunded_at = COALESCE(redline_payments.refunded_at, EXCLUDED.refunded_at)
+         RETURNING *`,
+        [fact.id, cleanOrNull(fact.session_id), cleanOrNull(fact.report_id), fact.amount_total ?? null, fact.amount_refunded ?? 0, cleanOrNull(fact.currency), fact.livemode ?? null, fact.paid ? at : null, fact.refunded ? at : null, at],
+      );
+      return toPayment(rows[0]);
+    },
+    async getPayment(id) {
+      if (!PAYMENT_ID_PATTERN.test(id)) return null;
+      const { rows } = await pool.query<PaymentRow>("SELECT * FROM redline_payments WHERE id = $1", [id]);
+      return rows[0] ? toPayment(rows[0]) : null;
+    },
+    async reportHasActivePayment(reportId) {
+      const { rows } = await pool.query("SELECT 1 FROM redline_payments WHERE report_id = $1 AND paid_at IS NOT NULL AND refunded_at IS NULL LIMIT 1", [cleanText(reportId)]);
+      return rows.length > 0;
+    },
+
     async purgeExpired() {
       const reports = await pool.query("DELETE FROM redline_reports WHERE created_at <= $1", [cutoff()]);
       const jobs = await pool.query("DELETE FROM redline_jobs WHERE expires_at <= $1", [nowIso()]);
       const rateLimits = await pool.query("DELETE FROM redline_rate_limits WHERE expires_at <= $1", [nowIso()]);
-      return { reports: reports.rowCount ?? 0, jobs: jobs.rowCount ?? 0, rateLimits: rateLimits.rowCount ?? 0 };
+      // Last, so a database that hasn't had this migration yet still purges letters.
+      const payments = await pool.query("DELETE FROM redline_payments WHERE created_at <= $1", [cutoff()]);
+      return { reports: reports.rowCount ?? 0, jobs: jobs.rowCount ?? 0, rateLimits: rateLimits.rowCount ?? 0, payments: payments.rowCount ?? 0 };
     },
 
     async createJob(id) {

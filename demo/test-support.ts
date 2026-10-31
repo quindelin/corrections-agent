@@ -2,6 +2,7 @@
 // real pg driver over a local socket. It's a stand-in: one backend process, so statements never truly run in parallel.
 
 import { randomBytes } from "node:crypto";
+import { createServer } from "node:net";
 import { PGlite } from "@electric-sql/pglite";
 import { PGLiteSocketServer } from "@electric-sql/pglite-socket";
 import pg from "pg";
@@ -9,6 +10,23 @@ import type { Report } from "./reports.ts";
 import { applyMigrations } from "./store-postgres.ts";
 
 export const newId = () => randomBytes(16).toString("hex");
+
+/** Free ports in the range this project may use. Other agents' servers and tests share this machine, so none is hard-coded. */
+export async function freePorts(count: number): Promise<number[]> {
+  const ports: number[] = [];
+  const start = 8800 + Math.floor(Math.random() * 100);
+  for (let i = 0; i < 100 && ports.length < count; i++) {
+    const port = 8800 + ((start - 8800 + i) % 100);
+    const free = await new Promise<boolean>((resolve) => {
+      const probe = createServer();
+      probe.once("error", () => resolve(false));
+      probe.listen(port, "127.0.0.1", () => probe.close(() => resolve(true)));
+    });
+    if (free) ports.push(port);
+  }
+  if (ports.length < count) throw new Error("Not enough free ports in 8800-8899.");
+  return ports;
+}
 
 /** Five drafted items. C1 to C3 are the free drafts, and C4 and C5 stay locked. */
 export function fixtureReport(overrides: Partial<Report> = {}): Report {

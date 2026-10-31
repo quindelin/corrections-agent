@@ -11,6 +11,8 @@ export const DEFAULT_RETENTION_DAYS = 90;
 /** A job is forgotten an hour after it starts, finished or not. Its report is saved separately. */
 export const JOB_TTL_MS = 3_600_000;
 export const ID_PATTERN = /^[a-f0-9]{32}$/;
+/** Stripe's own ids, such as pi_ and cs_test_. Checked because the local backend makes file names from them. */
+export const PAYMENT_ID_PATTERN = /^[\w-]{1,255}$/;
 
 export interface WaitlistEntry {
   at: string;
@@ -25,6 +27,55 @@ export interface PurgeCounts {
   reports: number;
   jobs: number;
   rateLimits: number;
+  payments: number;
+}
+
+/** One payment, as far as Stripe's events have told us. It counts while paid_at is set and refunded_at isn't. */
+export interface PaymentRecord {
+  /** The PaymentIntent id, which is the only thing a charge and a Checkout Session have in common. */
+  id: string;
+  session_id: string | null;
+  report_id: string | null;
+  amount_total: number | null;
+  amount_refunded: number;
+  currency: string | null;
+  livemode: boolean | null;
+  paid_at: string | null;
+  refunded_at: string | null;
+  created_at: string;
+}
+
+/** What one event says about a payment. Anything left out is simply not known by this event. */
+export interface PaymentFact {
+  id: string;
+  session_id?: string | null;
+  report_id?: string | null;
+  amount_total?: number | null;
+  amount_refunded?: number;
+  currency?: string | null;
+  livemode?: boolean | null;
+  paid?: boolean;
+  refunded?: boolean;
+}
+
+/**
+ * First value wins, and the refunded amount only grows, so facts can be merged in any order, any number of times, with
+ * the same result. Nothing clears refunded_at, which is why no later event can undo a refund. Postgres does the same
+ * in one statement in store-postgres.ts.
+ */
+export function mergePaymentFact(prior: PaymentRecord | null, fact: PaymentFact, at: string): PaymentRecord {
+  return {
+    id: fact.id,
+    session_id: prior?.session_id ?? fact.session_id ?? null,
+    report_id: prior?.report_id ?? fact.report_id ?? null,
+    amount_total: prior?.amount_total ?? fact.amount_total ?? null,
+    amount_refunded: Math.max(prior?.amount_refunded ?? 0, fact.amount_refunded ?? 0),
+    currency: prior?.currency ?? fact.currency ?? null,
+    livemode: prior?.livemode ?? fact.livemode ?? null,
+    paid_at: prior?.paid_at ?? (fact.paid ? at : null),
+    refunded_at: prior?.refunded_at ?? (fact.refunded ? at : null),
+    created_at: prior?.created_at ?? at,
+  };
 }
 
 export interface Store {
@@ -38,6 +89,15 @@ export interface Store {
   /** True if a report was deleted. */
   deleteReport(id: string): Promise<boolean>;
   permitUnlocked(permit: string): Promise<boolean>;
+  /** The unlocked, unexpired reports on a permit, and why each one is unlocked. */
+  unlockedOnPermit(permit: string): Promise<{ id: string; unlocked_by: Report["unlocked_by"] }[]>;
+
+  /** Merges a fact into the ledger atomically and returns the result. See mergePaymentFact. Throws on a malformed id. */
+  mergePayment(fact: PaymentFact): Promise<PaymentRecord>;
+  getPayment(id: string): Promise<PaymentRecord | null>;
+  /** True if any payment for this report is paid and not refunded. */
+  reportHasActivePayment(reportId: string): Promise<boolean>;
+
   /** Deletes everything past its limit. Safe to run on several instances at once. */
   purgeExpired(): Promise<PurgeCounts>;
 

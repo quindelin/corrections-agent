@@ -6,7 +6,7 @@ import { randomBytes } from "node:crypto";
 import { appendFileSync, existsSync, mkdirSync, readdirSync, readFileSync, renameSync, rmSync, statSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import type { Report } from "./reports.ts";
-import { ID_PATTERN, isExpired, JOB_TTL_MS, keepIdentity, retentionDays, type JobRecord, type PurgeCounts, type Store, type StoreOptions, type WaitlistEntry } from "./store.ts";
+import { ID_PATTERN, isExpired, JOB_TTL_MS, keepIdentity, mergePaymentFact, PAYMENT_ID_PATTERN, retentionDays, type JobRecord, type PaymentRecord, type PurgeCounts, type Store, type StoreOptions, type WaitlistEntry } from "./store.ts";
 
 interface JobFile {
   status: "running" | "done";
@@ -22,6 +22,7 @@ const TMP_MAX_AGE_MS = 3_600_000;
 export function createLocalStore(dir: string, options: StoreOptions = {}): Store {
   const reportsDir = join(dir, "reports");
   const jobsDir = join(dir, "jobs");
+  const paymentsDir = join(dir, "payments");
   const rateFile = join(dir, "rate-limits.json");
   const waitlistFile = join(dir, "waitlist.jsonl");
   const retentionMs = (options.retentionDays ?? retentionDays()) * 86_400_000;
@@ -35,6 +36,8 @@ export function createLocalStore(dir: string, options: StoreOptions = {}): Store
   };
   const reportFile = (id: string) => join(reportsDir, `${id}.json`);
   const jobFile = (id: string) => join(jobsDir, `${id}.json`);
+  const paymentFile = (id: string) => join(paymentsDir, `${id}.json`);
+  const paymentFiles = () => (existsSync(paymentsDir) ? readdirSync(paymentsDir).filter((f) => f.endsWith(".json")).map((f) => join(paymentsDir, f)) : []);
   const readJson = <T>(file: string): T | null => {
     try {
       return JSON.parse(readFileSync(file, "utf8")) as T;
@@ -90,8 +93,29 @@ export function createLocalStore(dir: string, options: StoreOptions = {}): Store
         return report?.unlocked === true && report.permit_number === permit;
       });
     },
+    async unlockedOnPermit(permit) {
+      return reportIds().flatMap((id) => {
+        const report = live(id);
+        return report?.unlocked === true && report.permit_number === permit ? [{ id: report.id, unlocked_by: report.unlocked_by }] : [];
+      });
+    },
+
+    async mergePayment(fact) {
+      if (!PAYMENT_ID_PATTERN.test(fact.id)) throw new Error("Bad payment id.");
+      const next = mergePaymentFact(readJson<PaymentRecord>(paymentFile(fact.id)), fact, new Date(now()).toISOString());
+      write(paymentFile(fact.id), JSON.stringify(next));
+      return next;
+    },
+    getPayment: async (id) => (PAYMENT_ID_PATTERN.test(id) ? readJson<PaymentRecord>(paymentFile(id)) : null),
+    async reportHasActivePayment(reportId) {
+      return paymentFiles().some((file) => {
+        const payment = readJson<PaymentRecord>(file);
+        return payment?.report_id === reportId && Boolean(payment.paid_at) && !payment.refunded_at;
+      });
+    },
+
     async purgeExpired() {
-      const counts: PurgeCounts = { reports: 0, jobs: 0, rateLimits: 0 };
+      const counts: PurgeCounts = { reports: 0, jobs: 0, rateLimits: 0, payments: 0 };
       for (const id of reportIds()) {
         const report = readJson<Report>(reportFile(id));
         // An unreadable file has no date inside it, so its age comes from the file itself.
@@ -109,6 +133,14 @@ export function createLocalStore(dir: string, options: StoreOptions = {}): Store
           }
         }
       }
+      for (const file of paymentFiles()) {
+        const payment = readJson<PaymentRecord>(file);
+        if (payment ? isExpired(payment.created_at, now(), retentionMs) : statSync(file).mtimeMs <= now() - retentionMs) {
+          rmSync(file, { force: true });
+          counts.payments++;
+        }
+      }
+      removeOldTemp(paymentsDir);
       removeOldTemp(reportsDir);
       removeOldTemp(jobsDir);
       removeOldTemp(dir);

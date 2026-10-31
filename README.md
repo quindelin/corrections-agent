@@ -125,7 +125,7 @@ npm run run-evals
 
 Review each change with `git show`. To drop one: `git reset --hard HEAD~1`, then improve again. The rule is that **the agent writes the change**: you can keep it or drop it, but you don't edit it.
 
-**5. Open the customer flow or the review queue.** `npm run demo` serves the drop-a-letter flow at http://localhost:8792/start and the review queue at http://localhost:8792. As a service behind Emris, set `REDLINE_API_KEY`, and `REDLINE_HOST` if it must listen beyond localhost. Stripe needs `STRIPE_PAYMENT_LINK` and `STRIPE_SECRET_KEY`; without them, unlocking is a free design-partner offer.
+**5. Open the customer flow or the review queue.** `npm run demo` serves the drop-a-letter flow at http://localhost:8792/start and the review queue at http://localhost:8792. As a service behind Emris, set `REDLINE_API_KEY`, and `REDLINE_HOST` if it must listen beyond localhost. Stripe needs `STRIPE_PAYMENT_LINK`, `STRIPE_SECRET_KEY` and `STRIPE_WEBHOOK_SECRET`, set up by following [docs/stripe-setup.md](docs/stripe-setup.md). Without the first two, unlocking is a free design-partner offer. `npm run test:payments` checks the payment code offline on both backends; it hasn't been run against Stripe itself.
 
 ```bash
 npm run demo
@@ -133,7 +133,7 @@ npm run demo
 
 ## Where state is kept
 
-Reports, jobs, rate limits and the waitlist go through one interface, `demo/store.ts`, with two backends.
+Reports, jobs, rate limits, the payment ledger and the waitlist go through one interface, `demo/store.ts`, with two backends.
 
 | | Local files (default) | Postgres (when `DATABASE_URL` is set) |
 |---|---|---|
