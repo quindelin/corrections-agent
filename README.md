@@ -131,6 +131,20 @@ Review each change with `git show`. To drop one: `git reset --hard HEAD~1`, then
 npm run demo
 ```
 
+## Where state is kept
+
+Reports, jobs, rate limits and the waitlist go through one interface, `demo/store.ts`, with two backends.
+
+| | Local files (default) | Postgres (when `DATABASE_URL` is set) |
+|---|---|---|
+| **Setup** | None. Everything is under `.cache/` | `npm run store -- migrate` once, then start the service |
+| **Instances** | One process only | Several |
+
+- **Retention:** reports are deleted after 90 days, or `REDLINE_RETENTION_DAYS`. Instances purge at startup and hourly, and an expired report can't be read even before the purge. Once a permit's reports are deleted, its next round is no longer free. Jobs last an hour.
+- **Deleting one report:** `npm run store -- delete <report id>`, or `deleteReport()` in `demo/reports.ts`. There's no HTTP route for it. `npm run store -- purge` runs the retention purge now.
+- **Personal data:** rate limits keep a keyed hash of the client address, not the address. Set `REDLINE_RATE_LIMIT_SECRET` to the same value on every instance, or they fall back to `REDLINE_API_KEY`. Jobs keep a report's id, not its contents.
+- **Not covered:** `feedback/reviews.jsonl` and the review queue's in-memory letters stay local to one instance, and retention doesn't reach them or TrueForge sessions. Report text isn't encrypted by this code, so use a database with encryption at rest. Existing local reports aren't copied into Postgres.
+- **Tests:** `npm run test:demo` runs the same behavior tests on both backends. Postgres is PGlite, the real engine compiled to WebAssembly, reached through the `pg` driver. It has one backend process, so statements never run truly in parallel. These tests have not run against a real Postgres server.
 
 ## The scorer
 

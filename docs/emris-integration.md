@@ -13,7 +13,7 @@ Reviewed against `renee-stack/Emris` at commit `9e5da76`, on 2026-10-31. Nothing
 | **Pricing** | Subscription by metro, on the pricing page | $59 per permit recommended, not launched |
 | **Stack** | Next.js 16.4.3, React 19, Tailwind 4, on Vercel | Node scripts and a plain HTTP server |
 | **AI** | Anthropic SDK called directly from API routes | Agent loop on TrueForge, tools over MCP |
-| **Storage** | JSON files bundled at build time, no database | Local files under `.cache/` |
+| **Storage** | JSON files bundled at build time, no database | Local files under `.cache/`, or Postgres when `DATABASE_URL` is set |
 | **Accounts and payments** | None. The request-access form only shows a success state | None. Stripe is coded but untested |
 | **Coverage** | Chicago | Seattle real letters; Chicago code index, no real letters |
 
@@ -96,6 +96,6 @@ git subtree pull --prefix=services/redline <this repo> <branch>
 
 1. Get the PR reviewed, including the four-builder sign-off that `contract.md` requires.
 2. Deploy `services/redline` on a private container host, with `REDLINE_API_KEY` set. Set `REDLINE_API_URL` and `REDLINE_API_KEY` in Vercel. Until then, the `/redline` page says it isn't connected.
-3. Replace local-file report storage with a database, and move rate limits to shared storage.
+3. Provision Postgres, set `DATABASE_URL` on the service, and run `npm run store -- migrate`. The code is in place, but it hasn't run against a real Postgres server yet.
 4. Run real Chicago letters through it with an architect reviewing, before charging anyone.
 5. Add the permit friction layer, then Stripe, with a webhook.

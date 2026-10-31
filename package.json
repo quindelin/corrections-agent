@@ -19,16 +19,22 @@
     "real:build": "tsx realdata/build-seattle.ts",
     "real:run": "tsx realdata/run.ts",
     "real:improve": "tsx realdata/improve.ts",
+    "store": "tsx demo/store-cli.ts",
+    "test:demo": "node --import tsx --test --test-concurrency=1 demo/*.test.ts",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.32.2",
     "@truefoundry/trueforge-sdk": "^0.180.0",
     "pdfjs-dist": "^4.10.38",
+    "pg": "^8.23.1",
     "zod": "^4.6.7"
   },
   "devDependencies": {
+    "@electric-sql/pglite": "^0.5.14",
+    "@electric-sql/pglite-socket": "^0.2.17",
     "@types/node": "^22.10.0",
+    "@types/pg": "^8.23.1",
     "tsx": "^4.19.0",
     "typescript": "^5.7.0"
   }
