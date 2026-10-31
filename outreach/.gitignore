@@ -1,0 +1,4 @@
+# This repo is public. Prospect lists, messages, outcomes, the suppression list and your sender
+# details (which include a postal address) stay on your machine. Only the playbook, the claims,
+# the policy and aggregate learn reports are meant to be committed.
+data/

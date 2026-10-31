@@ -1,0 +1,9 @@
+{
+  "_note": "Copy to outreach/data/sender.json (gitignored) and fill in with your real details. CAN-SPAM needs a real sender and a valid physical postal address. Approval is blocked until this is complete.",
+  "from_name": "",
+  "from_email": "",
+  "organization": "",
+  "postal_address": "",
+  "opt_out_mailbox_monitored": false,
+  "subject_prefix": ""
+}

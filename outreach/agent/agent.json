@@ -1,0 +1,8 @@
+{
+  "name": "redline-outreach",
+  "description": "Researches prospects for Redline and drafts outreach for a person to review. It has no tools and cannot send anything.",
+  "model": {
+    "name": "truefoundry/claude-haiku-4-5",
+    "params": { "temperature": 0 }
+  }
+}
